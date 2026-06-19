@@ -42,7 +42,7 @@ export default function ContactPage() {
           <Card className="md:col-span-2">
             <div className="text-lg font-bold">Inquiry form</div>
             <div className="mt-2 text-sm text-slate-600 dark:text-slate-300">
-              This form posts to `/api/contact`. Plug in email/CRM later without changing the UI.
+              Fill in your details below and we&apos;ll get back to you within 24 hours.
             </div>
             <div className="mt-6">
               <ContactForm />

@@ -14,7 +14,7 @@ const dropdownNav = [
   {
     label: "Services",
     items: [
-      { href: "/", label: "SOLAR (EPC/IPP, I&C)" },
+      { href: "/projects/p1", label: "SOLAR (EPC/IPP, I&C)" },
       { href: "/projects/p3", label: "BESS (EPC / I&C)" },
       { href: "/pmc", label: "Project Management Consultancy (PMC)" },
       { href: "/o-and-m", label: "O&M" },

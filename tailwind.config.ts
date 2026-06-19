@@ -16,6 +16,15 @@ export default {
       },
       boxShadow: {
         glow: "0 0 0 1px rgba(22,163,74,.28), 0 12px 40px rgba(22,163,74,.2)"
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" }
+        }
+      },
+      animation: {
+        marquee: "marquee 20s linear infinite"
       }
     }
   },

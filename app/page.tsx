@@ -4,7 +4,6 @@ import { HeroCarousel } from "@/components/HeroCarousel";
 import { ImpactStats } from "@/components/ImpactStats";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ArrowRight, MapPin, ChevronRight, Leaf, Zap } from "lucide-react";
-
 export default function HomePage() {
   return (
     <div>
