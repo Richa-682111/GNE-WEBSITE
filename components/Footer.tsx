@@ -1,6 +1,14 @@
 import Link from "next/link";
 import { site } from "@/content/site";
 
+const serviceLinks = [
+  { href: "/projects/p1", label: "SOLAR (EPC/IPP, I&C)" },
+  { href: "/projects/p3", label: "BESS (EPC / I&C)" },
+  { href: "/pmc", label: "Project Management Consultancy (PMC)" },
+  { href: "/o-and-m", label: "O&M" },
+  { href: "/green-hydrogen", label: "Green Hydrogen" },
+];
+
 export function Footer() {
   return (
     <footer className="border-t border-emerald-100/80 bg-white dark:border-emerald-900/40 dark:bg-slate-950">
@@ -29,16 +37,13 @@ export function Footer() {
         <div>
           <div className="text-sm font-semibold">Services</div>
           <ul className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
-            <li>
-              <Link className="hover:underline" href="/solar-epc">
-                Solar EPC
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:underline" href="/bess-ems">
-                BESS & EMS
-              </Link>
-            </li>
+            {serviceLinks.map((item) => (
+              <li key={item.href}>
+                <Link className="hover:underline" href={item.href}>
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -77,4 +82,3 @@ export function Footer() {
     </footer>
   );
 }
-

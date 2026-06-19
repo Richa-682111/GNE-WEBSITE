@@ -3,7 +3,7 @@ import { posts } from "@/content/blog";
 import { site } from "@/content/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["/", "/solar-epc", "/bess-ems", "/pmc", "/pmc-for-psp", "/o-and-m", "/projects", "/blog", "/contact"];
+  const staticRoutes = ["/", "/about", "/projects/p1", "/projects/p3", "/pmc", "/o-and-m", "/green-hydrogen", "/projects", "/blog", "/contact"];
 
   const now = new Date();
 

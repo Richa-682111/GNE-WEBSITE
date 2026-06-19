@@ -4,12 +4,13 @@ import { CheckCircle2, HardHat, LineChart, Wrench, Zap } from "lucide-react";
 import { Card } from "@/components/Card";
 import { Section } from "@/components/Section";
 import { JsonLd } from "@/components/JsonLd";
+import { ServicePageHero } from "@/components/ServicePageHero";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "Solar EPC India",
   description:
-    "Solar EPC delivery for utility-scale and rooftop projects: design, procurement, construction, commissioning, and O&M readiness."
+    "Solar EPC delivery for utility-scale and rooftop projects: design, procurement, construction, commissioning, and O&M readiness.",
 };
 
 export default function SolarEpcPage() {
@@ -20,43 +21,28 @@ export default function SolarEpcPage() {
     provider: { "@type": "Organization", name: site.legalName, url: site.url },
     areaServed: { "@type": "Country", name: "India" },
     serviceType: "Solar EPC",
-    keywords: ["Solar EPC India", "utility-scale solar", "rooftop solar", "EPC contractor"]
+    keywords: ["Solar EPC India", "utility-scale solar", "rooftop solar", "EPC contractor"],
   };
 
   return (
     <div>
       <JsonLd data={jsonLd} />
-      <Section className="bg-renewable-gradient">
-        <div className="mx-auto max-w-6xl px-4">
+      <ServicePageHero
+        badge={
           <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-xs font-semibold text-slate-700 backdrop-blur dark:border-slate-800 dark:bg-slate-950/50 dark:text-slate-200">
             <Zap className="h-4 w-4 text-brand-solar" />
             Solar EPC
           </div>
-          <h1 className="mt-6 text-4xl font-black tracking-tight sm:text-5xl">
-            Utility-scale and rooftop Solar EPC
-          </h1>
-          <p className="mt-4 max-w-2xl text-lg text-slate-700 dark:text-slate-200">
-            From feasibility to commissioning—with predictable timelines, bankable documentation, and
-            quality-controlled execution.
-          </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="/contact"
-              className="btn-primary"
-            >
-              Get EPC Proposal
-            </Link>
-            <Link
-              href="/projects"
-              className="btn-secondary"
-            >
-              See Case Studies
-            </Link>
-          </div>
-        </div>
-      </Section>
+        }
+        title="Utility-scale and rooftop Solar EPC"
+        description="From feasibility to commissioning—with predictable timelines, bankable documentation, and quality-controlled execution."
+        image="/hero-solar-farm.png"
+        imageAlt="Utility-scale solar farm installation"
+        primaryCta={{ href: "/contact", label: "Get EPC Proposal" }}
+        secondaryCta={{ href: "/projects/p1", label: "See Case Study" }}
+      />
 
-      <Section className="bg-grid">
+      <Section className="bg-service-gradient">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-2xl font-bold tracking-tight">What we deliver</h2>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -128,4 +114,3 @@ export default function SolarEpcPage() {
     </div>
   );
 }
-

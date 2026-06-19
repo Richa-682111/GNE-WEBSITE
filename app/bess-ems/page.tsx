@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Battery, CheckCircle2, Cpu, Gauge, LineChart, ShieldCheck } from "lucide-react";
 import { Card } from "@/components/Card";
 import { Section } from "@/components/Section";
 import { JsonLd } from "@/components/JsonLd";
+import { ServicePageHero } from "@/components/ServicePageHero";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "BESS Solutions & EMS Software",
   description:
-    "Battery Energy Storage Systems (BESS) and EMS software: sizing, integration, dispatch strategy, monitoring, and analytics."
+    "Battery Energy Storage Systems (BESS) and EMS software: sizing, integration, dispatch strategy, monitoring, and analytics.",
 };
 
 export default function BessEmsPage() {
@@ -20,43 +20,28 @@ export default function BessEmsPage() {
     provider: { "@type": "Organization", name: site.legalName, url: site.url },
     areaServed: { "@type": "Country", name: "India" },
     serviceType: "BESS solutions",
-    keywords: ["BESS solutions", "Energy Management System", "EMS software", "battery storage India"]
+    keywords: ["BESS solutions", "Energy Management System", "EMS software", "battery storage India"],
   };
 
   return (
     <div>
       <JsonLd data={jsonLd} />
-      <Section className="bg-renewable-gradient">
-        <div className="mx-auto max-w-6xl px-4">
+      <ServicePageHero
+        badge={
           <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-xs font-semibold text-slate-700 backdrop-blur dark:border-slate-800 dark:bg-slate-950/50 dark:text-slate-200">
             <Battery className="h-4 w-4 text-brand-blue" />
             BESS & EMS
           </div>
-          <h1 className="mt-6 text-4xl font-black tracking-tight sm:text-5xl">
-            Storage that performs—powered by EMS
-          </h1>
-          <p className="mt-4 max-w-2xl text-lg text-slate-700 dark:text-slate-200">
-            We make battery projects bankable with controls, analytics, and operational discipline—so
-            BESS delivers measurable value.
-          </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="/contact"
-              className="btn-primary"
-            >
-              Discuss BESS + EMS
-            </Link>
-            <Link
-              href="/projects"
-              className="btn-secondary"
-            >
-              View Deployments
-            </Link>
-          </div>
-        </div>
-      </Section>
+        }
+        title="Storage that performs—powered by EMS"
+        description="We make battery projects bankable with controls, analytics, and operational discipline—so BESS delivers measurable value."
+        image="/hero-bess-storage.png"
+        imageAlt="Battery energy storage system installation"
+        primaryCta={{ href: "/contact", label: "Discuss BESS + EMS" }}
+        secondaryCta={{ href: "/projects/p3", label: "View Case Study" }}
+      />
 
-      <Section className="bg-grid">
+      <Section className="bg-service-gradient">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-2xl font-bold tracking-tight">Key differentiators</h2>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
@@ -131,4 +116,3 @@ export default function BessEmsPage() {
     </div>
   );
 }
-

@@ -51,51 +51,6 @@ export default function AboutPage() {
     }
   ];
 
-  const milestones = [
-    {
-      year: "2015",
-      title: "The Beginning",
-      description: "Founded by Lalit Kumarr with a vision to democratize renewable energy in Asia",
-      icon: "🌱"
-    },
-    {
-      year: "2017",
-      title: "First Major Success",
-      description: "Completed India's first 50 MWp utility-scale solar plant in record time",
-      icon: "⚡"
-    },
-    {
-      year: "2018",
-      title: "International Expansion",
-      description: "Opened Singapore office and secured $50M in Series A funding",
-      icon: "🌍"
-    },
-    {
-      year: "2019",
-      title: "BESS Innovation",
-      description: "Launched integrated battery energy storage solutions with AI-powered EMS",
-      icon: "🔋"
-    },
-    {
-      year: "2021",
-      title: "Global Reach",
-      description: "Established presence in 8 countries with 300+ MWp portfolio",
-      icon: "🗺️"
-    },
-    {
-      year: "2023",
-      title: "The H2 Leap",
-      description: "Pioneered green hydrogen integration for industrial decarbonization",
-      icon: "♻️"
-    },
-    {
-      year: "2025",
-      title: "Carbon Neutral",
-      description: "Achieved carbon-neutral operations and 500k+ tons CO₂ reduction impact",
-      icon: "🌿"
-    }
-  ];
-
   const cultureValues = [
     {
       icon: Heart,
@@ -210,25 +165,38 @@ export default function AboutPage() {
     {
       name: "Lalit Kumarr",
       title: "Founder & CEO",
-      bio: "20+ years in renewable energy sector. Previously led large-scale solar projects across Asia-Pacific.",
+      bio: "20+ years in renewable energy. Led large-scale solar across Asia-Pacific.",
       linkedin: "https://www.linkedin.com/in/lalitkumar07/"
     },
     {
-      name: "Priya Sharma",
-      title: "Chief Technology Officer",
-      bio: "Former head of R&D at leading solar manufacturer. 15+ years innovation expertise in BESS systems.",
+      name: "Ajit Shah",
+      title: "Vice President",
+      bio: "Over 18 years of diverse experience as a Business Development Leader, specializing in stakeholder management, government liaison, and project and financial management.",
       linkedin: "#"
     },
     {
-      name: "Marcus Johnson",
-      title: "Chief Operating Officer",
-      bio: "Operations excellence champion. Managed 500+ MWp portfolio execution with 98% on-time delivery.",
+      name: "Ajay Singh",
+      title: "CFO",
+      bio: "Chartered Accountant with over 30 years of experience in working as CFO & Board member.",
       linkedin: "#"
     },
     {
       name: "Advita Singh",
       title: "VP - Business Development",
-      bio: "Strategic partnerships builder. Established GNE Infra's presence across 15+ countries and regions.",
+      bio: "Built GNE Infra's presence across 15+ countries and regions.",
+      linkedin: "#"
+    },
+    {
+      name: "Shrikant Bartakke",
+      title: "Director - Finance & Strategy",
+      bio: "Structured $500M+ in renewable project finance and investor partnerships.",
+      linkedin: "#"
+    }
+
+    {
+      name: "Rajesh Kumar",
+      title: "General Manager Projects & Operation",
+      bio: "Over 24 years of vast experience in Project Management, Operation Management and Solar O&M.",
       linkedin: "#"
     }
   ];
@@ -396,39 +364,24 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      {/* Timeline */}
-      <Section className="py-10 relative overflow-hidden">
-        <div className="mx-auto max-w-4xl px-4">
-          <h2 className="text-4xl font-black text-center text-slate-950 dark:text-white mb-3">
+      {/* Timeline → Our Journey roadmap image */}
+      <Section className="py-8 sm:py-10">
+        <div className="mx-auto max-w-6xl px-4">
+          <h2 className="text-3xl font-black text-center text-slate-950 dark:text-white sm:text-4xl">
             Our Journey
           </h2>
-          <p className="text-center text-slate-700 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
-            Key milestones that shaped GNE Infra&apos;s growth
+          <p className="mx-auto mt-2 max-w-2xl text-center text-sm text-slate-600 dark:text-slate-400">
+            Five-year growth roadmap across solar, BESS, and green hydrogen
           </p>
-
-          <div className="space-y-8">
-            {timeline.map((item, idx) => (
-              <div key={idx} className="flex gap-6 items-start group">
-                {/* Timeline Marker */}
-                <div className="flex flex-col items-center flex-shrink-0">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-emerald-100 to-blue-100 dark:from-emerald-900/40 dark:to-blue-900/40 flex items-center justify-center text-2xl border-4 border-white dark:border-slate-950 shadow-lg">
-                    {item.icon}
-                  </div>
-                  {idx !== timeline.length - 1 && (
-                    <div className="w-1 h-16 bg-gradient-to-b from-emerald-400 to-emerald-200 dark:from-emerald-600 dark:to-emerald-800 mt-4"></div>
-                  )}
-                </div>
-
-                {/* Content */}
-                <div className="pt-2 flex-grow">
-                  <div className="inline-block mb-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/40 text-xs font-black text-emerald-700 dark:text-emerald-300">
-                    {item.year}
-                  </div>
-                  <h3 className="font-black text-lg text-slate-950 dark:text-white">{item.title}</h3>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm mt-1">{item.description}</p>
-                </div>
-              </div>
-            ))}
+          <div className="mt-6 overflow-hidden rounded-2xl border border-emerald-100 bg-white shadow-lg dark:border-emerald-900/40 dark:bg-slate-900">
+            <Image
+              src="/our-journey-roadmap.png"
+              alt="GNE Infra five-year journey roadmap from FY2025-26 to FY2029-30"
+              width={1600}
+              height={900}
+              className="h-auto w-full"
+              priority
+            />
           </div>
         </div>
       </Section>
@@ -440,87 +393,55 @@ export default function AboutPage() {
 
 
 
-      {/* Leadership Section - Premium Showcase */}
-      <Section className="py-10 relative overflow-hidden">
+      {/* Leadership Section - Board Members */}
+      <Section className="py-8 sm:py-10 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-100/20 dark:bg-emerald-900/10 rounded-full blur-3xl -mr-48 -mt-48"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-100/20 dark:bg-blue-900/10 rounded-full blur-3xl -ml-48 -mb-48"></div>
         </div>
 
-        <div className="relative z-10 mx-auto max-w-5xl px-4">
-          {/* Section Header */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200/50 dark:border-emerald-900/50 bg-emerald-50/30 dark:bg-emerald-950/30 px-4 py-2 text-sm font-bold text-emerald-700 dark:text-emerald-300 backdrop-blur-sm mb-6">
-              <Users className="h-4 w-4" />
+        <div className="relative z-10 mx-auto max-w-6xl px-4">
+          <div className="mb-6 text-center">
+            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200/50 dark:border-emerald-900/50 bg-emerald-50/30 dark:bg-emerald-950/30 px-3 py-1.5 text-xs font-bold text-emerald-700 dark:text-emerald-300 backdrop-blur-sm">
+              <Users className="h-3.5 w-3.5" />
               World-Class Leadership
             </div>
-            <h2 className="text-4xl font-black text-slate-950 dark:text-white mb-3">
+            <h2 className="mt-3 text-2xl font-black text-slate-950 dark:text-white sm:text-3xl">
               Meet Our Board Members
             </h2>
-            <p className="text-slate-700 dark:text-slate-300 max-w-3xl mx-auto">
-              Experienced visionaries committed to advancing renewable energy globally. Our leadership brings 150+ years of combined expertise across solar, BESS, and energy infrastructure.
+            <p className="mx-auto mt-2 max-w-2xl text-sm text-slate-600 dark:text-slate-400">
+              Experienced leaders driving renewable energy across solar, BESS, and hydrogen.
             </p>
           </div>
 
-          {/* Leadership Grid - Premium Card Showcase */}
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mb-8">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5 lg:gap-4">
             {leadership.map((leader, idx) => (
-              <div
+              <Card
                 key={idx}
-                className="group relative"
+                className="flex h-full flex-col p-3 sm:p-4 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700/50"
               >
-                {/* Card Background with Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-100/20 to-emerald-100/5 dark:from-emerald-900/20 dark:to-emerald-900/5 rounded-2xl transform group-hover:scale-105 transition-transform duration-300"></div>
-
-                <Card className="relative p-6 h-full flex flex-col bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700/50 hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                  {/* Decorative Top Element */}
-                  <div className="absolute -top-16 -right-16 w-32 h-32 bg-emerald-200/10 dark:bg-emerald-900/10 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
-
-                  {/* Leader Image Placeholder */}
-                  <div className="relative h-32 mb-6 rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 flex items-center justify-center">
-                    <Users className="h-16 w-16 text-slate-400 dark:text-slate-500" />
-                  </div>
-
-                  {/* Content */}
-                  <div className="flex-grow">
-                    <h3 className="font-semibold text-lg text-slate-950 dark:text-white">{leader.name}</h3>
-                    <p className="text-sm font-bold text-emerald-600 dark:text-emerald-400 mt-1">{leader.title}</p>
-                    <p className="text-xs text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">{leader.bio}</p>
-                  </div>
-
-                  {/* LinkedIn Badge */}
-                  <div className="mt-6 pt-4 border-t border-slate-200/50 dark:border-slate-700/50">
-                    <a
-                      href={leader.linkedin}
-                      className="inline-flex items-center gap-2 text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 text-sm font-semibold transition-colors"
-                    >
-                      <Linkedin className="h-4 w-4" />
-                      Connect
-                    </a>
-                  </div>
-                </Card>
-              </div>
+                <div className="relative mb-3 flex h-16 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 sm:h-[4.5rem]">
+                  <Users className="h-8 w-8 text-slate-400 dark:text-slate-500" />
+                </div>
+                <h3 className="text-sm font-semibold leading-tight text-slate-950 dark:text-white">
+                  {leader.name}
+                </h3>
+                <p className="mt-0.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
+                  {leader.title}
+                </p>
+                <p className="mt-1.5 line-clamp-3 flex-grow text-[10px] leading-relaxed text-slate-600 dark:text-slate-400 sm:text-[11px]">
+                  {leader.bio}
+                </p>
+                <a
+                  href={leader.linkedin}
+                  className="mt-2 inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-600 dark:text-emerald-400 hover:underline sm:text-[11px]"
+                >
+                  <Linkedin className="h-3 w-3" />
+                  Connect
+                </a>
+              </Card>
             ))}
           </div>
-
-          {/* Leadership Quote Section */}
-          <Card className="p-12 bg-gradient-to-r from-emerald-50 to-blue-50 dark:from-emerald-950/40 dark:to-blue-950/40 border border-emerald-200/50 dark:border-emerald-900/50 relative overflow-hidden">
-            <div className="absolute inset-0 opacity-5">
-              <div className="absolute top-0 right-0 text-9xl font-black text-emerald-600 dark:text-emerald-400">
-                &ldquo;
-              </div>
-            </div>
-            <div className="relative z-10">
-              <p className="text-lg font-semibold text-slate-900 dark:text-white mb-4">
-                &ldquo;Our mission is not just to build Solar, BESS, and Hydrogen projects, but to build a sustainable future. Every megawatt we install, every ton of CO₂ we prevent, every community we empower—this is the legacy we&apos;re creating together.&rdquo;
-              </p>
-              <p className="text-sm font-bold text-emerald-700 dark:text-emerald-300">
-                — Lalit Kumarr, Founder & CEO, GNE Infra
-              </p>
-            </div>
-          </Card>
-
-
         </div>
       </Section>
 

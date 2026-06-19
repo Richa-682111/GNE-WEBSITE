@@ -107,7 +107,7 @@ export default async function ProjectDetailPage({ params }: Props) {
       </Section>
 
       {/* Details */}
-      <Section className="bg-grid">
+      <Section className="bg-service-gradient">
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
             <div className="space-y-8">
