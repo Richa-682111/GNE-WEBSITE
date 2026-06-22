@@ -180,18 +180,13 @@ export default function AboutPage() {
       bio: "Chartered Accountant with over 30 years of experience in working as CFO & Board member.",
       linkedin: "#"
     },
-    {
-      name: "Advita Singh",
-      title: "VP - Business Development",
-      bio: "Built GNE Infra's presence across 15+ countries and regions.",
-      linkedin: "#"
-    },
+
     {
       name: "Shrikant Bartakke",
       title: "Director - Finance & Strategy",
       bio: "Structured $500M+ in renewable project finance and investor partnerships.",
       linkedin: "#"
-    }
+    },
 
     {
       name: "Rajesh Kumar",
@@ -373,21 +368,19 @@ export default function AboutPage() {
           <p className="mx-auto mt-2 max-w-2xl text-center text-sm text-slate-600 dark:text-slate-400">
             Five-year growth roadmap across solar, BESS, and green hydrogen
           </p>
-          <div className="mt-6 overflow-hidden rounded-2xl border border-emerald-100 bg-white shadow-lg dark:border-emerald-900/40 dark:bg-slate-900">
-            <Image
-              src="/our-journey-roadmap.png"
-              alt="GNE Infra five-year journey roadmap from FY2025-26 to FY2029-30"
-              width={1600}
-              height={900}
-              className="h-auto w-full"
-              priority
-            />
-          </div>
+        </div>
+
+        <div className="mx-auto mt-6 w-[55vw] overflow-hidden rounded-2xl border border-emerald-100 bg-white shadow-lg dark:border-emerald-900/40 dark:bg-slate-900">
+          <Image
+            src="/coporatedecimg.png"
+            alt="GNE Infra five-year journey roadmap from FY2025-26 to FY2029-30"
+            width={1600}
+            height={900}
+            className="h-auto w-full"
+            priority
+          />
         </div>
       </Section>
-
-
-
 
 
 
