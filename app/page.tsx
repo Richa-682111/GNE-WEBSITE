@@ -99,9 +99,8 @@ export default function HomePage() {
                 {/* Outer glow ring */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-emerald-500/20 via-sky-400/10 to-teal-400/10 blur-2xl" />
 
-                <div className="relative overflow-hidden rounded-3xl border border-emerald-200/60 bg-white/80 p-6 shadow-2xl backdrop-blur dark:border-emerald-900/50 dark:bg-slate-900/70 sm:p-8">
-                  {/* Centre orbit graphic */}
-                  <div className="relative mx-auto flex h-64 w-64 items-center justify-center sm:h-72 sm:w-72">
+                <div className="relative w-[600px] overflow-hidden rounded-3xl border border-emerald-200/60 bg-white/80 p-6 shadow-2xl backdrop-blur dark:border-emerald-900/50 dark:bg-slate-900/70 sm:p-8">
+                  <div className="relative mx-auto flex h-80 w-80 items-center justify-center sm:h-96 sm:w-96">
                     {/* Animated orbit rings */}
                     <div className="absolute inset-0 animate-[spin_18s_linear_infinite] rounded-full border-2 border-dashed border-emerald-300/40 dark:border-emerald-700/40" />
                     <div className="absolute inset-6 animate-[spin_24s_linear_infinite_reverse] rounded-full border border-dashed border-sky-300/30 dark:border-sky-700/30" />
@@ -109,7 +108,7 @@ export default function HomePage() {
                     {/* Centre hub */}
                     <div className="relative z-10 flex h-24 w-24 flex-col items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-700 shadow-xl shadow-emerald-500/40">
                       <Leaf className="mb-0.5 h-7 w-7 text-white" />
-                      <span className="text-[11px] font-bold uppercase tracking-wide text-white/90">GNE</span>
+                      <span className="text-[11px] font-bold uppercase tracking-wide text-white/90">GNE infra</span>
                     </div>
 
                     {/* Orbital nodes */}
@@ -123,16 +122,16 @@ export default function HomePage() {
                       { label: "End-of-Life", angle: 306, icon: "♻️", color: "bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-200" },
                     ].map(({ label, angle, icon, color }) => {
                       const rad = (angle - 90) * (Math.PI / 180);
-                      const r = 112;
+                      const r = 170;
                       const x = Math.cos(rad) * r;
                       const y = Math.sin(rad) * r;
                       return (
                         <div
                           key={label}
-                          className={`absolute flex h-14 w-14 flex-col items-center justify-center rounded-2xl text-center text-[9px] font-semibold leading-tight shadow-lg transition-transform hover:scale-110 ${color}`}
+                          className={`absolute flex h-20 w-20 flex-col items-center justify-center rounded-2xl text-center text-[11px] font-semibold leading-tight shadow-lg transition-transform hover:scale-110 ${color}`}
                           style={{ transform: `translate(${x}px, ${y}px)` }}
                         >
-                          <span className="text-base leading-none">{icon}</span>
+                          <span className="text-2xl leading-none">{icon}</span>
                           <span className="mt-0.5 px-0.5">{label}</span>
                         </div>
                       );
@@ -293,15 +292,22 @@ export default function HomePage() {
       {/* ── CTA BANNER ──────────────────────────────────────────────────── */}
       <section className="relative isolate overflow-hidden">
         {/* Rich layered background */}
-        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-emerald-700 via-emerald-600 to-teal-500" />
-        <div className="absolute inset-0 -z-10 bg-[url('/hero-solar.jpg')] bg-cover bg-center opacity-20 mix-blend-luminosity" />
-        {/* Radial vignette for depth */}
-        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-emerald-900/60 via-transparent to-emerald-900/30" />
-        {/* Subtle grid pattern */}
-        <div className="absolute inset-0 -z-10 opacity-10"
-          style={{ backgroundImage: "linear-gradient(to right,rgba(255,255,255,.15) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.15) 1px,transparent 1px)", backgroundSize: "56px 56px" }}
-        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-slate-800/50 via-blue-700/40 to-cyan-600/35" />
 
+        <div className="absolute inset-0 -z-10 bg-[url('/hero-solar.jpg')] bg-cover bg-center opacity-45" />
+
+        {/* Radial vignette for depth */}
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/25 via-transparent to-black/10" />
+
+        {/* Subtle grid pattern */}
+        <div
+          className="absolute inset-0 -z-10 opacity-10"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right,rgba(255,255,255,.15) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.15) 1px,transparent 1px)",
+            backgroundSize: "56px 56px",
+          }}
+        />
         <div className="mx-auto max-w-5xl px-4 py-20 text-center sm:px-6 sm:py-24 lg:px-8">
           {/* Eyebrow */}
           <span className="inline-block rounded-full bg-white/15 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-emerald-100 ring-1 ring-white/25">

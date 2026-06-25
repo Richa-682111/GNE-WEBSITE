@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import NextImage from "next/image";
 import { CheckCircle2, Droplets, Leaf, ShieldCheck } from "lucide-react";
 import { Card } from "@/components/Card";
 import { Section } from "@/components/Section";
@@ -47,26 +48,24 @@ export default function GreenHydrogenPage() {
             <div>
               <h2 className="text-3xl font-black tracking-tight">Building the hydrogen economy</h2>
               <p className="mt-5 text-base leading-relaxed text-slate-700 dark:text-slate-300">
-                GNE Infra is expanding into green hydrogen with a focus on electrolyzer deployment,
-                renewable-powered H2 production, and industrial offtake partnerships aligned with
-                India&apos;s National Green Hydrogen Mission.
+                GNE Infra is expanding into the green hydrogen sector with a focus on renewable-powered hydrogen production, electrolyzer deployment, storage infrastructure, and industrial offtake partnerships. Our approach combines renewable energy assets with advanced hydrogen technologies to support India&apos;s National Green Hydrogen Mission while delivering scalable, commercially viable projects from 5 MW to utility-scale deployments.
               </p>
               <ul className="mt-8 space-y-4 text-sm text-slate-600 dark:text-slate-300">
                 <li className="flex gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-brand-green" />
-                  Electrolyzer sizing, procurement, and integration
+                  Integrated Developer + EPC capability
                 </li>
                 <li className="flex gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-brand-green" />
-                  Solar + BESS + H2 hybrid project development
+                  Aligned with National Green Hydrogen Mission
                 </li>
                 <li className="flex gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-brand-green" />
-                  Feasibility, DPR support, and stakeholder management
+                  Focus on long-term offtake & annuity chashflows
                 </li>
                 <li className="flex gap-3">
                   <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-brand-green" />
-                  EPC and lifecycle advisory for H2 infrastructure
+                  Scalable platform from 5 MW to 100+MW
                 </li>
               </ul>
             </div>
@@ -80,7 +79,7 @@ export default function GreenHydrogenPage() {
                       Renewable-powered H2
                     </div>
                     <div className="mt-2 text-sm text-slate-600 dark:text-slate-300">
-                      Coupling solar and storage assets with electrolysis for truly green hydrogen production.
+
                     </div>
                   </div>
                 </div>
@@ -106,6 +105,19 @@ export default function GreenHydrogenPage() {
                   <div>Mobility & fuel cell applications</div>
                 </div>
               </Card>
+            </div>
+          </div>
+
+          {/* Process flow diagram */}
+          <div className="mt-16">
+            <div className="relative h-[25vh] min-h-[220px] w-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-950/50">
+              <NextImage
+                src="/h3.png"
+                alt="Green hydrogen process flow: power supply, production, storage and distribution, end use"
+                fill
+                className="object-contain p-4"
+                sizes="(max-width: 768px) 100vw, 1200px"
+              />
             </div>
           </div>
         </div>

@@ -13,6 +13,15 @@
 @layer base {
   html {
     @apply scroll-smooth;
+    overscroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Smooth elastic/bounce overscroll on supported browsers */
+  @supports (-webkit-overscroll-behavior: auto) or (overscroll-behavior: auto) {
+    body {
+      overscroll-behavior: auto;
+    }
   }
 
   body {
@@ -207,6 +216,70 @@
 
   .animate-slow-zoom {
     animation: slowZoom 20s ease-in-out infinite alternate;
+  }
+
+  @keyframes slowFloat {
+    0%,
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+    30% {
+      transform: translateY(-8px) translateX(4px);
+    }
+    60% {
+      transform: translateY(4px) translateX(-8px);
+    }
+  }
+
+  .animate-slow-float {
+    animation: slowFloat 18s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulseLightGreen {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .animate-pulse-light-green {
+    background-size: 200% 200%;
+    animation: pulseLightGreen 3s ease infinite;
+  }
+
+  @keyframes pulseBorderGlow {
+    0%,
+    100% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-pulse-border-glow {
+    animation: pulseBorderGlow 2.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulseLine {
+    0%,
+    100% {
+      transform: scaleX(0.8) translateX(-10%);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scaleX(1) translateX(10%);
+      opacity: 1;
+    }
+  }
+
+  .animate-pulse-line {
+    animation: pulseLine 2s ease-in-out infinite alternate;
   }
 
   .reveal-up {
