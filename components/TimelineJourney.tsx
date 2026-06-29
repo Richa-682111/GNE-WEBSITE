@@ -1,283 +1,158 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { Factory, Globe, TrendingUp, Zap, Target } from "lucide-react";
 
 const roadmap = [
   {
     fy: "FY2025-26",
     yearLabel: "Year 1",
-    color: "#1976d2",
-    top: "22%", // Shifted up and right
-    left: "8%", // Shifted up and right
+    color: "text-emerald-500",
+    bgColor: "bg-emerald-500",
+    glowColor: "shadow-emerald-500/20",
+    icon: Factory,
     summary: [
       "Solar EPC > 100 MW",
-      "Office in Pune",
-      "Entry to Green Hydrogen Business",
+      "Office established in Pune",
+      "Strategic entry into Green Hydrogen Business",
     ],
-    expanded: [] as string[],
+    expanded: [],
   },
   {
     fy: "FY2026-27",
     yearLabel: "Year 2",
-    color: "#4caf50",
-    top: "18%", // Shifted up and right
-    left: "27%", // Shifted up and right
+    color: "text-sky-500",
+    bgColor: "bg-sky-500",
+    glowColor: "shadow-sky-500/20",
+    icon: Zap,
     summary: [
       "Solar EPC > 450 MW",
-      "Business Expansion for BESS EPC > 50MW/200MWh",
-      "PMC - 1.5 GW BESS",
+      "BESS EPC Expansion > 50MW / 200MWh",
+      "PMC for 1.5 GW BESS projects",
     ],
     expanded: [
       "Develop 100 MW IPP Solar + BESS",
       "GH2 Electrolyser Business Growth",
-      "BESS Manufacturing factory",
-      "Inviting and onboarding of Investors",
-      "Development of indigenous EMS in collaboration with IIT Delhi",
+      "Commission BESS Manufacturing factory",
+      "Onboard strategic investors",
+      "Develop indigenous EMS with IIT Delhi",
     ],
   },
   {
     fy: "FY2027-28",
     yearLabel: "Year 3",
-    color: "#f4c20d",
-    top: "14%", // Shifted up and right
-    left: "46%", // Shifted up and right
+    color: "text-violet-500",
+    bgColor: "bg-violet-500",
+    glowColor: "shadow-violet-500/20",
+    icon: Target,
     summary: [
-      "Develop off grid hybrid projects for 500 MW PV + 2GWh MWh BESS",
-      "Expanding the portfolio for 100 MW Solar as a developer",
-      "BESS Expansion > 2 GWh",
-
-
+      "Develop off-grid hybrid projects (500 MW PV + 2GWh BESS)",
+      "Expand IPP portfolio to 100 MW Solar",
+      "BESS Expansion > 2 GWh globally",
     ],
     expanded: [
-      "Become a developer of Green Hydrogen",
-      "Innovation",
+      "Establish position as Green Hydrogen developer",
+      "Advance R&D and tech innovation",
     ],
   },
   {
     fy: "FY2028-29",
     yearLabel: "Year 4",
-    color: "#f57c00",
-    top: "8%", // Shifted up and right
-    left: "65%", // Shifted up and right
+    color: "text-amber-500",
+    bgColor: "bg-amber-500",
+    glowColor: "shadow-amber-500/20",
+    icon: TrendingUp,
     summary: [
-      "Innovation",
-      "Market Growth",
-      "Preparation for IPO",
+      "Drive deep technological innovation",
+      "Accelerate global market growth",
+      "Initiate preparation for IPO",
     ],
-    expanded: [] as string[],
+    expanded: [],
   },
   {
     fy: "FY2029-30",
     yearLabel: "Year 5",
-    color: "#7e57c2",
-    top: "2%", // Shifted up and right
-    left: "84%", // Shifted up and right
+    color: "text-slate-900 dark:text-white",
+    bgColor: "bg-slate-900 dark:bg-slate-100",
+    glowColor: "shadow-slate-500/20",
+    icon: Globe,
     summary: [
       "Upscaling to Public Limited Company",
+      "Establish as top-tier global renewable EPC",
     ],
-    expanded: [] as string[],
+    expanded: [],
   },
 ];
 
-function StaircaseCard({
-  item,
-  index,
-  inView,
-}: {
-  item: (typeof roadmap)[number];
-  index: number;
-  inView: boolean;
-}) {
-  const [hovered, setHovered] = useState(false);
-  const [animatedIn, setAnimatedIn] = useState(false);
-  const hasExpanded = item.expanded.length > 0;
-
+export default function TimelineJourney() {
   return (
-    <div key={item.fy}>
-      {/* Arrow badge */}
-      <motion.div
-        initial={{ y: -200, opacity: 0 }}
-        animate={inView ? { y: 0, opacity: 1 } : { y: -200, opacity: 0 }}
-        transition={{
-          delay: index * 0.15,
-          duration: 0.7,
-          type: "spring",
-          bounce: 0.4,
-        }}
-        style={{ top: item.top, left: item.left }}
-        className="absolute z-10"
-      >
-        <div
-          className="relative flex h-10 w-36 items-center justify-center text-[15px] font-bold text-white shadow-lg lg:h-11 lg:w-40 lg:text-base"
-          style={{ backgroundColor: item.color }}
-        >
-          {item.fy}
-          <div
-            className="absolute right-[-24px] top-0 h-0 w-0 border-b-[20px] border-l-[24px] border-t-[20px] border-b-transparent border-t-transparent lg:right-[-26px] lg:border-b-[22px] lg:border-l-[26px] lg:border-t-[22px]"
-            style={{ borderLeftColor: item.color }}
-          />
-        </div>
-      </motion.div>
+    <div className="relative mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+      {/* Central Glowing Line */}
+      <div className="absolute left-8 sm:left-1/2 top-0 bottom-0 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-emerald-400/50 to-transparent" />
+      
+      <div className="space-y-16 sm:space-y-24">
+        {roadmap.map((item, index) => {
+          const isEven = index % 2 === 0;
+          const Icon = item.icon;
 
-      {/* Content card */}
-      <motion.div
-        initial={{ opacity: 0, y: 18 }}
-        animate={{
-          opacity: inView ? 1 : 0,
-          y: inView ? (hovered && hasExpanded ? -80 : 0) : 18,
-        }}
-        transition={{
-          delay: animatedIn ? 0 : index * 0.15 + 0.1,
-          duration: 0.4,
-          ease: "easeInOut",
-        }}
-        onAnimationComplete={() => {
-          if (inView) {
-            setAnimatedIn(true);
-          }
-        }}
-        style={{
-          top: `calc(${item.top} + 52px)`,
-          left: item.left,
-          boxShadow: hovered
-            ? `0 8px 32px ${item.color}22, 0 0 0 2px ${item.color}33`
-            : undefined,
-        }}
-        className="absolute z-20 w-44 lg:w-48 cursor-pointer"
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-      >
-        <div
-          className="overflow-hidden rounded-xl border border-slate-200 bg-white/95 shadow-md backdrop-blur-sm transition-all duration-500 ease-in-out"
-          style={{
-            maxHeight: hovered && hasExpanded ? "650px" : "160px",
-            minHeight: "160px", // Ensure minimum height to prevent flickering
-            transition: "max-height 0.5s ease-in-out, box-shadow 0.3s ease-in-out",
+          return (
+            <motion.div
+              key={item.fy}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className={`relative flex flex-col sm:flex-row items-start ${
+                isEven ? "sm:flex-row-reverse" : ""
+              } group`}
+            >
+              {/* Central Node */}
+              <div className="absolute left-8 sm:left-1/2 top-0 sm:top-6 -translate-x-1/2 flex items-center justify-center">
+                <div className={`w-12 h-12 rounded-full border-4 border-white dark:border-slate-950 ${item.bgColor} shadow-lg ${item.glowColor} flex items-center justify-center z-10 transition-transform duration-300 group-hover:scale-110`}>
+                  <Icon className="w-5 h-5 text-white dark:text-slate-950" />
+                </div>
+              </div>
 
-            boxShadow: hovered
-              ? `0 8px 32px ${item.color}22, 0 0 0 2px ${item.color}33`
-              : undefined,
-          }}
-        >
-          {/* Year label */}
-          <div
-            className="px-3 py-1.5 text-[11px] font-bold uppercase tracking-widest text-white"
-            style={{ backgroundColor: item.color }}
-          >
-            {item.yearLabel}
-          </div>
+              {/* Content Box */}
+              <div className={`w-full pl-20 sm:pl-0 sm:w-1/2 ${isEven ? "sm:pr-16" : "sm:pl-16"} pt-1 sm:pt-0`}>
+                <div className={`p-6 sm:p-8 rounded-3xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/60 dark:border-slate-700/50 shadow-xl ${item.glowColor} transition-shadow duration-300 hover:shadow-2xl`}>
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className={`text-[11px] font-black uppercase tracking-widest px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 ${item.color}`}>
+                      {item.yearLabel}
+                    </span>
+                    <h4 className="text-xl font-bold text-slate-900 dark:text-white">
+                      {item.fy}
+                    </h4>
+                  </div>
 
-          <div className="p-3">
-            {/* Summary (always visible) */}
-            <ul className="space-y-1.5 text-[12px] font-semibold leading-snug text-slate-800 lg:text-[13px]">
-              {item.summary.map((point) => (
-                <li key={point} className="flex gap-1.5">
-                  <span className="mt-0.5 text-emerald-500">•</span>
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
-
-            {/* Expanded content (revealed on hover) */}
-            {hasExpanded && (
-              <div
-                className="transition-all duration-500 ease-in-out px-3 pb-3"
-                style={{
-                  maxHeight: hovered ? "300px" : "0px",
-                  opacity: hovered ? 1 : 0,
-                  overflow: "hidden",
-                  paddingTop: hovered ? "8px" : "0px",
-                  marginTop: hovered ? "6px" : "0px",
-                }}
-              >
-                <div className="border-t border-dashed border-slate-200 pt-2">
-                  <ul className="space-y-1.5 text-[12px] font-medium leading-snug text-slate-600 lg:text-[13px]">
-                    {item.expanded.map((point) => (
-                      <li key={point} className="flex gap-1.5">
-                        <span className="mt-0.5 text-blue-400">•</span>
-                        <span>{point}</span>
+                  <ul className="space-y-3">
+                    {item.summary.map((point, i) => (
+                      <li key={i} className="flex items-start gap-3 text-slate-700 dark:text-slate-300 text-[15px] leading-relaxed">
+                        <span className={`mt-1.5 w-1.5 h-1.5 rounded-full shrink-0 ${item.bgColor}`} />
+                        {point}
                       </li>
                     ))}
                   </ul>
+
+                  {item.expanded.length > 0 && (
+                    <div className="mt-5 pt-5 border-t border-slate-100 dark:border-slate-800">
+                      <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Key Strategic Initiatives</p>
+                      <ul className="space-y-2.5">
+                        {item.expanded.map((point, i) => (
+                          <li key={i} className="flex items-start gap-2.5 text-slate-500 dark:text-slate-400 text-sm">
+                            <span className="mt-1.5 w-1 h-1 rounded-full shrink-0 bg-slate-300 dark:bg-slate-600" />
+                            {point}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </div>
-            )}
-
-            {/* Expand hint */}
-            {hasExpanded && !hovered && (
-              <p className="mt-2 text-center text-[10px] font-medium text-slate-400 animate-pulse">
-                Hover to see more ↓
-              </p>
-            )}
-          </div>
-        </div>
-      </motion.div>
-    </div>
-  );
-}
-
-export default function TimelineJourney() {
-  const [inView, setInView] = useState(false);
-
-  return (
-    <div className="mx-auto max-w-7xl px-4 py-4">
-      <motion.div
-        onViewportEnter={() => setInView(true)}
-        viewport={{ once: true, amount: 0.15 }}
-        className="relative h-[380px] overflow-visible rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-50 via-white to-emerald-50/30 shadow-xl lg:h-[480px]"
-      >
-        {/* Faint dotted path */}
-        <div className="absolute inset-0 z-0 opacity-20">
-          <svg width="100%" height="100%">
-            <defs>
-              <pattern id="dotted-path" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
-                <circle cx="1" cy="1" r="1.3" fill="#86efac" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#dotted-path)" />
-          </svg>
-        </div>
-
-        {/* Decorative background elements */}
-        <div className="pointer-events-none absolute inset-0 z-0">
-          {/* Gradient blobs */}
-          <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-emerald-200/70 blur-3xl" />
-          <div className="absolute -left-16 bottom-0 h-56 w-56 rounded-full bg-blue-200/60 blur-3xl" />
-          <div className="absolute right-1/3 top-1/2 h-48 w-48 rounded-full bg-amber-200/50 blur-3xl" />
-          <div className="absolute bottom-1/4 left-1/4 h-36 w-36 rounded-full bg-purple-200/50 blur-3xl" />
-          {/* Dot grid pattern */}
-          <svg className="absolute inset-0 h-full w-full opacity-[0.04]">
-            <pattern id="dots" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
-              <circle cx="2" cy="2" r="1.2" fill="currentColor" />
-            </pattern>
-            <rect width="100%" height="100%" fill="url(#dots)" />
-          </svg>
-
-          {/* Decorative icons */}
-          <div className="absolute bottom-8 right-8 text-4xl opacity-80">☀️</div>
-          <div className="absolute bottom-20 right-24 text-3xl opacity-80">🔋</div>
-          <div className="absolute bottom-10 right-44 text-2xl opacity-80">⚡</div>
-        </div>
-
-        {/* Upward path line (diagonal) */}
-        <div className="absolute left-[20%] top-[78%] h-[2px] w-[65%] rotate-[-15deg] rounded-full bg-gradient-to-r from-blue-300 via-emerald-300 to-purple-300" />
-
-        {/* Staircase cards */}
-        {roadmap.map((item, index) => (
-          <StaircaseCard key={item.fy} item={item} index={index} inView={inView} />
-        ))}
-
-        {/* Title */}
-        <div className="absolute left-6 top-5 z-30">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-emerald-600">
-            Growth Roadmap
-          </p>
-          <h3 className="mt-1 text-xl font-black text-slate-900 lg:text-2xl">
-            5-Year Strategic Journey
-          </h3>
-        </div>
-      </motion.div>
+            </motion.div>
+          );
+        })}
+      </div>
     </div>
   );
 }

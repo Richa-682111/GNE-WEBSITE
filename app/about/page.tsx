@@ -249,10 +249,10 @@ export default function AboutPage() {
   ];
 
   return (
+
     <div>
-      <div className="bg-gradient-to-br from-emerald-50/50 to-blue-50/50"></div>
       {/* About Hero Section */}
-      <Section className="py-8 sm:py-10 relative overflow-hidden bg-gradient-to-br from-emerald-100/40 via-blue-100/30 to-purple-100/30 dark:from-slate-900 dark:via-slate-900 dark:to-emerald-950/20">
+      <Section className="py-8 sm:py-10 relative overflow-hidden">
         {/* Decorative background elements */}
         <div className="pointer-events-none absolute inset-0 z-0 opacity-80">
           <div className="absolute -right-32 -top-32 h-[400px] w-[400px] rounded-full bg-emerald-300/30 blur-[100px] dark:bg-emerald-900/20 animate-slow-float" />
@@ -312,7 +312,7 @@ export default function AboutPage() {
       <div className="h-1 w-full bg-gradient-to-r from-transparent via-emerald-300/50 to-transparent dark:via-emerald-700/30" />
 
       {/* Mission & Vision */}
-      <Section className="py-10 relative overflow-hidden bg-gradient-to-b from-emerald-50/60 via-white/80 to-emerald-50/50 dark:from-slate-950/70 dark:via-slate-900/60 dark:to-slate-950/70">
+      <Section className="py-10 relative overflow-hidden">
         {/* Decorative blobs */}
         <div className="pointer-events-none absolute inset-0 z-0">
           <div className="absolute -left-20 top-0 h-64 w-64 rounded-full bg-emerald-200/30 blur-[80px] dark:bg-emerald-900/20 animate-slow-float delay-700" />
@@ -361,7 +361,7 @@ export default function AboutPage() {
       <div className="h-1 w-full bg-gradient-to-r from-transparent via-blue-300/40 to-transparent dark:via-blue-700/25" />
 
       {/* Company Culture */}
-      <Section className="py-10 relative overflow-hidden bg-[radial-gradient(circle_at_center,#ffffff_25%,#dbeafe_60%,#93c5fd_100%)]">
+      <Section className="py-10 relative overflow-hidden">
         <div className="absolute -top-24 -left-24 h-80 w-80 rounded-full bg-blue-300/20 blur-[120px]" />
         <div className="absolute -bottom-24 -right-24 h-80 w-80 rounded-full bg-blue-300/20 blur-[120px]" />
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-blue-50/40 via-white to-emerald-50/30 dark:from-blue-950/20 dark:via-slate-950 dark:to-emerald-950/20"></div>
@@ -414,7 +414,7 @@ export default function AboutPage() {
           </div>
         </div>
       </Section>
-      <Section className="py-10 sm:py-14 relative overflow-hidden bg-gradient-to-b from-white via-emerald-50/30 to-white dark:from-slate-950 dark:via-emerald-950/10 dark:to-slate-950">
+      <Section className="py-10 sm:py-14 relative overflow-hidden">
 
         <div className="pointer-events-none absolute inset-0 z-0">
 
@@ -676,7 +676,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Timeline → Our Journey roadmap image */}
-      <Section className="py-8 sm:py-10 relative overflow-hidden bg-[radial-gradient(circle_at_center,#ffffff_30%,#dbeafe_75%,#93c5fd_100%)]">
+      <Section className="py-8 sm:py-10 relative overflow-hidden">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="text-3xl font-black text-center text-slate-950 dark:text-white sm:text-4xl relative z-10">
             Our Journey
@@ -694,7 +694,7 @@ export default function AboutPage() {
 
 
       {/* Leadership Section - Board Members */}
-      <Section className="py-8 sm:py-10 relative overflow-hidden bg-[radial-gradient(circle_at_center,#ffffff_30%,#dbeafe_75%,#93c5fd_100%)]">
+      <Section className="py-8 sm:py-10 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-100/30 dark:bg-emerald-900/20 rounded-full blur-3xl -mr-48 -mt-48 animate-slow-float delay-200"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-100/30 dark:bg-blue-900/20 rounded-full blur-3xl -ml-48 -mb-48 animate-slow-float delay-900"></div>
@@ -754,7 +754,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Closing CTA */}
-      <Section className="py-8 sm:py-10 relative overflow-hidden bg-[radial-gradient(circle_at_center,#ffffff_30%,#dbeafe_75%,#93c5fd_100%)]">
+      <Section className="py-8 sm:py-10 relative overflow-hidden">
         <div className="absolute inset-0 z-0 bg-gradient-to-r from-emerald-50/50 to-blue-50/50 dark:from-emerald-950/30 dark:to-blue-950/30"></div>
 
         <div className="relative z-10 mx-auto max-w-4xl px-4 text-center">

@@ -29,8 +29,8 @@ export default function HomePage() {
           {/* Service Boxes */}
           <div className="flex flex-wrap justify-center gap-2 sm:gap-2.5">
             {[
-              { key: "solar-epc", href: "/projects/p1", lines: ["Solar EPC"], wide: false },
-              { key: "bess-epc", href: "/projects/p3", lines: ["BESS EPC"], wide: false },
+              { key: "solar-epc", href: "/solar-epc", lines: ["Solar EPC"], wide: false },
+              { key: "bess-epc", href: "/bess-ems", lines: ["BESS EPC"], wide: false },
               { key: "pmc", href: "/pmc", lines: ["Project Management Consultancy"], wide: true },
               { key: "pmc-psp", href: "/pmc-for-psp", lines: ["PMC for PSP"], wide: false },
               { key: "o-and-m", href: "/o-and-m", lines: ["O&M"], wide: false },
@@ -72,11 +72,6 @@ export default function HomePage() {
 
       {/* ── OUR IMPACT ─────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden py-14 sm:py-20">
-        {/* Subtle ambient background */}
-        <div className="pointer-events-none absolute inset-0 -z-10">
-          <div className="absolute -left-32 -top-20 h-[520px] w-[520px] rounded-full bg-emerald-400/10 blur-[100px]" />
-          <div className="absolute -right-24 bottom-0 h-[400px] w-[400px] rounded-full bg-sky-400/10 blur-[90px]" />
-        </div>
 
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           {/* Section header */}
@@ -150,7 +145,7 @@ export default function HomePage() {
             <ScrollReveal delay={120}>
               <div className="flex flex-col gap-6">
                 <p className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
-                  “Building the Infrastructure Powering India's Energy Transition”
+                  “Building the Infrastructure Powering India&apos;s Energy Transition”
                   GNE Infra contributes to the development of sustainable energy infrastructure through integrated Solar EPC, BESS, project development, land procurement, grid connectivity, and project management solutions. Our focus is on enabling faster project execution, improving energy reliability, and supporting the adoption of clean energy technologies across India.
 
                 </p>

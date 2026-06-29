@@ -50,7 +50,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider>
           <LoadingOverlay />
           <Header />
-          <main className="min-h-[70vh]">{children}</main>
+          
+          {/* GLOBAL GLASSY CORPORATE BACKGROUND */}
+          <div className="fixed inset-0 z-[-1] bg-[#f8fafc] dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
+            {/* Fixed Depth Orbs with subtle animations */}
+            <div className="absolute top-[-20%] left-[-10%] w-[50vw] h-[50vw] max-w-[800px] max-h-[800px] bg-emerald-500/10 dark:bg-emerald-500/15 rounded-full blur-[120px] pointer-events-none animate-[pulse_8s_ease-in-out_infinite]" />
+            <div className="absolute bottom-[-20%] right-[-10%] w-[40vw] h-[40vw] max-w-[600px] max-h-[600px] bg-sky-500/10 dark:bg-sky-500/15 rounded-full blur-[100px] pointer-events-none animate-[pulse_12s_ease-in-out_infinite]" />
+            
+            {/* Subtle Noise/Mesh */}
+            <div 
+              className="absolute inset-0 opacity-[0.02] dark:opacity-[0.04] pointer-events-none mix-blend-overlay"
+              style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, black 1px, transparent 0)', backgroundSize: '32px 32px' }}
+            />
+          </div>
+
+          <main className="min-h-[70vh] relative z-0">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

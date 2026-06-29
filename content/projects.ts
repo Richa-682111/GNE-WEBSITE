@@ -99,8 +99,15 @@ export const projects: Project[] = [
     image: "/hero-bess-storage.png",
     summary:
       "Grid-scale battery energy storage with EMS integration for dispatch optimization, degradation-aware operations, and real-time KPI dashboards.",
-    description:
-      "GNE Infra is delivering a 50 MWh BESS installation paired with an intelligent Energy Management System. The scope covers containerized battery integration, PCS and transformer works, grid interconnection, and EMS configuration for peak shaving, frequency support, and solar firming use cases.",
+    description: `
+Intelligent Energy Storage Solutions for a Reliable Grid
+
+As renewable energy adoption continues to grow, Battery Energy Storage Systems (BESS) have become essential for improving grid stability, maximizing renewable energy utilization, and ensuring reliable power availability.
+
+GNE Infra provides integrated BESS EPC solutions covering engineering, procurement, installation, testing, commissioning, and system integration.
+
+Our solutions are designed to support utility-scale, commercial, and industrial energy storage applications with a focus on safety, performance, and long-term reliability.
+`,
     client: "Renewable energy developer",
     scope: [
       "BESS system design & integration",

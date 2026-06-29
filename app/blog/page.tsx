@@ -25,7 +25,7 @@ export default function BlogPage() {
   return (
     <div>
       <JsonLd data={jsonLd} />
-      <Section className="bg-renewable-gradient">
+      <Section className="relative">
         <div className="mx-auto max-w-6xl px-4">
           <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-xs font-semibold text-slate-700 backdrop-blur dark:border-slate-800 dark:bg-slate-950/50 dark:text-slate-200">
             <Newspaper className="h-4 w-4 text-brand-blue" />
@@ -41,7 +41,7 @@ export default function BlogPage() {
         </div>
       </Section>
 
-      <Section className="bg-grid">
+      <Section className="relative">
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid gap-4 md:grid-cols-3">
             {posts.map((p) => (

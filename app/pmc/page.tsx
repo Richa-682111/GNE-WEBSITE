@@ -1,129 +1,94 @@
 import type { Metadata } from "next";
-import { CheckCircle2, ShieldCheck, Target } from "lucide-react";
-import { Card } from "@/components/Card";
-import { Section } from "@/components/Section";
 import { JsonLd } from "@/components/JsonLd";
-import { ServicePageHero } from "@/components/ServicePageHero";
 import { site } from "@/content/site";
+import { PremiumServiceHero } from "@/components/PremiumServiceHero";
+import { EditorialIntro } from "@/components/EditorialIntro";
+import { BentoFeatureGrid } from "@/components/BentoFeatureGrid";
+import { InteractiveHorizontalFlow } from "@/components/InteractiveHorizontalFlow";
+import { BriefcaseBusiness, Activity, Users, ShieldAlert, Calculator, BookOpenCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Project Management Consultancy | GNE Infra",
-  description:
-    "Project Management Consultancy for renewable energy projects: governance, quality, compliance, and stakeholder coordination.",
+  title: "Project Management Consultancy (PMC)",
+  description: "End-to-end Project Management Consultancy for renewable energy and infrastructure projects.",
 };
 
 export default function PmcPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Project Management Consultancy",
+    name: "Project Management Consultancy (PMC)",
     provider: { "@type": "Organization", name: site.legalName, url: site.url },
     areaServed: { "@type": "Country", name: "India" },
     serviceType: "Project Management Consultancy",
-    keywords: ["PMC", "solar project management", "renewable energy consultancy"],
   };
 
-  return (
-    <div className="relative min-h-screen overflow-hidden">
-      {/* Soft Lavender Indigo Gradient — very light indigo corners, pure white center */}
-      <div className="fixed inset-0 -z-10" style={{ background: 'radial-gradient(ellipse at top left, #e0e7ff 0%, #eef2ff 30%, #f5f7ff 58%, #ffffff 72%, #f5f7ff 85%, #e0e7ff 100%)' }}>
-        <div className="absolute left-[-8%] top-[-8%] h-[550px] w-[550px] rounded-full bg-indigo-400/35 blur-[140px]" />
-        <div className="absolute right-[-8%] top-[-8%] h-[550px] w-[550px] rounded-full bg-violet-100/20 blur-[140px]" />
-        <div className="absolute left-[-8%] bottom-[-8%] h-[550px] w-[550px] rounded-full bg-indigo-100/18 blur-[140px]" />
-        <div className="absolute right-[-8%] bottom-[-8%] h-[550px] w-[550px] rounded-full bg-blue-100/18 blur-[140px]" />
-        <div className="absolute left-1/2 top-1/2 h-[65%] w-[65%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/98 blur-[130px]" />
-      </div>
+  const features = [
+    {
+      title: "End-to-End Project Management",
+      description: "Complete oversight from project planning and procurement to commissioning and handover.",
+      icon: BriefcaseBusiness,
+    },
+    {
+      title: "Execution Monitoring",
+      description: "Continuous monitoring of project progress, quality, timelines, and contractor performance.",
+      icon: Activity,
+    },
+    {
+      title: "Stakeholder Coordination",
+      description: "Effective coordination between clients, contractors, consultants, vendors, and regulatory authorities.",
+      icon: Users,
+    },
+    {
+      title: "Risk & Quality Management",
+      description: "Proactive risk identification, quality assurance, compliance monitoring, and issue resolution.",
+      icon: ShieldAlert,
+    },
+    {
+      title: "Cost & Schedule Control",
+      description: "Structured planning and progress tracking to optimize project costs and ensure timely completion.",
+      icon: Calculator,
+    },
+    {
+      title: "Technical & Regulatory Expertise",
+      description: "Strong understanding of engineering standards, statutory approvals, and grid requirements.",
+      icon: BookOpenCheck,
+    },
+  ];
 
+  const scopeSteps = [
+    { title: "Planning" },
+    { title: "Engineering Coord." },
+    { title: "Procurement" },
+    { title: "Monitoring" },
+    { title: "Risk Mgmt" },
+    { title: "Commissioning" },
+    { title: "Handover" },
+  ];
+
+  return (
+    <div className="flex flex-col min-h-screen">
       <JsonLd data={jsonLd} />
-      <ServicePageHero
-        className="[background:radial-gradient(ellipse_at_top_left,#e0e7ff_0%,#eef2ff_30%,#f5f7ff_58%,#ffffff_72%,#f5f7ff_85%,#e0e7ff_100%)]"
-        badge={
-          <div className="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50/80 px-4 py-2 text-xs font-semibold text-indigo-800 backdrop-blur">
-            <Target className="h-4 w-4 text-indigo-600" />
-            Project Management Consultancy
-          </div>
-        }
-        title="Project Management Consultancy For Solar, BESS, Pumped Storage Project (PSP)"
-        description="Driving Seamless Execution and On-Ground Delivery"
+      
+      <PremiumServiceHero
+        title="Project Management Consultancy"
+        subtitle="Delivering end-to-end Project Management Consultancy (PMC) services for renewable energy and infrastructure projects, ensuring seamless planning, execution, quality assurance, and timely project delivery from concept to commissioning."
         image="/service-pmc.jpg"
-        imageAlt="Project management and engineering consultancy"
-        primaryCta={{ href: "/contact", label: "Request PMC Support" }}
-        secondaryCta={{ href: "/projects", label: "Review Delivery Experience" }}
       />
 
-      <Section className="bg-transparent">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="grid gap-10 lg:grid-cols-2">
-            <div>
-              <h2 className="text-3xl font-black tracking-tight">PMC that keeps projects on track</h2>
-              <p className="mt-5 text-base leading-relaxed text-slate-700 dark:text-slate-300">
-                Our PMC services are tailored for large-scale solar and energy storage assets, with robust contract governance,
-                quality assurance, risk management and reporting built in from day one.
-              </p>
-              <ul className="mt-8 space-y-4 text-sm text-slate-600 dark:text-slate-300">
-                <li className="flex gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-indigo-500" />
-                  Land Identification &amp; ROU structuring
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-indigo-500" />
-                  Concept engineering (SLD, layouts, GAD)
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-indigo-500" />
-                  Grid connectivity &amp; approvals
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-indigo-500" />
-                  Regulatory &amp; statutory advisory
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-indigo-500" />
-                  DPR support &amp; lender coordination
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-indigo-500" />
-                  Execution planning &amp; EMS integration
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-indigo-500" />
-                  SCADA integration &amp; EHS advisory
-                </li>
-              </ul>
-            </div>
+      <EditorialIntro 
+        title="Driving Successful Project Delivery through Expert Management"
+        content="GNE Infra provides comprehensive Project Management Consultancy (PMC) services for solar, BESS, and renewable energy infrastructure projects. Acting as the client's representative, we oversee planning, engineering coordination, procurement, construction, quality control, and project execution to ensure every project is delivered safely, on schedule, within budget, and in compliance with technical and regulatory requirements."
+      />
 
-            <div className="space-y-6">
-              <Card>
-                <div className="text-sm font-semibold text-slate-900 dark:text-white">What we manage</div>
-                <div className="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
-                  <div>Scope alignment and change control</div>
-                  <div>Schedule monitoring and issue resolution</div>
-                  <div>Procurement oversight and vendor performance</div>
-                </div>
-              </Card>
-              <Card>
-                <div className="text-sm font-semibold text-slate-900 dark:text-white">Our PMC promise</div>
-                <div className="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
-                  <div>Transparent governance and stakeholder communication</div>
-                  <div>Consistent quality checks with audit-ready documentation</div>
-                  <div>Practical decisions that preserve capital and schedule</div>
-                </div>
-              </Card>
-              <Card>
-                <div className="flex items-start gap-3">
-                  <ShieldCheck className="mt-0.5 h-5 w-5 text-indigo-500" />
-                  <div>
-                    <div className="text-sm font-semibold">Handover excellence</div>
-                    <div className="mt-2 text-sm text-slate-600 dark:text-slate-300">
-                      We prepare commissioning reports, O&amp;M readiness packages, and formal acceptance documentation.
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </Section>
+      <BentoFeatureGrid 
+        title="Why Choose GNE Infra"
+        features={features}
+      />
+
+      <InteractiveHorizontalFlow 
+        title="Our PMC Scope"
+        steps={scopeSteps}
+      />
     </div>
   );
 }

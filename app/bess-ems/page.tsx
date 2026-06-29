@@ -1,118 +1,94 @@
 import type { Metadata } from "next";
-import { Battery, CheckCircle2, Cpu, Gauge, LineChart, ShieldCheck } from "lucide-react";
-import { Card } from "@/components/Card";
-import { Section } from "@/components/Section";
 import { JsonLd } from "@/components/JsonLd";
-import { ServicePageHero } from "@/components/ServicePageHero";
 import { site } from "@/content/site";
+import { PremiumServiceHero } from "@/components/PremiumServiceHero";
+import { EditorialIntro } from "@/components/EditorialIntro";
+import { BentoFeatureGrid } from "@/components/BentoFeatureGrid";
+import { InteractiveHorizontalFlow } from "@/components/InteractiveHorizontalFlow";
+import { Building2, Cpu, Network, ShieldCheck, Expand, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "BESS Solutions & EMS Software",
-  description:
-    "Battery Energy Storage Systems (BESS) and EMS software: sizing, integration, dispatch strategy, monitoring, and analytics.",
+  title: "BESS EPC Solutions",
+  description: "Delivering end-to-end Battery Energy Storage System (BESS) EPC solutions for utilities and commercial applications.",
 };
 
-export default function BessEmsPage() {
+export default function BessEpcPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "BESS & EMS Solutions",
+    name: "BESS EPC",
     provider: { "@type": "Organization", name: site.legalName, url: site.url },
     areaServed: { "@type": "Country", name: "India" },
-    serviceType: "BESS solutions",
-    keywords: ["BESS solutions", "Energy Management System", "EMS software", "battery storage India"],
+    serviceType: "BESS EPC",
   };
 
+  const features = [
+    {
+      title: "Integrated EPC Delivery",
+      description: "Complete project execution from engineering and procurement to commissioning and handover.",
+      icon: Building2,
+    },
+    {
+      title: "Advanced System Integration",
+      description: "Expertise in integrating Battery Systems, PCS, EMS, SCADA, Transformers, and Balance of Plant (BoP).",
+      icon: Cpu,
+    },
+    {
+      title: "Grid Integration Expertise",
+      description: "Seamless integration with utility grids while ensuring regulatory compliance and reliable power evacuation.",
+      icon: Network,
+    },
+    {
+      title: "Quality & Safety",
+      description: "Strict adherence to international quality standards and comprehensive safety protocols throughout project execution.",
+      icon: ShieldCheck,
+    },
+    {
+      title: "Scalable Storage Solutions",
+      description: "Flexible BESS solutions designed for utility-scale, commercial, and industrial applications.",
+      icon: Expand,
+    },
+    {
+      title: "Performance-Focused",
+      description: "Optimized system design and execution to maximize operational efficiency, reliability, and asset performance.",
+      icon: Zap,
+    },
+  ];
+
+  const scopeSteps = [
+    { title: "Project Planning" },
+    { title: "Engineering & Design" },
+    { title: "Procurement" },
+    { title: "Installation" },
+    { title: "Testing" },
+    { title: "EMS Integration" },
+    { title: "Grid Sync" },
+  ];
+
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <JsonLd data={jsonLd} />
-      <ServicePageHero
-        badge={
-          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-xs font-semibold text-slate-700 backdrop-blur dark:border-slate-800 dark:bg-slate-950/50 dark:text-slate-200">
-            <Battery className="h-4 w-4 text-brand-blue" />
-            BESS & EMS
-          </div>
-        }
-        title="Storage that performs—powered by EMS"
-        description="We make battery projects bankable with controls, analytics, and operational discipline—so BESS delivers measurable value."
+      
+      <PremiumServiceHero
+        title="Battery Energy Storage System (BESS) EPC"
+        subtitle="Delivering end-to-end Battery Energy Storage System (BESS) EPC solutions for utilities, renewable energy developers, and commercial & industrial applications, enabling reliable energy storage, grid stability, and optimized power management."
         image="/hero-bess-storage.png"
-        imageAlt="Battery energy storage system installation"
-        primaryCta={{ href: "/contact", label: "Discuss BESS + EMS" }}
-        secondaryCta={{ href: "/projects/p3", label: "View Case Study" }}
       />
 
-      <Section className="bg-service-gradient">
-        <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-2xl font-bold tracking-tight">Key differentiators</h2>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            <Card>
-              <div className="flex items-start gap-3">
-                <Cpu className="mt-0.5 h-5 w-5 text-brand-blue" />
-                <div>
-                  <div className="text-sm font-semibold">EMS software</div>
-                  <div className="mt-1 text-sm text-slate-600 dark:text-slate-300">
-                    Dispatch optimization, constraints handling, and automated reporting.
-                  </div>
-                </div>
-              </div>
-            </Card>
-            <Card>
-              <div className="flex items-start gap-3">
-                <Gauge className="mt-0.5 h-5 w-5 text-brand-solar" />
-                <div>
-                  <div className="text-sm font-semibold">Performance analytics</div>
-                  <div className="mt-1 text-sm text-slate-600 dark:text-slate-300">
-                    Round-trip efficiency, degradation tracking, alarms, and KPI dashboards.
-                  </div>
-                </div>
-              </div>
-            </Card>
-            <Card>
-              <div className="flex items-start gap-3">
-                <ShieldCheck className="mt-0.5 h-5 w-5 text-brand-green" />
-                <div>
-                  <div className="text-sm font-semibold">Safety + compliance</div>
-                  <div className="mt-1 text-sm text-slate-600 dark:text-slate-300">
-                    Commissioning checklists, SOPs, and integration validation.
-                  </div>
-                </div>
-              </div>
-            </Card>
-          </div>
+      <EditorialIntro 
+        title="Intelligent Energy Storage Solutions for a Reliable Grid"
+        content="As renewable energy adoption continues to grow, Battery Energy Storage Systems (BESS) have become essential for improving grid stability, maximizing renewable energy utilization, and ensuring reliable power availability. GNE Infra provides integrated BESS EPC solutions covering engineering, procurement, installation, testing, commissioning, and system integration. Our solutions are designed to support utility-scale, commercial, and industrial energy storage applications with a focus on safety, performance, and long-term reliability."
+      />
 
-          <div className="mt-10 grid gap-4 md:grid-cols-2">
-            <Card>
-              <div className="text-base font-semibold">Use cases</div>
-              <ul className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
-                <li className="flex gap-2">
-                  <CheckCircle2 className="mt-0.5 h-4 w-4 text-brand-green" />
-                  Peak shaving and demand charge reduction
-                </li>
-                <li className="flex gap-2">
-                  <CheckCircle2 className="mt-0.5 h-4 w-4 text-brand-green" />
-                  Solar smoothing and grid support
-                </li>
-                <li className="flex gap-2">
-                  <CheckCircle2 className="mt-0.5 h-4 w-4 text-brand-green" />
-                  Backup power and critical loads
-                </li>
-              </ul>
-            </Card>
-            <Card>
-              <div className="flex items-start gap-3">
-                <LineChart className="mt-0.5 h-5 w-5 text-brand-green" />
-                <div>
-                  <div className="text-base font-semibold">Sizing + strategy</div>
-                  <div className="mt-1 text-sm text-slate-600 dark:text-slate-300">
-                    We align energy capacity, power rating, and dispatch strategy to the business
-                    objective—then validate with data.
-                  </div>
-                </div>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </Section>
+      <BentoFeatureGrid 
+        title="Why Choose GNE Infra"
+        features={features}
+      />
+
+      <InteractiveHorizontalFlow 
+        title="Our BESS EPC Scope"
+        steps={scopeSteps}
+      />
     </div>
   );
 }

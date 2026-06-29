@@ -4,7 +4,7 @@ import { ProjectsPortfolio } from "@/components/ProjectsPortfolio";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { JsonLd } from "@/components/JsonLd";
 import { site } from "@/content/site";
-
+import Link from "next/link";
 export const metadata: Metadata = {
   title: "EPC Projects & Case Studies",
   description:
@@ -27,83 +27,6 @@ export default function ProjectsPage() {
 
   return (
     <div className="relative min-h-screen pb-16 overflow-hidden">
-      {/* Soft Gradient Background */}
-      <div className="fixed inset-0 -z-10">
-        {/* Base */}
-        <div className="absolute inset-0 bg-red-200" />
-
-        {/* White glow */}
-        <div
-          className="
-            absolute
-            left-1/2
-            top-[5%]
-            h-[700px]
-            w-[700px]
-            -translate-x-1/2
-            rounded-full
-            bg-white/95
-            blur-[150px]
-          "
-        />
-
-        {/* Pink */}
-        <div
-          className="
-            absolute
-            left-[-5%]
-            top-[20%]
-            h-[500px]
-            w-[500px]
-            rounded-full
-            bg-pink-200/20
-            blur-[120px]
-          "
-        />
-
-        {/* Purple */}
-        <div
-          className="
-            absolute
-            right-[10%]
-            top-[15%]
-            h-[550px]
-            w-[550px]
-            rounded-full
-            bg-violet-200/20
-            blur-[120px]
-          "
-        />
-
-        {/* Blue */}
-        <div
-          className="
-            absolute
-            left-[20%]
-            bottom-[5%]
-            h-[500px]
-            w-[500px]
-            rounded-full
-            bg-sky-200/20
-            blur-[120px]
-          "
-        />
-
-        {/* Lavender accent */}
-        <div
-          className="
-            absolute
-            right-[20%]
-            bottom-[10%]
-            h-[350px]
-            w-[350px]
-            rounded-full
-            bg-fuchsia-100/20
-            blur-[100px]
-          "
-        />
-      </div>
-
       <JsonLd data={jsonLd} />
 
       {/* Hero Banner */}
@@ -121,20 +44,38 @@ export default function ProjectsPage() {
 
         <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="max-w-2xl text-white">
-              <h1 className="text-4xl font-black sm:text-5xl tracking-tight leading-none">
+         <div className="max-w-2xl text-white translate-x-20 -translate-y-20">
+             <h1 className="mb-6 text-5xl sm:text-7xl font-black tracking-tight leading-none text-white-300 drop-shadow-lg">
                 Projects & Project Pipeline
               </h1>
 
-              <p className="mt-3 text-lg sm:text-xl font-bold text-emerald-400">
+              <p className="mt-3 text-lg sm:text-xl font-bold text-white">
+                
                 Delivering renewable energy infrastructure through integrated engineering, project management, land development, and energy storage solutions.
               </p>
 
-              <p className="mt-3.5 text-xs sm:text-sm leading-relaxed text-slate-200 max-w-xl opacity-90">
-                We deliver end-to-end renewable energy solutions through EPC,
-                BESS, O&M and Project Management services with excellence and
-                integrity.
-              </p>
+             <Link
+  href="/contact"
+  className="
+    mt-8
+    inline-flex
+    items-center
+    rounded-xl
+    bg-emerald-600
+    px-6
+    py-3
+    text-base
+    font-semibold
+    text-white
+    shadow-lg
+    transition-all
+    duration-300
+    hover:bg-emerald-700
+    hover:scale-105
+  "
+>
+  Discuss Your Project
+</Link>
             </div>
           </ScrollReveal>
         </div>

@@ -2,8 +2,8 @@ import Link from "next/link";
 import { site } from "@/content/site";
 
 const serviceLinks = [
-  { href: "/projects/p1", label: "SOLAR (EPC/IPP, I&C)" },
-  { href: "/projects/p3", label: "BESS (EPC / I&C)" },
+  { href: "/solar-epc", label: "SOLAR (EPC/IPP, I&C)" },
+  { href: "/bess-ems", label: "BESS (EPC / I&C)" },
   { href: "/pmc", label: "Project Management Consultancy (PMC)" },
   { href: "/o-and-m", label: "O&M" },
   { href: "/green-hydrogen", label: "Green Hydrogen" },

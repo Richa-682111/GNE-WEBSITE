@@ -181,8 +181,8 @@ export default async function ProjectDetailPage({ params }: Props) {
               BESS + EMS Deployment
             </div>
           }
-          title="Grid-Scale Battery Energy Storage (BESS) & Intelligent Energy Management (EMS)"
-          description="Optimizing dispatch control, peak shaving, frequency support, degradation-aware operations, and remote monitoring analytics."
+          title="Battery Energy Storage System (BESS) EPC"
+          description="Delivering end-to-end Battery Energy Storage System (BESS) EPC solutions for utilities, renewable energy developers, and commercial & industrial applications, enabling reliable energy storage, grid stability, and optimized power management."
           image="/hero-bess-storage.png"
           imageAlt="Utility-scale battery energy storage system"
           primaryCta={{ href: "/contact", label: "Request BESS Support" }}
@@ -193,7 +193,7 @@ export default async function ProjectDetailPage({ params }: Props) {
           <div className="mx-auto max-w-6xl px-4">
             <div className="grid gap-10 lg:grid-cols-2">
               <div>
-                <h2 className="text-3xl font-black tracking-tight">BESS & EMS that optimizes storage stability</h2>
+                <h2 className="text-3xl font-black tracking-tight">ABOUT BESS EPC</h2>
                 <p className="mt-5 text-base leading-relaxed text-slate-700 dark:text-slate-300">
                   {project.description}
                 </p>

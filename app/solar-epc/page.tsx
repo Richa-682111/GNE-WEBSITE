@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { CheckCircle2, HardHat, LineChart, Wrench, Zap } from "lucide-react";
-import { Card } from "@/components/Card";
-import { Section } from "@/components/Section";
 import { JsonLd } from "@/components/JsonLd";
-import { ServicePageHero } from "@/components/ServicePageHero";
 import { site } from "@/content/site";
+import { PremiumServiceHero } from "@/components/PremiumServiceHero";
+import { EditorialIntro } from "@/components/EditorialIntro";
+import { BentoFeatureGrid } from "@/components/BentoFeatureGrid";
+import { InteractiveHorizontalFlow } from "@/components/InteractiveHorizontalFlow";
+import { Building2, DraftingCompass, ShieldCheck, MapPin, BriefcaseBusiness, Leaf, CheckCircle2 } from "lucide-react";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Solar EPC India",
-  description:
-    "Solar EPC delivery for utility-scale and rooftop projects: design, procurement, construction, commissioning, and O&M readiness.",
+  title: "Solar EPC Solutions",
+  description: "Delivering end-to-end Engineering, Procurement, Construction, and Commissioning solutions for solar power projects.",
 };
 
 export default function SolarEpcPage() {
@@ -21,96 +21,114 @@ export default function SolarEpcPage() {
     provider: { "@type": "Organization", name: site.legalName, url: site.url },
     areaServed: { "@type": "Country", name: "India" },
     serviceType: "Solar EPC",
-    keywords: ["Solar EPC India", "utility-scale solar", "rooftop solar", "EPC contractor"],
   };
 
+  const features = [
+    {
+      title: "End-to-End EPC Delivery",
+      description: "Comprehensive project execution from engineering to commissioning.",
+      icon: Building2,
+    },
+    {
+      title: "Engineering Excellence",
+      description: "Optimized system design for maximum performance and reliability.",
+      icon: DraftingCompass,
+    },
+    {
+      title: "Quality-Driven Execution",
+      description: "Strict quality assurance at every stage of construction.",
+      icon: ShieldCheck,
+    },
+    {
+      title: "Land & Grid Expertise",
+      description: "Integrated support for land development and grid connectivity.",
+      icon: MapPin,
+    },
+    {
+      title: "Experienced Management",
+      description: "Structured planning and execution with schedule adherence.",
+      icon: BriefcaseBusiness,
+    },
+    {
+      title: "Safety & Sustainability",
+      description: "Highest standards in HSE and sustainable infrastructure practices.",
+      icon: Leaf,
+    },
+  ];
+
+  const scopeSteps = [
+    { title: "Site Assessment" },
+    { title: "Engineering" },
+    { title: "Procurement" },
+    { title: "Construction" },
+    { title: "Testing" },
+    { title: "Commissioning" },
+    { title: "Grid Sync" },
+    { title: "O&M Support" },
+  ];
+
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <JsonLd data={jsonLd} />
-      <ServicePageHero
-        badge={
-          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-xs font-semibold text-slate-700 backdrop-blur dark:border-slate-800 dark:bg-slate-950/50 dark:text-slate-200">
-            <Zap className="h-4 w-4 text-brand-solar" />
-            Solar EPC
-          </div>
-        }
-        title="Utility-scale and rooftop Solar EPC"
-        description="From feasibility to commissioning—with predictable timelines, bankable documentation, and quality-controlled execution."
+      
+      <PremiumServiceHero
+        title="Solar EPC Solutions"
+        subtitle="Delivering end-to-end Engineering, Procurement, Construction, and Commissioning solutions for utility-scale, commercial, and industrial solar power projects."
         image="/hero-solar-farm.png"
-        imageAlt="Utility-scale solar farm installation"
-        primaryCta={{ href: "/contact", label: "Get EPC Proposal" }}
-        secondaryCta={{ href: "/projects/p1", label: "See Case Study" }}
       />
 
-      <Section className="bg-service-gradient">
-        <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-2xl font-bold tracking-tight">What we deliver</h2>
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
-            <Card>
-              <div className="flex items-start gap-3">
-                <Wrench className="mt-0.5 h-5 w-5 text-brand-blue" />
-                <div>
-                  <div className="text-base font-semibold">Engineering & design</div>
-                  <ul className="mt-2 space-y-2 text-sm text-slate-600 dark:text-slate-300">
-                    <li className="flex gap-2">
-                      <CheckCircle2 className="mt-0.5 h-4 w-4 text-brand-green" />
-                      Plant layout, SLD, stringing, earthing, and SCADA readiness
-                    </li>
-                    <li className="flex gap-2">
-                      <CheckCircle2 className="mt-0.5 h-4 w-4 text-brand-green" />
-                      BoQ/BoM optimization for yield and reliability
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </Card>
-            <Card>
-              <div className="flex items-start gap-3">
-                <HardHat className="mt-0.5 h-5 w-5 text-brand-solar" />
-                <div>
-                  <div className="text-base font-semibold">Construction & commissioning</div>
-                  <ul className="mt-2 space-y-2 text-sm text-slate-600 dark:text-slate-300">
-                    <li className="flex gap-2">
-                      <CheckCircle2 className="mt-0.5 h-4 w-4 text-brand-green" />
-                      Civil, mechanical, electrical installation with QA/QC checkpoints
-                    </li>
-                    <li className="flex gap-2">
-                      <CheckCircle2 className="mt-0.5 h-4 w-4 text-brand-green" />
-                      Testing protocols, performance validation, as-built documentation
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </Card>
-          </div>
+      <EditorialIntro 
+        title="Building High-Performance Solar Infrastructure"
+        content="GNE Infra delivers integrated Solar EPC solutions that transform project concepts into operational renewable energy assets. From feasibility and engineering to procurement, construction, commissioning, and long-term support, we ensure every project is executed with a focus on quality, efficiency, safety, and performance."
+      />
 
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
-            <Card>
-              <div className="flex items-start gap-3">
-                <LineChart className="mt-0.5 h-5 w-5 text-brand-green" />
-                <div>
-                  <div className="text-sm font-semibold">Yield-first approach</div>
-                  <div className="mt-1 text-sm text-slate-600 dark:text-slate-300">
-                    Design choices guided by generation, losses, and O&M impact.
-                  </div>
-                </div>
+      <BentoFeatureGrid 
+        title="Why Choose GNE Infra"
+        features={features}
+      />
+
+      <InteractiveHorizontalFlow 
+        title="Our Solar EPC Scope"
+        steps={scopeSteps}
+      />
+
+      {/* Additional Solar EPC Details */}
+      <section className="py-24 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <ScrollReveal delay={100}>
+              <div className="bg-slate-50 dark:bg-slate-800/50 p-8 rounded-3xl h-full border border-slate-200/60 dark:border-slate-700/50 hover:shadow-xl transition-shadow duration-300">
+                <h4 className="text-sm font-black text-brand-green uppercase tracking-widest mb-6">Engineering & Design</h4>
+                <ul className="space-y-4 text-sm font-semibold text-slate-700 dark:text-slate-300">
+                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-brand-green shrink-0" /> Solar & BESS Plant Design, Development & Optimization</li>
+                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-brand-green shrink-0" /> Topology & Site Feasibility Surveys</li>
+                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-brand-green shrink-0" /> PV System Modelling & Shadow Analysis</li>
+                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-brand-green shrink-0" /> Structural Design & STAD Analysis</li>
+                </ul>
               </div>
-            </Card>
-            <Card>
-              <div className="text-sm font-semibold">Rooftop solutions</div>
-              <div className="mt-1 text-sm text-slate-600 dark:text-slate-300">
-                Industrial rooftops with safe access, structural checks, and net-metering alignment.
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <div className="bg-slate-50 dark:bg-slate-800/50 p-8 rounded-3xl h-full border border-slate-200/60 dark:border-slate-700/50 hover:shadow-xl transition-shadow duration-300">
+                <h4 className="text-sm font-black text-brand-green uppercase tracking-widest mb-6">Execution & Delivery</h4>
+                <ul className="space-y-4 text-sm font-semibold text-slate-700 dark:text-slate-300">
+                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-brand-green shrink-0" /> Engineering, Procurement & Construction (EPC)</li>
+                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-brand-green shrink-0" /> Testing, Commissioning & Grid Integration</li>
+                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-brand-green shrink-0" /> CEIG Approvals & Net Metering Services</li>
+                </ul>
               </div>
-            </Card>
-            <Card>
-              <div className="text-sm font-semibold">Utility-scale delivery</div>
-              <div className="mt-1 text-sm text-slate-600 dark:text-slate-300">
-                Execution planning, construction management, commissioning & handover for scale.
+            </ScrollReveal>
+            <ScrollReveal delay={300}>
+              <div className="bg-slate-50 dark:bg-slate-800/50 p-8 rounded-3xl h-full border border-slate-200/60 dark:border-slate-700/50 hover:shadow-xl transition-shadow duration-300">
+                <h4 className="text-sm font-black text-brand-green uppercase tracking-widest mb-6">Digital & O&M Solutions</h4>
+                <ul className="space-y-4 text-sm font-semibold text-slate-700 dark:text-slate-300">
+                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-brand-green shrink-0" /> Centralized Monitoring Systems & IoT Integration</li>
+                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-brand-green shrink-0" /> Solar SCADA for Ground-Mounted Projects</li>
+                </ul>
               </div>
-            </Card>
+            </ScrollReveal>
           </div>
         </div>
-      </Section>
+      </section>
     </div>
   );
 }
