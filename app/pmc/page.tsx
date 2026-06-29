@@ -24,12 +24,22 @@ export default function PmcPage() {
   };
 
   return (
-    <div>
+    <div className="relative min-h-screen overflow-hidden">
+      {/* Soft Lavender Indigo Gradient — very light indigo corners, pure white center */}
+      <div className="fixed inset-0 -z-10" style={{ background: 'radial-gradient(ellipse at top left, #e0e7ff 0%, #eef2ff 30%, #f5f7ff 58%, #ffffff 72%, #f5f7ff 85%, #e0e7ff 100%)' }}>
+        <div className="absolute left-[-8%] top-[-8%] h-[550px] w-[550px] rounded-full bg-indigo-400/35 blur-[140px]" />
+        <div className="absolute right-[-8%] top-[-8%] h-[550px] w-[550px] rounded-full bg-violet-100/20 blur-[140px]" />
+        <div className="absolute left-[-8%] bottom-[-8%] h-[550px] w-[550px] rounded-full bg-indigo-100/18 blur-[140px]" />
+        <div className="absolute right-[-8%] bottom-[-8%] h-[550px] w-[550px] rounded-full bg-blue-100/18 blur-[140px]" />
+        <div className="absolute left-1/2 top-1/2 h-[65%] w-[65%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/98 blur-[130px]" />
+      </div>
+
       <JsonLd data={jsonLd} />
       <ServicePageHero
+        className="[background:radial-gradient(ellipse_at_top_left,#e0e7ff_0%,#eef2ff_30%,#f5f7ff_58%,#ffffff_72%,#f5f7ff_85%,#e0e7ff_100%)]"
         badge={
-          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-xs font-semibold text-slate-700 backdrop-blur dark:border-slate-800 dark:bg-slate-950/50 dark:text-slate-200">
-            <Target className="h-4 w-4 text-brand-blue" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50/80 px-4 py-2 text-xs font-semibold text-indigo-800 backdrop-blur">
+            <Target className="h-4 w-4 text-indigo-600" />
             Project Management Consultancy
           </div>
         }
@@ -41,7 +51,7 @@ export default function PmcPage() {
         secondaryCta={{ href: "/projects", label: "Review Delivery Experience" }}
       />
 
-      <Section className="bg-service-gradient">
+      <Section className="bg-transparent">
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid gap-10 lg:grid-cols-2">
             <div>
@@ -52,32 +62,32 @@ export default function PmcPage() {
               </p>
               <ul className="mt-8 space-y-4 text-sm text-slate-600 dark:text-slate-300">
                 <li className="flex gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-brand-green" />
-                  Land Identification & ROU structuring
+                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-indigo-500" />
+                  Land Identification &amp; ROU structuring
                 </li>
                 <li className="flex gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-brand-green" />
+                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-indigo-500" />
                   Concept engineering (SLD, layouts, GAD)
                 </li>
                 <li className="flex gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-brand-green" />
-                  Grid connectivity & approvals
+                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-indigo-500" />
+                  Grid connectivity &amp; approvals
                 </li>
                 <li className="flex gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-brand-green" />
-                  Regulatory & statutory advisory
+                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-indigo-500" />
+                  Regulatory &amp; statutory advisory
                 </li>
                 <li className="flex gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-brand-green" />
-                  DPR support & lender coordination
+                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-indigo-500" />
+                  DPR support &amp; lender coordination
                 </li>
                 <li className="flex gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-brand-green" />
-                  Execution planning & EMS integration
+                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-indigo-500" />
+                  Execution planning &amp; EMS integration
                 </li>
                 <li className="flex gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-brand-green" />
-                  SCADA integration & EHS advisory
+                  <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-indigo-500" />
+                  SCADA integration &amp; EHS advisory
                 </li>
               </ul>
             </div>
@@ -101,11 +111,11 @@ export default function PmcPage() {
               </Card>
               <Card>
                 <div className="flex items-start gap-3">
-                  <ShieldCheck className="mt-0.5 h-5 w-5 text-brand-blue" />
+                  <ShieldCheck className="mt-0.5 h-5 w-5 text-indigo-500" />
                   <div>
                     <div className="text-sm font-semibold">Handover excellence</div>
                     <div className="mt-2 text-sm text-slate-600 dark:text-slate-300">
-                      We prepare commissioning reports, O&M readiness packages, and formal acceptance documentation.
+                      We prepare commissioning reports, O&amp;M readiness packages, and formal acceptance documentation.
                     </div>
                   </div>
                 </div>

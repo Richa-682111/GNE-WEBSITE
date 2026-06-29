@@ -284,7 +284,7 @@ export default function AboutPage() {
                 </span>
               </h1>
               <p className="max-w-2xl text-sm leading-relaxed text-slate-700 dark:text-slate-300 sm:text-[15px] sm:leading-7">
-                At GNE Infra, we are committed to providing innovative solar energy solutions and Battery Energy Solutions (BESS) that are designed to meet the growing energy demands of businesses, industries, and communities. We are dedicated to revolutionizing the energy landscape with innovative and sustainable solar solutions. As a leading EPC (Engineering, Procurement, and Construction) company, we specialize in delivering high-quality, end-to-end solar energy solutions and BESS for commercial, industrial, and utility-scale projects. We specialize in the full spectrum of solar project development, from design and engineering to procurement and constructions.
+                At GNE Infra, we are committed to providing innovative solar energy solutions and Battery Energy Solutions (BESS) that are designed to meet the growing energy demands of businesses, industries, and communities. We are dedicated to revolutionizing the energy landscape with innovative and sustainable solar solutions. As a leading EPC (Engineering, Procurement, and Construction) company, we specialize in delivering high-quality, end-to-end solar energy solutions and BESS for commercial, industrial, and utility-scale projects. We specialize in the full spectrum of solar project development, from design and engineering to procurement and constructions
               </p>
             </div>
 

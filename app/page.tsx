@@ -23,7 +23,7 @@ export default function HomePage() {
 
           {/* Subheading */}
           <p className="mx-auto max-w-2xl text-center text-sm font-medium leading-snug text-white/95 drop-shadow-md sm:text-[15px]">
-            Delivering Solar EPC, Battery Energy Storage Systems (BESS), and Intelligent Energy Management Solutions for commercial, industrial, and utility-scale clients across India.
+            Integrating Solar, Energy Storage & Green Hydrogen Solutions for a Net-Zero World
           </p>
 
           {/* Service Boxes */}
@@ -149,16 +149,12 @@ export default function HomePage() {
             {/* RIGHT — Copy */}
             <ScrollReveal delay={120}>
               <div className="flex flex-col gap-6">
-                <p className="text-base leading-relaxed text-slate-700 dark:text-slate-300">
-                  Since our inception, <strong className="text-slate-900 dark:text-white">GNE Infra</strong> has been
-                  at the forefront of India&apos;s solar energy revolution. Our innovative solar systems have
-                  empowered businesses and communities to reduce their energy costs, achieve sustainability
-                  goals, and contribute to the global effort against climate change.
+                <p className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
+                  “Building the Infrastructure Powering India's Energy Transition”
+                  GNE Infra contributes to the development of sustainable energy infrastructure through integrated Solar EPC, BESS, project development, land procurement, grid connectivity, and project management solutions. Our focus is on enabling faster project execution, improving energy reliability, and supporting the adoption of clean energy technologies across India.
+
                 </p>
-                <p className="text-base leading-relaxed text-slate-700 dark:text-slate-300">
-                  Led by forward-thinking professionals, GNE Infra focuses on delivering top-tier project
-                  execution and optimizing cost efficiency through effective supply chain management.
-                </p>
+
 
                 <Link
                   href="/about"
@@ -173,6 +169,107 @@ export default function HomePage() {
 
           {/* ── KPI Stats row ─────────────────────────────────────────── */}
           <ImpactStats />
+        </div>
+      </section>
+
+      {/* ── WHAT WE DO — Editorial Numbered Strip ───────────────────────── */}
+      <section className="relative py-16 sm:py-24 overflow-hidden">
+        {/* Subtle background */}
+        <div className="pointer-events-none absolute inset-0 -z-10">
+          <div className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-emerald-200/60 to-transparent" />
+          <div className="absolute left-0 bottom-0 h-px w-full bg-gradient-to-r from-transparent via-emerald-200/60 to-transparent" />
+        </div>
+
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          {/* Section header */}
+          <ScrollReveal>
+            <div className="mb-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+              <div>
+                <span className="mb-3 inline-block rounded-full bg-emerald-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-emerald-700 ring-1 ring-emerald-200">
+                  Our Focus Areas
+                </span>
+                <h2 className="mt-2 text-4xl font-black tracking-tight text-slate-900 dark:text-white sm:text-5xl">
+                  What We <span className="text-brand-green">Do</span>
+                </h2>
+              </div>
+
+            </div>
+          </ScrollReveal>
+
+          {/* Numbered editorial rows */}
+          <div className="divide-y divide-slate-200/70 dark:divide-slate-700/50">
+            {[
+              {
+                num: "01",
+                title: "Renewable Energy Development",
+                body: "Supporting the deployment of solar and energy storage projects through end-to-end engineering, procurement, construction, and project management capabilities.",
+                accent: "#10b981",
+              },
+              {
+                num: "02",
+                title: "Accelerating Project Readiness",
+                body: "Facilitating land procurement, stakeholder coordination, regulatory approvals, and grid integration to reduce development challenges and improve project timelines.",
+                accent: "#0d9488",
+              },
+              {
+                num: "03",
+                title: "Advancing Energy Storage Adoption",
+                body: "Developing Battery Energy Storage System (BESS) solutions that enhance grid stability, renewable energy integration, and long-term energy resilience.",
+                accent: "#0ea5e9",
+              },
+              {
+                num: "04",
+                title: "Supporting Industrial Decarbonization",
+                body: "Helping commercial and industrial consumers adopt Solar and BESS solutions to reduce energy costs, improve reliability, and lower carbon emissions.",
+                accent: "#6366f1",
+              },
+              {
+                num: "05",
+                title: "Building Future-Ready Infrastructure",
+                body: "Expanding capabilities across Solar, BESS, Hybrid Energy Systems, and Green Hydrogen to support India's long-term clean energy and energy security goals.",
+                accent: "#8b5cf6",
+              },
+              {
+                num: "06",
+                title: "Driving Sustainable Value",
+                body: "Delivering bankable, high-yield renewable assets with transparent governance, rigorous quality assurance, and lifecycle support — ensuring lasting impact for investors and communities.",
+                accent: "#059669",
+              },
+            ].map(({ num, title, body, accent }, i) => (
+              <ScrollReveal key={num} delay={i * 60}>
+                <div className="flex gap-6 py-7 sm:gap-10 sm:py-8 rounded-xl px-2 sm:px-4 -mx-2 sm:-mx-4">
+                  {/* Large decorative number — always visible */}
+                  <div className="shrink-0 w-14 sm:w-20">
+                    <span
+                      className="text-4xl sm:text-5xl font-black leading-none select-none inline-block"
+                      style={{ color: accent, opacity: 0.35 }}
+                    >
+                      {num}
+                    </span>
+                  </div>
+
+                  {/* Vertical accent bar — always visible */}
+                  <div
+                    className="shrink-0 w-0.5 rounded-full self-stretch opacity-60"
+                    style={{ background: accent }}
+                  />
+
+                  {/* Content */}
+                  <div className="flex-1 min-w-0 py-1">
+                    <h3
+                      className="text-base sm:text-lg font-bold leading-snug"
+                      style={{ color: accent }}
+                    >
+                      {title}
+                    </h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-slate-500 dark:text-slate-400 max-w-2xl">
+                      {body}
+                    </p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -209,15 +306,15 @@ export default function HomePage() {
                 label: "Land Procurement",
                 accent: "from-emerald-600 to-emerald-800",
                 tag: "bg-emerald-500",
-                desc: "GNE Infra provides end-to-end land procurement services for utility-scale solar projects — from site identification and feasibility analysis to title verification, due diligence, liaison with revenue authorities, and legal clearances — ensuring a bankable, encumbrance-free land parcel ready for construction.",
+                desc: "We support renewable energy projects through strategic land identification, aggregation, techno-legal due diligence, and regulatory coordination. Our integrated approach helps accelerate project development while minimizing land-related risks and execution delays.",
               },
               {
                 key: "installation",
                 img: "/service-installation.jpg",
-                label: "Solar Installation Services",
+                label: "Project Management Consultancy",
                 accent: "from-sky-600 to-sky-900",
                 tag: "bg-sky-500",
-                desc: "Our certified installation teams handle precision module mounting, DC/AC electrical integration, string commissioning, and final grid synchronization. Every installation follows stringent HSE protocols and is backed by SCADA-ready documentation for seamless asset handover.",
+                desc: "We offer end-to-end project management consultancy services covering project planning, execution monitoring, contract management, procurement support, quality control, and stakeholder coordination to ensure efficient and timely project delivery.",
               },
               {
                 key: "epc",
@@ -225,31 +322,31 @@ export default function HomePage() {
                 label: "Solar EPC",
                 accent: "from-teal-600 to-teal-900",
                 tag: "bg-teal-500",
-                desc: "We deliver fully turnkey Engineering, Procurement & Construction contracts for utility-scale and commercial rooftop solar plants. Our integrated approach covers detailed engineering, optimized BoQ, quality procurement, on-site civil/electrical works, and lender-compliant commissioning — ensuring bankable, on-schedule delivery.",
+                desc: "We provide complete Solar EPC services from feasibility studies and detailed engineering to procurement, construction, commissioning, and grid connectivity, ensuring high-quality and timely project delivery.",
               },
               {
                 key: "om",
                 img: "/service-om.jpg",
-                label: "Solar O&M Services",
+                label: "O&M Services",
                 accent: "from-amber-600 to-amber-900",
                 tag: "bg-amber-500",
-                desc: "GNE Infra's O&M offering covers preventive and corrective maintenance schedules, SCADA-based real-time performance monitoring, thermographic inspections, I-V curve analysis, and yield optimization strategies — maximizing plant availability and generation revenue across the entire operational lifecycle.",
+                desc: "We deliver end-to-end operations and maintenance services focused on maximizing plant availability, improving energy generation, reducing downtime, and extending asset life.",
               },
               {
                 key: "bess",
                 img: "/service-bess.jpg",
-                label: "Solar BESS Solutions",
+                label: "BESS EPC",
                 accent: "from-violet-600 to-violet-900",
                 tag: "bg-violet-500",
-                desc: "We design and deploy Battery Energy Storage Systems paired with intelligent Energy Management Systems for peak shaving, frequency regulation, solar firming, and grid-scale arbitrage. Our BESS solutions integrate seamlessly with existing solar assets and are engineered for degradation-aware, long-cycle performance.",
+                desc: "We deliver turnkey Battery Energy Storage System (BESS) projects, including engineering, procurement, installation, commissioning, and grid integration to enhance energy reliability, flexibility, and operational efficiency.",
               },
               {
                 key: "manufacturing",
                 img: "/service-manufacturing.jpg",
-                label: "Manufacturing Capabilities",
+                label: "Grid Integration",
                 accent: "from-rose-600 to-rose-900",
                 tag: "bg-rose-500",
-                desc: "GNE Infra operates in-house solar panel manufacturing with rigorously quality-controlled production lines, certified BOS components, automated testing stations, and international compliance standards — ensuring reliable, high-efficiency modules that meet lender and regulatory specifications.",
+                desc: "We facilitate efficient grid connectivity through transmission planning, utility coordination, regulatory approvals, and power evacuation solutions, ensuring smooth integration of renewable energy projects into the grid.",
               },
             ].map(({ key, img, label, accent, tag, desc }, index) => (
               <ScrollReveal key={key} delay={index * 60} className="h-full">

@@ -10,6 +10,7 @@ type ServicePageHeroProps = {
   imageAlt: string;
   primaryCta: { href: string; label: string };
   secondaryCta: { href: string; label: string };
+  className?: string;   // ADD THIS
 };
 
 export function ServicePageHero({
@@ -20,9 +21,10 @@ export function ServicePageHero({
   imageAlt,
   primaryCta,
   secondaryCta,
+  className = "bg-service-gradient",
 }: ServicePageHeroProps) {
   return (
-    <section className="bg-service-gradient py-10 sm:py-12">
+    <section className={`${className} py-10 sm:py-12`}>
       <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 lg:grid-cols-[1.05fr_0.95fr]">
         <div>
           {badge}

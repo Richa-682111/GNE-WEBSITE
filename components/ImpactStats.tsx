@@ -1,5 +1,5 @@
 "use client";
-
+import { BadgeCheck } from "lucide-react";
 import { ArrowRight, Globe2, LineChart, Sparkles, Zap } from "lucide-react";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { ScrollReveal } from "@/components/ScrollReveal";
@@ -9,8 +9,8 @@ const stats = [
     icon: <Zap className="h-6 w-6 text-amber-500" />,
     bg: "bg-amber-50 dark:bg-amber-950/40",
     ring: "ring-amber-200 dark:ring-amber-800/50",
-    end: 112,
-    suffix: " MWp",
+    end: 100,
+    suffix: " MW",
     label: "Project Under Execution",
     sub: "projects in progress",
   },
@@ -18,28 +18,28 @@ const stats = [
     icon: <LineChart className="h-6 w-6 text-sky-500" />,
     bg: "bg-sky-50 dark:bg-sky-950/40",
     ring: "ring-sky-200 dark:ring-sky-800/50",
-    end: 300,
-    suffix: "+ MWp",
+    end: 500,
+    suffix: " MW",
     label: "Projects Pipeline",
-    sub: "projects in pipeline",
+    sub: "Solar: 450 MW • BESS: 50 MW / 200 MWh",
   },
   {
     icon: <Sparkles className="h-6 w-6 text-emerald-600" />,
     bg: "bg-emerald-50 dark:bg-emerald-950/40",
     ring: "ring-emerald-200 dark:ring-emerald-800/50",
-    end: 68,
-    suffix: " MWp",
+    end: 5,
+    suffix: " MW",
     label: "O&M Projects",
-    sub: "under execution",
+    sub: "executed",
   },
   {
-    icon: <Globe2 className="h-6 w-6 text-violet-500" />,
+    icon: <BadgeCheck className="h-6 w-6 text-green-500" />,
     bg: "bg-violet-50 dark:bg-violet-950/40",
     ring: "ring-violet-200 dark:ring-violet-800/50",
-    end: 3,
-    suffix: " Regions",
-    label: "Overseas Expansion",
-    sub: "Europe, Africa & Middle East",
+    end: 24,
+    suffix: " MW",
+    label: "Project Completed",
+
   },
 ];
 

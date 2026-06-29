@@ -24,12 +24,23 @@ export default function OmPage() {
   };
 
   return (
-    <div>
+    <div className="relative min-h-screen overflow-hidden pb-12">
+      {/* Light Charcoal Gray Gradient — soft gray corners, white center */}
+      <div className="fixed inset-0 -z-10" style={{background: 'radial-gradient(ellipse at top left, #9ca3af 0%, #d1d5db 30%, #f3f4f6 60%, #ffffff 75%, #f3f4f6 85%, #9ca3af 100%)'}}>
+        {/* Soft gray corner punches */}
+        <div className="absolute left-[-8%] top-[-8%] h-[550px] w-[550px] rounded-full bg-gray-400/40 blur-[120px]" />
+        <div className="absolute right-[-8%] top-[-8%] h-[550px] w-[550px] rounded-full bg-slate-400/35 blur-[120px]" />
+        <div className="absolute left-[-8%] bottom-[-8%] h-[550px] w-[550px] rounded-full bg-gray-300/35 blur-[120px]" />
+        <div className="absolute right-[-8%] bottom-[-8%] h-[550px] w-[550px] rounded-full bg-slate-300/30 blur-[120px]" />
+        {/* Bright white center glow */}
+        <div className="absolute left-1/2 top-1/2 h-[65%] w-[65%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/95 blur-[120px]" />
+      </div>
+
       <JsonLd data={jsonLd} />
-      <ServicePageHero
+      <ServicePageHero className="[background:radial-gradient(ellipse_at_top_left,#9ca3af_0%,#d1d5db_30%,#f3f4f6_60%,#ffffff_75%,#f3f4f6_85%,#9ca3af_100%)]"
         badge={
-          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-xs font-semibold text-slate-700 backdrop-blur dark:border-slate-800 dark:bg-slate-950/50 dark:text-slate-200">
-            <Zap className="h-4 w-4 text-brand-green" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-gray-300 bg-gray-100/80 px-4 py-2 text-xs font-semibold text-gray-700 backdrop-blur">
+            <Zap className="h-4 w-4 text-gray-500" />
             Operations & Maintenance
           </div>
         }
@@ -41,11 +52,11 @@ export default function OmPage() {
         secondaryCta={{ href: "/projects", label: "View Performance Cases" }}
       />
 
-      <Section className="bg-service-gradient">
+      <Section className="bg-transparent">
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid gap-10 lg:grid-cols-2">
             <div>
-              <h2 className="text-3xl font-black tracking-tight">Asset care that drives results</h2>
+              <h2 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white">Asset care that drives results</h2>
               <p className="mt-5 text-base leading-relaxed text-slate-700 dark:text-slate-300">
                 Our O&M approach combines preventative maintenance, remote monitoring, and rapid response so your investment meets performance expectations.
               </p>

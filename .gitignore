@@ -7,3 +7,5 @@ dist
 .env
 .env.*.local
 
+
+public/drone2.mp4
