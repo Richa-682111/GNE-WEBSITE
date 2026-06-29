@@ -288,7 +288,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="group relative overflow-hidden rounded-3xl border-2 border-emerald-300/60 dark:border-emerald-700/60 bg-slate-950/5 shadow-2xl shadow-emerald-500/10 transition-all duration-500 ease-out hover:scale-[1.03] hover:shadow-emerald-500/20 hover:border-emerald-400/80 lg:max-w-md lg:justify-self-end">
+            <div className="group w-full max-w-lg mx-auto lg:mx-0 relative overflow-hidden rounded-3xl border-2 border-emerald-300/60 dark:border-emerald-700/60 bg-slate-950/5 shadow-2xl shadow-emerald-500/10 transition-all duration-500 ease-out hover:scale-[1.03] hover:shadow-emerald-500/20 hover:border-emerald-400/80 lg:max-w-md lg:justify-self-end">
               {/* Glow ring effect */}
               <div className="pointer-events-none absolute -inset-1.5 z-0 rounded-3xl bg-gradient-to-br from-emerald-400/40 via-transparent to-blue-400/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100 animate-pulse-border-glow" />
               <Image

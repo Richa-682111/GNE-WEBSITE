@@ -103,7 +103,7 @@ export default function TimelineJourney() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, ease: "easeOut" }}
               className={`relative flex flex-col sm:flex-row items-start ${
-                isEven ? "sm:flex-row-reverse" : ""
+                isEven ? "sm:justify-start" : "sm:justify-end"
               } group`}
             >
               {/* Central Node */}
