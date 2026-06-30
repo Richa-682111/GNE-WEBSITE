@@ -11,11 +11,21 @@ export default {
           green: "#16A34A",
           emerald: "#10B981",
           blue: "#0B5FFF",
-          solar: "#FFB800"
+          solar: "#FFD54A",
+          hydrogen: "#3BB7FF",
+          bess: "#00E676",
+          darkBg: "#050B14",
+          darkCard: "#071018",
+          darkBorder: "#0B1623"
         }
       },
       boxShadow: {
-        glow: "0 0 0 1px rgba(22,163,74,.28), 0 12px 40px rgba(22,163,74,.2)"
+        glow: "0 0 0 1px rgba(22,163,74,.28), 0 12px 40px rgba(22,163,74,.2)",
+        solarGlow: "0 0 25px rgba(255,213,74,0.18)",
+        hydrogenGlow: "0 0 25px rgba(59,183,255,0.18)",
+        bessGlow: "0 0 25px rgba(0,230,118,0.18)",
+        glassGlow: "0 8px 32px 0 rgba(0, 0, 0, 0.37)",
+        premiumGlow: "0 0 30px rgba(16,185,129,0.15)"
       },
       keyframes: {
         marquee: {

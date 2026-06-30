@@ -88,7 +88,7 @@ export default function TimelineJourney() {
   return (
     <div className="relative mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
       {/* Central Glowing Line */}
-      <div className="absolute left-8 sm:left-1/2 top-0 bottom-0 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-emerald-400/50 to-transparent" />
+      <div className="absolute left-6 sm:left-1/2 top-0 bottom-0 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-emerald-400/50 to-transparent" />
       
       <div className="space-y-16 sm:space-y-24">
         {roadmap.map((item, index) => {
@@ -107,14 +107,14 @@ export default function TimelineJourney() {
               } group`}
             >
               {/* Central Node */}
-              <div className="absolute left-8 sm:left-1/2 top-0 sm:top-6 -translate-x-1/2 flex items-center justify-center">
-                <div className={`w-12 h-12 rounded-full border-4 border-white dark:border-slate-950 ${item.bgColor} shadow-lg ${item.glowColor} flex items-center justify-center z-10 transition-transform duration-300 group-hover:scale-110`}>
-                  <Icon className="w-5 h-5 text-white dark:text-slate-950" />
+              <div className="absolute left-6 sm:left-1/2 top-0 sm:top-6 -translate-x-1/2 flex items-center justify-center">
+                <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full border-4 border-white dark:border-slate-950 ${item.bgColor} shadow-lg ${item.glowColor} flex items-center justify-center z-10 transition-transform duration-300 group-hover:scale-110`}>
+                  <Icon className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-white dark:text-slate-950" />
                 </div>
               </div>
 
               {/* Content Box */}
-              <div className={`w-full pl-20 sm:pl-0 sm:w-1/2 ${isEven ? "sm:pr-16" : "sm:pl-16"} pt-1 sm:pt-0`}>
+              <div className={`w-full pl-14 sm:pl-0 sm:w-1/2 ${isEven ? "sm:pr-16" : "sm:pl-16"} pt-1 sm:pt-0`}>
                 <div className={`p-6 sm:p-8 rounded-3xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/60 dark:border-slate-700/50 shadow-xl ${item.glowColor} transition-shadow duration-300 hover:shadow-2xl`}>
                   <div className="flex items-center gap-3 mb-4">
                     <span className={`text-[11px] font-black uppercase tracking-widest px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 ${item.color}`}>

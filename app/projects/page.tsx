@@ -44,7 +44,7 @@ export default function ProjectsPage() {
 
         <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-         <div className="max-w-2xl text-white translate-x-20 -translate-y-20">
+         <div className="max-w-2xl text-white translate-x-0 lg:translate-x-20 -translate-y-0 lg:-translate-y-20">
              <h1 className="mb-6 text-5xl sm:text-7xl font-black tracking-tight leading-none text-white-300 drop-shadow-lg">
                 Projects & Project Pipeline
               </h1>

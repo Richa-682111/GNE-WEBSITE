@@ -55,10 +55,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Header />
           
           {/* GLOBAL GLASSY CORPORATE BACKGROUND */}
-          <div className="fixed inset-0 z-[-1] bg-[#f8fafc] dark:bg-slate-950 transition-colors duration-500 overflow-hidden">
+          <div className="fixed inset-0 z-[-1] bg-[#f8fafc] dark:bg-[#050B14] transition-colors duration-500 overflow-hidden">
             {/* Fixed Depth Orbs with subtle animations */}
-            <div className="absolute top-[-20%] left-[-10%] w-[50vw] h-[50vw] max-w-[800px] max-h-[800px] bg-emerald-500/10 dark:bg-emerald-500/15 rounded-full blur-[120px] pointer-events-none animate-[pulse_8s_ease-in-out_infinite]" />
-            <div className="absolute bottom-[-20%] right-[-10%] w-[40vw] h-[40vw] max-w-[600px] max-h-[600px] bg-sky-500/10 dark:bg-sky-500/15 rounded-full blur-[100px] pointer-events-none animate-[pulse_12s_ease-in-out_infinite]" />
+            <div className="absolute top-[-20%] left-[-10%] w-[50vw] h-[50vw] max-w-[800px] max-h-[800px] bg-emerald-500/10 dark:bg-[#00E676]/8 rounded-full blur-[120px] pointer-events-none animate-[pulse_8s_ease-in-out_infinite]" />
+            <div className="absolute bottom-[-20%] right-[-10%] w-[40vw] h-[40vw] max-w-[600px] max-h-[600px] bg-sky-500/10 dark:bg-[#3BB7FF]/8 rounded-full blur-[100px] pointer-events-none animate-[pulse_12s_ease-in-out_infinite]" />
+            <div className="absolute top-[30%] right-[-20%] w-[35vw] h-[35vw] max-w-[500px] max-h-[500px] bg-amber-500/5 dark:bg-[#FFD54A]/5 rounded-full blur-[110px] pointer-events-none animate-[pulse_10s_ease-in-out_infinite_reverse]" />
             
             {/* Subtle Noise/Mesh */}
             <div 

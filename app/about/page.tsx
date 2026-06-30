@@ -721,7 +721,7 @@ export default function AboutPage() {
                 className="flex h-full flex-col p-3 sm:p-4 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700/50 animate-fade-in-up"
 
               >
-                <div className="relative mb-3 h-56 overflow-hidden rounded-lg">
+                <div className="relative mb-3 aspect-[4/5] w-full overflow-hidden rounded-lg">
                   <Image
                     src={leader.image}
                     alt={leader.name}

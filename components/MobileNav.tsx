@@ -8,7 +8,7 @@ type NavItem = { href: string; label: string };
 type DropdownGroup = { label: string; items: NavItem[] };
 
 const mobileLink =
-  "block rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-800 transition-colors hover:bg-emerald-50 hover:text-emerald-700 dark:text-slate-100 dark:hover:bg-emerald-900/40 dark:hover:text-emerald-300";
+  "block rounded-xl px-4 py-3 text-sm font-bold text-slate-800 transition-all duration-200 hover:bg-emerald-50 hover:text-emerald-700 dark:text-slate-200 dark:hover:bg-slate-800/65 dark:hover:text-emerald-450";
 
 export function MobileNav({
   primaryNav,
@@ -73,12 +73,12 @@ export function MobileNav({
           />
           <div
             id={panelId}
-            className="fixed left-3 right-3 top-[4.75rem] z-50 max-h-[min(70vh,calc(100dvh-6rem))] overflow-y-auto rounded-xl border border-emerald-100 bg-white/98 p-2 shadow-2xl dark:border-emerald-900/50 dark:bg-slate-900/98"
+            className="fixed left-4 right-4 top-[4.75rem] z-50 max-h-[min(70vh,calc(100dvh-6rem))] overflow-y-auto rounded-2xl border border-slate-200/80 bg-white/95 p-3 shadow-2xl dark:border-brand-darkBorder/55 dark:bg-brand-darkCard/95 backdrop-blur-lg"
             role="dialog"
             aria-modal="true"
             aria-label="Site navigation"
           >
-            <div className="flex flex-col gap-0.5">
+            <div className="flex flex-col gap-1">
               {primaryNav.map((item) => (
                 <Link key={item.href} href={item.href} className={mobileLink} onClick={close}>
                   {item.label}

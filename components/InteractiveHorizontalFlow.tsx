@@ -71,7 +71,7 @@ export function InteractiveHorizontalFlow({
         </ScrollReveal>
 
         {/* Mobile Vertical Flow */}
-        <ScrollReveal className="lg:hidden relative max-w-md mx-auto ml-2">
+        <ScrollReveal className="lg:hidden relative max-w-xl mx-auto px-2">
           <div className="absolute top-4 bottom-4 left-[23px] w-1 bg-slate-200 dark:bg-slate-800 rounded-full" />
           <div className="flex flex-col gap-10 relative z-10">
             {steps.map((step, idx) => (
