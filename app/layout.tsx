@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Suspense } from "react";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Header } from "@/components/Header";
@@ -48,7 +49,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider>
-          <LoadingOverlay />
+          <Suspense fallback={null}>
+            <LoadingOverlay />
+          </Suspense>
           <Header />
           
           {/* GLOBAL GLASSY CORPORATE BACKGROUND */}
