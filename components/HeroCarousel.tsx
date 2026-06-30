@@ -15,7 +15,7 @@ export function HeroCarousel({
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/drone2.mp4" type="video/mp4" />
+        <source src="/hero-droneshot.mp4" type="video/mp4" />
 
         Your browser does not support the video tag.
       </video>
