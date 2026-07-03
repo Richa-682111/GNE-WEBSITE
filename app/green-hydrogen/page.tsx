@@ -66,6 +66,23 @@ export default function GreenHydrogenPage() {
         content="GNE Infra is actively expanding into the green hydrogen sector with a dedicated focus on renewable-powered hydrogen production, advanced electrolyzer deployment, robust storage infrastructure, and strategic industrial offtake partnerships. Our approach masterfully combines existing renewable energy assets with next-generation hydrogen technologies to directly support India's National Green Hydrogen Mission while delivering highly scalable, commercially viable projects." 
       />
 
+      {/* Featured Green Hydrogen Video */}
+      <section className="py-12 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-[0_20px_60px_rgba(0,0,0,0.12)] bg-slate-950">
+            <video
+              src="/GreenHydrogen.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              controls
+              className="w-full h-auto object-cover max-h-[700px] aspect-video"
+            />
+          </div>
+        </div>
+      </section>
+
       <BentoFeatureGrid title="Our Hydrogen Strategy" features={features} />
 
       <InteractiveHorizontalFlow title="Value Chain Integration" steps={processSteps} />

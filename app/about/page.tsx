@@ -266,11 +266,11 @@ export default function AboutPage() {
       <section className="relative h-[88vh] min-h-[560px] w-full flex items-center justify-start overflow-hidden bg-slate-950">
         {/* Background Image */}
         <Image
-          src="/hero-solar-farm.png"
+          src="/about-hero.png"
           alt="About GNE Infra"
           fill
           priority
-          className="absolute inset-0 object-cover"
+          className="absolute inset-0 object-cover object-top"
         />
 
         {/* Dark Gradient Overlay */}
@@ -326,29 +326,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 2. Stats Strip */}
-      <section className="bg-[#0d1117] py-6 border-b border-white/[0.05] font-inter">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 md:gap-y-0 text-left md:text-center">
-            <div className="p-4 border-r border-b md:border-b-0 border-white/[0.07] flex flex-col justify-center">
-              <span className="font-sora text-3xl font-extrabold text-[#22c55e]">500 MW</span>
-              <p className="mt-1 text-xs uppercase tracking-wider text-white/45">Projects Pipeline</p>
-            </div>
-            <div className="p-4 border-b md:border-r md:border-b-0 border-white/[0.07] flex flex-col justify-center">
-              <span className="font-sora text-3xl font-extrabold text-[#22c55e]">100 MW</span>
-              <p className="mt-1 text-xs uppercase tracking-wider text-white/45">MW Under Execution</p>
-            </div>
-            <div className="p-4 border-r border-white/[0.07] flex flex-col justify-center">
-              <span className="font-sora text-3xl font-extrabold text-[#22c55e]">5 MW</span>
-              <p className="mt-1 text-xs uppercase tracking-wider text-white/45">O&M Projects</p>
-            </div>
-            <div className="p-4 flex flex-col justify-center">
-              <span className="font-sora text-3xl font-extrabold text-[#22c55e]">24 MW</span>
-              <p className="mt-1 text-xs uppercase tracking-wider text-white/45">Completed MW</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* 3. "Your Trusted Energy Partner" Section */}
       <section className="py-[100px] bg-white font-inter">

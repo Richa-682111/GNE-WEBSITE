@@ -25,7 +25,7 @@
   }
 
   body {
-    @apply overflow-x-hidden bg-emerald-50/40 text-slate-900 antialiased;
+    @apply overflow-x-hidden bg-slate-300 text-slate-900 antialiased;
     @apply dark:bg-slate-950 dark:text-slate-100;
   }
 

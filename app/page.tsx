@@ -15,10 +15,20 @@ export default function HomePage() {
             ENTERPRISE-GRADE RENEWABLE INFRASTRUCTURE
           </div>
 
-          {/* Heading */}
-          <h1 className="mx-auto max-w-4xl text-center text-3xl font-black leading-[1.1] text-white drop-shadow-lg sm:text-4xl md:text-5xl lg:text-[52px]">
+
+          <h1
+            className="mx-auto max-w-4xl text-center text-3xl font-black leading-[1.1] text-white sm:text-4xl md:text-5xl lg:text-[52px]"
+            style={{
+              textShadow: `
+      0 0 4px rgba(0,0,0,0.9),
+      0 0 8px rgba(0,0,0,0.8),
+      0 0 16px rgba(0,0,0,0.7),
+      2px 2px 6px rgba(0,0,0,0.9)
+    `
+            }}
+          >
             Engineering the <br className="hidden sm:block" />
-            Future of Energy
+            Future
           </h1>
 
           {/* Subheading */}
@@ -395,7 +405,7 @@ export default function HomePage() {
         {/* Rich layered background */}
         < div className="absolute inset-0 -z-10 bg-gradient-to-br from-slate-800/50 via-blue-700/40 to-cyan-600/35" />
 
-        <div className="absolute inset-0 -z-10 bg-[url('/hero-solar.jpg')] bg-cover bg-center opacity-45" />
+        <div className="absolute inset-0 -z-10 bg-[url('/cta.png')] bg-cover bg-center opacity-75" />
 
         {/* Radial vignette for depth */}
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/25 via-transparent to-black/10" />
@@ -421,7 +431,7 @@ export default function HomePage() {
           </h2>
 
           {/* Sub-copy */}
-          <p className="mx-auto mt-5 max-w-xl text-base font-medium text-emerald-100/90 sm:text-lg">
+          <p className="mx-auto mt-5 max-w-xl text-base font-semibold text-[#00E5FF] sm:text-lg drop-shadow-[0_0_10px_rgba(0,229,255,0.3)]">
             Tell us your capacity, location and timeline — our engineering team will craft a solution that delivers results from day one.
           </p>
 
