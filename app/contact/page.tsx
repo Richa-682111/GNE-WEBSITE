@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { MessageSquareText, PhoneCall } from "lucide-react";
-import { Card } from "@/components/Card";
+import { MessageSquareText, PhoneCall, Mail } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
-import { Section } from "@/components/Section";
 import { JsonLd } from "@/components/JsonLd";
 import { site } from "@/content/site";
 
@@ -22,54 +20,100 @@ export default function ContactPage() {
   };
 
   return (
-    <div>
+    <div className="bg-[#16462d] text-white min-h-screen pb-20 font-inter selection:bg-[#4ade80] selection:text-slate-950">
       <JsonLd data={jsonLd} />
-      <Section className="bg-renewable-gradient">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-xs font-semibold text-slate-700 backdrop-blur dark:border-slate-800 dark:bg-slate-950/50 dark:text-slate-200">
-            <MessageSquareText className="h-4 w-4 text-brand-blue" />
+
+      {/* Hero Section */}
+      <section className="relative pt-24 pb-12 sm:pt-32 sm:pb-16 border-b border-white/10 overflow-hidden">
+        {/* Subtle ambient glow */}
+        <div className="pointer-events-none absolute inset-0 -z-10">
+          <div className="absolute top-0 left-1/3 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-[#4ade80]/15 blur-[120px]" />
+          <div className="absolute bottom-0 right-1/4 h-[300px] w-[400px] rounded-full bg-teal-400/10 blur-[100px]" />
+        </div>
+
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+          <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-[#1a4a30]/80 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#4ade80] shadow-sm">
+            <MessageSquareText className="h-4 w-4 text-[#4ade80]" />
             Contact
           </div>
-          <h1 className="mt-6 text-4xl font-black tracking-tight sm:text-5xl">Let’s talk</h1>
-          <p className="mt-4 max-w-2xl text-lg text-slate-700 dark:text-slate-200">
+          <h1 className="mt-5 text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Let’s talk
+          </h1>
+          <p className="mt-4 max-w-2xl text-base sm:text-lg text-white/80 leading-relaxed">
             Share your project capacity, location, and timeline. We’ll respond with next steps.
           </p>
         </div>
-      </Section>
+      </section>
 
-      <Section className="bg-grid">
-        <div className="mx-auto grid max-w-6xl gap-6 px-4 md:grid-cols-3">
-          <Card className="md:col-span-2">
-            <div className="text-lg font-bold">Inquiry form</div>
-            <div className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+      {/* Main Content Grid (Inquiry Form Section with Contacthero Background) */}
+      <section className="relative py-16 sm:py-24 overflow-hidden">
+        {/* Contacthero image behind inquiry form section — using inline style for guaranteed rendering */}
+        <div 
+          className="absolute inset-0 -z-10" 
+          style={{
+            backgroundImage: 'url("/Contacthero.jpeg")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        />
+        
+        {/* Subtle dark vignette for depth and contrast without any green color */}
+        <div className="absolute inset-0 -z-10 bg-black/20" />
+
+        <div className="mx-auto grid max-w-6xl gap-8 px-4 sm:px-6 lg:px-8 md:grid-cols-3 items-start relative z-10">
+          
+          {/* Inquiry Form Card — Crystal White Opaque Glassmorphism (Span 2) */}
+          <div className="md:col-span-2 rounded-3xl bg-white/85 border border-white/60 p-6 sm:p-10 shadow-[0_25px_60px_rgba(0,0,0,0.2)] backdrop-blur-xl text-slate-900">
+            <div className="text-xl sm:text-2xl font-bold text-slate-900">
+              Inquiry form
+            </div>
+            <div className="mt-1.5 text-sm sm:text-base text-slate-600 mb-8">
               Fill in your details below and we&apos;ll get back to you within 24 hours.
             </div>
-            <div className="mt-6">
-              <ContactForm />
+            <ContactForm />
+          </div>
+
+          {/* Direct Contact Card — Crystal White Opaque Glassmorphism (Span 1) */}
+          <div className="rounded-3xl bg-white/85 border border-white/60 p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.2)] backdrop-blur-xl text-slate-900 space-y-6">
+            <div className="text-xl font-bold text-slate-900 border-b border-slate-200 pb-4">
+              Direct contact
             </div>
-          </Card>
-          <Card>
-            <div className="text-lg font-bold">Direct contact</div>
-            <div className="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
-              <div>
-                <div className="font-semibold text-slate-900 dark:text-white">Email</div>
-                <a className="underline underline-offset-4" href={`mailto:${site.contact.email}`}>
+            
+            <div className="space-y-6 text-sm">
+              <div className="group">
+                <div className="flex items-center gap-2.5 font-semibold text-slate-800 text-xs uppercase tracking-wider mb-1.5">
+                  <Mail className="w-4 h-4 text-emerald-600" />
+                  Email
+                </div>
+                <a 
+                  className="text-base font-bold text-slate-900 hover:text-emerald-600 underline underline-offset-4 transition-colors block truncate" 
+                  href={`mailto:${site.contact.email}`}
+                >
                   {site.contact.email}
                 </a>
               </div>
-              <div>
-                <div className="font-semibold text-slate-900 dark:text-white">Phone</div>
-                <a className="inline-flex items-center gap-2 underline underline-offset-4" href={`tel:${site.contact.phone}`}>
-                  <PhoneCall className="h-4 w-4" />
+
+              <div className="group">
+                <div className="flex items-center gap-2.5 font-semibold text-slate-800 text-xs uppercase tracking-wider mb-1.5">
+                  <PhoneCall className="w-4 h-4 text-emerald-600" />
+                  Phone
+                </div>
+                <a 
+                  className="text-base font-bold text-slate-900 hover:text-emerald-600 underline underline-offset-4 transition-colors inline-flex items-center gap-2" 
+                  href={`tel:${site.contact.phone}`}
+                >
                   {site.contact.phone}
                 </a>
               </div>
             </div>
 
-          </Card>
+            <div className="pt-4 border-t border-slate-200 text-xs text-slate-500 leading-relaxed">
+              Our engineering team is available Monday through Saturday to assist with turnkey EPC and advisory inquiries.
+            </div>
+          </div>
+
         </div>
-      </Section>
+      </section>
     </div>
   );
 }
-

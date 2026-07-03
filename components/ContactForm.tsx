@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { z } from "zod";
+import { Send, CheckCircle, AlertCircle } from "lucide-react";
 
 const ContactSchema = z.object({
   name: z.string().min(2, "Please enter your name."),
@@ -57,91 +58,109 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="grid gap-4">
-      <div className="grid gap-4 md:grid-cols-2">
-        <div className="grid gap-2">
-          <label className="text-sm font-semibold" htmlFor="name">
-            Name
+    <form onSubmit={onSubmit} className="grid gap-5">
+      <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-2 text-left">
+          <label className="text-sm font-semibold text-slate-800" htmlFor="name">
+            Name <span className="text-emerald-600">*</span>
           </label>
           <input
-            className="h-11 rounded-xl border border-emerald-200 bg-white px-3 text-sm outline-none ring-brand-green/30 focus:ring-4 dark:border-emerald-900/60 dark:bg-slate-950"
+            className="h-12 rounded-xl border border-slate-300 bg-white/90 px-4 text-sm text-slate-900 placeholder-slate-400 outline-none ring-emerald-500/30 transition-all focus:border-emerald-600 focus:bg-white focus:ring-4 shadow-sm"
             id="name"
             name="name"
             autoComplete="name"
+            placeholder="Your full name"
             required
           />
         </div>
-        <div className="grid gap-2">
-          <label className="text-sm font-semibold" htmlFor="email">
-            Email
+        <div className="grid gap-2 text-left">
+          <label className="text-sm font-semibold text-slate-800" htmlFor="email">
+            Email <span className="text-emerald-600">*</span>
           </label>
           <input
-            className="h-11 rounded-xl border border-emerald-200 bg-white px-3 text-sm outline-none ring-brand-green/30 focus:ring-4 dark:border-emerald-900/60 dark:bg-slate-950"
+            className="h-12 rounded-xl border border-slate-300 bg-white/90 px-4 text-sm text-slate-900 placeholder-slate-400 outline-none ring-emerald-500/30 transition-all focus:border-emerald-600 focus:bg-white focus:ring-4 shadow-sm"
             id="email"
             name="email"
             type="email"
             autoComplete="email"
+            placeholder="you@company.com"
             required
           />
         </div>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2">
-        <div className="grid gap-2">
-          <label className="text-sm font-semibold" htmlFor="phone">
+      <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-2 text-left">
+          <label className="text-sm font-semibold text-slate-800" htmlFor="phone">
             Phone (optional)
           </label>
           <input
-            className="h-11 rounded-xl border border-emerald-200 bg-white px-3 text-sm outline-none ring-brand-green/30 focus:ring-4 dark:border-emerald-900/60 dark:bg-slate-950"
+            className="h-12 rounded-xl border border-slate-300 bg-white/90 px-4 text-sm text-slate-900 placeholder-slate-400 outline-none ring-emerald-500/30 transition-all focus:border-emerald-600 focus:bg-white focus:ring-4 shadow-sm"
             id="phone"
             name="phone"
             autoComplete="tel"
+            placeholder="+91 98765 43210"
           />
         </div>
-        <div className="grid gap-2">
-          <label className="text-sm font-semibold" htmlFor="company">
+        <div className="grid gap-2 text-left">
+          <label className="text-sm font-semibold text-slate-800" htmlFor="company">
             Company (optional)
           </label>
           <input
-            className="h-11 rounded-xl border border-emerald-200 bg-white px-3 text-sm outline-none ring-brand-green/30 focus:ring-4 dark:border-emerald-900/60 dark:bg-slate-950"
+            className="h-12 rounded-xl border border-slate-300 bg-white/90 px-4 text-sm text-slate-900 placeholder-slate-400 outline-none ring-emerald-500/30 transition-all focus:border-emerald-600 focus:bg-white focus:ring-4 shadow-sm"
             id="company"
             name="company"
             autoComplete="organization"
+            placeholder="Your organization"
           />
         </div>
       </div>
 
-      <div className="grid gap-2">
-        <label className="text-sm font-semibold" htmlFor="message">
-          Message
+      <div className="grid gap-2 text-left">
+        <label className="text-sm font-semibold text-slate-800" htmlFor="message">
+          Message <span className="text-emerald-600">*</span>
         </label>
         <textarea
-          className="min-h-32 rounded-xl border border-emerald-200 bg-white px-3 py-2 text-sm outline-none ring-brand-green/30 focus:ring-4 dark:border-emerald-900/60 dark:bg-slate-950"
+          className="min-h-[140px] rounded-xl border border-slate-300 bg-white/90 p-4 text-sm text-slate-900 placeholder-slate-400 outline-none ring-emerald-500/30 transition-all focus:border-emerald-600 focus:bg-white focus:ring-4 shadow-sm resize-none"
           id="message"
           name="message"
+          placeholder="How can we help you?"
           required
         />
       </div>
 
       {status === "success" ? (
-        <div className="rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800 dark:border-emerald-900/60 dark:bg-emerald-950/40 dark:text-emerald-200">
-          Thank you! Your inquiry has been sent successfully.
+        <div className="rounded-xl border border-emerald-300 bg-emerald-50 px-4 py-3 text-sm text-emerald-800 flex items-center gap-3">
+          <CheckCircle className="w-5 h-5 text-emerald-600 shrink-0" />
+          <span>Thank you! Your inquiry has been sent successfully.</span>
         </div>
       ) : null}
       {status === "error" ? (
-        <div className="rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-800 dark:border-rose-900/60 dark:bg-rose-950/40 dark:text-rose-200">
-          {error || "Failed to send your message. Please try again."}
+        <div className="rounded-xl border border-rose-300 bg-rose-50 px-4 py-3 text-sm text-rose-800 flex items-center gap-3">
+          <AlertCircle className="w-5 h-5 text-rose-600 shrink-0" />
+          <span>{error || "Failed to send your message. Please try again."}</span>
         </div>
       ) : null}
 
-      <button
-        type="submit"
-        disabled={status === "loading"}
-        className="inline-flex h-12 items-center justify-center rounded-2xl bg-brand-green px-6 text-sm font-semibold text-white transition hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-60"
-      >
-        {status === "loading" ? "Sending..." : "Send message"}
-      </button>
+      <div className="pt-2 text-left">
+        <button
+          type="submit"
+          disabled={status === "loading"}
+          className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 px-8 text-sm font-bold text-white shadow-lg shadow-emerald-600/25 transition-all duration-200 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
+        >
+          {status === "loading" ? (
+            <>
+              <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+              <span>Sending...</span>
+            </>
+          ) : (
+            <>
+              <span>Send message</span>
+              <Send className="w-4 h-4" />
+            </>
+          )}
+        </button>
+      </div>
     </form>
   );
 }
-

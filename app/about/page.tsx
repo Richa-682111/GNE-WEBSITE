@@ -776,39 +776,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 10. Closing CTA */}
-      <section className="py-[72px] bg-[#0d1117] font-inter text-left border-t border-white/5">
-        <div className="mx-auto max-w-4xl px-4 flex flex-col items-start space-y-6">
-          {/* Eyebrow */}
-          <div className="flex items-center gap-3">
-            <span className="w-8 h-[2px] bg-[#16a34a]" />
-            <span className="text-[11px] font-bold uppercase tracking-[3px] text-[#22c55e]">
-              PARTNER WITH US
-            </span>
-          </div>
 
-          <h2 className="font-sora font-extrabold text-3xl sm:text-4xl text-white leading-tight">
-            Let&apos;s Build the Energy Future Together
-          </h2>
-          <p className="text-[15px] text-white/55 max-w-2xl leading-relaxed">
-            From vision to execution, GNE Infra delivers integrated renewable solutions that drive real impact.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 pt-2 w-full sm:w-auto">
-            <Link
-              href="/contact"
-              className="px-8 py-4 bg-[#16a34a] hover:bg-[#15803d] text-white font-bold rounded-[6px] shadow-lg text-center transition-all duration-200"
-            >
-              Start a Project
-            </Link>
-            <Link
-              href="/"
-              className="px-8 py-4 bg-white/10 hover:bg-white/15 text-white font-bold rounded-[6px] border border-white/10 text-center transition-all duration-200"
-            >
-              Back to Home
-            </Link>
-          </div>
-        </div>
-      </section>
+
 
     </div>
   );

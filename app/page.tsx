@@ -200,79 +200,166 @@ export default function HomePage() {
             </div>
           </ScrollReveal>
 
-          {/* Numbered editorial rows */}
-          <div className="divide-y divide-slate-200/70 dark:divide-slate-700/50">
-            {[
-              {
-                num: "01",
-                title: "Renewable Energy Development",
-                body: "Supporting the deployment of solar and energy storage projects through end-to-end engineering, procurement, construction, and project management capabilities.",
-                accent: "#10b981",
-              },
-              {
-                num: "02",
-                title: "Accelerating Project Readiness",
-                body: "Facilitating land procurement, stakeholder coordination, regulatory approvals, and grid integration to reduce development challenges and improve project timelines.",
-                accent: "#0d9488",
-              },
-              {
-                num: "03",
-                title: "Advancing Energy Storage Adoption",
-                body: "Developing Battery Energy Storage System (BESS) solutions that enhance grid stability, renewable energy integration, and long-term energy resilience.",
-                accent: "#0ea5e9",
-              },
-              {
-                num: "04",
-                title: "Supporting Industrial Decarbonization",
-                body: "Helping commercial and industrial consumers adopt Solar and BESS solutions to reduce energy costs, improve reliability, and lower carbon emissions.",
-                accent: "#6366f1",
-              },
-              {
-                num: "05",
-                title: "Building Future-Ready Infrastructure",
-                body: "Expanding capabilities across Solar, BESS, Hybrid Energy Systems, and Green Hydrogen to support India's long-term clean energy and energy security goals.",
-                accent: "#8b5cf6",
-              },
-              {
-                num: "06",
-                title: "Driving Sustainable Value",
-                body: "Delivering bankable, high-yield renewable assets with transparent governance, rigorous quality assurance, and lifecycle support — ensuring lasting impact for investors and communities.",
-                accent: "#059669",
-              },
-            ].map(({ num, title, body, accent }, i) => (
-              <ScrollReveal key={num} delay={i * 60}>
-                <div className="flex gap-6 py-7 sm:gap-10 sm:py-8 rounded-xl px-2 sm:px-4 -mx-2 sm:-mx-4">
-                  {/* Large decorative number — always visible */}
-                  <div className="shrink-0 w-14 sm:w-20">
-                    <span
-                      className="text-4xl sm:text-5xl font-black leading-none select-none inline-block"
-                      style={{ color: accent, opacity: 0.35 }}
-                    >
-                      {num}
-                    </span>
+          {/* Top Row: Points 01-03 on Left, wedo1 Image Card on Right */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-16 sm:mb-24">
+            {/* Left Column: First 3 Points (Span 7) */}
+            <div className="lg:col-span-7 divide-y divide-slate-200/70 dark:divide-slate-700/50">
+              {[
+                {
+                  num: "01",
+                  title: "Renewable Energy Development",
+                  body: "Supporting the deployment of solar and energy storage projects through end-to-end engineering, procurement, construction, and project management capabilities.",
+                  accent: "#10b981",
+                },
+                {
+                  num: "02",
+                  title: "Accelerating Project Readiness",
+                  body: "Facilitating land procurement, stakeholder coordination, regulatory approvals, and grid integration to reduce development challenges and improve project timelines.",
+                  accent: "#0d9488",
+                },
+                {
+                  num: "03",
+                  title: "Advancing Energy Storage Adoption",
+                  body: "Developing Battery Energy Storage System (BESS) solutions that enhance grid stability, renewable energy integration, and long-term energy resilience.",
+                  accent: "#0ea5e9",
+                },
+              ].map(({ num, title, body, accent }, i) => (
+                <ScrollReveal key={num} delay={i * 60}>
+                  <div className="flex gap-6 py-7 sm:gap-10 sm:py-8 rounded-xl px-2 sm:px-4 -mx-2 sm:-mx-4">
+                    <div className="shrink-0 w-14 sm:w-20">
+                      <span
+                        className="text-4xl sm:text-5xl font-black leading-none select-none inline-block"
+                        style={{ color: accent, opacity: 0.35 }}
+                      >
+                        {num}
+                      </span>
+                    </div>
+                    <div
+                      className="shrink-0 w-0.5 rounded-full self-stretch opacity-60"
+                      style={{ background: accent }}
+                    />
+                    <div className="flex-1 min-w-0 py-1">
+                      <h3
+                        className="text-base sm:text-lg font-bold leading-snug"
+                        style={{ color: accent }}
+                      >
+                        {title}
+                      </h3>
+                      <p className="mt-1.5 text-sm leading-relaxed text-slate-500 dark:text-slate-400 max-w-xl">
+                        {body}
+                      </p>
+                    </div>
                   </div>
+                </ScrollReveal>
+              ))}
+            </div>
 
-                  {/* Vertical accent bar — always visible */}
-                  <div
-                    className="shrink-0 w-0.5 rounded-full self-stretch opacity-60"
-                    style={{ background: accent }}
+            {/* Right Column: wedo1 Image Card (Span 5) */}
+            <div className="lg:col-span-5">
+              <ScrollReveal delay={200}>
+                <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl bg-slate-900 group aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/5] min-h-[360px] lg:min-h-[460px]">
+                  <Image
+                    src="/wedo1.jpg"
+                    alt="Renewable Energy Development"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-
-                  {/* Content */}
-                  <div className="flex-1 min-w-0 py-1">
-                    <h3
-                      className="text-base sm:text-lg font-bold leading-snug"
-                      style={{ color: accent }}
-                    >
-                      {title}
-                    </h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-slate-500 dark:text-slate-400 max-w-2xl">
-                      {body}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6 text-white z-10">
+                    <span className="inline-block px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-[11px] font-bold uppercase tracking-wider text-emerald-400 mb-2">
+                      End-to-End Execution
+                    </span>
+                    <h4 className="text-xl sm:text-2xl font-black leading-tight">
+                      Deploying Utility-Scale Clean Infrastructure
+                    </h4>
+                    <p className="mt-2 text-xs sm:text-sm text-slate-300 line-clamp-2 leading-relaxed">
+                      Comprehensive EPC and project development capabilities driving sustainable energy transformation.
                     </p>
                   </div>
                 </div>
               </ScrollReveal>
-            ))}
+            </div>
+          </div>
+
+          {/* Bottom Row: wedo2 Image Card on Left, Points 04-06 on Right */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            {/* Left Column: wedo2 Image Card (Span 5) - Order 2 on mobile, 1 on desktop */}
+            <div className="lg:col-span-5 order-2 lg:order-1">
+              <ScrollReveal delay={200}>
+                <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl bg-slate-900 group aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/5] min-h-[360px] lg:min-h-[460px]">
+                  <Image
+                    src="/wedo2.jpg"
+                    alt="Industrial Decarbonization and Sustainable Value"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6 text-white z-10">
+                    <span className="inline-block px-3 py-1 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-[11px] font-bold uppercase tracking-wider text-cyan-400 mb-2">
+                      Future-Ready Assets
+                    </span>
+                    <h4 className="text-xl sm:text-2xl font-black leading-tight">
+                      Powering Industrial Decarbonization
+                    </h4>
+                    <p className="mt-2 text-xs sm:text-sm text-slate-300 line-clamp-2 leading-relaxed">
+                      Securing long-term resilience and carbon reduction across commercial and industrial sectors.
+                    </p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
+
+            {/* Right Column: Last 3 Points (Span 7) - Order 1 on mobile, 2 on desktop */}
+            <div className="lg:col-span-7 order-1 lg:order-2 divide-y divide-slate-200/70 dark:divide-slate-700/50">
+              {[
+                {
+                  num: "04",
+                  title: "Supporting Industrial Decarbonization",
+                  body: "Helping commercial and industrial consumers adopt Solar and BESS solutions to reduce energy costs, improve reliability, and lower carbon emissions.",
+                  accent: "#6366f1",
+                },
+                {
+                  num: "05",
+                  title: "Building Future-Ready Infrastructure",
+                  body: "Expanding capabilities across Solar, BESS, Hybrid Energy Systems, and Green Hydrogen to support India's long-term clean energy and energy security goals.",
+                  accent: "#8b5cf6",
+                },
+                {
+                  num: "06",
+                  title: "Driving Sustainable Value",
+                  body: "Delivering bankable, high-yield renewable assets with transparent governance, rigorous quality assurance, and lifecycle support — ensuring lasting impact for investors and communities.",
+                  accent: "#059669",
+                },
+              ].map(({ num, title, body, accent }, i) => (
+                <ScrollReveal key={num} delay={i * 60}>
+                  <div className="flex gap-6 py-7 sm:gap-10 sm:py-8 rounded-xl px-2 sm:px-4 -mx-2 sm:-mx-4">
+                    <div className="shrink-0 w-14 sm:w-20">
+                      <span
+                        className="text-4xl sm:text-5xl font-black leading-none select-none inline-block"
+                        style={{ color: accent, opacity: 0.35 }}
+                      >
+                        {num}
+                      </span>
+                    </div>
+                    <div
+                      className="shrink-0 w-0.5 rounded-full self-stretch opacity-60"
+                      style={{ background: accent }}
+                    />
+                    <div className="flex-1 min-w-0 py-1">
+                      <h3
+                        className="text-base sm:text-lg font-bold leading-snug"
+                        style={{ color: accent }}
+                      >
+                        {title}
+                      </h3>
+                      <p className="mt-1.5 text-sm leading-relaxed text-slate-500 dark:text-slate-400 max-w-xl">
+                        {body}
+                      </p>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>
