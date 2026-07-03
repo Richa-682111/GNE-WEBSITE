@@ -181,11 +181,9 @@ export default function HomePage() {
           <ScrollReveal>
             <div className="mb-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
               <div>
-                <span className="mb-3 inline-block rounded-full bg-emerald-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-emerald-700 ring-1 ring-emerald-200">
-                  Our Focus Areas
-                </span>
+
                 <h2 className="mt-2 text-4xl font-black tracking-tight text-slate-900 dark:text-white sm:text-5xl">
-                  What We <span className="text-brand-green">Do</span>
+                  OUR <span className="text-brand-green">Focus Areas</span>
                 </h2>
               </div>
 
@@ -295,19 +293,20 @@ export default function HomePage() {
 
           {/* 3×2 Service Card Grid */}
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
             {[
               {
                 key: "land",
                 img: "/service-land.jpg",
-                label: "Land Procurement",
+                label: "Land Procurement & Grid Connectivity",
                 accent: "from-emerald-600 to-emerald-800",
                 tag: "bg-emerald-500",
                 desc: "We support renewable energy projects through strategic land identification, aggregation, techno-legal due diligence, and regulatory coordination. Our integrated approach helps accelerate project development while minimizing land-related risks and execution delays.",
               },
               {
                 key: "installation",
-                img: "/service-installation.jpg",
-                label: "Project Management Consultancy",
+                img: "/service-pmc.jpg",
+                label: "PMC(Solar, BESS, PSP, Wind)",
                 accent: "from-sky-600 to-sky-900",
                 tag: "bg-sky-500",
                 desc: "We offer end-to-end project management consultancy services covering project planning, execution monitoring, contract management, procurement support, quality control, and stakeholder coordination to ensure efficient and timely project delivery.",
@@ -323,7 +322,7 @@ export default function HomePage() {
               {
                 key: "om",
                 img: "/service-om.jpg",
-                label: "O&M Services",
+                label: "O&M(BESS, Solar,PSP)",
                 accent: "from-amber-600 to-amber-900",
                 tag: "bg-amber-500",
                 desc: "We deliver end-to-end operations and maintenance services focused on maximizing plant availability, improving energy generation, reducing downtime, and extending asset life.",
@@ -331,7 +330,7 @@ export default function HomePage() {
               {
                 key: "bess",
                 img: "/service-bess.jpg",
-                label: "BESS EPC",
+                label: "BESS (EPC/C&I, I&C)",
                 accent: "from-violet-600 to-violet-900",
                 tag: "bg-violet-500",
                 desc: "We deliver turnkey Battery Energy Storage System (BESS) projects, including engineering, procurement, installation, commissioning, and grid integration to enhance energy reliability, flexibility, and operational efficiency.",
@@ -366,7 +365,16 @@ export default function HomePage() {
 
                   {/* Label pill – always visible */}
                   <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <span className={`inline-block rounded-full px-3 py-1 text-xs font-bold text-white shadow-lg ${tag}`}>
+
+                    <span
+                      className={`inline-block rounded-full
+    px-4 py-2
+    sm:px-5 sm:py-2.5
+    lg:px-6 lg:py-3
+    text-sm sm:text-base
+    font-bold text-white shadow-xl
+    ${tag}`}
+                    >
                       {label}
                     </span>
 
@@ -379,13 +387,13 @@ export default function HomePage() {
               </ScrollReveal>
             ))}
           </div>
-        </div>
-      </section>
+        </div >
+      </section >
 
       {/* ── CTA BANNER ──────────────────────────────────────────────────── */}
-      <section className="relative isolate overflow-hidden">
+      < section className="relative isolate overflow-hidden" >
         {/* Rich layered background */}
-        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-slate-800/50 via-blue-700/40 to-cyan-600/35" />
+        < div className="absolute inset-0 -z-10 bg-gradient-to-br from-slate-800/50 via-blue-700/40 to-cyan-600/35" />
 
         <div className="absolute inset-0 -z-10 bg-[url('/hero-solar.jpg')] bg-cover bg-center opacity-45" />
 
@@ -446,14 +454,10 @@ export default function HomePage() {
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/15 text-base">✉️</span>
               info@gneinfra.com
             </a>
-            <span className="hidden h-4 w-px bg-white/20 sm:block" />
-            <span className="flex items-center gap-2">
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/15 text-base">🌍</span>
-              India · Middle East · Europe · Africa
-            </span>
+
           </div>
         </div>
-      </section>
-    </div>
+      </section >
+    </div >
   );
 }

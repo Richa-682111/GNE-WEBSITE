@@ -27,6 +27,10 @@ export default {
         glassGlow: "0 8px 32px 0 rgba(0, 0, 0, 0.37)",
         premiumGlow: "0 0 30px rgba(16,185,129,0.15)"
       },
+      fontFamily: {
+        sora: ["var(--font-sora)", "sans-serif"],
+        inter: ["var(--font-inter)", "sans-serif"],
+      },
       keyframes: {
         marquee: {
           "0%": { transform: "translateX(0)" },

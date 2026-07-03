@@ -21,7 +21,7 @@ const stats = [
     end: 500,
     suffix: " MW",
     label: "Projects Pipeline",
-    sub: "Solar: 450 MW • BESS: 50 MW / 200 MWh",
+
   },
   {
     icon: <Sparkles className="h-6 w-6 text-emerald-600" />,

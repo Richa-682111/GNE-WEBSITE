@@ -1,11 +1,26 @@
 import type { Metadata, Viewport } from "next";
 import { Suspense } from "react";
+import { Sora, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import LoadingOverlay from "@/components/LoadingOverlay";
 import { site } from "@/content/site";
+
+const sora = Sora({
+  subsets: ["latin"],
+  variable: "--font-sora",
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
 
 function metadataBaseUrl(): URL {
   try {
@@ -46,8 +61,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body>
+    <html lang="en" className={`${sora.variable} ${inter.variable}`} suppressHydrationWarning>
+      <body className="font-inter">
         <ThemeProvider>
           <Suspense fallback={null}>
             <LoadingOverlay />

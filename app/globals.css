@@ -29,6 +29,18 @@
     @apply dark:bg-slate-950 dark:text-slate-100;
   }
 
+  p,
+  .prose p {
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .culture-description {
+    text-align: left !important;
+  }
+
   main h1,
   main h2,
   main h3 {
@@ -42,6 +54,77 @@
     text-shadow: 0 0 14px rgba(74, 222, 128, 0.28);
     transform: translateY(-1px);
   }
+
+  /* Global typography upgrades to make text larger and high-contrast */
+  .text-xs {
+    font-size: 0.825rem !important;
+  }
+
+  .text-sm {
+    font-size: 0.95rem !important;
+  }
+
+  .text-base {
+    font-size: 1.075rem !important;
+  }
+
+  .text-lg {
+    font-size: 1.2rem !important;
+  }
+
+  .text-xl {
+    font-size: 1.35rem !important;
+  }
+
+  /* Increase text colors contrast (prevent faded/faint text in light mode) */
+  .text-slate-500,
+  .text-slate-550,
+  .text-\[\#6b7280\] {
+    color: #374151 !important;
+    /* Dark Slate/Charcoal instead of grey */
+  }
+
+  .text-slate-600 {
+    color: #1e293b !important;
+  }
+
+  .text-slate-650 {
+    color: #0f172a !important;
+  }
+
+  .text-slate-700 {
+    color: #0f172a !important;
+  }
+
+  .text-slate-800 {
+    color: #020617 !important;
+  }
+
+  /* Dark mode high-contrast overrides */
+  .dark .text-slate-400 {
+    color: #cbd5e1 !important;
+  }
+
+  .dark .text-slate-350 {
+    color: #e2e8f0 !important;
+  }
+
+  .dark .text-slate-300 {
+    color: #f1f5f9 !important;
+  }
+
+  .dark .text-slate-200 {
+    color: #ffffff !important;
+  }
+
+  .dark .text-white\/60,
+  .dark .text-white\/65,
+  .dark .text-white\/70,
+  .dark .text-white\/75,
+  .dark .text-white\/80,
+  .dark .text-white\/85 {
+    color: rgba(255, 255, 255, 0.88) !important;
+  }
 }
 
 @layer utilities {
@@ -51,6 +134,7 @@
       linear-gradient(to bottom, rgba(15, 23, 42, .08) 1px, transparent 1px);
     background-size: 48px 48px;
   }
+
   .dark .bg-grid {
     background-image:
       linear-gradient(to right, rgba(148, 163, 184, .12) 1px, transparent 1px),
@@ -72,7 +156,7 @@
   }
 
   .bg-project-p1 {
-    background: 
+    background:
       radial-gradient(circle at 0% 0%, rgba(253, 224, 71, 0.22) 0%, transparent 45%),
       radial-gradient(circle at 100% 0%, rgba(253, 224, 71, 0.22) 0%, transparent 45%),
       radial-gradient(circle at 0% 100%, rgba(253, 224, 71, 0.22) 0%, transparent 45%),
@@ -81,14 +165,14 @@
   }
 
   .dark .bg-project-p1 {
-    background: 
+    background:
       radial-gradient(circle at 0% 0%, rgba(253, 224, 71, 0.1) 0%, transparent 45%),
       radial-gradient(circle at 100% 0%, rgba(253, 224, 71, 0.1) 0%, transparent 45%),
       radial-gradient(circle at 50% 50%, #0f172a 0%, #020617 100%);
   }
 
   .bg-project-p3 {
-    background: 
+    background:
       radial-gradient(circle at 0% 0%, #DCE6F1 0%, transparent 50%),
       radial-gradient(circle at 100% 0%, #DCE6F1 0%, transparent 50%),
       radial-gradient(circle at 0% 100%, #DCE6F1 0%, transparent 50%),
@@ -97,7 +181,7 @@
   }
 
   .dark .bg-project-p3 {
-    background: 
+    background:
       radial-gradient(circle at 0% 0%, rgba(148, 163, 184, 0.12) 0%, transparent 50%),
       radial-gradient(circle at 100% 0%, rgba(148, 163, 184, 0.12) 0%, transparent 50%),
       radial-gradient(circle at 50% 50%, #0f172a 0%, #020617 100%);
@@ -218,6 +302,7 @@
       opacity: 0;
       transform: translateY(18px);
     }
+
     100% {
       opacity: 1;
       transform: translateY(0);
@@ -229,6 +314,7 @@
       opacity: 0;
       transform: translateY(22px) scale(0.96);
     }
+
     100% {
       opacity: 1;
       transform: translateY(0) scale(1);
@@ -236,18 +322,25 @@
   }
 
   @keyframes slowFloat {
+
     0%,
     100% {
       transform: translateY(0);
     }
+
     50% {
       transform: translateY(-8px);
     }
   }
 
   @keyframes slowZoom {
-    from { transform: scale(1); }
-    to { transform: scale(1.1); }
+    from {
+      transform: scale(1);
+    }
+
+    to {
+      transform: scale(1.1);
+    }
   }
 
   .animate-slow-zoom {
@@ -255,13 +348,16 @@
   }
 
   @keyframes slowFloat {
+
     0%,
     100% {
       transform: translateY(0) translateX(0);
     }
+
     30% {
       transform: translateY(-8px) translateX(4px);
     }
+
     60% {
       transform: translateY(4px) translateX(-8px);
     }
@@ -272,10 +368,12 @@
   }
 
   @keyframes pulseLightGreen {
+
     0%,
     100% {
       background-position: 0% 50%;
     }
+
     50% {
       background-position: 100% 50%;
     }
@@ -287,11 +385,13 @@
   }
 
   @keyframes pulseBorderGlow {
+
     0%,
     100% {
       opacity: 0;
       transform: scale(0.95);
     }
+
     50% {
       opacity: 1;
       transform: scale(1);
@@ -303,11 +403,13 @@
   }
 
   @keyframes pulseLine {
+
     0%,
     100% {
       transform: scaleX(0.8) translateX(-10%);
       opacity: 0.7;
     }
+
     50% {
       transform: scaleX(1) translateX(10%);
       opacity: 1;
@@ -359,6 +461,7 @@
   }
 
   @keyframes badgeGlow {
+
     0%,
     100% {
       box-shadow:
@@ -366,6 +469,7 @@
         0 0 16px rgba(16, 185, 129, 0.28);
       transform: translateY(0);
     }
+
     50% {
       box-shadow:
         0 0 0 6px rgba(16, 185, 129, 0.14),
@@ -386,6 +490,7 @@
     from {
       transform: rotate(0deg) scale(1);
     }
+
     to {
       transform: rotate(360deg) scale(1.08);
     }
@@ -415,12 +520,14 @@
   }
 
   @keyframes trustGlow {
+
     0%,
     100% {
       box-shadow:
         0 0 0 0 rgba(74, 222, 128, 0.12),
         0 0 14px rgba(74, 222, 128, 0.2);
     }
+
     50% {
       box-shadow:
         0 0 0 6px rgba(74, 222, 128, 0.16),
@@ -429,10 +536,12 @@
   }
 
   @keyframes chipGlow {
+
     0%,
     100% {
       box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.14);
     }
+
     50% {
       box-shadow:
         0 0 0 4px rgba(74, 222, 128, 0.14),
@@ -485,6 +594,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .reveal-up,
   .reveal-scale,
   .hero-float {
@@ -511,6 +621,7 @@
 .glass-card {
   @apply bg-white/75 dark:bg-brand-darkCard/75 border border-slate-200/50 dark:border-brand-darkBorder/45 backdrop-blur-md shadow-lg transition-all duration-300;
 }
+
 .glass-card:hover {
   @apply -translate-y-1 shadow-2xl shadow-emerald-500/10 border-emerald-300/40 dark:border-brand-green/30;
 }
@@ -519,6 +630,7 @@
   position: relative;
   overflow: hidden;
 }
+
 .shine-button::after {
   content: '';
   position: absolute;
@@ -526,16 +638,15 @@
   left: -60%;
   width: 25%;
   height: 200%;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.25) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.25) 50%,
+      rgba(255, 255, 255, 0) 100%);
   transform: rotate(30deg);
   transition: all 750ms cubic-bezier(0.19, 1, 0.22, 1);
   opacity: 0;
 }
+
 .shine-button:hover::after {
   left: 125%;
   opacity: 1;
@@ -545,7 +656,7 @@
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.3) 50%, transparent);
 }
+
 .dark .gradient-divider {
   background: linear-gradient(90deg, transparent, rgba(0, 230, 118, 0.2) 50%, transparent);
 }
-

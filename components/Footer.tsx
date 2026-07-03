@@ -1,83 +1,129 @@
 import Link from "next/link";
-import { site } from "@/content/site";
-
-const serviceLinks = [
-  { href: "/solar-epc", label: "SOLAR (EPC/IPP, I&C)" },
-  { href: "/bess-ems", label: "BESS (EPC / I&C)" },
-  { href: "/pmc", label: "Project Management Consultancy (PMC)" },
-  { href: "/o-and-m", label: "O&M" },
-  { href: "/green-hydrogen", label: "Green Hydrogen" },
-];
+import Image from "next/image";
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-200/50 bg-white dark:border-brand-darkBorder/45 dark:bg-brand-darkBg">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
-        <div className="md:col-span-2">
-          <div className="text-base font-semibold">{site.legalName}</div>
-          <p className="mt-2 max-w-md text-sm text-slate-600 dark:text-slate-300">
-            {site.description}
-          </p>
-          <div className="mt-4 text-sm text-slate-600 dark:text-slate-300">
-            <div>
-              <span className="font-medium">Email:</span>{" "}
-              <a className="underline underline-offset-4" href={`mailto:${site.contact.email}`}>
-                {site.contact.email}
-              </a>
+    <footer className="border-t border-white/[0.08] bg-[#131c2e] text-white font-inter">
+      <div className="mx-auto max-w-[1200px] px-6 sm:px-[60px] pt-16 pb-10">
+        
+        {/* Layout Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
+          
+          {/* Column 1 - Brand */}
+          <div className="space-y-4 text-left">
+            <Link href="/" className="inline-block">
+              <Image
+                src="/gne-logo.png"
+                alt="GNE Infra logo"
+                width={160}
+                height={48}
+                className="h-12 w-auto"
+              />
+            </Link>
+            <div className="text-[12px] font-semibold text-white/75 leading-none">
+              Green Next Energy Infra Pvt. Ltd
             </div>
-            <div className="mt-1">
-              <span className="font-medium">Phone:</span>{" "}
-              <a className="underline underline-offset-4" href={`tel:${site.contact.phone}`}>
-                {site.contact.phone}
+            <p className="text-[13px] text-white/55 leading-relaxed">
+              Powering tomorrow with integrated Solar, BESS, and Green Hydrogen infrastructure.
+            </p>
+            <div className="flex flex-col gap-1 text-[13px] text-white/55">
+              <a href="mailto:info@gneinfra.com" className="hover:text-white/70 transition-colors">
+                info@gneinfra.com
+              </a>
+              <a href="tel:+918448282440" className="hover:text-white/70 transition-colors">
+                +91 8448282440
               </a>
             </div>
           </div>
-        </div>
 
-        <div>
-          <div className="text-sm font-semibold">Services</div>
-          <ul className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
-            {serviceLinks.map((item) => (
-              <li key={item.href}>
-                <Link className="hover:underline" href={item.href}>
-                  {item.label}
+          {/* Column 2 - Services */}
+          <div className="text-left">
+            <h3 className="text-[10px] font-semibold text-[#22c55e] uppercase tracking-[3px] mb-5">
+              SERVICES
+            </h3>
+            <ul className="space-y-3 text-[13px] text-white/55">
+              <li>
+                <Link href="/solar-epc" className="hover:text-white/80 transition-colors">
+                  Solar (EPC/IPP, I&C)
                 </Link>
               </li>
-            ))}
-          </ul>
+              <li>
+                <Link href="/bess-ems" className="hover:text-white/80 transition-colors">
+                  BESS (EPC / I&C)
+                </Link>
+              </li>
+              <li>
+                <Link href="/pmc" className="hover:text-white/80 transition-colors">
+                  PMC
+                </Link>
+              </li>
+              <li>
+                <Link href="/o-and-m" className="hover:text-white/80 transition-colors">
+                  O&M
+                </Link>
+              </li>
+              <li>
+                <Link href="/green-hydrogen" className="hover:text-white/80 transition-colors">
+                  Green Hydrogen
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 3 - Company */}
+          <div className="text-left">
+            <h3 className="text-[10px] font-semibold text-[#22c55e] uppercase tracking-[3px] mb-5">
+              COMPANY
+            </h3>
+            <ul className="space-y-3 text-[13px] text-white/55">
+              <li>
+                <Link href="/projects" className="hover:text-white/80 transition-colors">
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:text-white/80 transition-colors">
+                  Blog / News
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-white/80 transition-colors">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4 - Contact */}
+          <div className="text-left space-y-4">
+            <h3 className="text-[10px] font-semibold text-[#22c55e] uppercase tracking-[3px] mb-5">
+              CONTACT
+            </h3>
+            <div className="flex flex-col gap-3 text-[13px] text-white/55">
+              <a href="mailto:info@gneinfra.com" className="hover:text-white/80 transition-colors">
+                info@gneinfra.com
+              </a>
+              <a href="tel:+918448282440" className="hover:text-white/80 transition-colors">
+                +91 8448282440
+              </a>
+              <p className="text-white/55 pt-1">
+                India · Middle East / Europe · Africa
+              </p>
+            </div>
+          </div>
+
         </div>
 
-        <div>
-          <div className="text-sm font-semibold">Company</div>
-          <ul className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
-            <li>
-              <Link className="hover:underline" href="/projects">
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:underline" href="/blog">
-                Blog / News
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:underline" href="/contact">
-                Contact
-              </Link>
-            </li>
-          </ul>
+        {/* Bottom Bar */}
+        <div className="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-white/[0.10] gap-4">
+          <div className="text-xs text-white/40 text-center md:text-left">
+            © 2026 Green Next Energy Infra Pvt. Ltd. All rights reserved.
+          </div>
+          <div className="text-xs text-white/40">
+            India 
+          </div>
         </div>
-      </div>
 
-      <div className="border-t border-emerald-100/80 dark:border-emerald-900/40">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-6 text-xs text-slate-500 dark:text-slate-400 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            © {new Date().getFullYear()} {site.legalName}. All rights reserved.
-          </div>
-          <div>
-            Built with Next.js • Optimized for WebP/AVIF • HTTPS-ready
-          </div>
-        </div>
       </div>
     </footer>
   );
