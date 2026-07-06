@@ -17,7 +17,7 @@ export default function HomePage() {
 
 
           <h1
-            className="mx-auto max-w-4xl text-center text-3xl font-black leading-[1.1] text-white sm:text-4xl md:text-5xl lg:text-[52px]"
+            className="mx-auto max-w-4xl text-center text-3xl font-black leading-[1.1] text-[#f5ece5] sm:text-4xl md:text-5xl lg:text-[52px]"
             style={{
               textShadow: `
       0 0 4px rgba(0,0,0,0.9),
@@ -81,17 +81,17 @@ export default function HomePage() {
       </HeroCarousel>
 
       {/* ── OUR IMPACT ─────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden py-14 sm:py-20">
+      <section className="relative overflow-hidden py-14 sm:py-20" style={{ background: '#f5ece5' }}>
 
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           {/* Section header */}
           <ScrollReveal>
             <div className="mb-14 text-center">
-              <span className="mb-3 inline-block rounded-full bg-emerald-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-emerald-700 ring-1 ring-emerald-200 dark:bg-emerald-950/50 dark:text-emerald-300 dark:ring-emerald-800">
+              <span className="mb-3 inline-block rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest" style={{ background: 'rgba(69,82,62,0.12)', color: '#0d7342ff', outline: '1px solid rgba(69,82,62,0.3)', outlineOffset: '0px' }}>
                 Welcome to Solar Power &amp; Save Energy
               </span>
-              <h2 className="mt-2 text-4xl font-black tracking-tight text-slate-900 dark:text-white sm:text-5xl">
-                Our&nbsp;<span className="text-brand-green">Impact</span>
+              <h2 className="mt-2 text-4xl font-black tracking-tight sm:text-5xl" style={{ color: '#010101' }}>
+                Our&nbsp;<span style={{ color: '#256c4aff' }}>Impact</span>
               </h2>
             </div>
           </ScrollReveal>
@@ -104,14 +104,14 @@ export default function HomePage() {
                 {/* Outer glow ring */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-emerald-500/20 via-sky-400/10 to-teal-400/10 blur-2xl" />
 
-                <div className="relative w-full max-w-xl overflow-hidden rounded-3xl border border-emerald-200/60 bg-white/80 p-6 shadow-2xl backdrop-blur dark:border-emerald-900/50 dark:bg-slate-900/70 sm:p-8">
+                <div className="relative w-full max-w-xl overflow-hidden rounded-3xl p-6 shadow-2xl sm:p-8" style={{ background: 'rgba(176,125,58,0.18)', border: '1px solid rgba(176,125,58,0.4)', backdropFilter: 'blur(8px)' }}>
                   <div className="relative mx-auto flex h-64 w-64 items-center justify-center sm:h-80 sm:w-80 lg:h-96 lg:w-96 [--orbit-radius:85px] sm:[--orbit-radius:120px] lg:[--orbit-radius:170px]">
                     {/* Animated orbit rings */}
                     <div className="absolute inset-0 animate-[spin_18s_linear_infinite] rounded-full border-2 border-dashed border-emerald-300/40 dark:border-emerald-700/40" />
                     <div className="absolute inset-6 animate-[spin_24s_linear_infinite_reverse] rounded-full border border-dashed border-sky-300/30 dark:border-sky-700/30" />
 
                     {/* Centre hub */}
-                    <div className="relative z-10 flex h-20 w-20 sm:h-24 sm:w-24 flex-col items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-emerald-700 shadow-xl shadow-emerald-500/40">
+                    <div className="relative z-10 flex h-20 w-20 sm:h-24 sm:w-24 flex-col items-center justify-center rounded-full shadow-xl" style={{ background: 'linear-gradient(135deg, #1a4731, #0f2d1e)' }}>
                       <Leaf className="mb-0.5 h-5 w-5 sm:h-7 sm:w-7 text-white" />
                       <span className="text-[9px] sm:text-[11px] font-bold uppercase tracking-wide text-white/90">GNE infra</span>
                     </div>
@@ -145,7 +145,7 @@ export default function HomePage() {
                   </div>
 
                   {/* Label below */}
-                  <p className="mt-5 text-center text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">
+                  <p className="mt-5 text-center text-xs font-semibold uppercase tracking-widest" style={{ color: ' #912716ff' }}>
                     Integrated Sustainability Framework
                   </p>
                 </div>
@@ -155,7 +155,7 @@ export default function HomePage() {
             {/* RIGHT — Copy */}
             <ScrollReveal delay={120}>
               <div className="flex flex-col gap-6">
-                <p className="text-xl leading-relaxed text-slate-700 dark:text-slate-300">
+                <p className="text-xl leading-relaxed" style={{ color: '#010101' }}>
                   “Building the Infrastructure Powering India&apos;s Energy Transition”
                   GNE Infra contributes to the development of sustainable energy infrastructure through integrated Solar EPC, BESS, project development, land procurement, grid connectivity, and project management solutions. Our focus is on enabling faster project execution, improving energy reliability, and supporting the adoption of clean energy technologies across India.
 
@@ -178,8 +178,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── WHAT WE DO — Editorial Numbered Strip ───────────────────────── */}
-      <section className="relative py-16 sm:py-24 overflow-hidden">
+      {/* ── WHAT WE DO — Editorial Numbered Strip ─────────────────── */}
+      <section className="relative py-16 sm:py-24 overflow-hidden" style={{ background: '#fbf5eb' }}>
         {/* Subtle background */}
         <div className="pointer-events-none absolute inset-0 -z-10">
           <div className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-emerald-200/60 to-transparent" />
@@ -192,8 +192,8 @@ export default function HomePage() {
             <div className="mb-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
               <div>
 
-                <h2 className="mt-2 text-4xl font-black tracking-tight text-slate-900 dark:text-white sm:text-5xl">
-                  OUR <span className="text-brand-green">Focus Areas</span>
+                <h2 className="mt-2 text-4xl font-black tracking-tight sm:text-5xl" style={{ color: '#010101' }}>
+                  OUR <span style={{ color: '#256c4aff' }}>Focus Areas</span>
                 </h2>
               </div>
 
@@ -209,19 +209,19 @@ export default function HomePage() {
                   num: "01",
                   title: "Renewable Energy Development",
                   body: "Supporting the deployment of solar and energy storage projects through end-to-end engineering, procurement, construction, and project management capabilities.",
-                  accent: "#10b981",
+                  accent: "#256c4aff",
                 },
                 {
                   num: "02",
                   title: "Accelerating Project Readiness",
                   body: "Facilitating land procurement, stakeholder coordination, regulatory approvals, and grid integration to reduce development challenges and improve project timelines.",
-                  accent: "#0d9488",
+                  accent: "#ad5d50",
                 },
                 {
                   num: "03",
                   title: "Advancing Energy Storage Adoption",
                   body: "Developing Battery Energy Storage System (BESS) solutions that enhance grid stability, renewable energy integration, and long-term energy resilience.",
-                  accent: "#0ea5e9",
+                  accent: "#1a98a8ff",
                 },
               ].map(({ num, title, body, accent }, i) => (
                 <ScrollReveal key={num} delay={i * 60}>
@@ -245,7 +245,7 @@ export default function HomePage() {
                       >
                         {title}
                       </h3>
-                      <p className="mt-1.5 text-sm leading-relaxed text-slate-500 dark:text-slate-400 max-w-xl">
+                      <p className="mt-1.5 text-sm leading-relaxed max-w-xl" style={{ color: '#5a5249' }}>
                         {body}
                       </p>
                     </div>
@@ -316,19 +316,19 @@ export default function HomePage() {
                   num: "04",
                   title: "Supporting Industrial Decarbonization",
                   body: "Helping commercial and industrial consumers adopt Solar and BESS solutions to reduce energy costs, improve reliability, and lower carbon emissions.",
-                  accent: "#6366f1",
+                  accent: "#e08e23ff",
                 },
                 {
                   num: "05",
                   title: "Building Future-Ready Infrastructure",
                   body: "Expanding capabilities across Solar, BESS, Hybrid Energy Systems, and Green Hydrogen to support India's long-term clean energy and energy security goals.",
-                  accent: "#8b5cf6",
+                  accent: "#357757ff",
                 },
                 {
                   num: "06",
                   title: "Driving Sustainable Value",
                   body: "Delivering bankable, high-yield renewable assets with transparent governance, rigorous quality assurance, and lifecycle support — ensuring lasting impact for investors and communities.",
-                  accent: "#059669",
+                  accent: "#c05a4aff",
                 },
               ].map(({ num, title, body, accent }, i) => (
                 <ScrollReveal key={num} delay={i * 60}>
@@ -352,7 +352,7 @@ export default function HomePage() {
                       >
                         {title}
                       </h3>
-                      <p className="mt-1.5 text-sm leading-relaxed text-slate-500 dark:text-slate-400 max-w-xl">
+                      <p className="mt-1.5 text-sm leading-relaxed max-w-xl" style={{ color: '#5a5249' }}>
                         {body}
                       </p>
                     </div>
@@ -364,8 +364,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── OUR EXPERTISE ──────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-emerald-50/60 py-14 dark:bg-slate-900/80 sm:py-20">
+      {/* ── OUR EXPERTISE ──────────────────────────────────────── */}
+      <section className="relative overflow-hidden py-14 sm:py-20" style={{ background: '#f5ece5' }}>
         {/* Ambient glow */}
         <div className="pointer-events-none absolute inset-0 -z-0">
           <div className="absolute left-1/3 top-0 h-[400px] w-[700px] -translate-x-1/2 rounded-full bg-emerald-400/15 blur-[130px]" />
@@ -376,13 +376,13 @@ export default function HomePage() {
           {/* Header */}
           <ScrollReveal>
             <div className="mb-10 text-center">
-              <span className="mb-3 inline-block rounded-full bg-emerald-100 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-emerald-700 ring-1 ring-emerald-300 dark:bg-emerald-950/60 dark:text-emerald-300 dark:ring-emerald-700/60">
+              <span className="mb-3 inline-block rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest" style={{ background: 'rgba(69,82,62,0.12)', color: '#45523e', outline: '1px solid rgba(69,82,62,0.3)', outlineOffset: '0px' }}>
                 Process &amp; The Solutions We Can Provide
               </span>
-              <h2 className="mt-2 text-4xl font-black tracking-tight text-slate-900 dark:text-white sm:text-5xl">
-                Our <span className="text-brand-green">Expertise</span>
+              <h2 className="mt-2 text-4xl font-black tracking-tight sm:text-5xl" style={{ color: '#010101' }}>
+                Our <span style={{ color: '#256c4aff' }}>Expertise</span>
               </h2>
-              <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-600 dark:text-slate-400">
+              <p className="mx-auto mt-3 max-w-2xl text-sm" style={{ color: '#492c06ff' }}>
                 End-to-end renewable energy solutions — from land identification to long-term operations — engineered for scale.
               </p>
             </div>
@@ -392,54 +392,12 @@ export default function HomePage() {
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
             {[
-              {
-                key: "land",
-                img: "/service-land.jpg",
-                label: "Land Procurement & Grid Connectivity",
-                accent: "from-emerald-600 to-emerald-800",
-                tag: "bg-emerald-500",
-                desc: "We support renewable energy projects through strategic land identification, aggregation, techno-legal due diligence, and regulatory coordination. Our integrated approach helps accelerate project development while minimizing land-related risks and execution delays.",
-              },
-              {
-                key: "installation",
-                img: "/service-pmc.jpg",
-                label: "PMC(Solar, BESS, PSP, Wind)",
-                accent: "from-sky-600 to-sky-900",
-                tag: "bg-sky-500",
-                desc: "We offer end-to-end project management consultancy services covering project planning, execution monitoring, contract management, procurement support, quality control, and stakeholder coordination to ensure efficient and timely project delivery.",
-              },
-              {
-                key: "epc",
-                img: "/service-epc.jpg",
-                label: "Solar EPC",
-                accent: "from-teal-600 to-teal-900",
-                tag: "bg-teal-500",
-                desc: "We provide complete Solar EPC services from feasibility studies and detailed engineering to procurement, construction, commissioning, and grid connectivity, ensuring high-quality and timely project delivery.",
-              },
-              {
-                key: "om",
-                img: "/service-om.jpg",
-                label: "O&M(BESS, Solar,PSP)",
-                accent: "from-amber-600 to-amber-900",
-                tag: "bg-amber-500",
-                desc: "We deliver end-to-end operations and maintenance services focused on maximizing plant availability, improving energy generation, reducing downtime, and extending asset life.",
-              },
-              {
-                key: "bess",
-                img: "/service-bess.jpg",
-                label: "BESS (EPC/C&I, I&C)",
-                accent: "from-violet-600 to-violet-900",
-                tag: "bg-violet-500",
-                desc: "We deliver turnkey Battery Energy Storage System (BESS) projects, including engineering, procurement, installation, commissioning, and grid integration to enhance energy reliability, flexibility, and operational efficiency.",
-              },
-              {
-                key: "manufacturing",
-                img: "/service-manufacturing.jpg",
-                label: "Grid Integration",
-                accent: "from-rose-600 to-rose-900",
-                tag: "bg-rose-500",
-                desc: "We facilitate efficient grid connectivity through transmission planning, utility coordination, regulatory approvals, and power evacuation solutions, ensuring smooth integration of renewable energy projects into the grid.",
-              },
+              { key: "land", img: "/service-land.jpg", label: "Land Procurement & Grid Connectivity", accent: "from-[#45523e] to-[#2a3328]", tag: "bg-[#45523e]", desc: "We support renewable energy projects through strategic land identification, aggregation, techno-legal due diligence, and regulatory coordination. Our integrated approach helps accelerate project development while minimizing land-related risks and execution delays." },
+              { key: "installation", img: "/service-pmc.jpg", label: "PMC(Solar, BESS, PSP, Wind)", accent: "from-[#b0aca2] to-[#7a756f]", tag: "bg-[#b0aca2]", desc: "We offer end-to-end project management consultancy services covering project planning, execution monitoring, contract management, procurement support, quality control, and stakeholder coordination to ensure efficient and timely project delivery." },
+              { key: "epc", img: "/service-epc.jpg", label: "Solar EPC", accent: "from-[#45523e] to-[#010101]", tag: "bg-[#45523e]", desc: "We provide complete Solar EPC services from feasibility studies and detailed engineering to procurement, construction, commissioning, and grid connectivity, ensuring high-quality and timely project delivery." },
+              { key: "om", img: "/service-om.jpg", label: "O&M(BESS, Solar,PSP)", accent: "from-[#ad5d50] to-[#7a3f35]", tag: "bg-[#ad5d50]", desc: "We deliver end-to-end operations and maintenance services focused on maximizing plant availability, improving energy generation, reducing downtime, and extending asset life." },
+              { key: "bess", img: "/service-bess.jpg", label: "BESS (EPC/C&I, I&C)", accent: "from-[#010101] to-[#45523e]", tag: "bg-[#010101]", desc: "We deliver turnkey Battery Energy Storage System (BESS) projects, including engineering, procurement, installation, commissioning, and grid integration to enhance energy reliability, flexibility, and operational efficiency." },
+              { key: "manufacturing", img: "/service-manufacturing.jpg", label: "Grid Integration", accent: "from-[#ad5d50] to-[#010101]", tag: "bg-[#ad5d50]", desc: "We facilitate efficient grid connectivity through transmission planning, utility coordination, regulatory approvals, and power evacuation solutions, ensuring smooth integration of renewable energy projects into the grid." },
             ].map(({ key, img, label, accent, tag, desc }, index) => (
               <ScrollReveal key={key} delay={index * 60} className="h-full">
                 <div
@@ -490,7 +448,7 @@ export default function HomePage() {
       {/* ── CTA BANNER ──────────────────────────────────────────────────── */}
       < section className="relative isolate overflow-hidden" >
         {/* Rich layered background */}
-        < div className="absolute inset-0 -z-10 bg-gradient-to-br from-slate-800/50 via-blue-700/40 to-cyan-600/35" />
+        <div className="absolute inset-0 -z-10" style={{ background: 'linear-gradient(135deg, #010101 0%, #45523e 50%, #010101 100%)' }} />
 
         <div className="absolute inset-0 -z-10 bg-[url('/cta.png')] bg-cover bg-center opacity-75" />
 
@@ -513,12 +471,12 @@ export default function HomePage() {
           </span>
 
           {/* Headline */}
-          <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-black leading-tight tracking-tight text-[#FFF8E7] drop-shadow-[0_4px_20px_rgba(0,0,0,0.85)] sm:text-5xl lg:text-6xl">
             Ready to Power<br className="hidden sm:block" /> Your Future?
           </h2>
 
           {/* Sub-copy */}
-          <p className="mx-auto mt-5 max-w-xl text-base font-semibold text-[#00E5FF] sm:text-lg drop-shadow-[0_0_10px_rgba(0,229,255,0.3)]">
+          <p className="mx-auto mt-5 max-w-xl text-base font-semibold text-[#FFF8E7] sm:text-lg drop-shadow-[0_4px_20px_rgba(0,0,0,0.85)]">
             Tell us your capacity, location and timeline — our engineering team will craft a solution that delivers results from day one.
           </p>
 

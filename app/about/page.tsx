@@ -20,6 +20,7 @@ import {
 import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
 import TimelineJourney from "@/components/TimelineJourney";
+import { CoreValuesSection } from "@/components/CoreValuesSection";
 
 export const metadata: Metadata = {
   title: "About GNE Infra | Our Story, Culture & Team",
@@ -260,7 +261,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen font-inter bg-white text-[#111827] antialiased">
+    <div className="flex flex-col min-h-screen font-inter bg-transparent text-[#111827] antialiased">
 
       {/* 1. Hero Section */}
       <section className="relative h-[88vh] min-h-[560px] w-full flex items-center justify-start overflow-hidden bg-slate-950">
@@ -328,7 +329,7 @@ export default function AboutPage() {
 
 
       {/* 3. "Your Trusted Energy Partner" Section */}
-      <section className="py-[100px] bg-white font-inter">
+      <section className="py-[100px] bg-transparent font-inter">
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
             <div className="space-y-6 text-left">
@@ -348,10 +349,8 @@ export default function AboutPage() {
               {/* Description */}
               <div className="space-y-4 text-[15px] text-[#6b7280] leading-[1.8]">
                 <p>
-                  At GNE Infra, we are committed to providing innovative solar energy solutions and Battery Energy Solutions (BESS) that are designed to meet the growing energy demands of businesses, industries, and communities.
-                </p>
-                <p>
-                  We are dedicated to revolutionizing the energy landscape with innovative and sustainable solar solutions. As a leading EPC (Engineering, Procurement, and Construction) company, we specialize in delivering high-quality, end-to-end solar energy solutions and BESS for commercial, industrial, and utility-scale projects. We specialize in the full spectrum of solar project development, from design and engineering to procurement and constructions
+                  GNE Infra is an integrated clean energy infrastructure company delivering end-to-end solutions across Engineering, Procurement & Construction (EPC), Project Management Consultancy (PMC), and Operations & Maintenance (O&M). Our expertise spans Solar Power, Battery Energy Storage Systems (BESS), Wind Energy, and Pumped Storage Projects (PSP), supporting projects from concept and engineering through commissioning and long-term asset management.
+                  Driven by innovation and execution excellence, GNE Infra is expanding into Green Hydrogen and next-generation energy technologies to accelerate the transition towards a sustainable, resilient, and low-carbon energy future.
                 </p>
               </div>
             </div>
@@ -421,83 +420,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 5. Our Values Section */}
-      <section className="py-[100px] bg-[#f9fafb] font-inter">
-        <div className="mx-auto max-w-6xl px-4 text-center">
-          <div className="mb-12 flex flex-col items-center">
-            {/* Eyebrow */}
-            <div className="flex items-center gap-3 justify-center mb-3">
-              <span className="w-8 h-[2px] bg-[#16a34a]" />
-              <span className="text-[11px] font-bold uppercase tracking-[3px] text-[#22c55e]">
-                WHAT DRIVES US
-              </span>
-            </div>
-            <h2 className="font-sora font-extrabold text-3xl sm:text-4xl text-[#111827]">
-              Our Core Values
-            </h2>
-            <p className="mt-3 text-[15px] text-[#6b7280] max-w-2xl font-normal">
-              We don&apos;t just build projects—we build a community where innovation thrives and people grow.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: "Integrity",
-                description: "We are committed to upholding the highest standards of professionalism, ethics, and transparency in all our operations.",
-                icon: Heart,
-                color: "text-[#22c55e]",
-                bg: "bg-[#22c55e]/10",
-                barColor: "bg-[#22c55e]"
-              },
-              {
-                title: "Innovation",
-                description: "We continually explore new technologies and strategies to provide cutting-edge solar energy solutions that address evolving energy needs.",
-                icon: Lightbulb,
-                color: "text-blue-600",
-                bg: "bg-blue-600/10",
-                barColor: "bg-blue-600"
-              },
-              {
-                title: "Sustainability",
-                description: "We strive to minimize environmental impact while helping our clients transition to renewable energy sources.",
-                icon: Globe,
-                color: "text-amber-600",
-                bg: "bg-amber-600/10",
-                barColor: "bg-amber-600"
-              },
-              {
-                title: "Excellence",
-                description: "Our dedication to quality ensures that every project we undertake is completed to the highest standards of craftsmanship and efficiency.",
-                icon: Star,
-                color: "text-purple-600",
-                bg: "bg-purple-600/10",
-                barColor: "bg-purple-600"
-              }
-            ].map((value, idx) => {
-              const ValIcon = value.icon;
-              return (
-                <div
-                  key={idx}
-                  className="bg-white border border-[#e5e7eb] rounded-2xl py-[36px] px-[28px] shadow-sm flex flex-col items-start text-left space-y-4 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:border-[#16a34a]/30"
-                >
-                  <div className={`w-[52px] h-[52px] rounded-xl ${value.bg} flex items-center justify-center shrink-0`}>
-                    <ValIcon className={`h-6 w-6 ${value.color}`} />
-                  </div>
-                  <div className={`w-8 h-[3px] ${value.barColor}`} />
-                  <div>
-                    <h3 className="font-sora font-bold text-[17px] text-[#111827]">{value.title}</h3>
-                    <p className="mt-2 text-sm text-[#6b7280] leading-relaxed culture-description">{value.description}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      {/* 5. Our Values Section (10-Stage Apple/Tesla Style Scroll Animation) */}
+      <CoreValuesSection />
 
       {/* 6. Global Presence Section */}
-      <section className="py-[100px] bg-white font-inter">
+      <section className="py-[100px] bg-transparent font-inter">
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Left Column: Text */}
@@ -550,7 +477,7 @@ export default function AboutPage() {
       </section>
 
       {/* 7. Our Services Section */}
-      <section className="py-[100px] bg-[#f9fafb] font-inter border-y border-[#e5e7eb]">
+      <section className="py-[100px] bg-transparent font-inter border-y border-[#e5e7eb]/50">
         <div className="mx-auto max-w-6xl px-4">
           <div className="mb-12 flex flex-col items-start text-left">
             {/* Eyebrow */}
@@ -697,7 +624,7 @@ export default function AboutPage() {
       </section>
 
       {/* 8. Our Journey Section */}
-      <section className="py-[100px] bg-white font-inter">
+      <section className="py-[100px] bg-transparent font-inter">
         <div className="mx-auto max-w-6xl px-4">
           <div className="mb-12 flex flex-col items-start text-left">
             {/* Eyebrow */}
@@ -720,7 +647,7 @@ export default function AboutPage() {
       </section>
 
       {/* 9. Leadership Section - Board Members */}
-      <section className="py-[100px] bg-[#f9fafb] border-t border-[#e5e7eb] font-inter">
+      <section className="py-[100px] bg-transparent border-t border-[#e5e7eb]/50 font-inter">
         <div className="mx-auto max-w-6xl px-4">
           <div className="mb-12 flex flex-col items-start text-left">
             {/* Eyebrow */}
@@ -742,7 +669,7 @@ export default function AboutPage() {
             {leadership.map((leader, idx) => (
               <Card
                 key={idx}
-                className="flex h-full flex-col p-4 bg-white border border-[#e5e7eb] rounded-2xl shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg text-left"
+                className="flex h-full flex-col p-4 bg-white/60 backdrop-blur-md border border-[#e5e7eb] rounded-2xl shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg text-left"
               >
                 <div className="relative mb-3 aspect-[4/5] w-full overflow-hidden rounded-xl">
                   <Image

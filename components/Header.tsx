@@ -51,9 +51,10 @@ export function Header() {
     <header
       className={`sticky top-0 z-40 transition-all duration-300 border-b backdrop-blur-md ${
         isScrolled
-          ? "border-slate-200/80 bg-white/90 shadow-md dark:border-slate-800/80 dark:bg-brand-darkBg/90"
-          : "border-slate-250/20 bg-white/75 dark:border-slate-800/20 dark:bg-brand-darkBg/75"
+          ? "border-[#b0aca2]/50 shadow-md"
+          : "border-[#b0aca2]/20"
       }`}
+      style={{ background: isScrolled ? 'rgba(245,236,229,0.96)' : 'rgba(245,236,229,0.85)' }}
     >
       <div className="grid w-full grid-cols-[auto_1fr_auto] items-center gap-4 px-3 py-2 sm:px-5 lg:px-8">
         {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- full document navigation */}
@@ -72,7 +73,8 @@ export function Header() {
           <MobileNav primaryNav={primaryNav} dropdownNav={dropdownNav} />
 
           <nav
-            className="hidden flex-nowrap items-center justify-center gap-3 text-[16px] font-bold tracking-wide text-slate-800 dark:text-slate-200 lg:flex"
+            className="hidden flex-nowrap items-center justify-center gap-3 text-[16px] font-bold tracking-wide lg:flex"
+            style={{ color: '#2a2a2a' }}
             aria-label="Main"
           >
             {primaryNav.map((item) => {
@@ -82,12 +84,13 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   className={`${navPill} relative ${
-                    isActive ? "text-brand-green dark:text-emerald-400 font-extrabold" : ""
+                    isActive ? "font-extrabold" : ""
                   }`}
+                  style={isActive ? { color: '#1a4731' } : {}}
                 >
                   {item.label}
                   {isActive && (
-                    <span className="absolute bottom-[-6px] left-1/2 -translate-x-1/2 h-1 w-4 rounded-full bg-brand-green dark:bg-emerald-400 shadow-[0_0_8px_rgba(16,185,129,0.6)]" />
+                    <span className="absolute bottom-[-6px] left-1/2 -translate-x-1/2 h-1 w-4 rounded-full" style={{ background: '#1a4731' }} />
                   )}
                 </Link>
               );
@@ -100,8 +103,9 @@ export function Header() {
                   <button
                     type="button"
                     className={`inline-flex items-center gap-1 ${navPill} ${
-                      isGroupActive ? "text-brand-green dark:text-emerald-400 font-extrabold" : ""
+                      isGroupActive ? "font-extrabold" : ""
                     }`}
+                    style={isGroupActive ? { color: '#1a4731' } : {}}
                   >
                     {group.label}
                     <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover/drop:rotate-180" />
@@ -116,9 +120,10 @@ export function Header() {
                           href={item.href}
                           className={`block rounded-xl px-4 py-2.5 text-[13px] font-bold transition-colors ${
                             isItemActive
-                              ? "bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300"
-                              : "text-slate-700 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-900/60 dark:hover:text-white"
+                              ? "font-extrabold"
+                              : "text-slate-700 hover:bg-[#45523e]/10 hover:text-[#1a4731]"
                           }`}
+                          style={isItemActive ? { background: 'rgba(26,71,49,0.1)', color: '#1a4731' } : {}}
                         >
                           {item.label}
                         </Link>
@@ -136,12 +141,13 @@ export function Header() {
                 <Link
                   href="/blog"
                   className={`${navPill} relative ${
-                    isBlogsActive ? "text-brand-green dark:text-emerald-400 font-extrabold" : ""
+                    isBlogsActive ? "font-extrabold" : ""
                   }`}
+                  style={isBlogsActive ? { color: '#1a4731' } : {}}
                 >
                   Blogs
                   {isBlogsActive && (
-                    <span className="absolute bottom-[-6px] left-1/2 -translate-x-1/2 h-1 w-4 rounded-full bg-brand-green dark:bg-emerald-400 shadow-[0_0_8px_rgba(16,185,129,0.6)]" />
+                    <span className="absolute bottom-[-6px] left-1/2 -translate-x-1/2 h-1 w-4 rounded-full" style={{ background: '#1a4731' }} />
                   )}
                 </Link>
               );
@@ -152,7 +158,8 @@ export function Header() {
         <div className="flex items-center justify-end gap-3">
           <Link
             href="/contact"
-            className="hidden rounded-xl bg-brand-green px-5 py-2.5 text-sm font-bold text-white transition-all duration-300 hover:bg-emerald-500 hover:scale-102 hover:shadow-md hover:shadow-emerald-500/25 sm:inline-flex shine-button"
+            className="hidden rounded-xl px-5 py-2.5 text-sm font-bold text-white transition-all duration-300 hover:scale-102 hover:shadow-md sm:inline-flex shine-button"
+            style={{ background: '#1a4731' }}
           >
             Get a Quote
           </Link>

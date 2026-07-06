@@ -46,22 +46,22 @@ export default function ContactPage() {
       </section>
 
       {/* Main Content Grid (Inquiry Form Section with Contacthero Background) */}
-      <section className="relative py-16 sm:py-24 overflow-hidden">
-        {/* Contacthero image behind inquiry form section — using inline style for guaranteed rendering */}
-        <div 
-          className="absolute inset-0 -z-10" 
+      <section className="relative z-0 py-16 sm:py-24 overflow-hidden">
+        {/* ContactForm image behind inquiry form section */}
+        <div
+          className="absolute inset-0 -z-20"
           style={{
-            backgroundImage: 'url("/Contacthero.jpeg")',
+            backgroundImage: 'url("/ContactForm.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
         />
-        
-        {/* Subtle dark vignette for depth and contrast without any green color */}
-        <div className="absolute inset-0 -z-10 bg-black/20" />
+
+        {/* Glassmorphic green overlay */}
+        <div className="absolute inset-0 -z-10 bg-[#16462d]/5 backdrop-blur-sm" />
 
         <div className="mx-auto grid max-w-6xl gap-8 px-4 sm:px-6 lg:px-8 md:grid-cols-3 items-start relative z-10">
-          
+
           {/* Inquiry Form Card — Crystal White Opaque Glassmorphism (Span 2) */}
           <div className="md:col-span-2 rounded-3xl bg-white/85 border border-white/60 p-6 sm:p-10 shadow-[0_25px_60px_rgba(0,0,0,0.2)] backdrop-blur-xl text-slate-900">
             <div className="text-xl sm:text-2xl font-bold text-slate-900">
@@ -78,15 +78,15 @@ export default function ContactPage() {
             <div className="text-xl font-bold text-slate-900 border-b border-slate-200 pb-4">
               Direct contact
             </div>
-            
+
             <div className="space-y-6 text-sm">
               <div className="group">
                 <div className="flex items-center gap-2.5 font-semibold text-slate-800 text-xs uppercase tracking-wider mb-1.5">
                   <Mail className="w-4 h-4 text-emerald-600" />
                   Email
                 </div>
-                <a 
-                  className="text-base font-bold text-slate-900 hover:text-emerald-600 underline underline-offset-4 transition-colors block truncate" 
+                <a
+                  className="text-base font-bold text-slate-900 hover:text-emerald-600 underline underline-offset-4 transition-colors block truncate"
                   href={`mailto:${site.contact.email}`}
                 >
                   {site.contact.email}
@@ -98,8 +98,8 @@ export default function ContactPage() {
                   <PhoneCall className="w-4 h-4 text-emerald-600" />
                   Phone
                 </div>
-                <a 
-                  className="text-base font-bold text-slate-900 hover:text-emerald-600 underline underline-offset-4 transition-colors inline-flex items-center gap-2" 
+                <a
+                  className="text-base font-bold text-slate-900 hover:text-emerald-600 underline underline-offset-4 transition-colors inline-flex items-center gap-2"
                   href={`tel:${site.contact.phone}`}
                 >
                   {site.contact.phone}

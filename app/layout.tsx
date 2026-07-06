@@ -68,16 +68,36 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <LoadingOverlay />
           </Suspense>
           <Header />
-          
+
           {/* GLOBAL GLASSY CORPORATE BACKGROUND */}
-          <div className="fixed inset-0 z-[-1] bg-[#f8fafc] dark:bg-[#050B14] transition-colors duration-500 overflow-hidden">
-            {/* Fixed Depth Orbs with subtle animations */}
-            <div className="absolute top-[-20%] left-[-10%] w-[50vw] h-[50vw] max-w-[800px] max-h-[800px] bg-emerald-500/10 dark:bg-[#00E676]/8 rounded-full blur-[120px] pointer-events-none animate-[pulse_8s_ease-in-out_infinite]" />
-            <div className="absolute bottom-[-20%] right-[-10%] w-[40vw] h-[40vw] max-w-[600px] max-h-[600px] bg-sky-500/10 dark:bg-[#3BB7FF]/8 rounded-full blur-[100px] pointer-events-none animate-[pulse_12s_ease-in-out_infinite]" />
-            <div className="absolute top-[30%] right-[-20%] w-[35vw] h-[35vw] max-w-[500px] max-h-[500px] bg-amber-500/5 dark:bg-[#FFD54A]/5 rounded-full blur-[110px] pointer-events-none animate-[pulse_10s_ease-in-out_infinite_reverse]" />
-            
+          <div
+            className="fixed inset-0 z-[-1] overflow-hidden transition-colors duration-500"
+            style={{
+              background: `
+    radial-gradient(circle at 15% 20%,
+      rgba(69,82,62,0.20),
+      transparent 40%),
+
+    radial-gradient(circle at 85% 75%,
+      rgba(173,93,80,0.12),
+      transparent 40%),
+
+    radial-gradient(ellipse at center,
+      rgba(255,255,255,0.30),
+      transparent 65%),
+
+    linear-gradient(
+      160deg,
+      #f5ece5 0%,
+      #ede4dc 40%,
+      #e8e2da 70%,
+      #f0ebe4 100%
+    )`
+            }}
+          >
+
             {/* Subtle Noise/Mesh */}
-            <div 
+            <div
               className="absolute inset-0 opacity-[0.02] dark:opacity-[0.04] pointer-events-none mix-blend-overlay"
               style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, black 1px, transparent 0)', backgroundSize: '32px 32px' }}
             />

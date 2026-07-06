@@ -48,62 +48,89 @@ export default function PmcForPspPage() {
           </div>
         </div>
       </Section>
-
       <Section className="bg-service-gradient">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="grid gap-10 lg:grid-cols-2">
-            <div>
-              <h2 className="text-3xl font-black tracking-tight">Expert PMC for government-backed projects</h2>
-              <p className="mt-5 text-base text-slate-700 dark:text-slate-300 leading-relaxed">
-                Our team understands the governance, approvals and compliance needed in public sector renewable development, ensuring projects stay aligned with stakeholder expectations and regulatory frameworks.
-              </p>
-              <ul className="mt-8 space-y-4 text-sm text-slate-600 dark:text-slate-300">
-                <li className="flex gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 text-brand-green" />
-                  Project controls tuned for tender milestones and public procurement requirements.
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 text-brand-green" />
-                  Compliance reporting, bid evaluation support, and stakeholder governance.
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle2 className="mt-1 h-5 w-5 text-brand-green" />
-                  Risk management, site readiness checks, and handover certainty.
-                </li>
-              </ul>
-            </div>
+        <div
+          className="rounded-3xl p-8"
+          style={{
+            background: `
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(16,185,129,0.12),
+          transparent 35%
+        ),
 
-            <div className="space-y-6">
-              <Card>
-                <div className="text-sm font-semibold text-slate-900 dark:text-white">PSP PMC focus areas</div>
-                <div className="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
-                  <div>Government process alignment and documentation</div>
-                  <div>Technical audit coordination and compliance</div>
-                  <div>Performance-based milestone delivery</div>
-                </div>
-              </Card>
-              <Card>
-                <div className="flex items-start gap-3">
-                  <ClipboardCheck className="mt-0.5 h-5 w-5 text-brand-solar" />
-                  <div>
-                    <div className="text-sm font-semibold">Quality and approvals</div>
-                    <div className="mt-2 text-sm text-slate-600 dark:text-slate-300">
-                      Tight quality control and approval management keeps projects audit-ready through every stage.
+        radial-gradient(
+          circle at 85% 75%,
+          rgba(59,130,246,0.10),
+          transparent 35%
+        ),
+
+        linear-gradient(
+          135deg,
+          #f5ece5 0%,
+          #efe7df 40%,
+          #e8ddd2 70%,
+          #d8e6ed 100%
+        )
+      `
+          }}
+        >
+
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="grid gap-10 lg:grid-cols-2">
+              <div>
+                <h2 className="text-3xl font-black tracking-tight">Expert PMC for government-backed projects</h2>
+                <p className="mt-5 text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+                  Our team understands the governance, approvals and compliance needed in public sector renewable development, ensuring projects stay aligned with stakeholder expectations and regulatory frameworks.
+                </p>
+                <ul className="mt-8 space-y-4 text-sm text-slate-600 dark:text-slate-300">
+                  <li className="flex gap-3">
+                    <CheckCircle2 className="mt-1 h-5 w-5 text-brand-green" />
+                    Project controls tuned for tender milestones and public procurement requirements.
+                  </li>
+                  <li className="flex gap-3">
+                    <CheckCircle2 className="mt-1 h-5 w-5 text-brand-green" />
+                    Compliance reporting, bid evaluation support, and stakeholder governance.
+                  </li>
+                  <li className="flex gap-3">
+                    <CheckCircle2 className="mt-1 h-5 w-5 text-brand-green" />
+                    Risk management, site readiness checks, and handover certainty.
+                  </li>
+                </ul>
+              </div>
+
+              <div className="space-y-6">
+                <Card>
+                  <div className="text-sm font-semibold text-slate-900 dark:text-white">PSP PMC focus areas</div>
+                  <div className="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                    <div>Government process alignment and documentation</div>
+                    <div>Technical audit coordination and compliance</div>
+                    <div>Performance-based milestone delivery</div>
+                  </div>
+                </Card>
+                <Card>
+                  <div className="flex items-start gap-3">
+                    <ClipboardCheck className="mt-0.5 h-5 w-5 text-brand-solar" />
+                    <div>
+                      <div className="text-sm font-semibold">Quality and approvals</div>
+                      <div className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+                        Tight quality control and approval management keeps projects audit-ready through every stage.
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Card>
-              <Card>
-                <div className="flex items-start gap-3">
-                  <ShieldCheck className="mt-0.5 h-5 w-5 text-brand-blue" />
-                  <div>
-                    <div className="text-sm font-semibold">Stakeholder confidence</div>
-                    <div className="mt-2 text-sm text-slate-600 dark:text-slate-300">
-                      Transparent coordination with agencies, financiers and EPC partners.
+                </Card>
+                <Card>
+                  <div className="flex items-start gap-3">
+                    <ShieldCheck className="mt-0.5 h-5 w-5 text-brand-blue" />
+                    <div>
+                      <div className="text-sm font-semibold">Stakeholder confidence</div>
+                      <div className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+                        Transparent coordination with agencies, financiers and EPC partners.
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Card>
+                </Card>
+              </div>
             </div>
           </div>
         </div>

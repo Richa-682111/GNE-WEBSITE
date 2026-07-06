@@ -20,8 +20,8 @@ export function HeroCarousel({
         Your browser does not support the video tag.
       </video>
 
-      {/* Dark cinematic gradient overlay */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-brand-darkBg/50 via-black/20 to-brand-darkBg dark:from-brand-darkBg/75 dark:via-black/30 dark:to-brand-darkBg" />
+      {/* Dark cinematic gradient overlay with warm forest-green tint */}
+      <div className="absolute inset-0 z-[1]" style={{ background: 'linear-gradient(to bottom, rgba(26,71,49,0.55) 0%, rgba(0,0,0,0.15) 50%, rgba(10,30,20,0.85) 100%)' }} />
 
       {/* Hero Content */}
       <div className="relative z-10">
