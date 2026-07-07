@@ -11,25 +11,22 @@ export function AnimatedBentoCard({
   idx: number;
   isWide?: boolean;
 }) {
-  // Even index cards slide from left, Odd index cards slide from right
-  const fromLeft = idx % 2 === 0;
-
   return (
     <motion.div
       className="col-span-1 w-full"
       initial={{
         opacity: 0,
-        x: fromLeft ? -70 : 70,
+        y: 35,
       }}
       whileInView={{
         opacity: 1,
-        x: 0,
+        y: 0,
       }}
-      viewport={{ once: false, margin: "-20px 0px -20px 0px" }}
+      viewport={{ once: true, margin: "-30px" }}
       transition={{
-        duration: 0.35,
-        delay: (idx % 3) * 0.05,
-        ease: "easeOut",
+        duration: 0.85,
+        delay: (idx % 3) * 0.15,
+        ease: [0.16, 1, 0.3, 1],
       }}
       style={{ willChange: "transform, opacity" }}
     >
@@ -37,3 +34,4 @@ export function AnimatedBentoCard({
     </motion.div>
   );
 }
+

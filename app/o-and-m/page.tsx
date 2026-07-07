@@ -27,31 +27,37 @@ export default function OAndMPage() {
       title: "Proactive Maintenance",
       description: "Planned preventive maintenance to minimize failures and maximize plant availability.",
       icon: Wrench,
+      image: "/service-om.jpg",
     },
     {
       title: "Performance Monitoring",
       description: "Continuous monitoring and analysis to optimize plant performance and energy generation.",
       icon: LineChart,
+      image: "/innovation.png",
     },
     {
       title: "Rapid Fault Response",
       description: "Timely troubleshooting and corrective maintenance to reduce downtime and restore operations quickly.",
       icon: Timer,
+      image: "/service-installation.jpg",
     },
     {
       title: "Asset Optimization",
       description: "Data-driven maintenance practices to improve system efficiency and extend equipment life.",
       icon: TrendingUp,
+      image: "/hero-solar-new.jpg",
     },
     {
       title: "Safety & Compliance",
       description: "Maintenance activities carried out in accordance with industry standards and HSE best practices.",
       icon: ShieldCheck,
+      image: "/service-land.jpg",
     },
     {
       title: "Experienced Team",
       description: "Skilled engineers and technicians ensuring reliable operation of solar and energy storage assets.",
       icon: Users,
+      image: "/cta.png",
     },
   ];
 

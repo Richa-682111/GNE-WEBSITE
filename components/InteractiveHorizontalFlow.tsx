@@ -22,16 +22,16 @@ const DEFAULT_IMAGES = [
   "/sustainablility.jpg",
 ];
 
-// Rich accent palette matching the Bento Feature Grid (Image 2)
+// Unified Green & Emerald accent palette for cohesive brand aesthetics
 const ACCENTS = [
   { color: '#4ade80', dark: '#0d7342ff', bg: 'rgba(13,115,66,0.25)', border: 'rgba(74,222,128,0.5)', glow: 'rgba(74,222,128,0.4)' }, // Jade Green
-  { color: '#fb923c', dark: '#ad5d50', bg: 'rgba(173,93,80,0.25)', border: 'rgba(251,146,60,0.5)', glow: 'rgba(251,146,60,0.4)' }, // Terracotta / Warm Orange
-  { color: '#38bdf8', dark: '#1a98a8ff', bg: 'rgba(26,152,168,0.25)', border: 'rgba(56,189,248,0.5)', glow: 'rgba(56,189,248,0.4)' }, // Teal / Cyan
-  { color: '#a78bfa', dark: '#7c3aed', bg: 'rgba(124,58,237,0.25)', border: 'rgba(167,139,250,0.5)', glow: 'rgba(167,139,250,0.4)' }, // Violet / Purple
-  { color: '#34d399', dark: '#256c4aff', bg: 'rgba(37,108,74,0.25)', border: 'rgba(52,211,153,0.5)', glow: 'rgba(52,211,153,0.4)' }, // Deep Emerald
-  { color: '#facc15', dark: '#b45309', bg: 'rgba(180,83,9,0.25)', border: 'rgba(250,204,21,0.5)', glow: 'rgba(250,204,21,0.4)' }, // Amber / Gold
-  { color: '#f472b6', dark: '#db2777', bg: 'rgba(219,39,119,0.25)', border: 'rgba(244,114,182,0.5)', glow: 'rgba(244,114,182,0.4)' }, // Rose
-  { color: '#60a5fa', dark: '#2563eb', bg: 'rgba(37,99,235,0.25)', border: 'rgba(96,165,250,0.5)', glow: 'rgba(96,165,250,0.4)' }, // Electric Blue
+  { color: '#34d399', dark: '#059669', bg: 'rgba(5,150,105,0.25)', border: 'rgba(52,211,153,0.5)', glow: 'rgba(52,211,153,0.4)' }, // Emerald Green
+  { color: '#22c55e', dark: '#15803d', bg: 'rgba(21,128,61,0.25)', border: 'rgba(34,197,94,0.5)', glow: 'rgba(34,197,94,0.4)' }, // Spring Green
+  { color: '#10b981', dark: '#047857', bg: 'rgba(4,120,87,0.25)', border: 'rgba(16,185,129,0.5)', glow: 'rgba(16,185,129,0.4)' }, // Forest Green
+  { color: '#6ee7b7', dark: '#0d7342ff', bg: 'rgba(13,115,66,0.25)', border: 'rgba(110,231,183,0.5)', glow: 'rgba(110,231,183,0.4)' }, // Mint Green
+  { color: '#86efac', dark: '#16a34a', bg: 'rgba(22,163,74,0.25)', border: 'rgba(134,239,172,0.5)', glow: 'rgba(134,239,172,0.4)' }, // Lime Green
+  { color: '#34d399', dark: '#065f46', bg: 'rgba(6,95,70,0.25)', border: 'rgba(52,211,153,0.5)', glow: 'rgba(52,211,153,0.4)' }, // Deep Emerald
+  { color: '#4ade80', dark: '#0d7342ff', bg: 'rgba(13,115,66,0.25)', border: 'rgba(74,222,128,0.5)', glow: 'rgba(74,222,128,0.4)' }, // Bright Jade
 ];
 
 export function InteractiveHorizontalFlow({

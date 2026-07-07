@@ -114,45 +114,46 @@ export function TimelineJourney() {
   const activeStep = STEPS[activeIdx];
 
   return (
-    <section className="relative min-h-screen py-20 md:py-32 font-inter bg-transparent overflow-hidden">
+    <div className="relative py-2 sm:py-4 font-inter bg-transparent overflow-hidden">
       {/* Subtle Background Glow matching active step */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-[180px] pointer-events-none transition-all duration-1000 opacity-25"
         style={{ background: activeStep.hex }}
       />
 
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+      <div className="w-full max-w-none mx-auto px-0 relative z-10">
+
         {/* EXECUTIVE 3D KEYNOTE DECK LAYOUT (40% / 60%) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
-          
-          {/* LEFT PANEL (40% - 5 Cols): NAVY BLUE CARD WITH ORANGE TOP HEADING & COLORED TABS */}
-          <div className="lg:col-span-5 flex flex-col justify-between rounded-[32px] bg-[#0B132B] border border-slate-800/80 p-6 sm:p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden">
-            
-            {/* Ambient inner glow */}
-            <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-orange-500/10 blur-3xl pointer-events-none" />
 
-            {/* Top Heading inside Navy Blue Card */}
+          {/* LEFT PANEL (40% - 5 Cols): WARM PEACH-TERRACOTTA GLASSMORPHIC CARD */}
+          <div
+            className="lg:col-span-5 flex flex-col justify-between rounded-[32px] p-6 sm:p-8 md:p-10 shadow-[0_20px_50px_rgba(173,93,80,0.15)] relative overflow-hidden transition-all duration-500"
+            style={{ background: 'linear-gradient(135deg, #fceee9 0%, #ecd3ca 100%)', border: '1.5px solid rgba(173,93,80,0.3)' }}
+          >
+
+            {/* Ambient inner glow */}
+            <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-white/50 blur-3xl pointer-events-none" />
+
+            {/* Top Heading inside Lavender Card */}
             <div className="space-y-4 relative z-10">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/30">
-                <Sparkles className="w-4 h-4 text-[#f97316]" />
-                <span className="text-[11px] font-bold uppercase tracking-[2.5px] text-[#f97316]">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/10 border border-slate-900/20">
+                <Sparkles className="w-4 h-4 text-[#d97706]" />
+                <span className="text-[11px] font-bold uppercase tracking-[2.5px] text-[#d97706]">
                   FUTURE INFRASTRUCTURE
                 </span>
               </div>
 
-              <h2 className="font-sora font-black text-3xl sm:text-4xl text-[#f97316] tracking-tight leading-[1.15]">
+              <h2 className="font-sora font-black text-3xl sm:text-4xl text-[#0f172a] tracking-tight leading-[1.15]">
                 5-Year Strategic Roadmap
               </h2>
 
-              <p className="text-sm sm:text-base text-slate-300 font-normal leading-relaxed">
-                An executive keynote blueprint outlining our precision expansion from regional EPC execution to global terawatt-scale clean energy dominance.
-              </p>
+
             </div>
 
             {/* 5 Multi-Colored Interactive Tabs */}
             <div className="mt-8 space-y-3 relative z-10">
-              <div className="text-[11px] font-mono font-bold uppercase tracking-widest text-slate-400 mb-2 px-1">
+              <div className="text-[11px] font-mono font-bold uppercase tracking-widest text-[#334155] mb-2 px-1">
                 SELECT FISCAL YEAR MILESTONE:
               </div>
 
@@ -162,24 +163,22 @@ export function TimelineJourney() {
                   <button
                     key={step.id}
                     onClick={() => setActiveIdx(idx)}
-                    className={`w-full text-left group flex items-center justify-between p-4 sm:p-5 rounded-2xl transition-all duration-300 border ${
-                      isActive
-                        ? "bg-slate-900/95 shadow-xl scale-[1.02]"
-                        : "bg-slate-950/40 border-slate-800/50 hover:bg-slate-900/50 hover:border-slate-700/60"
-                    }`}
+                    className={`w-full text-left group flex items-center justify-between p-4 sm:p-5 rounded-2xl transition-all duration-300 border ${isActive
+                      ? "bg-slate-900 text-white shadow-xl scale-[1.02] border-2"
+                      : "bg-white/70 border-white/90 hover:bg-white hover:shadow-md shadow-sm"
+                      }`}
                     style={{
                       borderColor: isActive ? step.hex : undefined,
-                      boxShadow: isActive ? `0 0 25px ${step.glow}` : undefined,
+                      boxShadow: isActive ? `0 8px 30px ${step.glow}` : undefined,
                     }}
                   >
                     <div className="flex items-center gap-4">
                       {/* Year badge pill */}
                       <span
-                        className={`font-mono text-xs sm:text-sm font-extrabold px-3.5 py-1.5 rounded-xl transition-all duration-300 border ${
-                          isActive
-                            ? "bg-white text-slate-950 border-white shadow-md scale-105"
-                            : "bg-slate-900/80 text-slate-400 border-slate-800 group-hover:text-slate-200"
-                        }`}
+                        className={`font-mono text-xs sm:text-sm font-extrabold px-3.5 py-1.5 rounded-xl transition-all duration-300 border ${isActive
+                          ? "bg-white text-slate-950 border-white shadow-md scale-105"
+                          : "bg-slate-800 text-white border-slate-700 shadow-sm group-hover:bg-slate-900"
+                          }`}
                       >
                         {step.fy}
                       </span>
@@ -191,11 +190,10 @@ export function TimelineJourney() {
                     </div>
 
                     <div
-                      className={`w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 ${
-                        isActive ? "scale-100 opacity-100 shadow-md" : "scale-75 opacity-40 group-hover:opacity-75"
-                      }`}
+                      className={`w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 ${isActive ? "scale-100 opacity-100 shadow-md" : "scale-90 opacity-75 group-hover:opacity-100 group-hover:scale-100"
+                        }`}
                       style={{
-                        backgroundColor: isActive ? step.bgGlow : "rgba(255,255,255,0.05)",
+                        backgroundColor: isActive ? step.bgGlow : "rgba(0,0,0,0.06)",
                         color: step.hex,
                       }}
                     >
@@ -206,22 +204,18 @@ export function TimelineJourney() {
               })}
             </div>
 
-            {/* Bottom Note */}
-            <div className="mt-8 pt-5 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 font-mono">
-              <span>EXECUTIVE KEYNOTE SERIES</span>
-              <span className="text-orange-500 font-bold">APPLE SUMMIT GRADE</span>
-            </div>
+
 
           </div>
 
           {/* RIGHT PANEL (60% - 7 Cols): 3D IMAGE CARD WITH HIGH-CLARITY PHOTOGRAPHY & EXACT BULLETS */}
           <div className="lg:col-span-7 flex flex-col justify-center">
-            
+
             <div className="relative w-full min-h-[580px] sm:min-h-[640px] rounded-[36px] overflow-hidden transition-all duration-700 bg-slate-950 border-2 flex flex-col justify-between p-6 sm:p-8 md:p-10 shadow-2xl"
-                 style={{
-                   borderColor: activeStep.hex,
-                   boxShadow: `0 0 50px ${activeStep.glow}, inset 0 0 25px ${activeStep.glow}`,
-                 }}
+              style={{
+                borderColor: activeStep.hex,
+                boxShadow: `0 0 50px ${activeStep.glow}, inset 0 0 25px ${activeStep.glow}`,
+              }}
             >
               <AnimatePresence mode="wait">
                 <motion.div
@@ -304,7 +298,7 @@ export function TimelineJourney() {
         </div>
 
       </div>
-    </section>
+    </div>
   );
 }
 

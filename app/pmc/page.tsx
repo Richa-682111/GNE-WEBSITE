@@ -27,31 +27,37 @@ export default function PmcPage() {
       title: "End-to-End Project Management",
       description: "Complete oversight from project planning and procurement to commissioning and handover.",
       icon: BriefcaseBusiness,
+      image: "/service-pmc.jpg",
     },
     {
       title: "Execution Monitoring",
       description: "Continuous monitoring of project progress, quality, timelines, and contractor performance.",
       icon: Activity,
+      image: "/wedo1.jpg",
     },
     {
       title: "Stakeholder Coordination",
       description: "Effective coordination between clients, contractors, consultants, vendors, and regulatory authorities.",
       icon: Users,
+      image: "/coporatedecimg.png",
     },
     {
       title: "Risk & Quality Management",
       description: "Proactive risk identification, quality assurance, compliance monitoring, and issue resolution.",
       icon: ShieldAlert,
+      image: "/sustainablility.jpg",
     },
     {
       title: "Cost & Schedule Control",
       description: "Structured planning and progress tracking to optimize project costs and ensure timely completion.",
       icon: Calculator,
+      image: "/solar epc.png",
     },
     {
       title: "Technical & Regulatory Expertise",
       description: "Strong understanding of engineering standards, statutory approvals, and grid requirements.",
       icon: BookOpenCheck,
+      image: "/wedo2.jpg",
     },
   ];
 

@@ -27,31 +27,37 @@ export default function BessEpcPage() {
       title: "Integrated EPC Delivery",
       description: "Complete project execution from engineering and procurement to commissioning and handover.",
       icon: Building2,
+      image: "/service-epc.jpg",
     },
     {
       title: "Advanced System Integration",
       description: "Expertise in integrating Battery Systems, PCS, EMS, SCADA, Transformers, and Balance of Plant (BoP).",
       icon: Cpu,
+      image: "/service-bess.jpg",
     },
     {
       title: "Grid Integration Expertise",
       description: "Seamless integration with utility grids while ensuring regulatory compliance and reliable power evacuation.",
       icon: Network,
+      image: "/hero-bess-storage.png",
     },
     {
       title: "Quality & Safety",
       description: "Strict adherence to international quality standards and comprehensive safety protocols throughout project execution.",
       icon: ShieldCheck,
+      image: "/excellence.jpg",
     },
     {
       title: "Scalable Storage Solutions",
       description: "Flexible BESS solutions designed for utility-scale, commercial, and industrial applications.",
       icon: Expand,
+      image: "/bess.png",
     },
     {
       title: "Performance-Focused",
       description: "Optimized system design and execution to maximize operational efficiency, reliability, and asset performance.",
       icon: Zap,
+      image: "/solutions-bg.jpg",
     },
   ];
 

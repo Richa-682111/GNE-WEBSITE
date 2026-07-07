@@ -70,25 +70,25 @@ export function BentoFeatureGrid({
                   className="group relative w-full aspect-[4/5] min-h-[420px] sm:min-h-[450px] rounded-3xl overflow-hidden border border-slate-800 bg-[#0B132B] shadow-xl hover:shadow-2xl transition-all duration-500 hover:border-[#4ade80]/50"
                   style={{ '--accent': accent.color } as CSSProperties}
                 >
+                  {/* Fallback subtle icon pattern when image is loading or missing */}
+                  <div className="absolute inset-0 bg-[#0f1d30] flex items-center justify-center opacity-40">
+                    <Icon className="w-72 h-72 text-slate-700 -rotate-12" strokeWidth={1} />
+                  </div>
+
                   {/* Full-Height Background Photography at 100% full brightness/clarity */}
-                  {feature.image ? (
+                  {feature.image && (
                     <img
                       src={feature.image}
                       alt={feature.title}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-100"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-100 bg-[#0B132B]"
                     />
-                  ) : (
-                    /* Fallback subtle pattern when no image provided */
-                    <div className="absolute inset-0 bg-[#0f1d30] flex items-center justify-center opacity-40">
-                      <Icon className="w-72 h-72 text-slate-700 -rotate-12" strokeWidth={1} />
-                    </div>
                   )}
 
-                  {/* High-Visibility Gradient Overlay: Only dim the bottom 25% for text readability so the top 75% of the photo is 100% bright and clear! */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B132B] via-[#0B132B]/50 via-25% to-transparent pointer-events-none" />
+                  {/* High-Contrast Readability Gradient Overlay: Ensures white text pops crisply over any image background */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#080E1E] via-[#080E1E]/85 via-50% to-[#080E1E]/25 pointer-events-none" />
 
                   {/* Top-Right Floating Icon Button */}
-                  <div className="absolute top-5 right-5 z-20 flex h-11 w-11 items-center justify-center rounded-2xl bg-black/50 backdrop-blur-md border border-white/15 text-white shadow-lg group-hover:scale-110 group-hover:border-[#4ade80]/60 group-hover:text-[#4ade80] transition-all duration-400">
+                  <div className="absolute top-5 right-5 z-20 flex h-11 w-11 items-center justify-center rounded-2xl bg-black/60 backdrop-blur-md border border-white/20 text-white shadow-lg group-hover:scale-110 group-hover:border-[#4ade80]/60 group-hover:text-[#4ade80] transition-all duration-400">
                     <Icon className="h-5 w-5" />
                   </div>
 
@@ -96,20 +96,20 @@ export function BentoFeatureGrid({
                   <div className="absolute bottom-0 inset-x-0 p-7 sm:p-8 z-20 flex flex-col justify-end text-left">
                     {/* Eyebrow Pill Badge */}
                     <span
-                      className="mb-3 w-fit inline-flex items-center gap-1.5 rounded-full px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider shadow-sm"
+                      className="mb-3 w-fit inline-flex items-center gap-1.5 rounded-full px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider shadow-md backdrop-blur-sm"
                       style={{ background: accent.bg, color: accent.color, border: `1px solid ${accent.border}` }}
                     >
                       <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: accent.color }} />
                       Capability 0{idx + 1}
                     </span>
 
-                    {/* Bold White Title */}
-                    <h3 className="text-xl sm:text-2xl font-black text-white leading-tight mb-2.5 font-sora group-hover:text-[#4ade80] transition-colors duration-300">
+                    {/* Bold White Title with Drop Shadow */}
+                    <h3 className="text-xl sm:text-2xl font-black text-white leading-tight mb-2.5 font-sora group-hover:text-[#4ade80] transition-colors duration-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
                       {feature.title}
                     </h3>
 
-                    {/* Light Slate Description */}
-                    <p className="text-sm text-slate-300 font-medium leading-relaxed line-clamp-3">
+                    {/* Light Slate Description with Drop Shadow */}
+                    <p className="text-sm text-slate-200 font-medium leading-relaxed line-clamp-3 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
                       {feature.description}
                     </p>
                   </div>

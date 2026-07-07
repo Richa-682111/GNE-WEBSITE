@@ -17,31 +17,37 @@ const features: FeatureCard[] = [
     title: "Integrated Capability",
     description: "Combined Developer and EPC capability ensuring seamless green hydrogen generation and deployment.",
     icon: Factory,
+    image: "/service-green-hydrogen.jpg",
   },
   {
     title: "Renewable Integration",
     description: "100% renewable-powered hydrogen production coupled with cutting-edge electrolyzer technology.",
     icon: Leaf,
+    image: "/hero-solar-farm.png",
   },
   {
     title: "Bankable Projects",
     description: "Structured feasibility, offtake alignment, and stringent regulatory compliance for investor-ready assets.",
     icon: ShieldCheck,
+    image: "/collaboration.jpg",
   },
   {
     title: "Target Sectors",
     description: "Focused on decarbonizing fertilizers, refining, steel, heavy industry, and future mobility applications.",
     icon: Zap,
+    image: "/service-manufacturing.jpg",
   },
   {
     title: "Annuity Cashflows",
     description: "Emphasis on securing long-term offtake partnerships generating consistent, reliable revenue streams.",
     icon: TrendingUp,
+    image: "/value.jpg",
   },
   {
     title: "Scalable Platform",
     description: "Scalable execution methodology adapting from 5 MW pilot plants up to utility-scale 100+MW deployments.",
     icon: Shield,
+    image: "/hero-hybrid-2.webp",
   },
 ];
 

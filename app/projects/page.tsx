@@ -40,28 +40,47 @@ export default function ProjectsPage() {
           className="object-cover"
         />
 
-        {/* Deep layered overlay for premium dark feel */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B132B]/92 via-[#0B132B]/65 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0B132B]/80 via-transparent to-transparent" />
+        {/* Subtle, low-opacity gradient overlay for vivid image visibility while preserving text readability */}
+        <div className="absolute inset-0 z-[1]" style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.05) 100%)' }} />
         {/* Emerald neon top-left glow */}
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#0d7342ff]/20 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#0d7342ff]/15 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="max-w-2xl text-white">
+            <div className="max-w-2xl">
               {/* Eyebrow label */}
               <span
                 className="mb-6 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest"
-                style={{ background: 'rgba(13,115,66,0.20)', color: '#4ade80', outline: '1px solid rgba(13,115,66,0.4)' }}
+                style={{ background: 'rgba(69,82,62,0.12)', color: '#4ade80', outline: '1px solid rgba(69,82,62,0.3)', outlineOffset: '0px' }}
               >
                 Our Portfolio
               </span>
 
-              <h1 className="mb-6 text-5xl sm:text-7xl font-black font-sora tracking-tight leading-none text-white">
-                Projects &amp; <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4ade80] to-teal-300">Pipeline</span>
+              <h1 
+                className="mb-6 text-4xl sm:text-6xl lg:text-[64px] font-black font-sora tracking-tight leading-[1.1] text-[#f5ece5]"
+                style={{
+                  textShadow: `
+                    0 0 4px rgba(0,0,0,0.9),
+                    0 0 8px rgba(0,0,0,0.8),
+                    0 0 16px rgba(0,0,0,0.7),
+                    2px 2px 6px rgba(0,0,0,0.9)
+                  `
+                }}
+              >
+                Projects &amp; <span style={{ color: '#4ade80' }}>Pipeline</span>
               </h1>
 
-              <p className="mt-3 text-lg sm:text-xl font-normal text-slate-300 leading-[1.8] max-w-xl">
+              <p 
+                className="mt-3 text-base sm:text-lg md:text-xl font-semibold leading-relaxed max-w-xl"
+                style={{
+                  color: '#4ade80',
+                  textShadow: `
+                    0 0 8px rgba(0,0,0,0.9),
+                    0 0 16px rgba(0,0,0,0.8),
+                    2px 2px 6px rgba(0,0,0,0.9)
+                  `
+                }}
+              >
                 Delivering renewable energy infrastructure through integrated engineering, project management, land development, and energy storage solutions.
               </p>
 
@@ -79,8 +98,15 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* Portfolio Section — Big background card changed from plain white to a soft, warm light cream tint (#fcf8f5) that complements the #f5ece5 cream background */}
-      <div className="mx-auto max-w-6xl px-6 py-16 sm:px-10 lg:px-12 rounded-[3rem] my-12 shadow-xl" style={{ background: '#fcf8f5', border: '1px solid rgba(176,125,58,0.25)' }}>
+      {/* Portfolio Section — High-contrast luxury sage-emerald card background that contrasts beautifully against the cream page */}
+      <div 
+        className="mx-auto max-w-6xl px-6 py-16 sm:px-10 lg:px-12 rounded-[3rem] my-12 transition-all duration-500"
+        style={{ 
+          background: 'linear-gradient(135deg, #e2efe7 0%, #cbe4d5 100%)', 
+          border: '1.5px solid rgba(13,115,66,0.35)',
+          boxShadow: '0 20px 50px rgba(13,115,66,0.12), 0 8px 20px rgba(0,0,0,0.06)'
+        }}
+      >
         <ProjectsPortfolio />
       </div>
     </div>
