@@ -5,7 +5,7 @@ import { PremiumServiceHero } from "@/components/PremiumServiceHero";
 import { EditorialIntro } from "@/components/EditorialIntro";
 import { BentoFeatureGrid } from "@/components/BentoFeatureGrid";
 import { InteractiveHorizontalFlow } from "@/components/InteractiveHorizontalFlow";
-import { Building2, DraftingCompass, ShieldCheck, MapPin, BriefcaseBusiness, Leaf, CheckCircle2 } from "lucide-react";
+import { Building2, DraftingCompass, ShieldCheck, MapPin, BriefcaseBusiness, Leaf } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
@@ -28,31 +28,37 @@ export default function SolarEpcPage() {
       title: "End-to-End EPC Delivery",
       description: "Comprehensive project execution from engineering to commissioning.",
       icon: Building2,
+      image: "/hero-solar-farm.png",
     },
     {
       title: "Engineering Excellence",
       description: "Optimized system design for maximum performance and reliability.",
       icon: DraftingCompass,
+      image: "/solar epc.png",
     },
     {
       title: "Quality-Driven Execution",
       description: "Strict quality assurance at every stage of construction.",
       icon: ShieldCheck,
+      image: "/hero-solar.jpg",
     },
     {
       title: "Land & Grid Expertise",
       description: "Integrated support for land development and grid connectivity.",
       icon: MapPin,
+      image: "/hero-solar-bess-combined.png",
     },
     {
       title: "Experienced Management",
       description: "Structured planning and execution with schedule adherence.",
       icon: BriefcaseBusiness,
+      image: "/solar-blog.png",
     },
     {
       title: "Safety & Sustainability",
       description: "Highest standards in HSE and sustainable infrastructure practices.",
       icon: Leaf,
+      image: "/hero-solar-new.jpg",
     },
   ];
 
@@ -91,44 +97,6 @@ export default function SolarEpcPage() {
         title="Our Solar EPC Scope"
         steps={scopeSteps}
       />
-
-      {/* Additional Solar EPC Details */}
-      <section className="py-24 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <ScrollReveal delay={100}>
-              <div className="bg-slate-50 dark:bg-slate-800/50 p-8 rounded-3xl h-full border border-slate-200/60 dark:border-slate-700/50 hover:shadow-xl transition-shadow duration-300">
-                <h4 className="text-sm font-black text-brand-green uppercase tracking-widest mb-6">Engineering & Design</h4>
-                <ul className="space-y-4 text-sm font-semibold text-slate-700 dark:text-slate-300">
-                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-brand-green shrink-0" /> Solar & BESS Plant Design, Development & Optimization</li>
-                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-brand-green shrink-0" /> Topology & Site Feasibility Surveys</li>
-                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-brand-green shrink-0" /> PV System Modelling & Shadow Analysis</li>
-                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-brand-green shrink-0" /> Structural Design & STAD Analysis</li>
-                </ul>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={200}>
-              <div className="bg-slate-50 dark:bg-slate-800/50 p-8 rounded-3xl h-full border border-slate-200/60 dark:border-slate-700/50 hover:shadow-xl transition-shadow duration-300">
-                <h4 className="text-sm font-black text-brand-green uppercase tracking-widest mb-6">Execution & Delivery</h4>
-                <ul className="space-y-4 text-sm font-semibold text-slate-700 dark:text-slate-300">
-                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-brand-green shrink-0" /> Engineering, Procurement & Construction (EPC)</li>
-                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-brand-green shrink-0" /> Testing, Commissioning & Grid Integration</li>
-                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-brand-green shrink-0" /> CEIG Approvals & Net Metering Services</li>
-                </ul>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={300}>
-              <div className="bg-slate-50 dark:bg-slate-800/50 p-8 rounded-3xl h-full border border-slate-200/60 dark:border-slate-700/50 hover:shadow-xl transition-shadow duration-300">
-                <h4 className="text-sm font-black text-brand-green uppercase tracking-widest mb-6">Digital & O&M Solutions</h4>
-                <ul className="space-y-4 text-sm font-semibold text-slate-700 dark:text-slate-300">
-                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-brand-green shrink-0" /> Centralized Monitoring Systems & IoT Integration</li>
-                  <li className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-brand-green shrink-0" /> Solar SCADA for Ground-Mounted Projects</li>
-                </ul>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

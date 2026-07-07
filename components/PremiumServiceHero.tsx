@@ -19,7 +19,7 @@ export function PremiumServiceHero({
   ctaLink?: string;
 }) {
   return (
-    <section className="relative h-auto min-h-[500px] py-16 lg:py-0 lg:h-[80vh] lg:min-h-[550px] w-full flex items-center justify-start overflow-hidden">
+    <section className="relative h-auto min-h-[500px] py-16 lg:py-0 lg:h-[85vh] lg:min-h-[600px] w-full flex items-center justify-start overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 -z-20">
         <Image
@@ -31,25 +31,40 @@ export function PremiumServiceHero({
         />
       </div>
 
-      {/* Dark Gradient Overlay for readability */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-slate-950/90 via-slate-900/60 to-transparent" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+      {/* Layered Dark Gradient for drama and readability */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#0B132B]/95 via-[#0B132B]/70 to-transparent" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#0B132B]/80 via-transparent to-transparent" />
+
+      {/* Neon emerald ambient glow — top left corner */}
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#0d7342ff]/20 rounded-full blur-[120px] pointer-events-none -z-10" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20">
         <ScrollReveal>
-          <div className="max-w-3xl backdrop-blur-md bg-white/5 dark:bg-black/20 border border-white/10 p-5 sm:p-8 md:p-12 rounded-2xl sm:rounded-[2.5rem] shadow-2xl">
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] mb-5 sm:mb-6 drop-shadow-lg">
+          <div className="max-w-3xl">
+            {/* Eyebrow label */}
+            <span
+              className="mb-6 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest"
+              style={{ background: 'rgba(13,115,66,0.20)', color: '#4ade80', outline: '1px solid rgba(13,115,66,0.4)' }}
+            >
+              GNE Infra Service
+            </span>
+
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black font-sora tracking-tight text-white leading-[1.1] mb-5 sm:mb-7">
               {title}
             </h1>
-            <p className="text-base sm:text-lg lg:text-xl font-medium text-slate-200 leading-relaxed mb-8 sm:mb-10">
+
+            <p className="text-base sm:text-lg lg:text-xl font-medium text-slate-300 leading-[1.8] mb-8 sm:mb-10 max-w-2xl">
               {subtitle}
             </p>
+
+            {/* CTA Button — exact homepage style */}
             <Link
               href={ctaLink}
-              className="group relative inline-flex items-center gap-3 rounded-full bg-brand-green px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold text-white shadow-xl shadow-emerald-500/30 transition-all duration-300 hover:scale-105 hover:bg-emerald-500 hover:shadow-emerald-500/50 overflow-hidden shine-button"
+              className="group relative inline-flex items-center gap-3 rounded-2xl px-7 py-4 text-sm sm:text-base font-bold text-white shadow-[0_8px_30px_rgba(13,115,66,0.4)] transition-all duration-300 hover:scale-105 hover:shadow-[0_12px_40px_rgba(13,115,66,0.6)] overflow-hidden shine-button"
+              style={{ background: '#0d7342ff' }}
             >
-              <div className="absolute inset-0 bg-white/20 translate-y-full transition-transform duration-300 group-hover:translate-y-0" />
+              <div className="absolute inset-0 bg-white/15 translate-y-full transition-transform duration-300 group-hover:translate-y-0" />
               <span className="relative z-10">{ctaText}</span>
               <ArrowRight className="relative z-10 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
@@ -58,7 +73,7 @@ export function PremiumServiceHero({
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/70 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/60 animate-bounce">
         <span className="text-[10px] uppercase tracking-widest font-black">Scroll</span>
         <ChevronDown className="h-5 w-5 opacity-70" />
       </div>

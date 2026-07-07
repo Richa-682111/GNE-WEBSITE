@@ -61,8 +61,8 @@ export function ContactForm() {
     <form onSubmit={onSubmit} className="grid gap-5">
       <div className="grid gap-5 md:grid-cols-2">
         <div className="grid gap-2 text-left">
-          <label className="text-sm font-semibold text-slate-800" htmlFor="name">
-            Name <span className="text-emerald-600">*</span>
+          <label className="text-sm font-semibold text-white" htmlFor="name">
+            Name <span className="text-[#4ade80]">*</span>
           </label>
           <input
             className="h-12 rounded-xl border border-slate-300 bg-white/90 px-4 text-sm text-slate-900 placeholder-slate-400 outline-none ring-emerald-500/30 transition-all focus:border-emerald-600 focus:bg-white focus:ring-4 shadow-sm"
@@ -74,8 +74,8 @@ export function ContactForm() {
           />
         </div>
         <div className="grid gap-2 text-left">
-          <label className="text-sm font-semibold text-slate-800" htmlFor="email">
-            Email <span className="text-emerald-600">*</span>
+          <label className="text-sm font-semibold text-white" htmlFor="email">
+            Email <span className="text-[#4ade80]">*</span>
           </label>
           <input
             className="h-12 rounded-xl border border-slate-300 bg-white/90 px-4 text-sm text-slate-900 placeholder-slate-400 outline-none ring-emerald-500/30 transition-all focus:border-emerald-600 focus:bg-white focus:ring-4 shadow-sm"
@@ -91,7 +91,7 @@ export function ContactForm() {
 
       <div className="grid gap-5 md:grid-cols-2">
         <div className="grid gap-2 text-left">
-          <label className="text-sm font-semibold text-slate-800" htmlFor="phone">
+          <label className="text-sm font-semibold text-white" htmlFor="phone">
             Phone (optional)
           </label>
           <input
@@ -103,7 +103,7 @@ export function ContactForm() {
           />
         </div>
         <div className="grid gap-2 text-left">
-          <label className="text-sm font-semibold text-slate-800" htmlFor="company">
+          <label className="text-sm font-semibold text-white" htmlFor="company">
             Company (optional)
           </label>
           <input
@@ -117,8 +117,8 @@ export function ContactForm() {
       </div>
 
       <div className="grid gap-2 text-left">
-        <label className="text-sm font-semibold text-slate-800" htmlFor="message">
-          Message <span className="text-emerald-600">*</span>
+        <label className="text-sm font-semibold text-white" htmlFor="message">
+          Message <span className="text-[#4ade80]">*</span>
         </label>
         <textarea
           className="min-h-[140px] rounded-xl border border-slate-300 bg-white/90 p-4 text-sm text-slate-900 placeholder-slate-400 outline-none ring-emerald-500/30 transition-all focus:border-emerald-600 focus:bg-white focus:ring-4 shadow-sm resize-none"

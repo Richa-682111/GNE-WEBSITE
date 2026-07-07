@@ -56,13 +56,13 @@ export default function BessEpcPage() {
   ];
 
   const scopeSteps = [
-    { title: "Project Planning" },
-    { title: "Engineering & Design" },
-    { title: "Procurement" },
-    { title: "Installation" },
-    { title: "Testing" },
-    { title: "EMS Integration" },
-    { title: "Grid Sync" },
+    { title: "Project Planning", image: "/wedo1.jpg", description: "Comprehensive site assessment, feasibility studies, and regulatory planning for BESS deployment." },
+    { title: "Engineering & Design", image: "/service-epc.jpg", description: "Custom electrical, thermal, and structural system design optimized for utility and grid compliance." },
+    { title: "Procurement", image: "/service-manufacturing.jpg", description: "Sourcing Tier-1 battery modules, PCS, SCADA, and balance of plant equipment from verified global partners." },
+    { title: "Installation", image: "/hero-hybrid-2.webp", description: "Precision on-site construction, battery enclosure assembly, and high-voltage electrical cabling." },
+    { title: "Testing", image: "/service-bess.jpg", description: "Rigorous factory acceptance testing (FAT) and on-site site acceptance testing (SAT) under load." },
+    { title: "EMS Integration", image: "/innovation.png", description: "Seamless software integration with smart Energy Management Systems and utility dispatch control." },
+    { title: "Grid Sync", image: "/solutions-bg.jpg", description: "Final grid synchronization, harmonic filtering validation, and commercial operation handover." },
   ];
 
   return (

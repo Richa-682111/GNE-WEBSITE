@@ -15,7 +15,8 @@ import {
   Linkedin,
   Target,
   Lightbulb,
-  Eye
+  Eye,
+  ArrowRight
 } from "lucide-react";
 import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
@@ -342,12 +343,12 @@ export default function AboutPage() {
               </div>
 
               {/* Heading */}
-              <h2 className="font-sora font-extrabold text-3xl sm:text-4xl lg:text-[44px] text-[#111827] leading-[1.05] tracking-tight">
-                YOUR TRUSTED ENERGY PARTNER
+              <h2 className="font-sora font-extrabold text-3xl sm:text-4xl lg:text-[44px] leading-[1.05] tracking-tight" style={{ color: '#010101' }}>
+                YOUR TRUSTED <span style={{ color: '#256c4aff' }}>ENERGY PARTNER</span>
               </h2>
 
               {/* Description */}
-              <div className="space-y-4 text-[15px] text-[#6b7280] leading-[1.8]">
+              <div className="space-y-4 text-[15px] leading-[1.8]" style={{ color: '#5a5249' }}>
                 <p>
                   GNE Infra is an integrated clean energy infrastructure company delivering end-to-end solutions across Engineering, Procurement & Construction (EPC), Project Management Consultancy (PMC), and Operations & Maintenance (O&M). Our expertise spans Solar Power, Battery Energy Storage Systems (BESS), Wind Energy, and Pumped Storage Projects (PSP), supporting projects from concept and engineering through commissioning and long-term asset management.
                   Driven by innovation and execution excellence, GNE Infra is expanding into Green Hydrogen and next-generation energy technologies to accelerate the transition towards a sustainable, resilient, and low-carbon energy future.
@@ -381,100 +382,83 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 4. Mission & Vision Section */}
-      <section className="bg-[#0d1117] font-inter">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-white/[0.07]">
-            {/* Mission Panel */}
-            <div className="py-[72px] px-6 lg:px-[64px] flex flex-col items-start text-left">
-              <div className="w-12 h-12 rounded-[10px] bg-[#22c55e]/15 flex items-center justify-center mb-[20px]">
-                <Target className="h-6 w-6 text-[#22c55e]" />
+      {/* 4. Mission & Vision Section — Home Page Editorial Theme */}
+      <section className="py-20 sm:py-28 font-inter relative overflow-hidden" style={{ background: '#fbf5eb' }}>
+        {/* Subtle decorative grid lines matching home page */}
+        <div className="pointer-events-none absolute inset-0 -z-10">
+          <div className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-emerald-200/60 to-transparent" />
+          <div className="absolute left-0 bottom-0 h-px w-full bg-gradient-to-r from-transparent via-emerald-200/60 to-transparent" />
+        </div>
+
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+          {/* Two Card Grid — Dark Keynote Presentation Grade */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+
+            {/* Mission Card */}
+            <div className="bg-[#0B132B] text-white rounded-[36px] p-8 sm:p-12 lg:p-16 shadow-[0_25px_60px_rgba(11,19,43,0.35)] border border-white/10 hover:border-emerald-500/40 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden group flex flex-col justify-between">
+
+              {/* Glowing Emerald Neon Aura */}
+              <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-[#0d7342ff]/25 blur-3xl pointer-events-none group-hover:bg-[#0d7342ff]/40 transition-all duration-700" />
+              <div className="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-emerald-500/10 blur-3xl pointer-events-none group-hover:bg-emerald-500/20 transition-all duration-700" />
+
+              <div>
+                {/* Frosted Glass Icon Emblem */}
+                <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mb-10 text-[#4ade80] shadow-[0_0_30px_rgba(13,115,66,0.3)] group-hover:scale-110 transition-transform duration-300">
+                  <Target className="w-8 h-8" />
+                </div>
+
+                {/* Large Keynote Heading */}
+                <h3 className="font-sora font-extrabold text-4xl sm:text-5xl tracking-tight mb-6 text-white">
+                  Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4ade80] via-emerald-400 to-teal-300">Mission</span>
+                </h3>
+
+                {/* Clean Executive Typography (No Italic, No Blockquote Borders!) */}
+                <p className="text-slate-300 font-normal text-base sm:text-lg lg:text-xl leading-[1.85] tracking-wide font-inter max-w-2xl">
+                  To develop and execute bankable clean energy projects by combining strong EPC capabilities, land procurement with grid integration approval expertise, stakeholder management, and advanced energy solutions, while building future-ready capabilities to become Solar, BESS, Green Hydrogen, Developer and actively contributing to Viksit Bharat 2047.
+                </p>
               </div>
-              <p className="text-[11px] font-bold uppercase tracking-[3px] text-[#22c55e] mb-[20px]">
-                OUR MISSION
-              </p>
-              <h3 className="font-sora font-bold text-[26px] text-white leading-[1.2] mb-[20px]">
-                Execute bankable clean energy projects at scale
-              </h3>
-              <p className="text-[15px] text-white/55 leading-[1.8]">
-                “To develop and execute bankable clean energy projects by combining strong EPC capabilities, land procurement with grid integration approval expertise, stakeholder management, and advanced energy solutions, while building future-ready capabilities to become Solar, BESS, Green Hydrogen, Developer and actively contributing to Viksit Bharat 2047.”
-              </p>
+
+
             </div>
 
-            {/* Vision Panel */}
-            <div className="py-[72px] px-6 lg:px-[64px] flex flex-col items-start text-left">
-              <div className="w-12 h-12 rounded-[10px] bg-[#22c55e]/15 flex items-center justify-center mb-[20px]">
-                <Eye className="h-6 w-6 text-[#22c55e]" />
+            {/* Vision Card */}
+            <div className="bg-[#0B132B] text-white rounded-[36px] p-8 sm:p-12 lg:p-16 shadow-[0_25px_60px_rgba(11,19,43,0.35)] border border-white/10 hover:border-orange-500/40 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden group flex flex-col justify-between">
+
+              {/* Glowing Terracotta Neon Aura */}
+              <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-[#ad5d50]/25 blur-3xl pointer-events-none group-hover:bg-[#ad5d50]/40 transition-all duration-700" />
+              <div className="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-orange-500/10 blur-3xl pointer-events-none group-hover:bg-orange-500/20 transition-all duration-700" />
+
+              <div>
+                {/* Frosted Glass Icon Emblem */}
+                <div className="w-16 h-16 rounded-2xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center mb-10 text-[#ff9e8a] shadow-[0_0_30px_rgba(173,93,80,0.3)] group-hover:scale-110 transition-transform duration-300">
+                  <Eye className="w-8 h-8" />
+                </div>
+
+                {/* Large Keynote Heading */}
+                <h3 className="font-sora font-extrabold text-4xl sm:text-5xl tracking-tight mb-6 text-white">
+                  Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff9e8a] via-orange-400 to-amber-300">Vision</span>
+                </h3>
+
+                {/* Clean Executive Typography (No Italic, No Blockquote Borders!) */}
+                <p className="text-slate-300 font-normal text-base sm:text-lg lg:text-xl leading-[1.85] tracking-wide font-inter max-w-2xl">
+                  To become a leading intelligent renewable energy ecosystem, delivering solar, storage, hybrid, and green hydrogen infrastructure through execution excellence, indigenous technology, and sustainable innovation.
+                </p>
               </div>
-              <p className="text-[11px] font-bold uppercase tracking-[3px] text-[#22c55e] mb-[20px]">
-                OUR VISION
-              </p>
-              <h3 className="font-sora font-bold text-[26px] text-white leading-[1.2] mb-[20px]">
-                Lead the intelligent renewable energy ecosystem globally
-              </h3>
-              <p className="text-[15px] text-white/55 leading-[1.8]">
-                “To become a leading intelligent renewable energy ecosystem, delivering solar, storage, hybrid, and green hydrogen infrastructure through execution excellence, indigenous technology, and sustainable innovation.”
-              </p>
+
+
+
             </div>
+
           </div>
+
         </div>
       </section>
 
       {/* 5. Our Values Section (10-Stage Apple/Tesla Style Scroll Animation) */}
       <CoreValuesSection />
 
-      {/* 6. Global Presence Section */}
-      <section className="py-[100px] bg-transparent font-inter">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Left Column: Text */}
-            <div className="space-y-6 text-left">
-              {/* Eyebrow */}
-              <div className="flex items-center gap-3">
-                <span className="w-8 h-[2px] bg-[#16a34a] shrink-0" />
-                <span className="text-[11px] font-bold uppercase tracking-[3px] text-[#22c55e]">
-                  OUR REACH
-                </span>
-              </div>
-              <h2 className="font-sora font-extrabold text-3xl sm:text-4xl text-[#111827] leading-tight">
-                Global Presence, Local Expertise
-              </h2>
-              <p className="text-[15px] text-[#6b7280] leading-[1.8]">
-                With operational offices and engineering hubs positioned strategically across major global regions, GNE Infra delivers clean, stable, and highly localized renewable energy solutions. Our global reach allows us to navigate statutory requirements and local grid complexities with unmatched speed and efficiency.
-              </p>
 
-              {/* Region Pill Chips */}
-              <div className="flex flex-wrap gap-3 pt-2">
-                {["India"].map((region) => (
-                  <div
-                    key={region}
-                    className="inline-flex items-center gap-2 rounded-full border-[1.5px] border-[#e5e7eb] px-4 py-2 text-sm font-semibold text-[#111827] bg-white hover:border-[#16a34a]/30 transition-all duration-200"
-                  >
-                    <span className="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse" />
-                    <span>{region}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Right Column: Dark Stats Panel */}
-            <div className="bg-[#0d1117] rounded-[20px] p-8 sm:p-12 text-left relative overflow-hidden border border-white/5 shadow-2xl">
-              <div className="grid grid-cols-2 gap-8">
-                {stats.map((stat, idx) => (
-                  <div key={idx} className="space-y-2">
-                    <span className="font-sora font-extrabold text-3xl sm:text-[36px] text-[#22c55e] block leading-none">
-                      {stat.number}
-                    </span>
-                    <span className="text-xs font-semibold text-white/45 uppercase tracking-wider block">
-                      {stat.label}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* 7. Our Services Section */}
       <section className="py-[100px] bg-transparent font-inter border-y border-[#e5e7eb]/50">
@@ -487,10 +471,10 @@ export default function AboutPage() {
                 WHAT WE PROVIDE
               </span>
             </div>
-            <h2 className="font-sora font-extrabold text-3xl sm:text-4xl text-[#111827]">
-              Our Services
+            <h2 className="font-sora font-extrabold text-3xl sm:text-4xl" style={{ color: '#010101' }}>
+              Our <span style={{ color: '#256c4aff' }}>Services</span>
             </h2>
-            <p className="mt-2 text-[15px] text-[#6b7280] max-w-2xl font-normal">
+            <p className="mt-2 text-[15px] max-w-2xl font-normal" style={{ color: '#5a5249' }}>
               End-to-end renewable energy solutions — from engineering to operations
             </p>
           </div>
@@ -634,10 +618,10 @@ export default function AboutPage() {
                 OUR GROWTH
               </span>
             </div>
-            <h2 className="font-sora font-extrabold text-3xl sm:text-4xl text-[#111827]">
-              Our Journey
+            <h2 className="font-sora font-extrabold text-3xl sm:text-4xl" style={{ color: '#010101' }}>
+              Our <span style={{ color: '#ad5d50' }}>Journey</span>
             </h2>
-            <p className="mt-2 text-[15px] text-[#6b7280] max-w-2xl font-normal">
+            <p className="mt-2 text-[15px] max-w-2xl font-normal" style={{ color: '#5a5249' }}>
               Five-year growth roadmap across solar, BESS, and green hydrogen
             </p>
           </div>
@@ -657,10 +641,10 @@ export default function AboutPage() {
                 OUR LEADERSHIP
               </span>
             </div>
-            <h2 className="font-sora font-extrabold text-3xl sm:text-4xl text-[#111827]">
-              Meet Our Board Members
+            <h2 className="font-sora font-extrabold text-3xl sm:text-4xl" style={{ color: '#010101' }}>
+              Meet Our <span style={{ color: '#1a98a8ff' }}>Board Members</span>
             </h2>
-            <p className="mt-2 text-[15px] text-[#6b7280] max-w-2xl font-normal">
+            <p className="mt-2 text-[15px] max-w-2xl font-normal" style={{ color: '#5a5249' }}>
               Experienced leaders driving renewable energy across solar, BESS, and hydrogen.
             </p>
           </div>

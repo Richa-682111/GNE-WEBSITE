@@ -32,6 +32,7 @@ const lifecyclePhases = [
   {
     number: "01",
     title: "Land Identification",
+    image: "/service-land.jpg",
     icon: Compass,
     tagline: "Sourcing & securing high-yield locations",
     description: "Identifying prime solar radiation & wind zones, assessing topography, grid connectivity, and securing land rights.",
@@ -45,6 +46,7 @@ const lifecyclePhases = [
   {
     number: "02",
     title: "Feasibility Study",
+    image: "/service-pmc.jpg",
     icon: ClipboardList,
     tagline: "Assessing viability & optimizing parameters",
     description: "In-depth geotechnical, hydrological, and financial analysis to ensure maximum return on investment.",
@@ -58,6 +60,7 @@ const lifecyclePhases = [
   {
     number: "03",
     title: "Engineering",
+    image: "/service-epc.jpg",
     icon: Lightbulb,
     tagline: "Precision design for optimal performance",
     description: "Precision electrical, civil, and mechanical design utilizing advanced simulation tools for optimal energy yield.",
@@ -71,6 +74,7 @@ const lifecyclePhases = [
   {
     number: "04",
     title: "Procurement",
+    image: "/service-manufacturing.jpg",
     icon: Package,
     tagline: "Strategic sourcing of tier-1 technology",
     description: "Sourcing tier-1 solar modules, high-efficiency inverters, and premium structures through a robust global supply chain.",
@@ -84,6 +88,7 @@ const lifecyclePhases = [
   {
     number: "05",
     title: "Construction",
+    image: "/service-installation.jpg",
     icon: Hammer,
     tagline: "Rapid and safe on-site implementation",
     description: "Safe, rapid, and high-quality civil and electrical works, adhering strictly to global execution standards.",
@@ -97,6 +102,7 @@ const lifecyclePhases = [
   {
     number: "06",
     title: "Commissioning",
+    image: "/hero-solar-farm.png",
     icon: Zap,
     tagline: "Grid integration & performance validation",
     description: "Comprehensive hot & cold testing, grid synchronization, and final compliance approval for seamless power export.",
@@ -110,6 +116,7 @@ const lifecyclePhases = [
   {
     number: "07",
     title: "O&M",
+    image: "/o&m.png",
     icon: Wrench,
     tagline: "Asset management & uptime maximization",
     description: "Long-term predictive maintenance, real-time performance monitoring, and maximum plant uptime.",
@@ -122,6 +129,27 @@ const lifecyclePhases = [
   }
 ];
 
+const getOuterPopupPosition = (idx: number) => {
+  switch (idx) {
+    case 0: // Top (12 o'clock) - card pops up above
+      return "bottom-[105%] left-1/2 -translate-x-1/2 mb-2";
+    case 1: // Top-Right (~1:30)
+      return "left-[105%] bottom-0 ml-4";
+    case 2: // Right (~3:30)
+      return "left-[105%] top-1/2 -translate-y-1/2 ml-4";
+    case 3: // Bottom-Right (~5:00)
+      return "left-[105%] top-0 ml-4";
+    case 4: // Bottom-Left (~7:00)
+      return "right-[105%] top-0 mr-4";
+    case 5: // Left (~8:30)
+      return "right-[105%] top-1/2 -translate-y-1/2 mr-4";
+    case 6: // Top-Left (~10:30)
+      return "right-[105%] bottom-0 mr-4";
+    default:
+      return "left-[105%] ml-4";
+  }
+};
+
 export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
   const [activeTab, setActiveTab] = useState<"completed" | "execution" | "pipeline" | string>("completed");
   const [activePhase, setActivePhase] = useState(0);
@@ -129,23 +157,36 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
   return (
     <div className="w-full flex flex-col items-center">
       {/* Our Project Portfolio Heading */}
-      <ScrollReveal className="text-center mb-8">
-        <h2 className="text-3xl font-black text-slate-900 dark:text-white sm:text-4xl">
-          Our Project Portfolio
+      <ScrollReveal className="text-center mb-10">
+        <span
+          className="mb-3 inline-block rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest shadow-sm"
+          style={{ background: 'rgba(13,115,66,0.18)', color: '#0d7342ff', outline: '1px solid rgba(13,115,66,0.35)' }}
+        >
+          Track Record of Excellence
+        </span>
+        <h2 className="text-3xl sm:text-5xl font-black font-sora tracking-tight" style={{ color: '#010101' }}>
+          Our Project <span style={{ color: '#256c4aff' }}>Portfolio</span>
         </h2>
-        <div className="mt-2.5 mx-auto h-1.5 w-16 rounded-full bg-brand-green animate-pulse" />
+        <div className="mt-3.5 mx-auto h-1.5 w-20 rounded-full bg-gradient-to-r from-[#0d7342ff] to-teal-400" />
+        <p className="mt-4 text-base sm:text-lg font-semibold max-w-2xl mx-auto leading-relaxed" style={{ color: '#475569' }}>
+          Explore our completed renewable energy assets, projects currently under execution, and our nationwide growth pipeline across solar EPC, BESS, and O&amp;M.
+        </p>
       </ScrollReveal>
 
       {/* Filter Tabs */}
       <ScrollReveal className="w-full max-w-2xl mb-12">
-        <div className="flex rounded-2xl border border-slate-200/80 bg-white/80 p-1.5 shadow-sm dark:border-slate-800 dark:bg-slate-900/60 backdrop-blur-sm">
+        <div className="flex rounded-2xl p-1.5 shadow-md backdrop-blur-sm" style={{ background: 'rgba(255,255,255,0.75)', border: '1px solid rgba(176,125,58,0.3)' }}>
           <button
             type="button"
             onClick={() => setActiveTab("completed")}
             className={`w-full rounded-xl py-3 text-center text-xs sm:text-sm font-bold transition-all duration-300 ${activeTab === "completed"
-              ? "bg-brand-green text-white shadow-md shadow-emerald-500/20"
-              : "text-slate-650 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white"
+              ? "text-white shadow-md shadow-emerald-500/20"
+              : "hover:bg-slate-100/80"
               }`}
+            style={{
+              background: activeTab === "completed" ? '#0d7342ff' : 'transparent',
+              color: activeTab === "completed" ? '#ffffff' : '#334155'
+            }}
           >
             Completed Projects
           </button>
@@ -153,9 +194,13 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
             type="button"
             onClick={() => setActiveTab("execution")}
             className={`w-full rounded-xl py-3 text-center text-xs sm:text-sm font-bold transition-all duration-300 ${activeTab === "execution"
-              ? "bg-brand-green text-white shadow-md shadow-emerald-500/20"
-              : "text-slate-650 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white"
+              ? "text-white shadow-md shadow-emerald-500/20"
+              : "hover:bg-slate-100/80"
               }`}
+            style={{
+              background: activeTab === "execution" ? '#0d7342ff' : 'transparent',
+              color: activeTab === "execution" ? '#ffffff' : '#334155'
+            }}
           >
             Projects Under Execution
           </button>
@@ -163,9 +208,13 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
             type="button"
             onClick={() => setActiveTab("pipeline")}
             className={`w-full rounded-xl py-3 text-center text-xs sm:text-sm font-bold transition-all duration-300 ${activeTab === "pipeline"
-              ? "bg-brand-green text-white shadow-md shadow-emerald-500/20"
-              : "text-slate-650 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white"
+              ? "text-white shadow-md shadow-emerald-500/20"
+              : "hover:bg-slate-100/80"
               }`}
+            style={{
+              background: activeTab === "pipeline" ? '#0d7342ff' : 'transparent',
+              color: activeTab === "pipeline" ? '#ffffff' : '#334155'
+            }}
           >
             Growth Pipeline
           </button>
@@ -195,14 +244,14 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                   </div>
                 </div>
                 <div className="p-6 sm:p-8">
-                  <h3 className="text-2xl font-black text-slate-900 dark:text-white">
+                  <h3 className="text-2xl font-black" style={{ color: '#010101' }}>
                     41 MW Solar EPC
                   </h3>
-                  <p className="mt-1.5 text-lg font-extrabold text-brand-green">
+                  <p className="mt-1.5 text-lg font-extrabold" style={{ color: '#0d7342ff' }}>
 
                   </p>
-                  <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-slate-550 dark:text-slate-400">
-                    <MapPin className="h-4.5 w-4.5 text-slate-400 shrink-0" />
+                  <div className="mt-4 flex items-center gap-2 text-sm font-semibold" style={{ color: '#475569' }}>
+                    <MapPin className="h-4.5 w-4.5 text-slate-500 shrink-0" />
                     Maharashtra
                   </div>
                 </div>
@@ -225,14 +274,14 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                   </div>
                 </div>
                 <div className="p-6 sm:p-8">
-                  <h3 className="text-2xl font-black text-slate-900 dark:text-white">
-                    15 MW O&M
+                  <h3 className="text-2xl font-black" style={{ color: '#010101' }}>
+                    15 MW O&amp;M
                   </h3>
-                  <p className="mt-1.5 text-lg font-extrabold text-brand-green">
+                  <p className="mt-1.5 text-lg font-extrabold" style={{ color: '#0d7342ff' }}>
 
                   </p>
-                  <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-slate-550 dark:text-slate-400">
-                    <MapPin className="h-4.5 w-4.5 text-slate-400 shrink-0" />
+                  <div className="mt-4 flex items-center gap-2 text-sm font-semibold" style={{ color: '#475569' }}>
+                    <MapPin className="h-4.5 w-4.5 text-slate-500 shrink-0" />
                     Noida, Uttar Pradesh
                   </div>
                 </div>
@@ -263,21 +312,21 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                   <div>
                     {/* Header line */}
                     <div className="flex items-center justify-between">
-                      <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-emerald-600">
+                      <span className="text-[11px] font-extrabold uppercase tracking-[0.2em]" style={{ color: '#0d7342ff' }}>
                         Projects Under Execution
                       </span>
-                      <span className="rounded-xl border border-emerald-250 bg-emerald-50 px-3 py-1.5 text-[11px] font-bold text-emerald-700 dark:border-emerald-900/50 dark:bg-emerald-950/40 dark:text-emerald-300">
+                      <span className="rounded-xl border border-emerald-250 bg-emerald-50 px-3 py-1.5 text-[11px] font-bold text-emerald-800">
                         Under Execution
                       </span>
                     </div>
 
                     {/* Details */}
-                    <h3 className="mt-4 text-2xl sm:text-3xl font-black text-slate-950 dark:text-white leading-tight">
+                    <h3 className="mt-4 text-2xl sm:text-3xl font-black leading-tight" style={{ color: '#010101' }}>
                       100 MW Solar EPC
                     </h3>
 
-                    <div className="mt-3.5 flex items-center gap-2 text-sm font-semibold text-slate-600 dark:text-slate-400">
-                      <MapPin className="h-4.5 w-4.5 text-slate-400 shrink-0" />
+                    <div className="mt-3.5 flex items-center gap-2 text-sm font-semibold" style={{ color: '#475569' }}>
+                      <MapPin className="h-4.5 w-4.5 text-slate-500 shrink-0" />
                       Maharashtra
                     </div>
                   </div>
@@ -357,8 +406,8 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
             <div className="flex flex-col gap-8">
               {/* Pipeline header */}
               <div className="text-center mb-2">
-                <h3 className="text-2xl font-black text-brand-green">
-                  Growth Pipeline
+                <h3 className="text-2xl sm:text-4xl font-black" style={{ color: '#010101' }}>
+                  Growth <span style={{ color: '#256c4aff' }}>Pipeline</span>
                 </h3>
               </div>
 
@@ -370,34 +419,34 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-50 text-brand-solar dark:bg-amber-950/20">
                       <Sun className="h-5.5 w-5.5 fill-current" />
                     </div>
-                    <h4 className="text-xl font-black text-slate-900 dark:text-white">
+                    <h4 className="text-xl font-black" style={{ color: '#010101' }}>
                       Solar EPC Pipeline
                     </h4>
                   </div>
                   <div className="max-w-md mx-auto overflow-x-auto">
                     <table className="w-full text-center text-sm">
                       <thead>
-                        <tr className="border-b border-slate-150/60 text-[11px] font-extrabold uppercase tracking-[0.1em] text-slate-500">
+                        <tr className="border-b border-slate-150/60 text-[11px] font-extrabold uppercase tracking-[0.1em]" style={{ color: '#475569' }}>
                           <th className="pb-3 text-center">Capacity</th>
                           <th className="pb-3 text-center">Location</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-slate-100 dark:divide-slate-800/50">
                         <tr className="group/row hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
-                          <td className="py-3.5 text-center font-black text-slate-900 dark:text-white">100 MW</td>
-                          <td className="py-3.5 text-center text-slate-600 dark:text-slate-450">Maharashtra</td>
+                          <td className="py-3.5 text-center font-black" style={{ color: '#010101' }}>100 MW</td>
+                          <td className="py-3.5 text-center font-medium" style={{ color: '#475569' }}>Maharashtra</td>
                         </tr>
                         <tr className="group/row hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
-                          <td className="py-3.5 text-center font-black text-slate-900 dark:text-white">50 MW</td>
-                          <td className="py-3.5 text-center text-slate-600 dark:text-slate-450">Maharashtra</td>
+                          <td className="py-3.5 text-center font-black" style={{ color: '#010101' }}>50 MW</td>
+                          <td className="py-3.5 text-center font-medium" style={{ color: '#475569' }}>Maharashtra</td>
                         </tr>
                         <tr className="group/row hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
-                          <td className="py-3.5 text-center font-black text-slate-900 dark:text-white">50 MW</td>
-                          <td className="py-3.5 text-center text-slate-600 dark:text-slate-450">Maharashtra</td>
+                          <td className="py-3.5 text-center font-black" style={{ color: '#010101' }}>50 MW</td>
+                          <td className="py-3.5 text-center font-medium" style={{ color: '#475569' }}>Maharashtra</td>
                         </tr>
                         <tr className="group/row hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
-                          <td className="py-3.5 text-center font-black text-slate-900 dark:text-white">100 MW</td>
-                          <td className="py-3.5 text-center text-slate-600 dark:text-slate-450">Maharashtra</td>
+                          <td className="py-3.5 text-center font-black" style={{ color: '#010101' }}>100 MW</td>
+                          <td className="py-3.5 text-center font-medium" style={{ color: '#475569' }}>Maharashtra</td>
                         </tr>
                       </tbody>
                     </table>
@@ -410,7 +459,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-brand-green dark:bg-emerald-950/20">
                       <Battery className="h-5.5 w-5.5 fill-current" />
                     </div>
-                    <h4 className="text-xl font-black text-slate-900 dark:text-white">
+                    <h4 className="text-xl font-black" style={{ color: '#010101' }}>
                       BESS Pipeline
                     </h4>
                   </div>
@@ -418,27 +467,27 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                   <div className="max-w-md mx-auto overflow-x-auto">
                     <table className="w-full text-center text-sm">
                       <thead>
-                        <tr className="border-b border-slate-150/60 text-[11px] font-extrabold uppercase tracking-[0.1em] text-slate-500 dark:border-slate-800 dark:text-slate-400">
+                        <tr className="border-b border-slate-150/60 text-[11px] font-extrabold uppercase tracking-[0.1em]" style={{ color: '#475569' }}>
                           <th className="pb-3 text-center">Capacity</th>
                           <th className="pb-3 text-center">Location</th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-slate-100 dark:divide-slate-800/50">
                         <tr className="group/row hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
-                          <td className="py-3.5 text-center font-black text-slate-900 dark:text-white">45 MW / 180 MWh</td>
-                          <td className="py-3.5 text-center text-slate-600 dark:text-slate-450">Odisha</td>
+                          <td className="py-3.5 text-center font-black" style={{ color: '#010101' }}>45 MW / 180 MWh</td>
+                          <td className="py-3.5 text-center font-medium" style={{ color: '#475569' }}>Odisha</td>
                         </tr>
                         <tr className="group/row hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
-                          <td className="py-3.5 text-center font-black text-slate-900 dark:text-white">25 MW / 100 MWh</td>
-                          <td className="py-3.5 text-center text-slate-600 dark:text-slate-450">Tamil Nadu</td>
+                          <td className="py-3.5 text-center font-black" style={{ color: '#010101' }}>25 MW / 100 MWh</td>
+                          <td className="py-3.5 text-center font-medium" style={{ color: '#475569' }}>Tamil Nadu</td>
                         </tr>
                         <tr className="group/row hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
-                          <td className="py-3.5 text-center font-black text-slate-900 dark:text-white">100 MW / 200 MWh</td>
-                          <td className="py-3.5 text-center text-slate-600 dark:text-slate-450">Rajasthan</td>
+                          <td className="py-3.5 text-center font-black" style={{ color: '#010101' }}>100 MW / 200 MWh</td>
+                          <td className="py-3.5 text-center font-medium" style={{ color: '#475569' }}>Rajasthan</td>
                         </tr>
                         <tr className="group/row hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
-                          <td className="py-3.5 text-center font-black text-slate-900 dark:text-white">50 MW / 200 MWh</td>
-                          <td className="py-3.5 text-center text-slate-600 dark:text-slate-450">-</td>
+                          <td className="py-3.5 text-center font-black" style={{ color: '#010101' }}>50 MW / 200 MWh</td>
+                          <td className="py-3.5 text-center font-medium" style={{ color: '#475569' }}>-</td>
                         </tr>
                       </tbody>
                     </table>
@@ -455,11 +504,11 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                       <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-amber-50 text-brand-solar dark:bg-amber-950/20">
                         <Sun className="h-5 w-5 fill-current" />
                       </div>
-                      <span className="text-sm font-bold text-slate-700 dark:text-slate-300">
+                      <span className="text-sm font-bold" style={{ color: '#010101' }}>
                         Total Solar Pipeline
                       </span>
                     </div>
-                    <span className="text-xl font-extrabold text-brand-green">
+                    <span className="text-xl font-extrabold" style={{ color: '#0d7342ff' }}>
                       250 MW
                     </span>
                   </div>
@@ -476,11 +525,11 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                       <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-50 text-brand-green dark:bg-emerald-950/20">
                         <Battery className="h-5 w-5 fill-current" />
                       </div>
-                      <span className="text-sm font-bold text-slate-700 dark:text-slate-300">
+                      <span className="text-sm font-bold" style={{ color: '#010101' }}>
                         Total BESS Pipeline
                       </span>
                     </div>
-                    <span className="text-xl font-extrabold text-brand-green">
+                    <span className="text-xl font-extrabold" style={{ color: '#0d7342ff' }}>
                       480 MWh
                     </span>
                   </div>
@@ -499,17 +548,17 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
       <ScrollReveal className="w-full mt-24">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-black text-slate-900 dark:text-white sm:text-4xl">
-            Project Execution Lifecycle
+          <h2 className="text-3xl font-black sm:text-5xl font-sora tracking-tight" style={{ color: '#010101' }}>
+            Project Execution <span style={{ color: '#256c4aff' }}>Lifecycle</span>
           </h2>
-          <p className="mt-2 text-lg font-bold text-brand-green uppercase tracking-[0.15em]">
+          <p className="mt-3 text-sm sm:text-base font-bold uppercase tracking-[0.15em]" style={{ color: '#912716ff' }}>
             From Concept to Commissioning
           </p>
-          <div className="mt-3.5 mx-auto h-1.5 w-16 rounded-full bg-brand-green animate-pulse" />
+          <div className="mt-3.5 mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#0d7342ff] to-teal-400 animate-pulse" />
         </div>
 
         {/* Circular Lifecycle Layout */}
-        <div className="mx-auto max-w-6xl w-full mt-8 md:mt-20">
+        <div className="mx-auto max-w-6xl w-full mt-12 md:mt-28 md:mb-16">
 
           {/* Desktop Circular Layout */}
           <div className="hidden md:flex relative w-[900px] h-[900px] mx-auto items-center justify-center">
@@ -525,17 +574,17 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
 
             {/* Central Core Content (Interactive) */}
             <div className="absolute w-[420px] h-[420px] rounded-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-3xl shadow-2xl border border-white/60 dark:border-slate-700 flex flex-col items-center justify-center text-center p-14 z-0 transition-all duration-300">
-              <span className="text-[13px] font-black text-brand-green uppercase tracking-[0.25em] mb-3">
+              <span className="text-[13px] font-black uppercase tracking-[0.25em] mb-3" style={{ color: '#0d7342ff' }}>
                 Phase {lifecyclePhases[activePhase].number}
               </span>
-              <h3 className="text-3xl font-black text-slate-900 dark:text-white mb-4">
+              <h3 className="text-3xl font-black mb-4" style={{ color: '#010101' }}>
                 {lifecyclePhases[activePhase].title}
               </h3>
-              <p className="text-[14.5px] font-medium text-slate-650 dark:text-slate-400 leading-relaxed mb-6">
+              <p className="text-[14.5px] font-medium leading-relaxed mb-6" style={{ color: '#475569' }}>
                 {lifecyclePhases[activePhase].description}
               </p>
               <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-700 to-transparent mb-6" />
-              <ul className="text-[13.5px] text-center w-full mx-auto space-y-3 font-semibold text-slate-700 dark:text-slate-300">
+              <ul className="text-[13.5px] text-center w-full mx-auto space-y-3 font-semibold" style={{ color: '#334155' }}>
                 {lifecyclePhases[activePhase].deliverables.slice(0, 3).map((d, i) => (
                   <li key={i} className="flex items-center justify-center gap-2">
                     <CheckCircle2 className="w-4.5 h-4.5 text-brand-green shrink-0" />
@@ -559,6 +608,28 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                     transform: `rotate(${angle}deg) translate(330px) rotate(${-angle}deg)`
                   }}
                 >
+                  {/* Interactive Hover Image Popup Card on Outer Side */}
+                  <div className={`absolute ${getOuterPopupPosition(idx)} w-[230px] rounded-2xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-2xl p-3 shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-white/60 dark:border-slate-700 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 z-[100] text-left overflow-hidden`}>
+                    <div className="relative w-full h-[120px] rounded-xl overflow-hidden mb-2.5 bg-slate-100 dark:bg-slate-800">
+                      <Image
+                        src={(phase as any).image}
+                        alt={phase.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                      <span className="absolute bottom-2 left-2 text-[10px] font-black uppercase tracking-wider text-white bg-brand-green/90 px-2 py-0.5 rounded-full backdrop-blur-md">
+                        Phase {phase.number}
+                      </span>
+                    </div>
+                    <h5 className="text-[13px] font-extrabold leading-tight mb-1" style={{ color: '#010101' }}>
+                      {phase.title}
+                    </h5>
+                    <p className="text-[11px] leading-normal font-medium line-clamp-2" style={{ color: '#475569' }}>
+                      {phase.tagline}
+                    </p>
+                  </div>
+
                   {/* Glassmorphic 3D-like Box wrapper */}
                   <div className={`relative w-24 h-24 mb-4 rounded-3xl shadow-xl flex items-center justify-center transition-all duration-500 ${isActive ? 'bg-brand-green text-white shadow-emerald-500/30 -translate-y-2' : 'bg-white dark:bg-slate-800 text-brand-green shadow-slate-200/50 dark:shadow-none'}`}>
                     {/* Glossy overlay */}
@@ -566,8 +637,8 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                     <phase.icon className="h-10 w-10 relative z-10" />
                   </div>
                   <div className={`bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl rounded-2xl p-4 shadow-xl transition-colors duration-500 w-full border ${isActive ? 'border-brand-green/50 ring-2 ring-brand-green/20' : 'border-white/50 dark:border-slate-700'}`}>
-                    <span className={`text-[11px] font-black uppercase tracking-wider block mb-1.5 transition-colors ${isActive ? 'text-brand-green' : 'text-slate-500'}`}>Phase {phase.number}</span>
-                    <h4 className="text-[14px] font-bold text-slate-900 dark:text-white leading-tight">{phase.title}</h4>
+                    <span className={`text-[11px] font-black uppercase tracking-wider block mb-1.5 transition-colors`} style={{ color: isActive ? '#0d7342ff' : '#64748b' }}>Phase {phase.number}</span>
+                    <h4 className="text-[14px] font-bold leading-tight" style={{ color: '#010101' }}>{phase.title}</h4>
                   </div>
                 </button>
               );
@@ -590,17 +661,17 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                       <phase.icon className="h-6 w-6 relative z-10" />
                     </div>
                     <div>
-                      <span className={`text-[10px] font-black uppercase tracking-wider block ${isActive ? 'text-brand-green' : 'text-emerald-600'}`}>Phase {phase.number}</span>
-                      <h4 className="text-base font-bold text-slate-900 dark:text-white">{phase.title}</h4>
+                      <span className="text-[10px] font-black uppercase tracking-wider block" style={{ color: isActive ? '#0d7342ff' : '#0d7342ff' }}>Phase {phase.number}</span>
+                      <h4 className="text-base font-bold" style={{ color: '#010101' }}>{phase.title}</h4>
                     </div>
                   </button>
 
                   {isActive && (
                     <div className="ml-[72px] bg-white/70 dark:bg-slate-900/70 backdrop-blur-md rounded-xl p-4 shadow-sm border border-white/20 dark:border-slate-800 mt-1 mb-2 animate-in slide-in-from-top-2 fade-in duration-300">
-                      <p className="text-[13px] font-medium text-slate-650 dark:text-slate-400 leading-relaxed mb-3">
+                      <p className="text-[13px] font-medium leading-relaxed mb-3" style={{ color: '#475569' }}>
                         {phase.description}
                       </p>
-                      <ul className="text-[12px] space-y-2 font-semibold text-slate-700 dark:text-slate-300">
+                      <ul className="text-[12px] space-y-2 font-semibold" style={{ color: '#334155' }}>
                         {phase.deliverables.slice(0, 3).map((d, i) => (
                           <li key={i} className="flex items-start gap-2">
                             <CheckCircle2 className="w-3.5 h-3.5 text-brand-green shrink-0 mt-0.5" />
@@ -618,13 +689,13 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
         </div>
       </ScrollReveal>
 
-      {/* WHY CHOOSE GNE INFRA SECTION (Image 4) */}
+      {/* WHY CHOOSE GNE INFRA SECTION */}
       <ScrollReveal className="w-full mt-24">
         <div className="rounded-[2.5rem] border border-white/20 bg-white/55 p-8 sm:p-12 shadow-lg dark:border-slate-800 dark:bg-slate-900/40 backdrop-blur-xl">
           {/* Section Header */}
           <div className="text-center mb-12">
-            <h3 className="text-2xl sm:text-3xl font-black text-brand-green">
-              Why Clients Trust GNE Infra
+            <h3 className="text-2xl sm:text-4xl font-black" style={{ color: '#010101' }}>
+              Why Clients Trust <span style={{ color: '#256c4aff' }}>GNE Infra</span>
             </h3>
           </div>
 
@@ -636,10 +707,10 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                 <Building2 className="h-6 w-6" />
               </div>
               <div>
-                <h4 className="text-lg font-bold text-slate-900 dark:text-white leading-snug">
+                <h4 className="text-lg font-bold leading-snug" style={{ color: '#010101' }}>
                   End-to-End EPC Delivery
                 </h4>
-                <p className="mt-1.5 text-[15px] text-slate-650 dark:text-slate-350 leading-relaxed font-medium">
+                <p className="mt-1.5 text-[15px] leading-relaxed font-medium" style={{ color: '#475569' }}>
                   Comprehensive project execution from engineering to commissioning.
                 </p>
               </div>
@@ -651,10 +722,10 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                 <DraftingCompass className="h-6 w-6" />
               </div>
               <div>
-                <h4 className="text-lg font-bold text-slate-900 dark:text-white leading-snug">
+                <h4 className="text-lg font-bold leading-snug" style={{ color: '#010101' }}>
                   Engineering Excellence
                 </h4>
-                <p className="mt-1.5 text-[15px] text-slate-650 dark:text-slate-350 leading-relaxed font-medium">
+                <p className="mt-1.5 text-[15px] leading-relaxed font-medium" style={{ color: '#475569' }}>
                   Optimized system design for maximum performance and reliability.
                 </p>
               </div>
@@ -666,10 +737,10 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                 <ShieldCheck className="h-6 w-6" />
               </div>
               <div>
-                <h4 className="text-lg font-bold text-slate-900 dark:text-white leading-snug">
+                <h4 className="text-lg font-bold leading-snug" style={{ color: '#010101' }}>
                   Quality-Driven Execution
                 </h4>
-                <p className="mt-1.5 text-[15px] text-slate-650 dark:text-slate-350 leading-relaxed font-medium">
+                <p className="mt-1.5 text-[15px] leading-relaxed font-medium" style={{ color: '#475569' }}>
                   Strict quality assurance at every stage of construction.
                 </p>
               </div>
@@ -681,10 +752,10 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                 <TowerControl className="h-6 w-6" />
               </div>
               <div>
-                <h4 className="text-lg font-bold text-slate-900 dark:text-white leading-snug">
-                  Land & Grid Expertise
+                <h4 className="text-lg font-bold leading-snug" style={{ color: '#010101' }}>
+                  Land &amp; Grid Expertise
                 </h4>
-                <p className="mt-1.5 text-[15px] text-slate-650 dark:text-slate-350 leading-relaxed font-medium">
+                <p className="mt-1.5 text-[15px] leading-relaxed font-medium" style={{ color: '#475569' }}>
                   Integrated support for land development and grid connectivity.
                 </p>
               </div>
@@ -696,10 +767,10 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                 <BriefcaseBusiness className="h-6 w-6" />
               </div>
               <div>
-                <h4 className="text-lg font-bold text-slate-900 dark:text-white leading-snug">
+                <h4 className="text-lg font-bold leading-snug" style={{ color: '#010101' }}>
                   Experienced Project Management
                 </h4>
-                <p className="mt-1.5 text-[15px] text-slate-650 dark:text-slate-350 leading-relaxed font-medium">
+                <p className="mt-1.5 text-[15px] leading-relaxed font-medium" style={{ color: '#475569' }}>
                   Structured planning and execution with schedule adherence.
                 </p>
               </div>

@@ -10,10 +10,6 @@ export default function HomePage() {
       {/* Hero Section — Auto-Sliding Carousel */}
       <HeroCarousel>
         <div className="flex flex-col items-center justify-center gap-3 px-4 py-2 sm:gap-3.5 lg:gap-4">
-          {/* Badge */}
-          <div className="rounded-full border border-white/30 px-3 py-1 text-center text-[10px] font-semibold uppercase tracking-wider text-white/90 backdrop-blur-sm sm:text-[11px]">
-            ENTERPRISE-GRADE RENEWABLE INFRASTRUCTURE
-          </div>
 
 
           <h1
@@ -32,51 +28,23 @@ export default function HomePage() {
           </h1>
 
           {/* Subheading */}
-          <p className="mx-auto max-w-2xl text-center text-sm font-medium leading-snug text-white/95 drop-shadow-md sm:text-[15px]">
-            Integrating Solar, Energy Storage & Green Hydrogen Solutions for a Net-Zero World
+          <p
+            className="mx-auto max-w-2xl text-center text-base font-semibold leading-relaxed sm:text-lg md:text-xl"
+            style={{
+              color: '#4ade80',
+              textShadow: `
+                0 0 8px rgba(0,0,0,0.9),
+                0 0 16px rgba(0,0,0,0.8),
+                2px 2px 6px rgba(0,0,0,0.9)
+              `
+            }}
+          >
+            Integrating Solar, Energy Storage &amp; Green Hydrogen Solutions for a Net-Zero World
           </p>
 
-          {/* Service Boxes */}
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-2.5">
-            {[
-              { key: "solar-epc", href: "/solar-epc", lines: ["Solar EPC"], wide: false },
-              { key: "bess-epc", href: "/bess-ems", lines: ["BESS EPC"], wide: false },
-              { key: "pmc", href: "/pmc", lines: ["Project Management Consultancy"], wide: true },
-              { key: "pmc-psp", href: "/pmc-for-psp", lines: ["PMC for PSP"], wide: false },
-              { key: "o-and-m", href: "/o-and-m", lines: ["O&M"], wide: false },
-            ].map((service) => (
-              <Link
-                key={service.key}
-                href={service.href}
-                className={`hero-service-box flex h-[3rem] shrink-0 cursor-pointer items-center justify-center rounded-lg px-3 sm:h-[3.25rem] sm:rounded-xl sm:px-3.5 ${service.wide ? "w-[11.5rem] sm:w-[12rem]" : "w-[8.5rem] sm:w-[9rem]"
-                  }`}
-              >
-                <p className="text-center text-xs font-semibold leading-tight text-white sm:text-[13px]">
-                  {service.lines.map((line) => (
-                    <span key={line} className="block">
-                      {line}
-                    </span>
-                  ))}
-                </p>
-              </Link>
-            ))}
-          </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col gap-2.5 sm:flex-row sm:gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-brand-green to-emerald-600 px-7 py-2.5 text-sm font-semibold text-white transition-all hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/20 sm:px-8 sm:py-3 shine-button"
-            >
-              Get a Quote
-            </Link>
-            <Link
-              href="/projects"
-              className="hero-service-box inline-flex items-center justify-center rounded-full px-7 py-2.5 text-sm font-semibold text-white sm:px-8 sm:py-3"
-            >
-              View Our Projects
-            </Link>
-          </div>
+
+
         </div>
       </HeroCarousel>
 

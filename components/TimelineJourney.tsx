@@ -1,460 +1,311 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { CheckCircle2, ArrowRight, Sparkles, Calendar } from "lucide-react";
 
-/* ─────────────────────────────────────────────────────────────
-   DATA
-───────────────────────────────────────────────────────────── */
-interface Step {
-  yearLabel: string;
+interface BulletPoint {
+  text: string;
+}
+
+interface RoadmapStep {
+  id: string;
   fy: string;
+  phase: string;
+  image: string;
   hex: string;
   glow: string;
-  bullets: string[];
-  keyInitiatives?: string[];
+  textClass: string;
+  borderClass: string;
+  bgGlow: string;
+  bullets: BulletPoint[];
 }
 
-const STEPS: Step[] = [
+const STEPS: RoadmapStep[] = [
   {
-    yearLabel: "YEAR 1",
+    id: "fy26",
     fy: "FY2025-26",
-    hex: "#f97316",
-    glow: "rgba(249,115,22,0.45)",
-    bullets: [
-      "Solar EPC > 100 MW",
-      "Office established in Pune",
-      "Strategic entry into Green Hydrogen Business",
-    ],
-  },
-  {
-    yearLabel: "YEAR 2",
-    fy: "FY2026-27",
-    hex: "#ca8a04",
-    glow: "rgba(202,138,4,0.45)",
-    bullets: [
-      "Solar EPC > 450 MW",
-      "Develop 100 MW IPP Solar + BESS",
-      "GH2 Electrolyser Business Growth",
-      "Commission BESS Manufacturing factory",
-      "Onboard strategic investors",
-      "Develop indigenous EMS with IIT Delhi",
-    ],
-  },
-  {
-    yearLabel: "YEAR 3",
-    fy: "FY2027-28",
-    hex: "#16a34a",
-    glow: "rgba(22,163,74,0.45)",
-    bullets: [
-      "Develop off-grid hybrid projects (500 MW PV + 2GWh BESS)",
-      "Expand IPP portfolio to 100 MW Solar",
-      "BESS Expansion > 2 GWh globally",
-    ],
-    keyInitiatives: [
-      "Establish position as Green Hydrogen developer",
-      "Advance R&D and tech innovation",
-    ],
-  },
-  {
-    yearLabel: "YEAR 4",
-    fy: "FY2028-29",
+    phase: "Year 1",
+    image: "/service-epc.jpg",
     hex: "#2563eb",
-    glow: "rgba(37,99,235,0.45)",
+    glow: "rgba(37, 99, 235, 0.45)",
+    textClass: "text-[#3b82f6]",
+    borderClass: "border-[#2563eb]",
+    bgGlow: "rgba(37, 99, 235, 0.2)",
     bullets: [
-      "Drive deep technological innovation",
-      "Accelerate global market growth",
-      "Initiate preparation for IPO",
+      { text: "Solar EPC > 100 MW" },
+      { text: "Office In Pune" },
+      { text: "Entry to Green Hydrogen Business" },
     ],
   },
   {
-    yearLabel: "YEAR 5",
-    fy: "FY2029-30",
-    hex: "#7c3aed",
-    glow: "rgba(124,58,237,0.45)",
+    id: "fy27",
+    fy: "FY2026-27",
+    phase: "Year 2",
+    image: "/service-bess.jpg",
+    hex: "#16a34a",
+    glow: "rgba(22, 163, 74, 0.45)",
+    textClass: "text-[#22c55e]",
+    borderClass: "border-[#16a34a]",
+    bgGlow: "rgba(22, 163, 74, 0.2)",
     bullets: [
-      "Upscaling to Public Limited Company",
-      "Establish as top-tier global renewable EPC",
+      { text: "Solar EPC > 450 MW" },
+      { text: "Business Expansion for BESS EPC > 50MW/200MWh" },
+      { text: "PMC - 1.5 GW BESS" },
+      { text: "Develop 100 MW IPP Solar + BESS" },
+      { text: "GH2 Electrolyser Business Growth" },
+      { text: "BESS Manufacturing factory" },
+      { text: "Inviting and onboarding of Investors" },
+      { text: "Development of indigenous EMS in collaboration with IIT Delhi" },
+    ],
+  },
+  {
+    id: "fy28",
+    fy: "FY2027-28",
+    phase: "Year 3",
+    image: "/service-green-hydrogen.jpg",
+    hex: "#eab308",
+    glow: "rgba(234, 179, 8, 0.45)",
+    textClass: "text-[#eab308]",
+    borderClass: "border-[#eab308]",
+    bgGlow: "rgba(234, 179, 8, 0.2)",
+    bullets: [
+      { text: "Develop off grid hybrid projects for 500 MW PV + 2GWh MWh BESS" },
+      { text: "Expanding the portfolio for 100 MW Solar as a developer" },
+      { text: "BESS Expansion > 2 GWh" },
+      { text: "Become a developer of Green Hydrogen" },
+      { text: "Innovation" },
+    ],
+  },
+  {
+    id: "fy29",
+    fy: "FY2028-29",
+    phase: "Year 4",
+    image: "/service-manufacturing.jpg",
+    hex: "#f97316",
+    glow: "rgba(249, 115, 22, 0.45)",
+    textClass: "text-[#fb923c]",
+    borderClass: "border-[#f97316]",
+    bgGlow: "rgba(249, 115, 22, 0.2)",
+    bullets: [
+      { text: "Innovation" },
+      { text: "Market Growth" },
+      { text: "Preparation for IPO" },
+    ],
+  },
+  {
+    id: "fy30",
+    fy: "FY2029-30",
+    phase: "Year 5",
+    image: "/hero-solar-farm.png",
+    hex: "#8b5cf6",
+    glow: "rgba(139, 92, 246, 0.45)",
+    textClass: "text-[#a78bfa]",
+    borderClass: "border-[#8b5cf6]",
+    bgGlow: "rgba(139, 92, 246, 0.2)",
+    bullets: [
+      { text: "Upscaling to Public Limited Company" },
     ],
   },
 ];
 
-/* ─────────────────────────────────────────────────────────────
-   SVG CONFIG
-   ViewBox: 0 0 1000 490, SVG container height: 420px
-   Scale: 420/490 ≈ 0.857 px per SVG unit (height)
-           ~900/1000 = 0.9 px per SVG unit (width)
-
-   PATH starts at y=432 SVG units → 432 × 0.857 ≈ 370px from top
-   Cards: grid marginTop=-270px → grid top at 420-270=150px
-     Year 1 top = 150 + 220 = 370px ✓  ← path start matches Year 1 card top
-     Year 5 top = 150 + 0   = 150px
-───────────────────────────────────────────────────────────── */
-const PATH =
-  "M 18 432 L 215 268 L 302 332 L 452 136 L 538 206 L 650 160 L 734 218 L 946 16";
-
-const PATH_POINTS: [number, number][] = [
-  [18,  432],
-  [215, 268],
-  [302, 332],
-  [452, 136],
-  [538, 206],
-  [650, 160],
-  [734, 218],
-  [946,  16],
-];
-
-const TRAVEL_MS  = 20000; // slow — 20 s per loop
-const BOUNCE_AMP = 14;    // SVG units
-const BOUNCE_HZ  = 2.8;
-
-/* ─────────────────────────────────────────────────────────────
-   PATH MATHS — cumulative arc length interpolation
-───────────────────────────────────────────────────────────── */
-function buildSegments(pts: [number, number][]) {
-  const segs: {
-    x0: number; y0: number; x1: number; y1: number; len: number; cumLen: number;
-  }[] = [];
-  let cum = 0;
-  for (let i = 1; i < pts.length; i++) {
-    const [x0, y0] = pts[i - 1];
-    const [x1, y1] = pts[i];
-    const len = Math.hypot(x1 - x0, y1 - y0);
-    cum += len;
-    segs.push({ x0, y0, x1, y1, len, cumLen: cum });
-  }
-  return { segs, totalLen: cum };
-}
-
-const { segs: SEGS, totalLen: TOTAL_LEN } = buildSegments(PATH_POINTS);
-
-function getPos(frac: number): { x: number; y: number } {
-  const target = frac * TOTAL_LEN;
-  let prev = 0;
-  for (const seg of SEGS) {
-    if (target <= seg.cumLen) {
-      const t = (target - prev) / seg.len;
-      return {
-        x: seg.x0 + t * (seg.x1 - seg.x0),
-        y: seg.y0 + t * (seg.y1 - seg.y0),
-      };
-    }
-    prev = seg.cumLen;
-  }
-  const last = PATH_POINTS[PATH_POINTS.length - 1];
-  return { x: last[0], y: last[1] };
-}
-
-/* ─────────────────────────────────────────────────────────────
-   SOLAR PANEL  — at the arrow tip, 2× larger than before
-───────────────────────────────────────────────────────────── */
-function SolarPanel({ x, y }: { x: number; y: number }) {
-  const w = 110, h = 76;
-  const px = x - w / 2 + 10;
-  const py = y - h - 22;
+export function TimelineJourney() {
+  const [activeIdx, setActiveIdx] = useState(0);
+  const activeStep = STEPS[activeIdx];
 
   return (
-    <g>
-      {/* Frame */}
-      <rect x={px} y={py} width={w} height={h} rx={4} fill="#1e3a5f" />
-      {/* Vertical grid lines */}
-      {[1, 2].map((i) => (
-        <line
-          key={`v${i}`}
-          x1={px + (w / 3) * i} y1={py}
-          x2={px + (w / 3) * i} y2={py + h}
-          stroke="#4a90d9" strokeWidth="1.2"
-        />
-      ))}
-      {/* Horizontal grid line */}
-      <line x1={px} y1={py + h / 2} x2={px + w} y2={py + h / 2} stroke="#4a90d9" strokeWidth="1.2" />
-      {/* Sheen */}
-      <rect x={px} y={py} width={w} height={h} rx={4} fill="url(#panelSheen)" opacity="0.35" />
-      {/* Pole */}
-      <line x1={px + w / 2} y1={py + h} x2={px + w / 2} y2={py + h + 22} stroke="#888" strokeWidth="2.5" />
-      {/* Base shadow */}
-      <ellipse cx={px + w / 2} cy={py + h + 22} rx={14} ry={4} fill="#22c55e" opacity="0.22" />
-      {/* Label */}
-      <text
-        x={px + w / 2} y={py - 7}
-        textAnchor="middle"
-        fontSize="11"
-        fill="#7c3aed"
-        fontWeight="800"
-        fontFamily="Sora, sans-serif"
-      >
-        SOLAR
-      </text>
-      {/* Glow ring */}
-      <rect
-        x={px - 3} y={py - 3}
-        width={w + 6} height={h + 6}
-        rx={6}
-        fill="none"
-        stroke="#7c3aed"
-        strokeWidth="1.5"
-        opacity="0.35"
-      />
-    </g>
-  );
-}
-
-/* ─────────────────────────────────────────────────────────────
-   ANIMATED LOTTIE SUN
-   S = 78 SVG units ≈ ~70px on screen (≈ h2 size)
-   Travels along PATH, bounces, fades out at solar panel, loops.
-───────────────────────────────────────────────────────────── */
-const SUN_S = 78; // SVG units — roughly h2 heading height on screen
-
-function AnimatedSun() {
-  const [pos, setPos] = useState<{ x: number; y: number; opacity: number }>({
-    x: PATH_POINTS[0][0],
-    y: PATH_POINTS[0][1],
-    opacity: 1,
-  });
-
-  const startRef = useRef<number | null>(null);
-  const rafRef   = useRef<number | null>(null);
-
-  useEffect(() => {
-    let cancelled = false;
-
-    function tick(ts: number) {
-      if (cancelled) return;
-      if (startRef.current === null) startRef.current = ts;
-
-      const elapsed = ts - startRef.current;
-      const frac = Math.min(elapsed / TRAVEL_MS, 1);
-
-      const { x, y } = getPos(frac);
-      const bounce   = Math.sin(elapsed * 0.001 * Math.PI * 2 * BOUNCE_HZ) * BOUNCE_AMP;
-      // Fade out in the last 10% of the journey
-      const opacity  = frac > 0.90 ? Math.max(0, 1 - (frac - 0.90) / 0.10) : 1;
-
-      setPos({ x, y: y + bounce, opacity });
-
-      if (frac < 1) {
-        rafRef.current = requestAnimationFrame(tick);
-      } else {
-        // 1 s pause, then restart
-        setTimeout(() => {
-          if (!cancelled) {
-            startRef.current = null;
-            rafRef.current = requestAnimationFrame(tick);
-          }
-        }, 1000);
-      }
-    }
-
-    rafRef.current = requestAnimationFrame(tick);
-    return () => {
-      cancelled = true;
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-    };
-  }, []);
-
-  return (
-    <foreignObject
-      x={pos.x - SUN_S / 2}
-      y={pos.y - SUN_S / 2}
-      width={SUN_S}
-      height={SUN_S}
-      style={{ opacity: pos.opacity, pointerEvents: "none", overflow: "visible" }}
-    >
-      <DotLottieReact
-        src="/sunny-sun.lottie"
-        loop
-        autoplay
-        style={{ width: "100%", height: "100%", display: "block" }}
-      />
-    </foreignObject>
-  );
-}
-
-/* ─────────────────────────────────────────────────────────────
-   JOURNEY CARD
-───────────────────────────────────────────────────────────── */
-function JourneyCard({ step }: { step: Step }) {
-  const [hovered, setHovered] = useState(false);
-  const visible    = hovered ? step.bullets : step.bullets.slice(0, 3);
-  const extraCount = Math.max(0, step.bullets.length - 3) + (step.keyInitiatives?.length ?? 0);
-
-  return (
-    <div
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      onTouchStart={() => setHovered((v) => !v)}
-      style={{
-        borderRadius: 16,
-        border: `1.5px solid ${hovered ? step.hex : "#e5e7eb"}`,
-        background: "white",
-        padding: "18px 16px",
-        overflow: "hidden",
-        maxHeight: hovered ? 620 : 224,
-        transition: [
-          "max-height 0.52s cubic-bezier(0.4,0,0.2,1)",
-          "box-shadow 0.3s ease",
-          "border-color 0.3s ease",
-        ].join(", "),
-        boxShadow: hovered
-          ? `0 0 0 4px ${step.hex}22, 0 10px 40px ${step.glow}, 0 2px 8px rgba(0,0,0,0.06)`
-          : "0 1px 4px rgba(0,0,0,0.07)",
-        cursor: "default",
-      }}
-    >
-      {/* Badge */}
-      <span
-        style={{
-          display: "inline-block",
-          fontSize: 10, fontWeight: 700,
-          textTransform: "uppercase", letterSpacing: "0.09em",
-          padding: "3px 11px", borderRadius: 999,
-          background: step.hex, color: "#fff", marginBottom: 9,
-        }}
-      >
-        {step.yearLabel}
-      </span>
-
-      {/* FY heading */}
+    <section className="relative min-h-screen py-20 md:py-32 font-inter bg-transparent overflow-hidden">
+      {/* Subtle Background Glow matching active step */}
       <div
-        style={{
-          fontSize: 17, fontWeight: 800, color: "#111827",
-          marginBottom: 13, lineHeight: 1.2, fontFamily: "'Sora', sans-serif",
-        }}
-      >
-        {step.fy}
-      </div>
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-[180px] pointer-events-none transition-all duration-1000 opacity-25"
+        style={{ background: activeStep.hex }}
+      />
 
-      {/* Bullets */}
-      <ul style={{ padding: 0, margin: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 8 }}>
-        {visible.map((b, i) => (
-          <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: 8, fontSize: 12, lineHeight: 1.6, color: "#6b7280" }}>
-            <span style={{ marginTop: 5, width: 6, height: 6, borderRadius: "50%", flexShrink: 0, background: step.hex }} />
-            {b}
-          </li>
-        ))}
-      </ul>
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* EXECUTIVE 3D KEYNOTE DECK LAYOUT (40% / 60%) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+          
+          {/* LEFT PANEL (40% - 5 Cols): NAVY BLUE CARD WITH ORANGE TOP HEADING & COLORED TABS */}
+          <div className="lg:col-span-5 flex flex-col justify-between rounded-[32px] bg-[#0B132B] border border-slate-800/80 p-6 sm:p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden">
+            
+            {/* Ambient inner glow */}
+            <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-orange-500/10 blur-3xl pointer-events-none" />
 
-      {/* +N more */}
-      {!hovered && extraCount > 0 && (
-        <div style={{ marginTop: 11, fontSize: 10, fontWeight: 600, color: "#9ca3af", textTransform: "uppercase", letterSpacing: "0.07em" }}>
-          +{extraCount} more
-        </div>
-      )}
+            {/* Top Heading inside Navy Blue Card */}
+            <div className="space-y-4 relative z-10">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/30">
+                <Sparkles className="w-4 h-4 text-[#f97316]" />
+                <span className="text-[11px] font-bold uppercase tracking-[2.5px] text-[#f97316]">
+                  FUTURE INFRASTRUCTURE
+                </span>
+              </div>
 
-      {/* Key Initiatives (expanded) */}
-      {hovered && !!step.keyInitiatives?.length && (
-        <div style={{ marginTop: 14, paddingTop: 12, borderTop: "1px solid #f3f4f6" }}>
-          <div style={{ fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.09em", color: "#9ca3af", marginBottom: 8 }}>
-            Key Strategic Initiatives
-          </div>
-          <ul style={{ padding: 0, margin: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 7 }}>
-            {step.keyInitiatives.map((item, i) => (
-              <li key={i} style={{ display: "flex", alignItems: "flex-start", gap: 8, fontSize: 12, lineHeight: 1.6, color: "#9ca3af" }}>
-                <span style={{ marginTop: 5, width: 4, height: 4, borderRadius: "50%", flexShrink: 0, background: "#d1d5db" }} />
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </div>
-  );
-}
+              <h2 className="font-sora font-black text-3xl sm:text-4xl text-[#f97316] tracking-tight leading-[1.15]">
+                5-Year Strategic Roadmap
+              </h2>
 
-/* ─────────────────────────────────────────────────────────────
-   MAIN EXPORT
-───────────────────────────────────────────────────────────── */
-export default function TimelineJourney() {
-  // Ascending staircase: Year 1 lowest (most margin), Year 5 highest (0)
-  // With marginTop:-270px on grid and SVG height:420px:
-  //   grid top = 420-270 = 150px from section top
-  //   Year 1 card top = 150+220 = 370px  ← aligns with PATH start (y=432 → ~370px)
-  //   Year 5 card top = 150+0   = 150px
-  const cardOffsets = ["220px", "150px", "80px", "30px", "0px"];
-  const panelPt     = PATH_POINTS[PATH_POINTS.length - 1];
-
-  return (
-    <div className="w-full overflow-x-auto select-none pb-10">
-      <div className="relative min-w-[900px] max-w-6xl mx-auto px-4">
-
-        {/* ── Arrow SVG ──
-            height 420px + overflow:visible so the solar panel can peek above
-        */}
-        <div style={{ width: "100%", height: 420, overflow: "visible" }}>
-          <svg
-            viewBox="0 0 1000 490"
-            preserveAspectRatio="xMidYMid meet"
-            style={{ width: "100%", height: "100%", overflow: "visible" }}
-          >
-            <defs>
-              {/* Gradient matching the 5-year color ramp */}
-              <linearGradient id="tzGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%"   stopColor="#f97316" />
-                <stop offset="25%"  stopColor="#eab308" />
-                <stop offset="50%"  stopColor="#22c55e" />
-                <stop offset="75%"  stopColor="#3b82f6" />
-                <stop offset="100%" stopColor="#8b5cf6" />
-              </linearGradient>
-
-              {/* Arrowhead — doubled size to match doubled stroke */}
-              <marker
-                id="tzArrow"
-                markerWidth="44"
-                markerHeight="34"
-                refX="42"
-                refY="17"
-                orient="auto"
-                markerUnits="userSpaceOnUse"
-              >
-                <path d="M 0 0 L 44 17 L 0 34 Z" fill="#7c3aed" />
-              </marker>
-
-              {/* Solar panel sheen */}
-              <linearGradient id="panelSheen" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%"   stopColor="#ffffff" stopOpacity="0.7" />
-                <stop offset="100%" stopColor="#ffffff" stopOpacity="0"   />
-              </linearGradient>
-            </defs>
-
-            {/* ── Gradient zigzag line (doubled strokeWidth) ── */}
-            <path
-              d={PATH}
-              fill="none"
-              stroke="url(#tzGrad)"
-              strokeWidth="4.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              markerEnd="url(#tzArrow)"
-            />
-
-            {/* ── Solar panel at the arrowhead tip ── */}
-            <SolarPanel x={panelPt[0]} y={panelPt[1]} />
-
-            {/* ── Lottie Sun travelling the path ── */}
-            <AnimatedSun />
-          </svg>
-        </div>
-
-        {/* ── Ascending staircase cards ── */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(5, 1fr)",
-            gap: 14,
-            marginTop: "-270px",   // pulls cards up so Year 1 aligns with path start
-            position: "relative",
-            zIndex: 10,
-          }}
-        >
-          {STEPS.map((step, idx) => (
-            <div key={step.fy} style={{ marginTop: cardOffsets[idx] }}>
-              <JourneyCard step={step} />
+              <p className="text-sm sm:text-base text-slate-300 font-normal leading-relaxed">
+                An executive keynote blueprint outlining our precision expansion from regional EPC execution to global terawatt-scale clean energy dominance.
+              </p>
             </div>
-          ))}
+
+            {/* 5 Multi-Colored Interactive Tabs */}
+            <div className="mt-8 space-y-3 relative z-10">
+              <div className="text-[11px] font-mono font-bold uppercase tracking-widest text-slate-400 mb-2 px-1">
+                SELECT FISCAL YEAR MILESTONE:
+              </div>
+
+              {STEPS.map((step, idx) => {
+                const isActive = idx === activeIdx;
+                return (
+                  <button
+                    key={step.id}
+                    onClick={() => setActiveIdx(idx)}
+                    className={`w-full text-left group flex items-center justify-between p-4 sm:p-5 rounded-2xl transition-all duration-300 border ${
+                      isActive
+                        ? "bg-slate-900/95 shadow-xl scale-[1.02]"
+                        : "bg-slate-950/40 border-slate-800/50 hover:bg-slate-900/50 hover:border-slate-700/60"
+                    }`}
+                    style={{
+                      borderColor: isActive ? step.hex : undefined,
+                      boxShadow: isActive ? `0 0 25px ${step.glow}` : undefined,
+                    }}
+                  >
+                    <div className="flex items-center gap-4">
+                      {/* Year badge pill */}
+                      <span
+                        className={`font-mono text-xs sm:text-sm font-extrabold px-3.5 py-1.5 rounded-xl transition-all duration-300 border ${
+                          isActive
+                            ? "bg-white text-slate-950 border-white shadow-md scale-105"
+                            : "bg-slate-900/80 text-slate-400 border-slate-800 group-hover:text-slate-200"
+                        }`}
+                      >
+                        {step.fy}
+                      </span>
+
+                      {/* Phase Title in distinct color */}
+                      <div className={`font-sora font-black text-lg sm:text-xl tracking-tight transition-colors duration-200 ${step.textClass}`}>
+                        {step.phase}
+                      </div>
+                    </div>
+
+                    <div
+                      className={`w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 ${
+                        isActive ? "scale-100 opacity-100 shadow-md" : "scale-75 opacity-40 group-hover:opacity-75"
+                      }`}
+                      style={{
+                        backgroundColor: isActive ? step.bgGlow : "rgba(255,255,255,0.05)",
+                        color: step.hex,
+                      }}
+                    >
+                      <ArrowRight className="w-4 h-4" />
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Bottom Note */}
+            <div className="mt-8 pt-5 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 font-mono">
+              <span>EXECUTIVE KEYNOTE SERIES</span>
+              <span className="text-orange-500 font-bold">APPLE SUMMIT GRADE</span>
+            </div>
+
+          </div>
+
+          {/* RIGHT PANEL (60% - 7 Cols): 3D IMAGE CARD WITH HIGH-CLARITY PHOTOGRAPHY & EXACT BULLETS */}
+          <div className="lg:col-span-7 flex flex-col justify-center">
+            
+            <div className="relative w-full min-h-[580px] sm:min-h-[640px] rounded-[36px] overflow-hidden transition-all duration-700 bg-slate-950 border-2 flex flex-col justify-between p-6 sm:p-8 md:p-10 shadow-2xl"
+                 style={{
+                   borderColor: activeStep.hex,
+                   boxShadow: `0 0 50px ${activeStep.glow}, inset 0 0 25px ${activeStep.glow}`,
+                 }}
+            >
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeStep.id}
+                  initial={{ opacity: 0, scale: 0.98 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 1.02 }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  className="absolute inset-0 w-full h-full"
+                >
+                  {/* High-Resolution Photography Background - Kept Bright and Crisp */}
+                  <img
+                    src={activeStep.image}
+                    alt={activeStep.phase}
+                    className="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 hover:scale-105"
+                  />
+
+                  {/* Gentle Gradient Overlay: Leaves center photography vivid while creating readability for text */}
+                  <div className="absolute inset-0 z-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-slate-950/20" />
+                </motion.div>
+              </AnimatePresence>
+
+              {/* Top Banner inside Image Card */}
+              <div className="relative z-10 flex items-center justify-between gap-4 mb-8">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-xs font-semibold uppercase tracking-wider shadow-lg">
+                  <Calendar className="w-4 h-4" style={{ color: activeStep.hex }} />
+                  <span>Strategic Roadmap Milestone</span>
+                </div>
+
+                <div
+                  className="font-mono font-black text-sm sm:text-base px-5 py-2 rounded-full text-white shadow-xl backdrop-blur-md border border-white/30"
+                  style={{ backgroundColor: activeStep.hex }}
+                >
+                  {activeStep.fy} • {activeStep.phase}
+                </div>
+              </div>
+
+              {/* Middle & Bottom Area: EXACT BULLET POINTS FROM IMAGE 2 */}
+              <div className="relative z-10 my-auto py-4 space-y-4 max-w-3xl">
+                <div className="text-xs font-mono font-bold uppercase tracking-widest text-slate-300 px-1">
+                  <span>KEY STRATEGIC OBJECTIVES:</span>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                  {activeStep.bullets.map((bullet, i) => (
+                    <motion.div
+                      key={`${activeStep.id}-${i}`}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: i * 0.05 }}
+                      className="flex items-start gap-3 p-4 rounded-2xl bg-slate-950/70 backdrop-blur-md border border-white/20 hover:bg-slate-900/80 hover:border-white/30 transition-all shadow-lg group"
+                      style={{
+                        boxShadow: `0 8px 20px rgba(0,0,0,0.3)`,
+                      }}
+                    >
+                      <CheckCircle2
+                        className="w-5 h-5 shrink-0 mt-0.5 transition-transform group-hover:scale-110"
+                        style={{ color: activeStep.hex }}
+                      />
+                      <span className="text-sm sm:text-base text-white font-semibold leading-snug drop-shadow-sm">
+                        {bullet.text}
+                      </span>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Bottom Decorative Footer */}
+              <div className="relative z-10 mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-300 font-mono">
+                <span>PHASE: <strong className="text-white">{activeStep.phase.toUpperCase()}</strong></span>
+                <span className="uppercase font-semibold" style={{ color: activeStep.hex }}>
+                  100% EXECUTABLE BLUEPRINT
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
 
       </div>
-    </div>
+    </section>
   );
 }
+
+export default TimelineJourney;

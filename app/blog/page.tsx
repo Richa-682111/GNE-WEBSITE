@@ -26,22 +26,29 @@ export default function BlogPage() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* ── HERO SECTION ────────────────────────────────────────────────── */}
-      <Section className="relative overflow-hidden bg-renewable-gradient pb-20 pt-28 border-b border-slate-100 dark:border-slate-900">
-        {/* Subtle grid background */}
-        <div className="pointer-events-none absolute inset-0 bg-grid opacity-[0.4]" />
-        
+      <Section className="relative overflow-hidden pb-20 pt-28 border-b border-white/10" style={{ background: '#0B132B' }}>
+        {/* Ambient glow orbs */}
+        <div className="pointer-events-none absolute top-0 left-1/3 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-[#0d7342ff]/15 blur-[120px]" />
+        <div className="pointer-events-none absolute bottom-0 right-1/4 h-[400px] w-[500px] rounded-full bg-teal-400/8 blur-[100px]" />
+        {/* Subtle dot grid */}
+        <div
+          className="absolute inset-0 z-0 opacity-[0.04] pointer-events-none"
+          style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.6) 1px, transparent 0)', backgroundSize: '36px 36px' }}
+        />
+
         <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center sm:text-left">
           <ScrollReveal>
-            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200/60 bg-white/70 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-emerald-700 backdrop-blur dark:border-emerald-900/40 dark:bg-slate-950/50 dark:text-emerald-300">
-              <Newspaper className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" />
+            <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest"
+              style={{ background: 'rgba(13,115,66,0.18)', color: '#4ade80', outline: '1px solid rgba(13,115,66,0.35)' }}>
+              <Newspaper className="h-3.5 w-3.5 text-[#4ade80]" />
               GNE Infra Insights
             </div>
-            
-            <h1 className="mt-6 text-4xl font-black tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl">
-              Shaping the <span className="text-brand-green">Energy Transition</span>
+
+            <h1 className="mt-6 text-4xl font-black font-sora tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Shaping the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4ade80] via-emerald-400 to-teal-300">Energy Transition</span>
             </h1>
-            
-            <p className="mt-4 max-w-2xl text-lg text-slate-700 dark:text-slate-200">
+
+            <p className="mt-4 max-w-2xl text-lg text-slate-300 leading-[1.85]">
               Deep-dives into utility-scale Solar EPC quality standards, next-generation BESS solutions, energy management intelligence, and green hydrogen scaling roadmap.
             </p>
           </ScrollReveal>
@@ -49,7 +56,7 @@ export default function BlogPage() {
       </Section>
 
       {/* ── CATEGORY SELECTOR ───────────────────────────────────────────── */}
-      <Section className="py-8 bg-white/40 dark:bg-slate-950/20 border-b border-slate-100 dark:border-slate-900/50 backdrop-blur-sm">
+      <Section className="py-6 bg-[#0f1d35] border-b border-white/10 backdrop-blur-sm">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-center gap-3">
             {CATEGORIES.map((category) => {
@@ -60,9 +67,10 @@ export default function BlogPage() {
                   onClick={() => setActiveCategory(category)}
                   className={`inline-flex items-center gap-1.5 rounded-full px-5 py-2 text-sm font-bold transition-all duration-300 ${
                     isActive
-                      ? "bg-brand-green text-white shadow-md shadow-emerald-500/20"
-                      : "bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 border border-slate-200/50 dark:border-slate-800/40"
+                      ? "text-white shadow-[0_4px_20px_rgba(13,115,66,0.4)]"
+                      : "bg-white/5 text-slate-400 hover:bg-white/10 hover:text-white border border-white/10"
                   }`}
+                  style={isActive ? { background: '#0d7342ff' } : {}}
                 >
                   {isActive && <Check className="h-3.5 w-3.5" />}
                   {category}
@@ -74,7 +82,7 @@ export default function BlogPage() {
       </Section>
 
       {/* ── BLOGS GRID & FEATURED POST ──────────────────────────────────── */}
-      <Section className="relative bg-slate-50/30 dark:bg-slate-950/10 flex-grow">
+      <Section className="relative bg-white flex-grow">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           {/* FEATURED POST (Shown only on 'All' category and if it matches filter) */}
           {activeCategory === "All" && featuredPost && (
@@ -102,7 +110,7 @@ export default function BlogPage() {
                       </span>
 
                       {/* Title */}
-                      <h2 className="mt-4 text-2xl font-black tracking-tight text-slate-900 dark:text-white transition-colors duration-300 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 sm:text-3xl leading-snug">
+                      <h2 className="mt-4 text-2xl font-black tracking-tight sm:text-3xl leading-snug" style={{ color: '#010101' }}>
                         {featuredPost.title}
                       </h2>
 
@@ -168,7 +176,7 @@ export default function BlogPage() {
                           </span>
 
                           {/* Title */}
-                          <h3 className="mt-3 text-lg font-bold leading-snug text-slate-900 dark:text-white transition-colors duration-300 group-hover:text-emerald-600 dark:group-hover:text-emerald-400">
+                          <h3 className="mt-3 text-lg font-bold leading-snug transition-colors duration-300" style={{ color: '#256c4aff' }}>
                             {post.title}
                           </h3>
 
@@ -232,7 +240,7 @@ export default function BlogPage() {
                           </span>
 
                           {/* Title */}
-                          <h3 className="mt-3 text-lg font-bold leading-snug text-slate-900 dark:text-white transition-colors duration-300 group-hover:text-emerald-600 dark:group-hover:text-emerald-400">
+                          <h3 className="mt-3 text-lg font-bold leading-snug transition-colors duration-300" style={{ color: '#256c4aff' }}>
                             {post.title}
                           </h3>
 
