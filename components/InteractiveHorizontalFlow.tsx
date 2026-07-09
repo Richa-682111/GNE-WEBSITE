@@ -96,7 +96,7 @@ export function InteractiveHorizontalFlow({
         </ScrollReveal>
 
         {/* Desktop Interactive Flow Track - compact pb-44 provides exact space for popup without excess empty space */}
-        <ScrollReveal className="hidden lg:block relative max-w-6xl mx-auto pb-44">
+        <ScrollReveal className="hidden lg:block relative max-w-[1400px] mx-auto pb-44">
           {/* Track background line */}
           <div className="absolute top-8 left-8 right-8 h-1.5 bg-white/10 rounded-full" />
           {/* Active Track line matching active accent color */}

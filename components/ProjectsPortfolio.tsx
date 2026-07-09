@@ -236,7 +236,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
             <div className="grid gap-8 md:grid-cols-2">
               {/* Card 1: Bondada Group */}
               <div className="group overflow-hidden rounded-[2rem] border border-white/80 bg-white/95 dark:border-slate-800 dark:bg-slate-900/90 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1.5 backdrop-blur-xl">
-                <div className="relative h-56 sm:h-64 w-full">
+                <div className="relative h-80 sm:h-96 w-full">
                   <Image
                     src="/hero-solar-farm.png"
                     alt="Bondada Group solar project"

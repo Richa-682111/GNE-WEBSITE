@@ -45,7 +45,7 @@ export default function ProjectsPage() {
         {/* Emerald neon top-left glow */}
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#0d7342ff]/15 rounded-full blur-[120px] pointer-events-none" />
 
-        <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 mx-auto w-full max-w-[1400px] px-4 sm:px-8 lg:px-12">
           <ScrollReveal>
             <div className="max-w-2xl">
               {/* Eyebrow label */}
@@ -100,7 +100,7 @@ export default function ProjectsPage() {
 
       {/* Portfolio Section — High-contrast luxury sage-emerald card background that contrasts beautifully against the cream page */}
       <div 
-        className="mx-auto max-w-6xl px-6 py-16 sm:px-10 lg:px-12 rounded-[3rem] my-12 transition-all duration-500"
+        className="mx-auto max-w-[1400px] px-6 py-16 sm:px-10 lg:px-12 rounded-[3rem] my-12 transition-all duration-500"
         style={{ 
           background: 'linear-gradient(135deg, #e2efe7 0%, #cbe4d5 100%)', 
           border: '1.5px solid rgba(13,115,66,0.35)',

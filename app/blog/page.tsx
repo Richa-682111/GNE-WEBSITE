@@ -57,7 +57,7 @@ export default function BlogPage() {
 
       {/* ── CATEGORY SELECTOR ───────────────────────────────────────────── */}
       <Section className="py-6 bg-[#0f1d35] border-b border-white/10 backdrop-blur-sm">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1400px] px-4 sm:px-8 lg:px-12">
           <div className="flex flex-wrap items-center justify-center gap-3">
             {CATEGORIES.map((category) => {
               const isActive = activeCategory === category;
@@ -83,14 +83,14 @@ export default function BlogPage() {
 
       {/* ── BLOGS GRID & FEATURED POST ──────────────────────────────────── */}
       <Section className="relative bg-white flex-grow">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1400px] px-4 sm:px-8 lg:px-12">
           {/* FEATURED POST (Shown only on 'All' category and if it matches filter) */}
           {activeCategory === "All" && featuredPost && (
             <ScrollReveal className="mb-16">
               <Link href={`/blog/${featuredPost.slug}`} className="group block">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch overflow-hidden rounded-[2.5rem] border border-emerald-100 dark:border-emerald-900/40 bg-white/70 dark:bg-slate-950/40 backdrop-blur-md p-6 sm:p-8 hover:shadow-glow transition-all duration-300">
                   {/* Image container */}
-                  <div className="relative overflow-hidden rounded-[1.5rem] border border-emerald-100/50 dark:border-emerald-900/20 lg:col-span-6 min-h-[250px] sm:min-h-[300px]">
+                  <div className="relative overflow-hidden rounded-[1.5rem] border border-emerald-100/50 dark:border-emerald-900/20 lg:col-span-6 min-h-[360px] sm:min-h-[440px]">
                     <Image
                       src={featuredPost.image}
                       alt={featuredPost.title}
@@ -157,7 +157,7 @@ export default function BlogPage() {
                   <Link href={`/blog/${post.slug}`} className="group flex h-full">
                     <Card className="flex w-full flex-col overflow-hidden !p-0">
                       {/* Image Thumbnail */}
-                      <div className="relative aspect-video w-full overflow-hidden rounded-t-2xl border-b border-slate-100 dark:border-slate-900">
+                      <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full overflow-hidden rounded-t-2xl border-b border-slate-100 dark:border-slate-900">
                         <Image
                           src={post.image}
                           alt={post.title}

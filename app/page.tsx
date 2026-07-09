@@ -51,7 +51,7 @@ export default function HomePage() {
       {/* ── OUR IMPACT ─────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden py-14 sm:py-20" style={{ background: '#f5ece5' }}>
 
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1400px] px-4 sm:px-8 lg:px-12">
           {/* Section header */}
           <ScrollReveal>
             <div className="mb-14 text-center">
@@ -154,7 +154,7 @@ export default function HomePage() {
           <div className="absolute left-0 bottom-0 h-px w-full bg-gradient-to-r from-transparent via-emerald-200/60 to-transparent" />
         </div>
 
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1400px] px-4 sm:px-8 lg:px-12">
           {/* Section header */}
           <ScrollReveal>
             <div className="mb-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
@@ -225,7 +225,7 @@ export default function HomePage() {
             {/* Right Column: wedo1 Image Card (Span 5) */}
             <div className="lg:col-span-5">
               <ScrollReveal delay={200}>
-                <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl bg-slate-900 group aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/5] min-h-[360px] lg:min-h-[460px]">
+                <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl bg-slate-900 group aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/5] min-h-[440px] lg:min-h-[560px]">
                   <Image
                     src="/wedo1.jpg"
                     alt="Renewable Energy Development"
@@ -340,7 +340,7 @@ export default function HomePage() {
           <div className="absolute right-0 bottom-0 h-[300px] w-[400px] rounded-full bg-teal-400/10 blur-[100px]" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 mx-auto max-w-[1400px] px-4 sm:px-8 lg:px-12">
           {/* Header */}
           <ScrollReveal>
             <div className="mb-10 text-center">
@@ -369,7 +369,7 @@ export default function HomePage() {
             ].map(({ key, img, label, accent, tag, desc }, index) => (
               <ScrollReveal key={key} delay={index * 60} className="h-full">
                 <div
-                  className="group relative flex h-64 flex-col overflow-hidden rounded-2xl shadow-xl transition-all duration-500 hover:-translate-y-1.5 hover:shadow-emerald-500/20 hover:shadow-2xl sm:h-72 cursor-default"
+                  className="group relative flex h-80 flex-col overflow-hidden rounded-3xl shadow-xl transition-all duration-500 hover:-translate-y-1.5 hover:shadow-emerald-500/20 hover:shadow-2xl sm:h-96 cursor-default"
                 >
                   {/* Background image */}
                   <Image
