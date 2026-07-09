@@ -64,7 +64,7 @@ export function CoreValuesSection() {
         background: `radial-gradient(circle at 20% 20%, rgba(22,199,132,.06), transparent 35%), radial-gradient(circle at 80% 80%, rgba(79,124,255,.06), transparent 35%), var(--background, #faf8f5)`,
       }}
     >
-      <div className="w-full max-w-6xl mx-auto px-4">
+      <div className="w-full max-w-[1380px] mx-auto px-4 sm:px-8 lg:px-12">
         {/* SECTION HEADER (Center Aligned) */}
         <div className="mx-auto max-w-4xl text-center mb-16 md:mb-24">
           <div className="flex items-center gap-3 justify-center mb-3">
@@ -84,8 +84,8 @@ export function CoreValuesSection() {
           </p>
         </div>
 
-        {/* STACKOVER SCROLL CARDS CONTAINER */}
-        <div className="relative w-full max-w-5xl mx-auto space-y-8 sm:space-y-12 md:space-y-16 pb-24">
+        {/* STACKOVER SCROLL CARDS CONTAINER - EXPANDED TO FULL CONTAINER WIDTH */}
+        <div className="relative w-full max-w-[1340px] mx-auto space-y-8 sm:space-y-12 md:space-y-16 pb-24">
           {cardsData.map((card, idx) => {
             const Icon = card.icon;
             // Calculate a staggered top offset so stacking creates a visible deck effect
@@ -94,8 +94,8 @@ export function CoreValuesSection() {
             return (
               <div
                 key={idx}
-                className="sticky w-full rounded-3xl overflow-hidden border border-slate-200/20 dark:border-slate-800/40 shadow-2xl transition-all duration-500 group bg-slate-950"
-                style={{ top: topOffset, minHeight: "460px" }}
+                className="sticky w-full rounded-[36px] overflow-hidden border border-slate-200/20 dark:border-slate-800/40 shadow-2xl transition-all duration-500 group bg-slate-950"
+                style={{ top: topOffset, minHeight: "580px" }}
               >
                 {/* Crisp Background Image (NO backdrop blur!) */}
                 <img
@@ -108,30 +108,30 @@ export function CoreValuesSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/60 to-slate-950/20" />
 
                 {/* Content Container */}
-                <div className="relative z-10 p-8 sm:p-12 md:p-16 flex flex-col justify-end min-h-[460px] text-left">
+                <div className="relative z-10 p-8 sm:p-14 md:p-20 flex flex-col justify-end min-h-[580px] text-left">
                   <div className="flex items-center gap-3 mb-6">
                     <div
-                      className="w-12 h-12 rounded-2xl flex items-center justify-center backdrop-blur-md shadow-lg border border-white/10"
+                      className="w-14 h-14 rounded-2xl flex items-center justify-center backdrop-blur-md shadow-lg border border-white/10"
                       style={{ background: card.badgeBg, color: card.badgeColor }}
                     >
-                      <Icon className="w-6 h-6" />
+                      <Icon className="w-7 h-7" />
                     </div>
                     <span className="text-xs font-mono font-bold uppercase tracking-widest text-slate-300">
                       CORE VALUE 0{idx + 1}
                     </span>
                   </div>
 
-                  <h3 className="font-sora font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mb-4 group-hover:translate-x-1 transition-transform duration-300">
+                  <h3 className="font-sora font-extrabold text-4xl sm:text-5xl md:text-6xl text-white tracking-tight mb-4 group-hover:translate-x-1 transition-transform duration-300">
                     {card.title}
                   </h3>
 
-                  <p className="text-base sm:text-lg md:text-xl text-slate-200 max-w-3xl leading-relaxed font-normal">
+                  <p className="text-lg sm:text-xl md:text-2xl text-slate-200 max-w-4xl leading-relaxed font-normal">
                     {card.description}
                   </p>
 
-                  <div className="mt-8 flex items-center gap-2 text-sm font-semibold text-[#4ade80] opacity-90 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300">
+                  <div className="mt-8 flex items-center gap-2 text-base font-semibold text-[#4ade80] opacity-90 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300">
                     <span>Explore our standard of {card.title.toLowerCase()}</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-5 h-5" />
                   </div>
                 </div>
               </div>

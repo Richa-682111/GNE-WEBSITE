@@ -337,11 +337,14 @@ export default function AboutPage() {
       </section>
 
 
-      {/* 3. "Your Trusted Energy Partner" Section */}
-      <section className="py-[100px] bg-transparent font-inter">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
-            <div className="space-y-6 text-left">
+      {/* 3. "Your Trusted Energy Partner" Section — 3-Image Overlapping Architectural Collage */}
+      <section className="py-12 sm:py-16 bg-transparent font-inter relative overflow-hidden">
+        {/* Optimized wide container to reduce wasted whitespace */}
+        <div className="mx-auto max-w-[1380px] px-4 sm:px-8 lg:px-12">
+          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
+            
+            {/* Left Narrative Column */}
+            <div className="lg:col-span-5 space-y-6 text-left">
               {/* Eyebrow */}
               <div className="flex items-center gap-3">
                 <span className="w-8 h-[2px] bg-[#16a34a] shrink-0" />
@@ -351,105 +354,184 @@ export default function AboutPage() {
               </div>
 
               {/* Heading */}
-              <h2 className="font-sora font-extrabold text-3xl sm:text-4xl lg:text-[44px] leading-[1.05] tracking-tight" style={{ color: '#010101' }}>
+              <h2 className="font-sora font-extrabold text-3xl sm:text-4xl lg:text-[44px] leading-[1.08] tracking-tight" style={{ color: '#010101' }}>
                 YOUR TRUSTED <span style={{ color: '#256c4aff' }}>ENERGY PARTNER</span>
               </h2>
 
-              {/* Description */}
-              <div className="space-y-4 text-[15px] leading-[1.8]" style={{ color: '#5a5249' }}>
-                <p>
+              {/* Exact Description Text - Left Aligned */}
+              <div className="space-y-4 text-[15.5px] leading-[1.8]" style={{ color: '#5a5249' }}>
+                <p className="text-left">
                   GNE Infra is an integrated clean energy infrastructure company delivering end-to-end solutions across Engineering, Procurement & Construction (EPC), Project Management Consultancy (PMC), and Operations & Maintenance (O&M). Our expertise spans Solar Power, Battery Energy Storage Systems (BESS), Wind Energy, and Pumped Storage Projects (PSP), supporting projects from concept and engineering through commissioning and long-term asset management.
                   Driven by innovation and execution excellence, GNE Infra is expanding into Green Hydrogen and next-generation energy technologies to accelerate the transition towards a sustainable, resilient, and low-carbon energy future.
                 </p>
               </div>
-            </div>
 
-            <div className="relative flex justify-center lg:justify-end">
-              {/* Decorative border behind image */}
-              <div
-                className="absolute border-2 border-[#dcfce7] rounded-[20px] -z-10"
-                style={{ top: "-12px", right: "-12px", bottom: "12px", left: "12px" }}
-              />
+              {/* Expertise Pills */}
+              <div className="pt-2 flex flex-wrap gap-2.5">
+                {["Solar EPC", "BESS Storage", "Wind & PSP", "Green Hydrogen", "O&M"].map((skill, index) => (
+                  <span
+                    key={index}
+                    className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-1.5 text-xs font-bold text-[#16a34a] transition-all duration-300 hover:bg-emerald-500/20 hover:scale-105"
+                  >
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                    {skill}
+                  </span>
+                ))}
+              </div>
 
-              {/* Image Container */}
-              <div className="relative w-full aspect-[4/3] overflow-hidden rounded-[16px] shadow-lg">
-                <Image
-                  src="/solutions-bg.jpg"
-                  alt="Solar project overview"
-                  fill
-                  className="object-cover"
-                />
-                {/* Floating badge */}
-                <div className="absolute bottom-4 left-4 z-30 rounded-full bg-[#16a34a] px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-wider text-white shadow-lg flex items-center">
-                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-white mr-1.5 shrink-0" />
-                  Powering India&apos;s Future
+              {/* Quick Metrics Cards Below Text */}
+              <div className="grid grid-cols-2 gap-4 pt-3">
+                <div className="rounded-2xl border border-slate-200/80 bg-white/90 backdrop-blur-md p-4 shadow-sm hover:shadow-md transition-all">
+                  <div className="text-2xl sm:text-3xl font-sora font-extrabold text-[#16a34a]">500+ MWp</div>
+                  <div className="text-xs font-semibold text-slate-600 mt-0.5">Delivered Renewable Portfolio</div>
+                </div>
+                <div className="rounded-2xl border border-slate-200/80 bg-white/90 backdrop-blur-md p-4 shadow-sm hover:shadow-md transition-all">
+                  <div className="text-2xl sm:text-3xl font-sora font-extrabold text-[#0f172a]">End-to-End</div>
+                  <div className="text-xs font-semibold text-slate-600 mt-0.5">Turnkey EPC & Asset Management</div>
                 </div>
               </div>
             </div>
+
+            {/* Right Column: 3-Image Overlapping Architectural Collage + Scroll/Hover Animations */}
+            <div className="lg:col-span-7 relative pt-6 pb-14 sm:py-10 flex justify-center">
+              {/* Subtle ambient lighting behind images */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-emerald-500/15 blur-3xl pointer-events-none" />
+
+              {/* Main Primary Image Card - HUGE SIZE */}
+              <div className="relative w-full aspect-[16/11] sm:aspect-[16/10] rounded-[28px] overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.18)] border border-slate-200 group transition-all duration-700 hover:shadow-[0_30px_70px_rgba(13,115,66,0.25)]">
+                <Image
+                  src="/new-solar-farm.jpg"
+                  alt="Utility Scale Solar Plant Infrastructure"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
+              </div>
+
+              {/* Overlapping Secondary Image Card (Bottom Right) - LARGE SIZE */}
+              <div className="absolute -bottom-6 -right-2 sm:-right-4 w-[60%] sm:w-[56%] aspect-[16/11] rounded-[24px] overflow-hidden shadow-[0_25px_55px_rgba(0,0,0,0.3)] border-[5px] border-white z-20 group/second transition-all duration-500 hover:-translate-y-2 hover:scale-105">
+                <Image
+                  src="/new-solar-epc.jpg"
+                  alt="Solar EPC Installation & Operations"
+                  fill
+                  className="object-cover transition-transform duration-700 group/second-hover:scale-110"
+                />
+                <div className="absolute bottom-3 left-3 right-3 bg-black/75 backdrop-blur-md rounded-xl px-3.5 py-1.5 text-xs font-bold text-white tracking-wide">
+                  Utility-Scale EPC • 500+ MWp
+                </div>
+              </div>
+
+              {/* Floating Glass Status Card (Top Left) */}
+              <div className="absolute -top-3 left-2 sm:left-6 z-30 rounded-2xl bg-white/95 backdrop-blur-xl px-5 py-3.5 border border-emerald-500/30 shadow-xl flex items-center gap-3 transition-all duration-500 hover:scale-105">
+                <div className="relative flex h-3.5 w-3.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-[#16a34a]" />
+                </div>
+                <div>
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500">Active Sites</div>
+                  <div className="text-sm font-sora font-extrabold text-slate-900">Powering Viksit Bharat 2047</div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* 4. Mission & Vision Section — Home Page Editorial Theme */}
+      {/* 4. Mission & Vision Section — Split-Screen Photography Editorial Cards */}
       <section className="py-20 sm:py-28 font-inter relative overflow-hidden" style={{ background: '#fbf5eb' }}>
-        {/* Subtle decorative grid lines matching home page */}
+        {/* Subtle decorative grid lines */}
         <div className="pointer-events-none absolute inset-0 -z-10">
           <div className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-emerald-200/60 to-transparent" />
           <div className="absolute left-0 bottom-0 h-px w-full bg-gradient-to-r from-transparent via-emerald-200/60 to-transparent" />
         </div>
 
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1380px] px-4 sm:px-8 lg:px-12">
+          {/* Section Heading & Context */}
+          <div className="mb-12 text-left">
+            <div className="flex items-center gap-3 mb-3">
+              <span className="w-8 h-[2px] bg-[#16a34a]" />
+              <span className="text-[11px] font-bold uppercase tracking-[3px] text-[#22c55e]">
+                PURPOSE & DIRECTION
+              </span>
+            </div>
+            <h2 className="font-sora font-extrabold text-3xl sm:text-5xl text-[#010101]">
+              Our <span className="text-[#16a34a]">Mission</span> & <span className="text-[#ad5d50]">Vision</span>
+            </h2>
+          </div>
 
-          {/* Two Card Grid — Compact Executive Keynote Style */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+          {/* Two Card Grid — Large Split-Screen Cards with Expansive Photography Header & Frosted Glass Content */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-stretch">
 
-            {/* Mission Card */}
-            <div
-              className="rounded-[28px] p-6 sm:p-8 lg:p-10 shadow-[0_15px_35px_rgba(13,115,66,0.1)] transition-all duration-500 hover:-translate-y-1.5 relative overflow-hidden group flex flex-col justify-between"
-              style={{ background: 'linear-gradient(135deg, #e2efe7 0%, #cbe4d5 100%)', border: '1.5px solid rgba(13,115,66,0.3)' }}
-            >
-              {/* Subtle ambient light aura */}
-              <div className="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-white/50 blur-3xl pointer-events-none group-hover:bg-white/70 transition-all duration-700" />
+            {/* Mission Card - EXPANDED SIZE */}
+            <div className="group flex flex-col rounded-[32px] overflow-hidden shadow-[0_25px_60px_rgba(13,115,66,0.14)] border border-[#0d7342]/25 bg-white transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_70px_rgba(13,115,66,0.24)]">
+              {/* Visual Header Band with Massive High-Res Image & Gradient Overlay */}
+              <div className="relative h-72 sm:h-84 lg:h-96 w-full overflow-hidden shrink-0">
+                <Image
+                  src="/service-epc.jpg"
+                  alt="Solar EPC & Renewable Energy Infrastructure"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                {/* Soft Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/15" />
 
-              <div>
-                {/* Frosted Glass Icon Emblem */}
-                <div className="w-12 h-12 rounded-xl bg-white/90 border border-emerald-500/20 flex items-center justify-center mb-6 text-[#0d7342ff] shadow-sm group-hover:scale-110 transition-transform duration-300">
-                  <Target className="w-6 h-6" />
+                {/* Floating Emblem Badge */}
+                <div className="absolute top-6 left-6 z-10 flex items-center gap-2.5 rounded-full bg-white/20 px-5 py-2 backdrop-blur-md border border-white/35 text-white">
+                  <Target className="w-4 h-4 text-emerald-400" />
+                  <span className="text-xs font-bold uppercase tracking-widest">
+                    01 • Mission
+                  </span>
                 </div>
 
-                {/* Compact Keynote Heading */}
-                <h3 className="font-sora font-extrabold text-2xl sm:text-3xl tracking-tight mb-4 text-[#0f172a]">
-                  Our <span style={{ color: '#0d7342ff' }}>Mission</span>
-                </h3>
+                {/* Title Overlay in Banner */}
+                <div className="absolute bottom-6 left-8 right-8 z-10">
+                  <h3 className="font-sora font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
+                    Our <span className="text-emerald-400">Mission</span>
+                  </h3>
+                </div>
+              </div>
 
-                {/* Clean Executive Typography */}
-                <p className="text-[#1e293b] font-medium text-sm sm:text-base leading-[1.7] tracking-normal font-inter">
+              {/* Frosted Glass Content Overlay Body - EXPANDED PADDING */}
+              <div className="flex flex-col justify-between flex-grow p-8 sm:p-11 lg:p-12 bg-white/95 backdrop-blur-xl">
+                <p className="text-[#1e293b] font-medium text-[16.5px] sm:text-[18px] leading-[1.85] tracking-normal font-inter text-left">
                   To develop and execute bankable clean energy projects by combining strong EPC capabilities, land procurement with grid integration approval expertise, stakeholder management, and advanced energy solutions, while building future-ready capabilities to become Solar, BESS, Green Hydrogen, Developer and actively contributing to Viksit Bharat 2047.
                 </p>
               </div>
             </div>
 
-            {/* Vision Card */}
-            <div
-              className="rounded-[28px] p-6 sm:p-8 lg:p-10 shadow-[0_15px_35px_rgba(173,93,80,0.1)] transition-all duration-500 hover:-translate-y-1.5 relative overflow-hidden group flex flex-col justify-between"
-              style={{ background: 'linear-gradient(135deg, #fceee9 0%, #ecd3ca 100%)', border: '1.5px solid rgba(173,93,80,0.3)' }}
-            >
-              {/* Subtle ambient light aura */}
-              <div className="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-white/50 blur-3xl pointer-events-none group-hover:bg-white/70 transition-all duration-700" />
+            {/* Vision Card - EXPANDED SIZE */}
+            <div className="group flex flex-col rounded-[32px] overflow-hidden shadow-[0_25px_60px_rgba(173,93,80,0.14)] border border-[#ad5d50]/25 bg-white transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_70px_rgba(173,93,80,0.24)]">
+              {/* Visual Header Band with Massive High-Res Image & Gradient Overlay */}
+              <div className="relative h-72 sm:h-84 lg:h-96 w-full overflow-hidden shrink-0">
+                <Image
+                  src="/hero-hybrid-2.webp"
+                  alt="Intelligent Renewable Energy Ecosystem"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                {/* Soft Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/15" />
 
-              <div>
-                {/* Frosted Glass Icon Emblem */}
-                <div className="w-12 h-12 rounded-xl bg-white/90 border border-orange-500/20 flex items-center justify-center mb-6 text-[#ad5d50] shadow-sm group-hover:scale-110 transition-transform duration-300">
-                  <Eye className="w-6 h-6" />
+                {/* Floating Emblem Badge */}
+                <div className="absolute top-6 left-6 z-10 flex items-center gap-2.5 rounded-full bg-white/20 px-5 py-2 backdrop-blur-md border border-white/35 text-white">
+                  <Eye className="w-4 h-4 text-orange-300" />
+                  <span className="text-xs font-bold uppercase tracking-widest">
+                    02 • Vision
+                  </span>
                 </div>
 
-                {/* Compact Keynote Heading */}
-                <h3 className="font-sora font-extrabold text-2xl sm:text-3xl tracking-tight mb-4 text-[#0f172a]">
-                  Our <span style={{ color: '#ad5d50' }}>Vision</span>
-                </h3>
+                {/* Title Overlay in Banner */}
+                <div className="absolute bottom-6 left-8 right-8 z-10">
+                  <h3 className="font-sora font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
+                    Our <span className="text-orange-300">Vision</span>
+                  </h3>
+                </div>
+              </div>
 
-                {/* Clean Executive Typography */}
-                <p className="text-[#1e293b] font-medium text-sm sm:text-base leading-[1.7] tracking-normal font-inter">
+              {/* Frosted Glass Content Overlay Body - EXPANDED PADDING */}
+              <div className="flex flex-col justify-between flex-grow p-8 sm:p-11 lg:p-12 bg-white/95 backdrop-blur-xl">
+                <p className="text-[#1e293b] font-medium text-[16.5px] sm:text-[18px] leading-[1.85] tracking-normal font-inter text-left">
                   To become a leading intelligent renewable energy ecosystem, delivering solar, storage, hybrid, and green hydrogen infrastructure through execution excellence, indigenous technology, and sustainable innovation.
                 </p>
               </div>
@@ -654,7 +736,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 xl:gap-6 items-stretch">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10 items-stretch">
             {leadership.map((leader, idx) => (
               <Card
                 key={idx}
