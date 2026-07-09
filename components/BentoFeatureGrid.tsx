@@ -84,8 +84,8 @@ export function BentoFeatureGrid({
                     />
                   )}
 
-                  {/* Reduced-Opacity Gradient Overlay: Lets background photography shine through clearly */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#050B14]/85 via-[#050B14]/60 via-50% to-transparent pointer-events-none" />
+                  {/* 75% Opacity Gradient Overlay: Balanced photography visibility & text contrast */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#050B14]/90 via-[#050B14]/75 via-50% to-transparent pointer-events-none" />
 
                   {/* Top-Right Floating Icon Button */}
                   <div className="absolute top-5 right-5 z-20 flex h-11 w-11 items-center justify-center rounded-2xl bg-black/60 backdrop-blur-md border border-white/20 text-white shadow-lg group-hover:scale-110 group-hover:border-[#4ade80]/60 group-hover:text-[#4ade80] transition-all duration-400">
