@@ -88,9 +88,9 @@ export default function BlogPage() {
           {activeCategory === "All" && featuredPost && (
             <ScrollReveal className="mb-16">
               <Link href={`/blog/${featuredPost.slug}`} className="group block">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch overflow-hidden rounded-[2.5rem] border border-emerald-100 dark:border-emerald-900/40 bg-white/70 dark:bg-slate-950/40 backdrop-blur-md p-6 sm:p-8 hover:shadow-glow transition-all duration-300">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch overflow-hidden rounded-[2.5rem] border border-emerald-100 dark:border-emerald-900/40 bg-white/70 dark:bg-slate-950/40 backdrop-blur-md p-6 sm:p-8 transition-all duration-500 ease-out group-hover:scale-[1.02] group-hover:-translate-y-2 group-hover:z-30 group-hover:shadow-[0_30px_70px_rgba(22,163,74,0.25)]">
                   {/* Image container */}
-                  <div className="relative overflow-hidden rounded-[1.5rem] border border-emerald-100/50 dark:border-emerald-900/20 lg:col-span-6 min-h-[360px] sm:min-h-[440px]">
+                  <div className="relative overflow-hidden rounded-[1.5rem] border border-emerald-100/50 dark:border-emerald-900/20 lg:col-span-6 min-h-[280px] lg:min-h-[340px] xl:min-h-[440px]">
                     <Image
                       src={featuredPost.image}
                       alt={featuredPost.title}
@@ -155,7 +155,7 @@ export default function BlogPage() {
               filteredPosts.map((post, i) => (
                 <ScrollReveal key={post.slug} delay={i * 80}>
                   <Link href={`/blog/${post.slug}`} className="group flex h-full">
-                    <Card className="flex w-full flex-col overflow-hidden !p-0">
+                    <Card className="flex w-full flex-col overflow-hidden !p-0 transition-all duration-500 ease-out group-hover:scale-[1.04] group-hover:-translate-y-2 group-hover:z-30 group-hover:shadow-[0_25px_60px_rgba(22,163,74,0.25)]">
                       {/* Image Thumbnail */}
                       <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full overflow-hidden rounded-t-2xl border-b border-slate-100 dark:border-slate-900">
                         <Image

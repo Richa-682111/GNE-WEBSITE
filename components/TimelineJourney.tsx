@@ -211,7 +211,7 @@ export function TimelineJourney() {
           {/* RIGHT PANEL (60% - 7 Cols): 3D IMAGE CARD WITH HIGH-CLARITY PHOTOGRAPHY & EXACT BULLETS */}
           <div className="lg:col-span-7 flex flex-col justify-center">
 
-            <div className="relative w-full min-h-[580px] sm:min-h-[640px] rounded-[36px] overflow-hidden transition-all duration-700 bg-slate-950 border-2 flex flex-col justify-between p-6 sm:p-8 md:p-10 shadow-2xl"
+            <div className="group relative w-full min-h-[420px] lg:min-h-[440px] xl:min-h-[600px] rounded-[36px] overflow-hidden transition-all duration-500 ease-out hover:scale-[1.03] hover:-translate-y-2 hover:z-30 hover:shadow-[0_25px_60px_rgba(22,163,74,0.35)] bg-slate-950 border-2 flex flex-col justify-between p-6 sm:p-8 md:p-10 shadow-2xl"
               style={{
                 borderColor: activeStep.hex,
                 boxShadow: `0 0 50px ${activeStep.glow}, inset 0 0 25px ${activeStep.glow}`,

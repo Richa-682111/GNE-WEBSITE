@@ -67,7 +67,7 @@ export function BentoFeatureGrid({
             return (
               <AnimatedBentoCard key={idx} idx={idx}>
                 <div
-                  className="group relative w-full aspect-[4/5] min-h-[480px] sm:min-h-[540px] rounded-[32px] overflow-hidden border border-slate-800 bg-[#0B132B] shadow-xl hover:shadow-2xl transition-all duration-500 hover:border-[#4ade80]/50"
+                  className="group relative w-full h-full min-h-[480px] sm:min-h-[520px] lg:min-h-[540px] xl:min-h-[580px] rounded-[32px] overflow-hidden border border-slate-800 bg-[#080E1E] shadow-2xl transition-all duration-500 ease-out hover:scale-[1.05] hover:-translate-y-2.5 hover:z-30 hover:shadow-[0_25px_60px_rgba(22,163,74,0.35)] hover:border-[#4ade80]/50 flex flex-col justify-end"
                   style={{ '--accent': accent.color } as CSSProperties}
                 >
                   {/* Fallback subtle icon pattern when image is loading or missing */}
@@ -75,17 +75,17 @@ export function BentoFeatureGrid({
                     <Icon className="w-72 h-72 text-slate-700 -rotate-12" strokeWidth={1} />
                   </div>
 
-                  {/* Full-Height Background Photography at 100% full brightness/clarity */}
+                  {/* Full-Height Background Photography */}
                   {feature.image && (
                     <img
                       src={feature.image}
                       alt={feature.title}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-100 bg-[#0B132B]"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-100 bg-[#080E1E]"
                     />
                   )}
 
-                  {/* High-Contrast Readability Gradient Overlay: Ensures white text pops crisply over any image background */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#080E1E] via-[#080E1E]/85 via-50% to-[#080E1E]/25 pointer-events-none" />
+                  {/* Reduced-Opacity Gradient Overlay: Lets background photography shine through clearly */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#050B14]/85 via-[#050B14]/60 via-50% to-transparent pointer-events-none" />
 
                   {/* Top-Right Floating Icon Button */}
                   <div className="absolute top-5 right-5 z-20 flex h-11 w-11 items-center justify-center rounded-2xl bg-black/60 backdrop-blur-md border border-white/20 text-white shadow-lg group-hover:scale-110 group-hover:border-[#4ade80]/60 group-hover:text-[#4ade80] transition-all duration-400">
@@ -93,7 +93,7 @@ export function BentoFeatureGrid({
                   </div>
 
                   {/* Bottom Content Area */}
-                  <div className="absolute bottom-0 inset-x-0 p-7 sm:p-8 z-20 flex flex-col justify-end text-left">
+                  <div className="relative p-7 sm:p-9 pb-8 sm:pb-10 z-20 flex flex-col justify-end text-left mt-auto">
                     {/* Eyebrow Pill Badge */}
                     <span
                       className="mb-3 w-fit inline-flex items-center gap-1.5 rounded-full px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider shadow-md backdrop-blur-sm"
@@ -103,13 +103,19 @@ export function BentoFeatureGrid({
                       Capability 0{idx + 1}
                     </span>
 
-                    {/* Bold White Title with Drop Shadow */}
-                    <h3 className="text-xl sm:text-2xl font-black text-white leading-tight mb-2.5 font-sora group-hover:text-[#4ade80] transition-colors duration-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
+                    {/* Bold Pure White Title */}
+                    <h3
+                      className="text-xl sm:text-2xl lg:text-[26px] font-black leading-tight mb-3 font-sora group-hover:text-[#4ade80] transition-colors duration-300 drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]"
+                      style={{ color: '#FFFFFF' }}
+                    >
                       {feature.title}
                     </h3>
 
-                    {/* Light Slate Description with Drop Shadow */}
-                    <p className="text-sm text-slate-200 font-medium leading-relaxed line-clamp-3 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
+                    {/* 100% Bright Pure White Description */}
+                    <p
+                      className="text-base sm:text-lg font-semibold leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]"
+                      style={{ color: '#FFFFFF' }}
+                    >
                       {feature.description}
                     </p>
                   </div>

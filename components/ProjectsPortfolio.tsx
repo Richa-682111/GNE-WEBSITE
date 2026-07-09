@@ -25,6 +25,7 @@ import {
   ShieldCheck,
   TowerControl,
   BriefcaseBusiness,
+  ArrowUpRight,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
@@ -235,8 +236,8 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
           <ScrollReveal>
             <div className="grid gap-8 md:grid-cols-2">
               {/* Card 1: Bondada Group */}
-              <div className="group overflow-hidden rounded-[2rem] border border-white/80 bg-white/95 dark:border-slate-800 dark:bg-slate-900/90 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1.5 backdrop-blur-xl">
-                <div className="relative h-80 sm:h-96 w-full">
+              <div className="group overflow-hidden rounded-[2rem] border border-white/80 bg-white/95 dark:border-slate-800 dark:bg-slate-900/90 shadow-lg transition-all duration-500 ease-out hover:scale-[1.04] hover:-translate-y-2.5 hover:z-30 hover:shadow-[0_25px_60px_rgba(22,163,74,0.25)] backdrop-blur-xl">
+                <div className="relative h-64 lg:h-72 xl:h-88 w-full">
                   <Image
                     src="/hero-solar-farm.png"
                     alt="Bondada Group solar project"
@@ -300,8 +301,8 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
         {/* PROJECTS UNDER EXECUTION */}
         {activeTab === "execution" && (
           <ScrollReveal>
-            <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/95 dark:border-slate-800 dark:bg-slate-900/90 shadow-lg hover:shadow-2xl transition-all duration-500 backdrop-blur-xl">
-              <div className="flex flex-col md:flex-row min-h-[320px]">
+            <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/95 dark:border-slate-800 dark:bg-slate-900/90 shadow-lg transition-all duration-500 ease-out hover:scale-[1.03] hover:-translate-y-2 hover:z-30 hover:shadow-[0_25px_60px_rgba(22,163,74,0.25)] backdrop-blur-xl">
+              <div className="flex flex-col md:flex-row min-h-[280px] lg:min-h-[300px] xl:min-h-[340px]">
                 {/* Image panel */}
                 <div className="relative md:w-5/12 min-h-[250px] md:min-h-full">
                   <Image
@@ -725,35 +726,67 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
 
       {/* WHY CHOOSE GNE INFRA SECTION */}
       <ScrollReveal className="w-full mt-24">
-        <div className="rounded-[2.5rem] border border-white/80 bg-white/95 p-8 sm:p-12 shadow-xl dark:border-slate-800 dark:bg-slate-900/90 backdrop-blur-xl">
+        <div className="group relative overflow-hidden rounded-[2.5rem] border border-white/80 bg-[#f2f8f9] dark:border-slate-800 dark:bg-slate-900 p-8 sm:p-12 shadow-xl transition-all duration-500 z-0">
+          {/* Expanding Corner Circle Effect on the OUTER Card */}
+          <div className="absolute -top-6 -right-6 h-14 w-14 rounded-full bg-gradient-to-br from-[#0d7342] via-[#105634] to-[#042f2c] transition-transform duration-700 ease-out group-hover:scale-[38] -z-20" />
+
+          {/* New Topic-Relevant Photography Background (/solutions-bg.jpg) with Rich Contrast Overlay */}
+          <div className="absolute inset-0 -z-10 opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100">
+            <Image
+              src="/solutions-bg.jpg"
+              alt="GNE Infra Clean Energy Advantage"
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            {/* High-Contrast Dark Overlay ensuring white text pops with 100% clarity and sharpness */}
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-950/88 via-slate-950/80 to-slate-950/90" />
+          </div>
+
+          {/* Top-Right "Go Corner" Badge on Outer Card */}
+          <div className="absolute top-0 right-0 flex h-14 w-14 items-center justify-center rounded-bl-[32px] bg-gradient-to-br from-[#0d7342] to-[#16a34a] text-white shadow-lg transition-transform duration-300 group-hover:scale-110 z-10">
+            <ArrowUpRight className="h-6 w-6 -mt-0.5 -mr-0.5" />
+          </div>
+
           {/* Section Header */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 relative z-10">
             <span
-              className="mb-3 inline-block rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest shadow-sm"
+              className="mb-3 inline-block rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest shadow-sm transition-colors duration-500 group-hover:bg-white/20 group-hover:text-white group-hover:border group-hover:border-white/30"
               style={{ background: 'rgba(69,82,62,0.12)', color: '#45523e', outline: '1px solid rgba(69,82,62,0.3)', outlineOffset: '0px' }}
             >
               The GNE Infra Advantage
             </span>
-            <h3 className="mt-2 text-2xl sm:text-4xl font-black font-sora tracking-tight" style={{ color: '#010101' }}>
-              Why Clients Trust <span style={{ color: '#256c4aff' }}>GNE Infra</span>
+            <h3
+              className="mt-2 text-2xl sm:text-4xl font-black font-sora tracking-tight transition-colors duration-500 group-hover:!text-white"
+              style={{ color: '#262626' }}
+            >
+              Why Clients Trust <span className="transition-colors duration-500 group-hover:!text-emerald-400" style={{ color: '#0d7342' }}>GNE Infra</span>
             </h3>
-            <p className="mt-3 text-base sm:text-lg font-semibold max-w-2xl mx-auto leading-relaxed" style={{ color: '#492c06ff' }}>
+            <p
+              className="mt-3 text-base sm:text-lg font-semibold max-w-2xl mx-auto leading-relaxed transition-colors duration-500 group-hover:!text-white/90"
+              style={{ color: '#452c2c' }}
+            >
               Delivering bankable clean energy infrastructure with uncompromising engineering excellence, transparent governance, and lifecycle reliability.
             </p>
           </div>
 
-          {/* Grid Layout */}
-          <div className="grid gap-8 sm:grid-cols-2">
+          {/* Grid Layout of Inner Feature Rows */}
+          <div className="grid gap-8 sm:grid-cols-2 relative z-10">
             {/* Feature 1 */}
             <div className="flex gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-brand-green dark:bg-slate-800/80 dark:text-brand-green-500 shadow-sm transition-transform duration-300 hover:scale-105 hover:rotate-3">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-[#0d7342] dark:bg-slate-800/80 dark:text-brand-green-500 shadow-sm transition-all duration-300 group-hover:bg-white/20 group-hover:text-white hover:scale-105 hover:rotate-3">
                 <Building2 className="h-6 w-6" />
               </div>
               <div>
-                <h4 className="text-lg font-bold leading-snug" style={{ color: '#010101' }}>
+                <h4
+                  className="text-lg font-bold leading-snug transition-colors duration-500 group-hover:!text-white"
+                  style={{ color: '#262626' }}
+                >
                   End-to-End EPC Delivery
                 </h4>
-                <p className="mt-1.5 text-[15px] leading-relaxed font-medium" style={{ color: '#5a5249' }}>
+                <p
+                  className="mt-1.5 text-[15px] leading-relaxed font-medium transition-colors duration-500 group-hover:!text-white/85"
+                  style={{ color: '#452c2c' }}
+                >
                   Comprehensive project execution from engineering to commissioning.
                 </p>
               </div>
@@ -761,14 +794,20 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
 
             {/* Feature 2 */}
             <div className="flex gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-brand-green dark:bg-slate-800/80 dark:text-brand-green-500 shadow-sm transition-transform duration-300 hover:scale-105 hover:rotate-3">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-[#0d7342] dark:bg-slate-800/80 dark:text-brand-green-500 shadow-sm transition-all duration-300 group-hover:bg-white/20 group-hover:text-white hover:scale-105 hover:rotate-3">
                 <DraftingCompass className="h-6 w-6" />
               </div>
               <div>
-                <h4 className="text-lg font-bold leading-snug" style={{ color: '#010101' }}>
+                <h4
+                  className="text-lg font-bold leading-snug transition-colors duration-500 group-hover:!text-white"
+                  style={{ color: '#262626' }}
+                >
                   Engineering Excellence
                 </h4>
-                <p className="mt-1.5 text-[15px] leading-relaxed font-medium" style={{ color: '#5a5249' }}>
+                <p
+                  className="mt-1.5 text-[15px] leading-relaxed font-medium transition-colors duration-500 group-hover:!text-white/85"
+                  style={{ color: '#452c2c' }}
+                >
                   Optimized system design for maximum performance and reliability.
                 </p>
               </div>
@@ -776,14 +815,20 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
 
             {/* Feature 3 */}
             <div className="flex gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-brand-green dark:bg-slate-800/80 dark:text-brand-green-500 shadow-sm transition-transform duration-300 hover:scale-105 hover:rotate-3">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-[#0d7342] dark:bg-slate-800/80 dark:text-brand-green-500 shadow-sm transition-all duration-300 group-hover:bg-white/20 group-hover:text-white hover:scale-105 hover:rotate-3">
                 <ShieldCheck className="h-6 w-6" />
               </div>
               <div>
-                <h4 className="text-lg font-bold leading-snug" style={{ color: '#010101' }}>
+                <h4
+                  className="text-lg font-bold leading-snug transition-colors duration-500 group-hover:!text-white"
+                  style={{ color: '#262626' }}
+                >
                   Quality-Driven Execution
                 </h4>
-                <p className="mt-1.5 text-[15px] leading-relaxed font-medium" style={{ color: '#5a5249' }}>
+                <p
+                  className="mt-1.5 text-[15px] leading-relaxed font-medium transition-colors duration-500 group-hover:!text-white/85"
+                  style={{ color: '#452c2c' }}
+                >
                   Strict quality assurance at every stage of construction.
                 </p>
               </div>
@@ -791,14 +836,20 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
 
             {/* Feature 4 */}
             <div className="flex gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-brand-green dark:bg-slate-800/80 dark:text-brand-green-500 shadow-sm transition-transform duration-300 hover:scale-105 hover:rotate-3">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-[#0d7342] dark:bg-slate-800/80 dark:text-brand-green-500 shadow-sm transition-all duration-300 group-hover:bg-white/20 group-hover:text-white hover:scale-105 hover:rotate-3">
                 <TowerControl className="h-6 w-6" />
               </div>
               <div>
-                <h4 className="text-lg font-bold leading-snug" style={{ color: '#010101' }}>
+                <h4
+                  className="text-lg font-bold leading-snug transition-colors duration-500 group-hover:!text-white"
+                  style={{ color: '#262626' }}
+                >
                   Land &amp; Grid Expertise
                 </h4>
-                <p className="mt-1.5 text-[15px] leading-relaxed font-medium" style={{ color: '#5a5249' }}>
+                <p
+                  className="mt-1.5 text-[15px] leading-relaxed font-medium transition-colors duration-500 group-hover:!text-white/85"
+                  style={{ color: '#452c2c' }}
+                >
                   Integrated support for land development and grid connectivity.
                 </p>
               </div>
@@ -806,14 +857,20 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
 
             {/* Feature 5 */}
             <div className="flex gap-4 sm:col-span-2">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-brand-green dark:bg-slate-800/80 dark:text-brand-green-500 shadow-sm transition-transform duration-300 hover:scale-105 hover:rotate-3">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-[#0d7342] dark:bg-slate-800/80 dark:text-brand-green-500 shadow-sm transition-all duration-300 group-hover:bg-white/20 group-hover:text-white hover:scale-105 hover:rotate-3">
                 <BriefcaseBusiness className="h-6 w-6" />
               </div>
               <div>
-                <h4 className="text-lg font-bold leading-snug" style={{ color: '#010101' }}>
+                <h4
+                  className="text-lg font-bold leading-snug transition-colors duration-500 group-hover:!text-white"
+                  style={{ color: '#262626' }}
+                >
                   Experienced Project Management
                 </h4>
-                <p className="mt-1.5 text-[15px] leading-relaxed font-medium" style={{ color: '#5a5249' }}>
+                <p
+                  className="mt-1.5 text-[15px] leading-relaxed font-medium transition-colors duration-500 group-hover:!text-white/85"
+                  style={{ color: '#452c2c' }}
+                >
                   Structured planning and execution with schedule adherence.
                 </p>
               </div>

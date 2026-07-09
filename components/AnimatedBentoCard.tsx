@@ -13,7 +13,7 @@ export function AnimatedBentoCard({
 }) {
   return (
     <motion.div
-      className="col-span-1 w-full"
+      className="col-span-1 w-full h-full flex flex-col"
       initial={{
         opacity: 0,
         y: 35,
