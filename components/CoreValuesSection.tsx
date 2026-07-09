@@ -59,14 +59,14 @@ const cardsData: CardData[] = [
 export function CoreValuesSection() {
   return (
     <section
-      className="core-values relative min-h-screen py-20 md:py-32 font-inter transition-colors duration-300"
+      className="core-values relative min-h-screen py-12 lg:py-16 xl:py-24 font-inter transition-colors duration-300"
       style={{
         background: `radial-gradient(circle at 20% 20%, rgba(22,199,132,.06), transparent 35%), radial-gradient(circle at 80% 80%, rgba(79,124,255,.06), transparent 35%), var(--background, #faf8f5)`,
       }}
     >
       <div className="w-full max-w-[1380px] mx-auto px-4 sm:px-8 lg:px-12">
         {/* SECTION HEADER (Center Aligned) */}
-        <div className="mx-auto max-w-4xl text-center mb-16 md:mb-24">
+        <div className="mx-auto max-w-4xl text-center mb-10 lg:mb-12 xl:mb-16">
           <div className="flex items-center gap-3 justify-center mb-3">
             <span className="w-8 h-[2px] bg-[#16c784]" />
             <span className="text-[11px] font-bold uppercase tracking-[3px] text-[#16c784]">
@@ -95,7 +95,7 @@ export function CoreValuesSection() {
               <div
                 key={idx}
                 className="sticky w-full rounded-[36px] overflow-hidden border border-slate-200/20 dark:border-slate-800/40 shadow-2xl transition-all duration-500 group bg-slate-950"
-                style={{ top: topOffset, minHeight: "580px" }}
+                style={{ top: topOffset, minHeight: "clamp(380px, 60vh, 540px)" }}
               >
                 {/* Crisp Background Image (NO backdrop blur!) */}
                 <img
@@ -128,11 +128,6 @@ export function CoreValuesSection() {
                   <p className="text-lg sm:text-xl md:text-2xl text-slate-200 max-w-4xl leading-relaxed font-normal">
                     {card.description}
                   </p>
-
-                  <div className="mt-8 flex items-center gap-2 text-base font-semibold text-[#4ade80] opacity-90 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300">
-                    <span>Explore our standard of {card.title.toLowerCase()}</span>
-                    <ArrowRight className="w-5 h-5" />
-                  </div>
                 </div>
               </div>
             );

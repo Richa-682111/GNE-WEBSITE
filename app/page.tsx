@@ -225,7 +225,7 @@ export default function HomePage() {
             {/* Right Column: wedo1 Image Card (Span 5) */}
             <div className="lg:col-span-5">
               <ScrollReveal delay={200}>
-                <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl bg-slate-900 group aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/5] min-h-[440px] lg:min-h-[560px]">
+                <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl bg-slate-900 group aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/5] min-h-[380px] lg:min-h-[440px] xl:min-h-[540px]">
                   <Image
                     src="/wedo1.jpg"
                     alt="Renewable Energy Development"
@@ -360,16 +360,17 @@ export default function HomePage() {
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
             {[
-              { key: "land", img: "/service-land.jpg", label: "Land Procurement & Grid Connectivity", accent: "from-[#45523e] to-[#2a3328]", tag: "bg-[#45523e]", desc: "We support renewable energy projects through strategic land identification, aggregation, techno-legal due diligence, and regulatory coordination. Our integrated approach helps accelerate project development while minimizing land-related risks and execution delays." },
-              { key: "installation", img: "/service-pmc.jpg", label: "PMC(Solar, BESS, PSP, Wind)", accent: "from-[#b0aca2] to-[#7a756f]", tag: "bg-[#b0aca2]", desc: "We offer end-to-end project management consultancy services covering project planning, execution monitoring, contract management, procurement support, quality control, and stakeholder coordination to ensure efficient and timely project delivery." },
-              { key: "epc", img: "/service-epc.jpg", label: "Solar EPC", accent: "from-[#45523e] to-[#010101]", tag: "bg-[#45523e]", desc: "We provide complete Solar EPC services from feasibility studies and detailed engineering to procurement, construction, commissioning, and grid connectivity, ensuring high-quality and timely project delivery." },
-              { key: "om", img: "/service-om.jpg", label: "O&M(BESS, Solar,PSP)", accent: "from-[#ad5d50] to-[#7a3f35]", tag: "bg-[#ad5d50]", desc: "We deliver end-to-end operations and maintenance services focused on maximizing plant availability, improving energy generation, reducing downtime, and extending asset life." },
-              { key: "bess", img: "/service-bess.jpg", label: "BESS (EPC/C&I, I&C)", accent: "from-[#010101] to-[#45523e]", tag: "bg-[#010101]", desc: "We deliver turnkey Battery Energy Storage System (BESS) projects, including engineering, procurement, installation, commissioning, and grid integration to enhance energy reliability, flexibility, and operational efficiency." },
-              { key: "manufacturing", img: "/service-manufacturing.jpg", label: "Grid Integration", accent: "from-[#ad5d50] to-[#010101]", tag: "bg-[#ad5d50]", desc: "We facilitate efficient grid connectivity through transmission planning, utility coordination, regulatory approvals, and power evacuation solutions, ensuring smooth integration of renewable energy projects into the grid." },
-            ].map(({ key, img, label, accent, tag, desc }, index) => (
+              { key: "land", href: "/solar-epc", img: "/service-land.jpg", label: "Land Procurement & Grid Connectivity", accent: "from-[#45523e] to-[#2a3328]", tag: "bg-[#45523e]", desc: "We support renewable energy projects through strategic land identification, aggregation, techno-legal due diligence, and regulatory coordination. Our integrated approach helps accelerate project development while minimizing land-related risks and execution delays." },
+              { key: "installation", href: "/pmc", img: "/service-pmc.jpg", label: "PMC(Solar, BESS, PSP, Wind)", accent: "from-[#b0aca2] to-[#7a756f]", tag: "bg-[#b0aca2]", desc: "We offer end-to-end project management consultancy services covering project planning, execution monitoring, contract management, procurement support, quality control, and stakeholder coordination to ensure efficient and timely project delivery." },
+              { key: "epc", href: "/solar-epc", img: "/service-epc.jpg", label: "Solar EPC", accent: "from-[#45523e] to-[#010101]", tag: "bg-[#45523e]", desc: "We provide complete Solar EPC services from feasibility studies and detailed engineering to procurement, construction, commissioning, and grid connectivity, ensuring high-quality and timely project delivery." },
+              { key: "om", href: "/o-and-m", img: "/service-om.jpg", label: "O&M(BESS, Solar,PSP)", accent: "from-[#ad5d50] to-[#7a3f35]", tag: "bg-[#ad5d50]", desc: "We deliver end-to-end operations and maintenance services focused on maximizing plant availability, improving energy generation, reducing downtime, and extending asset life." },
+              { key: "bess", href: "/bess-ems", img: "/service-bess.jpg", label: "BESS (EPC/C&I, I&C)", accent: "from-[#010101] to-[#45523e]", tag: "bg-[#010101]", desc: "We deliver turnkey Battery Energy Storage System (BESS) projects, including engineering, procurement, installation, commissioning, and grid integration to enhance energy reliability, flexibility, and operational efficiency." },
+              { key: "manufacturing", href: "/green-hydrogen", img: "/service-manufacturing.jpg", label: "Grid Integration", accent: "from-[#ad5d50] to-[#010101]", tag: "bg-[#ad5d50]", desc: "We facilitate efficient grid connectivity through transmission planning, utility coordination, regulatory approvals, and power evacuation solutions, ensuring smooth integration of renewable energy projects into the grid." },
+            ].map(({ key, href, img, label, accent, tag, desc }, index) => (
               <ScrollReveal key={key} delay={index * 60} className="h-full">
-                <div
-                  className="group relative flex h-80 flex-col overflow-hidden rounded-3xl shadow-xl transition-all duration-500 hover:-translate-y-1.5 hover:shadow-emerald-500/20 hover:shadow-2xl sm:h-96 cursor-default"
+                <Link
+                  href={href}
+                  className="group relative flex h-64 sm:h-72 lg:h-72 xl:h-96 flex-col overflow-hidden rounded-3xl shadow-xl transition-all duration-500 ease-out hover:scale-[1.06] hover:-translate-y-3 hover:z-30 hover:shadow-[0_30px_70px_rgba(22,163,74,0.35)] block cursor-pointer"
                 >
                   {/* Background image */}
                   <Image
@@ -377,7 +378,7 @@ export default function HomePage() {
                     alt={label}
                     fill
                     sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                   />
 
                   {/* Permanent dark-bottom gradient */}
@@ -406,7 +407,7 @@ export default function HomePage() {
                       {desc}
                     </p>
                   </div>
-                </div>
+                </Link>
               </ScrollReveal>
             ))}
           </div>

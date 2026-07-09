@@ -466,7 +466,7 @@ export default function AboutPage() {
             {/* Mission Card - EXPANDED SIZE */}
             <div className="group flex flex-col rounded-[32px] overflow-hidden shadow-[0_25px_60px_rgba(13,115,66,0.14)] border border-[#0d7342]/25 bg-white transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_70px_rgba(13,115,66,0.24)]">
               {/* Visual Header Band with Massive High-Res Image & Gradient Overlay */}
-              <div className="relative h-72 sm:h-84 lg:h-96 w-full overflow-hidden shrink-0">
+              <div className="relative h-56 lg:h-64 xl:h-80 2xl:h-96 w-full overflow-hidden shrink-0">
                 <Image
                   src="/service-epc.jpg"
                   alt="Solar EPC & Renewable Energy Infrastructure"
@@ -503,7 +503,7 @@ export default function AboutPage() {
             {/* Vision Card - EXPANDED SIZE */}
             <div className="group flex flex-col rounded-[32px] overflow-hidden shadow-[0_25px_60px_rgba(173,93,80,0.14)] border border-[#ad5d50]/25 bg-white transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_70px_rgba(173,93,80,0.24)]">
               {/* Visual Header Band with Massive High-Res Image & Gradient Overlay */}
-              <div className="relative h-72 sm:h-84 lg:h-96 w-full overflow-hidden shrink-0">
+              <div className="relative h-56 lg:h-64 xl:h-80 2xl:h-96 w-full overflow-hidden shrink-0">
                 <Image
                   src="/hero-hybrid-2.webp"
                   alt="Intelligent Renewable Energy Ecosystem"
@@ -566,17 +566,17 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-6 auto-rows-[200px] sm:auto-rows-[240px] lg:auto-rows-[280px]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-6 auto-rows-[180px] sm:auto-rows-[200px] lg:auto-rows-[220px] xl:auto-rows-[280px]">
             {/* Solar EPC */}
             <Link
               href="/solar-epc"
-              className="group relative col-span-1 md:col-span-2 row-span-2 overflow-hidden rounded-3xl border border-slate-200/60 dark:border-slate-700/50 shadow-xl transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl"
+              className="group relative col-span-1 md:col-span-2 row-span-2 overflow-hidden rounded-3xl border border-slate-200/60 dark:border-slate-700/50 shadow-xl transition-all duration-500 ease-out hover:scale-[1.06] hover:-translate-y-3 hover:z-30 hover:shadow-[0_30px_70px_rgba(22,163,74,0.35)] block cursor-pointer"
             >
               <Image
                 src="/solar epc.png"
                 alt="Solar EPC"
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-amber-400/30 to-orange-500/30" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
@@ -595,13 +595,13 @@ export default function AboutPage() {
             {/* BESS */}
             <Link
               href="/bess-ems"
-              className="group relative col-span-1 md:col-span-2 overflow-hidden rounded-3xl border border-slate-200/60 dark:border-slate-700/50 shadow-xl transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl"
+              className="group relative col-span-1 md:col-span-2 overflow-hidden rounded-3xl border border-slate-200/60 dark:border-slate-700/50 shadow-xl transition-all duration-500 ease-out hover:scale-[1.06] hover:-translate-y-3 hover:z-30 hover:shadow-[0_30px_70px_rgba(22,163,74,0.35)] block cursor-pointer"
             >
               <Image
                 src="/bess.png"
                 alt="BESS"
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-cyan-600/30" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
@@ -620,13 +620,13 @@ export default function AboutPage() {
             {/* PMC */}
             <Link
               href="/pmc"
-              className="group relative col-span-1 md:col-span-2 overflow-hidden rounded-3xl border border-slate-200/60 dark:border-slate-700/50 shadow-xl transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl"
+              className="group relative col-span-1 md:col-span-2 overflow-hidden rounded-3xl border border-slate-200/60 dark:border-slate-700/50 shadow-xl transition-all duration-500 ease-out hover:scale-[1.06] hover:-translate-y-3 hover:z-30 hover:shadow-[0_30px_70px_rgba(22,163,74,0.35)] block cursor-pointer"
             >
               <Image
                 src="/pmc.png"
                 alt="PMC"
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/30 to-teal-600/30" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
@@ -645,13 +645,13 @@ export default function AboutPage() {
             {/* O&M */}
             <Link
               href="/o-and-m"
-              className="group relative col-span-1 md:col-span-1 overflow-hidden rounded-3xl border border-slate-200/60 dark:border-slate-700/50 shadow-xl transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl"
+              className="group relative col-span-1 md:col-span-1 overflow-hidden rounded-3xl border border-slate-200/60 dark:border-slate-700/50 shadow-xl transition-all duration-500 ease-out hover:scale-[1.06] hover:-translate-y-3 hover:z-30 hover:shadow-[0_30px_70px_rgba(22,163,74,0.35)] block cursor-pointer"
             >
               <Image
                 src="/o&m.png"
                 alt="O&M"
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/30 to-indigo-600/30" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
@@ -669,13 +669,13 @@ export default function AboutPage() {
             {/* Green Hydrogen */}
             <Link
               href="/green-hydrogen"
-              className="group relative col-span-1 md:col-span-3 overflow-hidden rounded-3xl border border-slate-200/60 dark:border-slate-700/50 shadow-xl transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl"
+              className="group relative col-span-1 md:col-span-3 overflow-hidden rounded-3xl border border-slate-200/60 dark:border-slate-700/50 shadow-xl transition-all duration-500 ease-out hover:scale-[1.06] hover:-translate-y-3 hover:z-30 hover:shadow-[0_30px_70px_rgba(22,163,74,0.35)] block cursor-pointer"
             >
               <Image
                 src="/green hydrogen.png"
                 alt="green hydrogen"
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-green-500/30 to-lime-600/30" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
