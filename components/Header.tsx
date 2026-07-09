@@ -49,12 +49,11 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-40 transition-all duration-300 border-b backdrop-blur-md ${
+      className={`sticky top-0 z-40 transition-all duration-300 border-b backdrop-blur-md bg-white/95 dark:bg-[#0B132B]/95 ${
         isScrolled
-          ? "border-[#b0aca2]/50 shadow-md"
-          : "border-[#b0aca2]/20"
+          ? "border-slate-200 dark:border-slate-800 shadow-md"
+          : "border-slate-200/60 dark:border-slate-800/60 shadow-sm"
       }`}
-      style={{ background: isScrolled ? 'rgba(245,236,229,0.96)' : 'rgba(245,236,229,0.85)' }}
     >
       <div className="grid w-full grid-cols-[auto_1fr_auto] items-center gap-4 px-3 py-2 sm:px-5 lg:px-8">
         {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- full document navigation */}

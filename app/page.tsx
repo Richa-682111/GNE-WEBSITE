@@ -86,13 +86,13 @@ export default function HomePage() {
 
                     {/* Orbital nodes */}
                     {[
-                      { label: "Supply Chain", angle: 0, icon: "🔗", color: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-200" },
-                      { label: "Material", angle: 51, icon: "🏗️", color: "bg-sky-100 text-sky-800 dark:bg-sky-900/50 dark:text-sky-200" },
-                      { label: "Design", angle: 102, icon: "✏️", color: "bg-teal-100 text-teal-800 dark:bg-teal-900/50 dark:text-teal-200" },
-                      { label: "Energy", angle: 153, icon: "⚡", color: "bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-200" },
-                      { label: "Innovation", angle: 204, icon: "💡", color: "bg-violet-100 text-violet-800 dark:bg-violet-900/50 dark:text-violet-200" },
-                      { label: "Corporate", angle: 255, icon: "🌍", color: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-200" },
-                      { label: "End-of-Life", angle: 306, icon: "♻️", color: "bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-200" },
+                      { label: "Supply Chain", angle: 0, icon: "🔗", color: "bg-purple-100 text-purple-900 border border-purple-200/80 dark:bg-purple-900/50 dark:text-purple-200 dark:border-purple-700/50" },
+                      { label: "Material", angle: 51, icon: "🏗️", color: "bg-blue-100 text-blue-900 border border-blue-200/80 dark:bg-blue-900/50 dark:text-blue-200 dark:border-blue-700/50" },
+                      { label: "Design", angle: 102, icon: "✏️", color: "bg-pink-100 text-pink-900 border border-pink-200/80 dark:bg-pink-900/50 dark:text-pink-200 dark:border-pink-700/50" },
+                      { label: "Energy", angle: 153, icon: "⚡", color: "bg-amber-100 text-amber-900 border border-amber-200/80 dark:bg-amber-900/50 dark:text-amber-200 dark:border-amber-700/50" },
+                      { label: "Innovation", angle: 204, icon: "💡", color: "bg-indigo-100 text-indigo-900 border border-indigo-200/80 dark:bg-indigo-900/50 dark:text-indigo-200 dark:border-indigo-700/50" },
+                      { label: "Corporate", angle: 255, icon: "🌍", color: "bg-cyan-100 text-cyan-900 border border-cyan-200/80 dark:bg-cyan-900/50 dark:text-cyan-200 dark:border-cyan-700/50" },
+                      { label: "End-of-Life", angle: 306, icon: "♻️", color: "bg-rose-100 text-rose-900 border border-rose-200/80 dark:bg-rose-900/50 dark:text-rose-200 dark:border-rose-700/50" },
                     ].map(({ label, angle, icon, color }) => {
                       const rad = (angle - 90) * (Math.PI / 180);
                       const cosVal = Math.cos(rad);

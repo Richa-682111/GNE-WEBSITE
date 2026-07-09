@@ -189,7 +189,7 @@ export default function AboutPage() {
     },
     {
       name: "Shrikant Bartakke",
-      title: "Director - Finance & Strategy",
+      title: "President",
       bio: "Seasoned business leader with over 20 years of experience across telecommunications, infrastructure and renewable energy.",
       linkedin: "https://www.linkedin.com/in/shrikant-bartakke-2b977b60/",
       image: "/Shrikant.jpeg"
@@ -668,13 +668,13 @@ export default function AboutPage() {
                     className="object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
-                <h3 className="text-lg sm:text-xl font-sora font-extrabold leading-tight text-[#111827]">
+                <h3 className="text-lg sm:text-xl font-sora font-extrabold leading-tight text-[#111827] text-left">
                   {leader.name}
                 </h3>
-                <p className="mt-1 text-xs sm:text-sm font-bold text-[#16a34a]">
+                <p className="mt-1 text-xs sm:text-sm font-bold text-[#16a34a] text-left">
                   {leader.title}
                 </p>
-                <p className="mt-3 flex-grow text-xs sm:text-sm leading-relaxed text-[#475569]">
+                <p className="mt-3 flex-grow text-xs sm:text-sm leading-relaxed text-[#475569] text-left">
                   {leader.bio}
                 </p>
                 <a
