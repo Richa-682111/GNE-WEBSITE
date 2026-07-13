@@ -123,9 +123,8 @@ export default function HomePage() {
             {/* RIGHT — Copy */}
             <ScrollReveal delay={120}>
               <div className="flex flex-col gap-6">
-                <p className="text-xl leading-relaxed" style={{ color: '#010101' }}>
-                  “Building the Infrastructure Powering India&apos;s Energy Transition”
-                  GNE Infra contributes to the development of sustainable energy infrastructure through integrated Solar EPC, BESS, project development, land procurement, grid connectivity, and project management solutions. Our focus is on enabling faster project execution, improving energy reliability, and supporting the adoption of clean energy technologies across India.
+                <p className="text-xl leading-relaxed  text-justify" style={{ color: '#010101' }}>
+                  GNE Infra delivers integrated renewable energy solutions across Solar EPC, Battery Energy Storage Systems (BESS), Project Development, Land Acquisition, Grid Connectivity, and Project Management Consultancy (PMC). Combining engineering excellence, execution capability, and strategic advisory, we help clients accelerate project delivery, optimize investments, and develop reliable, future-ready energy infrastructure.
 
                 </p>
 
@@ -211,6 +210,7 @@ export default function HomePage() {
                         className="text-base sm:text-lg font-bold leading-snug"
                         style={{ color: accent }}
                       >
+
                         {title}
                       </h3>
                       <p className="mt-1.5 text-sm leading-relaxed max-w-xl" style={{ color: '#5a5249' }}>
@@ -240,9 +240,7 @@ export default function HomePage() {
                     <h4 className="text-xl sm:text-2xl font-black leading-tight">
                       Deploying Utility-Scale Clean Infrastructure
                     </h4>
-                    <p className="mt-2 text-xs sm:text-sm text-slate-300 line-clamp-2 leading-relaxed">
-                      Comprehensive EPC and project development capabilities driving sustainable energy transformation.
-                    </p>
+
                   </div>
                 </div>
               </ScrollReveal>
@@ -269,9 +267,7 @@ export default function HomePage() {
                     <h4 className="text-xl sm:text-2xl font-black leading-tight">
                       Powering Industrial Decarbonization
                     </h4>
-                    <p className="mt-2 text-xs sm:text-sm text-slate-300 line-clamp-2 leading-relaxed">
-                      Securing long-term resilience and carbon reduction across commercial and industrial sectors.
-                    </p>
+
                   </div>
                 </div>
               </ScrollReveal>
@@ -296,7 +292,7 @@ export default function HomePage() {
                   num: "06",
                   title: "Driving Sustainable Value",
                   body: "Delivering bankable, high-yield renewable assets with transparent governance, rigorous quality assurance, and lifecycle support — ensuring lasting impact for investors and communities.",
-                  accent: "#c05a4aff",
+                  accent: "#7f1d1d", // Dark red to match the visual weight of point 05
                 },
               ].map(({ num, title, body, accent }, i) => (
                 <ScrollReveal key={num} delay={i * 60}>
@@ -320,7 +316,7 @@ export default function HomePage() {
                       >
                         {title}
                       </h3>
-                      <p className="mt-1.5 text-sm leading-relaxed max-w-xl" style={{ color: '#5a5249' }}>
+                      <p className="mt-1.5 text-sm leading-relaxed max-w-xl" style={{ color: '#374151', opacity: 1, fontWeight: 500 }}>
                         {body}
                       </p>
                     </div>
@@ -365,7 +361,7 @@ export default function HomePage() {
               { key: "epc", href: "/solar-epc", img: "/service-epc.jpg", label: "Solar EPC", accent: "from-[#45523e] to-[#010101]", tag: "bg-[#45523e]", desc: "We provide complete Solar EPC services from feasibility studies and detailed engineering to procurement, construction, commissioning, and grid connectivity, ensuring high-quality and timely project delivery." },
               { key: "om", href: "/o-and-m", img: "/service-om.jpg", label: "O&M(BESS, Solar,PSP)", accent: "from-[#ad5d50] to-[#7a3f35]", tag: "bg-[#ad5d50]", desc: "We deliver end-to-end operations and maintenance services focused on maximizing plant availability, improving energy generation, reducing downtime, and extending asset life." },
               { key: "bess", href: "/bess-ems", img: "/service-bess.jpg", label: "BESS (EPC/C&I, I&C)", accent: "from-[#010101] to-[#45523e]", tag: "bg-[#010101]", desc: "We deliver turnkey Battery Energy Storage System (BESS) projects, including engineering, procurement, installation, commissioning, and grid integration to enhance energy reliability, flexibility, and operational efficiency." },
-              { key: "manufacturing", href: "/green-hydrogen", img: "/service-manufacturing.jpg", label: "Grid Integration", accent: "from-[#ad5d50] to-[#010101]", tag: "bg-[#ad5d50]", desc: "We facilitate efficient grid connectivity through transmission planning, utility coordination, regulatory approvals, and power evacuation solutions, ensuring smooth integration of renewable energy projects into the grid." },
+              { key: "manufacturing", href: "/green-hydrogen", img: "/grid-integration.png", label: "Grid Integration", accent: "from-[#ad5d50] to-[#010101]", tag: "bg-[#ad5d50]", desc: "We facilitate efficient grid connectivity through transmission planning, utility coordination, regulatory approvals, and power evacuation solutions, ensuring smooth integration of renewable energy projects into the grid." },
             ].map(({ key, href, img, label, accent, tag, desc }, index) => (
               <ScrollReveal key={key} delay={index * 60} className="h-full">
                 <Link
@@ -387,23 +383,16 @@ export default function HomePage() {
                   {/* Hover colour tint */}
                   <div className={`absolute inset-0 bg-gradient-to-t ${accent} opacity-0 transition-opacity duration-500 group-hover:opacity-60`} />
 
-                  {/* Label pill – always visible */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-
+                  {/* Label & Description Box */}
+                  <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 p-4 rounded-2xl bg-black/30 backdrop-blur-md border border-white/10 transition-colors duration-500 group-hover:bg-black/60">
                     <span
-                      className={`inline-block rounded-full
-    px-4 py-2
-    sm:px-5 sm:py-2.5
-    lg:px-6 lg:py-3
-    text-sm sm:text-base
-    font-bold text-white shadow-xl
-    ${tag}`}
+                      className={`inline-block rounded-full px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-bold text-white shadow-xl ${tag}`}
                     >
                       {label}
                     </span>
 
                     {/* Description – slides up on hover */}
-                    <p className="mt-2 max-h-0 overflow-hidden text-xs leading-relaxed text-white/90 transition-all duration-500 group-hover:max-h-32">
+                    <p className="mt-3 max-h-0 overflow-hidden text-xs leading-relaxed text-white transition-all duration-500 group-hover:max-h-48">
                       {desc}
                     </p>
                   </div>

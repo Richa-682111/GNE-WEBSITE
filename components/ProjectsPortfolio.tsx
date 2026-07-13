@@ -747,46 +747,35 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
             <ArrowUpRight className="h-6 w-6 -mt-0.5 -mr-0.5" />
           </div>
 
-          {/* Section Header */}
-          <div className="text-center mb-12 relative z-10">
-            <span
-              className="mb-3 inline-block rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest shadow-sm transition-colors duration-500 group-hover:bg-white/20 group-hover:text-white group-hover:border group-hover:border-white/30"
-              style={{ background: 'rgba(69,82,62,0.12)', color: '#45523e', outline: '1px solid rgba(69,82,62,0.3)', outlineOffset: '0px' }}
-            >
-              The GNE Infra Advantage
-            </span>
-            <h3
-              className="mt-2 text-2xl sm:text-4xl font-black font-sora tracking-tight transition-colors duration-500 group-hover:!text-white"
-              style={{ color: '#262626' }}
-            >
-              Why Clients Trust <span className="transition-colors duration-500 group-hover:!text-emerald-400" style={{ color: '#0d7342' }}>GNE Infra</span>
-            </h3>
-            <p
-              className="mt-3 text-base sm:text-lg font-semibold max-w-2xl mx-auto leading-relaxed transition-colors duration-500 group-hover:!text-white/90"
-              style={{ color: '#452c2c' }}
-            >
-              Delivering bankable clean energy infrastructure with uncompromising engineering excellence, transparent governance, and lifecycle reliability.
-            </p>
-          </div>
+          {/* Content Wrapper with Glassmorphism for Readability */}
+          <div className="relative z-10 max-w-5xl mx-auto rounded-3xl bg-black/40 backdrop-blur-lg border border-white/20 shadow-2xl p-8 sm:p-12 mt-4">
+            {/* Section Header */}
+            <div className="text-center mb-12">
+              <span
+                className="mb-3 inline-block rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest shadow-sm transition-colors duration-500 bg-white/20 text-white border border-white/30"
+              >
+                The GNE Infra Advantage
+              </span>
+              <h3 className="mt-2 text-2xl sm:text-4xl font-black font-sora tracking-tight text-white">
+                Why Clients Trust <span className="text-emerald-400">GNE Infra</span>
+              </h3>
+              <p className="mt-3 text-base sm:text-lg font-semibold max-w-2xl mx-auto leading-relaxed text-white/90">
+                Delivering bankable clean energy infrastructure with uncompromising engineering excellence, transparent governance, and lifecycle reliability.
+              </p>
+            </div>
 
-          {/* Grid Layout of Inner Feature Rows */}
-          <div className="grid gap-8 sm:grid-cols-2 relative z-10">
+            {/* Grid Layout of Inner Feature Rows */}
+            <div className="grid gap-8 sm:grid-cols-2">
             {/* Feature 1 */}
             <div className="flex gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-[#0d7342] dark:bg-slate-800/80 dark:text-brand-green-500 shadow-sm transition-all duration-300 group-hover:bg-white/20 group-hover:text-white hover:scale-105 hover:rotate-3">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-white shadow-sm transition-all duration-300 hover:scale-105 hover:rotate-3">
                 <Building2 className="h-6 w-6" />
               </div>
               <div>
-                <h4
-                  className="text-lg font-bold leading-snug transition-colors duration-500 group-hover:!text-white"
-                  style={{ color: '#262626' }}
-                >
+                <h4 className="text-lg font-bold leading-snug text-white">
                   End-to-End EPC Delivery
                 </h4>
-                <p
-                  className="mt-1.5 text-[15px] leading-relaxed font-medium transition-colors duration-500 group-hover:!text-white/85"
-                  style={{ color: '#452c2c' }}
-                >
+                <p className="mt-1.5 text-[15px] leading-relaxed font-medium text-white/85">
                   Comprehensive project execution from engineering to commissioning.
                 </p>
               </div>
@@ -794,20 +783,14 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
 
             {/* Feature 2 */}
             <div className="flex gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-[#0d7342] dark:bg-slate-800/80 dark:text-brand-green-500 shadow-sm transition-all duration-300 group-hover:bg-white/20 group-hover:text-white hover:scale-105 hover:rotate-3">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-white shadow-sm transition-all duration-300 hover:scale-105 hover:rotate-3">
                 <DraftingCompass className="h-6 w-6" />
               </div>
               <div>
-                <h4
-                  className="text-lg font-bold leading-snug transition-colors duration-500 group-hover:!text-white"
-                  style={{ color: '#262626' }}
-                >
+                <h4 className="text-lg font-bold leading-snug text-white">
                   Engineering Excellence
                 </h4>
-                <p
-                  className="mt-1.5 text-[15px] leading-relaxed font-medium transition-colors duration-500 group-hover:!text-white/85"
-                  style={{ color: '#452c2c' }}
-                >
+                <p className="mt-1.5 text-[15px] leading-relaxed font-medium text-white/85">
                   Optimized system design for maximum performance and reliability.
                 </p>
               </div>
@@ -815,20 +798,14 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
 
             {/* Feature 3 */}
             <div className="flex gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-[#0d7342] dark:bg-slate-800/80 dark:text-brand-green-500 shadow-sm transition-all duration-300 group-hover:bg-white/20 group-hover:text-white hover:scale-105 hover:rotate-3">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-white shadow-sm transition-all duration-300 hover:scale-105 hover:rotate-3">
                 <ShieldCheck className="h-6 w-6" />
               </div>
               <div>
-                <h4
-                  className="text-lg font-bold leading-snug transition-colors duration-500 group-hover:!text-white"
-                  style={{ color: '#262626' }}
-                >
+                <h4 className="text-lg font-bold leading-snug text-white">
                   Quality-Driven Execution
                 </h4>
-                <p
-                  className="mt-1.5 text-[15px] leading-relaxed font-medium transition-colors duration-500 group-hover:!text-white/85"
-                  style={{ color: '#452c2c' }}
-                >
+                <p className="mt-1.5 text-[15px] leading-relaxed font-medium text-white/85">
                   Strict quality assurance at every stage of construction.
                 </p>
               </div>
@@ -836,20 +813,14 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
 
             {/* Feature 4 */}
             <div className="flex gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-[#0d7342] dark:bg-slate-800/80 dark:text-brand-green-500 shadow-sm transition-all duration-300 group-hover:bg-white/20 group-hover:text-white hover:scale-105 hover:rotate-3">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-white shadow-sm transition-all duration-300 hover:scale-105 hover:rotate-3">
                 <TowerControl className="h-6 w-6" />
               </div>
               <div>
-                <h4
-                  className="text-lg font-bold leading-snug transition-colors duration-500 group-hover:!text-white"
-                  style={{ color: '#262626' }}
-                >
+                <h4 className="text-lg font-bold leading-snug text-white">
                   Land &amp; Grid Expertise
                 </h4>
-                <p
-                  className="mt-1.5 text-[15px] leading-relaxed font-medium transition-colors duration-500 group-hover:!text-white/85"
-                  style={{ color: '#452c2c' }}
-                >
+                <p className="mt-1.5 text-[15px] leading-relaxed font-medium text-white/85">
                   Integrated support for land development and grid connectivity.
                 </p>
               </div>
@@ -857,24 +828,19 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
 
             {/* Feature 5 */}
             <div className="flex gap-4 sm:col-span-2">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-[#0d7342] dark:bg-slate-800/80 dark:text-brand-green-500 shadow-sm transition-all duration-300 group-hover:bg-white/20 group-hover:text-white hover:scale-105 hover:rotate-3">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-white shadow-sm transition-all duration-300 hover:scale-105 hover:rotate-3">
                 <BriefcaseBusiness className="h-6 w-6" />
               </div>
               <div>
-                <h4
-                  className="text-lg font-bold leading-snug transition-colors duration-500 group-hover:!text-white"
-                  style={{ color: '#262626' }}
-                >
+                <h4 className="text-lg font-bold leading-snug text-white">
                   Experienced Project Management
                 </h4>
-                <p
-                  className="mt-1.5 text-[15px] leading-relaxed font-medium transition-colors duration-500 group-hover:!text-white/85"
-                  style={{ color: '#452c2c' }}
-                >
+                <p className="mt-1.5 text-[15px] leading-relaxed font-medium text-white/85">
                   Structured planning and execution with schedule adherence.
                 </p>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </ScrollReveal>

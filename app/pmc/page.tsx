@@ -5,7 +5,7 @@ import { PremiumServiceHero } from "@/components/PremiumServiceHero";
 import { EditorialIntro } from "@/components/EditorialIntro";
 import { BentoFeatureGrid } from "@/components/BentoFeatureGrid";
 import { InteractiveHorizontalFlow } from "@/components/InteractiveHorizontalFlow";
-import { BriefcaseBusiness, Activity, Users, ShieldAlert, Calculator, BookOpenCheck } from "lucide-react";
+import { Gavel, DraftingCompass, HardHat, Factory, GraduationCap, Building2, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Project Management Consultancy (PMC)",
@@ -24,40 +24,82 @@ export default function PmcPage() {
 
   const features = [
     {
-      title: "End-to-End Project Management",
-      description: "Complete oversight from project planning and procurement to commissioning and handover.",
-      icon: BriefcaseBusiness,
-      image: "/pmc-management.jpg",
+      title: "BID ADVISORY",
+      description: (
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Land Survey</li>
+          <li>Tender evaluation & bid strategy</li>
+          <li>Techno-commercial optimization</li>
+        </ul>
+      ),
+      icon: Gavel,
+      image: "/pmc-management.png",
     },
     {
-      title: "Execution Monitoring",
-      description: "Continuous monitoring of project progress, quality, timelines, and contractor performance.",
-      icon: Activity,
-      image: "/pmc-monitoring.jpg",
+      title: "DESIGN & ENGINEERING",
+      description: (
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Solar Plant & BESS engineering</li>
+          <li>Grid connectivity studies</li>
+          <li>Detailed engineering</li>
+        </ul>
+      ),
+      icon: DraftingCompass,
+      image: "/pmc-monitoring.png",
     },
     {
-      title: "Stakeholder Coordination",
-      description: "Effective coordination between clients, contractors, consultants, vendors, and regulatory authorities.",
-      icon: Users,
-      image: "/pmc-stakeholders.jpg",
+      title: "PMC & OWNER'S ENGINEER",
+      description: (
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Feasibility & DPR</li>
+          <li>Owner's Engineering</li>
+          <li>Vendor Selection and Procurement Support</li>
+          <li>EHS and Quality Control Support</li>
+          <li>Commissioning and Supervision</li>
+        </ul>
+      ),
+      icon: HardHat,
+      image: "/pmc-stakeholders.png",
     },
     {
-      title: "Risk & Quality Management",
-      description: "Proactive risk identification, quality assurance, compliance monitoring, and issue resolution.",
-      icon: ShieldAlert,
-      image: "/pmc-quality.jpg",
+      title: "BESS ASSEMBLY PLANT",
+      description: (
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Plant feasibility</li>
+          <li>Factory planning</li>
+          <li>Process & Vendor Selection</li>
+          <li>Manufacturing Readiness</li>
+          <li>Technology Selection</li>
+        </ul>
+      ),
+      icon: Factory,
+      image: "/pmc-quality.png",
     },
     {
-      title: "Cost & Schedule Control",
-      description: "Structured planning and progress tracking to optimize project costs and ensure timely completion.",
-      icon: Calculator,
-      image: "/pmc-control.jpg",
+      title: "SOLAR & BESS TRAINING",
+      description: (
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Solar EPC</li>
+          <li>BESS & EMS</li>
+          <li>Grid & SCADA</li>
+          <li>O&M & corporate training</li>
+        </ul>
+      ),
+      icon: GraduationCap,
+      image: "/pmc-control.png",
     },
     {
-      title: "Technical & Regulatory Expertise",
-      description: "Strong understanding of engineering standards, statutory approvals, and grid requirements.",
-      icon: BookOpenCheck,
-      image: "/pmc-regulatory.jpg",
+      title: "C&I SOLUTIONS",
+      description: (
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Energy assessment</li>
+          <li>Rooftop Solar</li>
+          <li>BESS integration</li>
+          <li>Financial advisory</li>
+        </ul>
+      ),
+      icon: Building2,
+      image: "/pmc-regulatory.png",
     },
   ];
 
@@ -87,9 +129,52 @@ export default function PmcPage() {
       />
 
       <BentoFeatureGrid 
-        title="Why Choose GNE Infra"
+        title="Our 7 Verticals"
         features={features}
+        hideBadge={true}
       />
+
+      {/* 7th Vertical: Land Procurement */}
+      <section className="pb-24 pt-4 relative bg-white px-4 z-10">
+        <div className="mx-auto max-w-[1400px]">
+          <div className="rounded-[32px] overflow-hidden border border-emerald-900/10 shadow-2xl bg-white flex flex-col md:flex-row relative h-auto md:h-80">
+            
+            {/* Left Image */}
+            <div className="relative w-full md:w-1/3 h-64 md:h-full">
+              <img src="/service-land.jpg" className="w-full h-full object-cover" alt="Land Identification" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white" />
+            </div>
+
+            {/* Center Content */}
+            <div className="w-full md:w-1/3 flex flex-col items-center justify-center p-8 lg:p-12 z-10 bg-white text-center">
+              <div className="mb-4 text-emerald-700">
+                <MapPin className="w-10 h-10 mx-auto" />
+              </div>
+              <h3 className="text-xl sm:text-2xl lg:text-[26px] font-black font-sora text-slate-900 mb-6 uppercase">
+                LAND Procurement
+              </h3>
+              <ul className="text-slate-700 font-semibold space-y-1.5 text-left list-disc inline-block pl-5">
+                <li>
+                  Land identification
+                  <ul className="ml-5 list-[circle] space-y-1 mt-1">
+                    <li>Aggregation</li>
+                    <li>Due diligence</li>
+                  </ul>
+                </li>
+                <li>Grid Connectivity</li>
+                <li>Regulatory &amp; transactions</li>
+              </ul>
+            </div>
+
+            {/* Right Image */}
+            <div className="relative w-full md:w-1/3 h-64 md:h-full">
+              <img src="/solutions-bg.jpg" className="w-full h-full object-cover" alt="Land Procurement" />
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent to-white" />
+            </div>
+
+          </div>
+        </div>
+      </section>
 
       <InteractiveHorizontalFlow 
         title="Our PMC Scope"

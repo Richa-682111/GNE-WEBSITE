@@ -5,7 +5,7 @@ import type { CSSProperties } from "react";
 
 export interface FeatureCard {
   title: string;
-  description: string;
+  description: string | React.ReactNode;
   icon: LucideIcon;
   image?: string;
 }
@@ -13,9 +13,11 @@ export interface FeatureCard {
 export function BentoFeatureGrid({
   title = "Why Choose GNE Infra",
   features,
+  hideBadge = false,
 }: {
   title?: string;
   features: FeatureCard[];
+  hideBadge?: boolean;
 }) {
   return (
     <section className="py-24 sm:py-32 relative overflow-hidden bg-white">
@@ -95,13 +97,15 @@ export function BentoFeatureGrid({
                   {/* Bottom Content Area */}
                   <div className="relative p-7 sm:p-9 pb-8 sm:pb-10 z-20 flex flex-col justify-end text-left mt-auto">
                     {/* Eyebrow Pill Badge */}
-                    <span
-                      className="mb-3 w-fit inline-flex items-center gap-1.5 rounded-full px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider shadow-md backdrop-blur-sm"
-                      style={{ background: accent.bg, color: accent.color, border: `1px solid ${accent.border}` }}
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: accent.color }} />
-                      Capability 0{idx + 1}
-                    </span>
+                    {!hideBadge && (
+                      <span
+                        className="mb-3 w-fit inline-flex items-center gap-1.5 rounded-full px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider shadow-md backdrop-blur-sm"
+                        style={{ background: accent.bg, color: accent.color, border: `1px solid ${accent.border}` }}
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: accent.color }} />
+                        Capability 0{idx + 1}
+                      </span>
+                    )}
 
                     {/* Bold Pure White Title */}
                     <h3
@@ -112,12 +116,12 @@ export function BentoFeatureGrid({
                     </h3>
 
                     {/* 100% Bright Pure White Description */}
-                    <p
+                    <div
                       className="text-base sm:text-lg font-semibold leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]"
                       style={{ color: '#FFFFFF' }}
                     >
                       {feature.description}
-                    </p>
+                    </div>
                   </div>
 
                   {/* Top glowing accent border line */}

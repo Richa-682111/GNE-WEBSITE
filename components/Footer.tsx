@@ -53,7 +53,7 @@ export function Footer() {
         <div className="bg-[#113823] py-16 sm:py-20 border-t border-emerald-900/40">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-              
+
               {/* Left Column — Copy & Contact Details (Span 5) */}
               <div className="lg:col-span-5 space-y-6 text-left">
                 <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#4ade80]">
@@ -99,7 +99,7 @@ export function Footer() {
                       <MapPin className="w-5 h-5" />
                     </div>
                     <span className="text-sm text-white/90 font-medium">
-                      Greater Noida, Uttar Pradesh, India
+                      A - 114, Urbtech Trade Center, Sector - 132, Noida, UP
                     </span>
                   </div>
                 </div>
@@ -228,7 +228,7 @@ export function Footer() {
       {/* ── BOTTOM BAR: Dark Forest Green with Logo & Copyright ─────────────── */}
       <div className="bg-[#0b2617] py-8 border-t border-white/[0.06]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          
+
           {/* Logo at Bottom Left */}
           <div className="shrink-0">
             <Link href="/" className="inline-block">

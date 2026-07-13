@@ -16,7 +16,7 @@ export function ScrollReveal({
   className,
   delay = 0,
   animation = "up",
-  threshold = 0.12,
+  threshold = 0.05,
 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -32,7 +32,7 @@ export function ScrollReveal({
           observer.disconnect();
         }
       },
-      { threshold, rootMargin: "0px 0px -32px 0px" },
+      { threshold, rootMargin: "0px 0px 0px 0px" },
     );
 
     observer.observe(el);

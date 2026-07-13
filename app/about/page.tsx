@@ -25,8 +25,7 @@ import { CoreValuesSection } from "@/components/CoreValuesSection";
 
 export const metadata: Metadata = {
   title: "About GNE Infra | Our Story, Culture & Team",
-  description:
-    "Discover GNE Infra's founding story, company culture, global offices, and the passionate team building the renewable energy future.",
+
 };
 
 export default function AboutPage() {
@@ -292,38 +291,14 @@ export default function AboutPage() {
         />
 
         {/* Content */}
-        <div className="relative z-10 mx-auto w-full max-w-6xl px-4">
-          <div className="max-w-[650px] text-left space-y-6">
-            {/* Eyebrow */}
-            <div className="flex items-center gap-3">
-              <span className="w-8 h-[2px] bg-[#16a34a] shrink-0" />
-              <span className="text-[11px] font-bold uppercase tracking-[3px] text-[#22c55e]">
-                ABOUT GNE INFRA
-              </span>
-            </div>
+        <div className="relative z-10 mx-auto flex w-full max-w-6xl justify-center px-4">
+          <div className="max-w-[650px] text-center space-y-6">
 
             {/* Heading */}
             <h1 className="font-sora font-extrabold text-5xl sm:text-6xl lg:text-[72px] text-white leading-[1.05] tracking-tight">
-              About GNE Infra
+              About US
             </h1>
 
-            {/* Subtext */}
-            <p className="text-[16px] text-white/65 max-w-[500px] leading-[1.7] font-normal">
-              Discover GNE Infra&apos;s founding story, company culture, global offices, and the passionate team building the renewable energy future.
-            </p>
-
-            {/* CTA Button */}
-            <div className="pt-2">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 rounded-[6px] bg-[#16a34a] px-[28px] py-[14px] text-[14px] font-semibold text-white transition-all duration-200 hover:bg-[#15803d]"
-              >
-                <span>Discuss Your Project</span>
-                <svg className="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
           </div>
         </div>
 
@@ -342,7 +317,7 @@ export default function AboutPage() {
         {/* Optimized wide container to reduce wasted whitespace */}
         <div className="mx-auto max-w-[1380px] px-4 sm:px-8 lg:px-12">
           <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
-            
+
             {/* Left Narrative Column */}
             <div className="lg:col-span-5 space-y-6 text-left">
               {/* Eyebrow */}
@@ -366,34 +341,12 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              {/* Expertise Pills */}
-              <div className="pt-2 flex flex-wrap gap-2.5">
-                {["Solar EPC", "BESS Storage", "Wind & PSP", "Green Hydrogen", "O&M"].map((skill, index) => (
-                  <span
-                    key={index}
-                    className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 px-3.5 py-1.5 text-xs font-bold text-[#16a34a] transition-all duration-300 hover:bg-emerald-500/20 hover:scale-105"
-                  >
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                    {skill}
-                  </span>
-                ))}
-              </div>
 
-              {/* Quick Metrics Cards Below Text */}
-              <div className="grid grid-cols-2 gap-4 pt-3">
-                <div className="rounded-2xl border border-slate-200/80 bg-white/90 backdrop-blur-md p-4 shadow-sm hover:shadow-md transition-all">
-                  <div className="text-2xl sm:text-3xl font-sora font-extrabold text-[#16a34a]">500+ MWp</div>
-                  <div className="text-xs font-semibold text-slate-600 mt-0.5">Delivered Renewable Portfolio</div>
-                </div>
-                <div className="rounded-2xl border border-slate-200/80 bg-white/90 backdrop-blur-md p-4 shadow-sm hover:shadow-md transition-all">
-                  <div className="text-2xl sm:text-3xl font-sora font-extrabold text-[#0f172a]">End-to-End</div>
-                  <div className="text-xs font-semibold text-slate-600 mt-0.5">Turnkey EPC & Asset Management</div>
-                </div>
-              </div>
+
+
             </div>
-
             {/* Right Column: 3-Image Overlapping Architectural Collage + Scroll/Hover Animations */}
-            <div className="lg:col-span-7 relative pt-6 pb-14 sm:py-10 flex justify-center overflow-hidden sm:overflow-visible">
+            <div className="lg:col-span-7 relative flex items-center justify-end py-8">
               {/* Subtle ambient lighting behind images */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-emerald-500/15 blur-3xl pointer-events-none" />
 
@@ -416,24 +369,12 @@ export default function AboutPage() {
                   fill
                   className="object-cover transition-transform duration-700 group/second-hover:scale-110"
                 />
-                <div className="absolute bottom-3 left-3 right-3 bg-black/75 backdrop-blur-md rounded-xl px-3.5 py-1.5 text-xs font-bold text-white tracking-wide">
-                  Utility-Scale EPC • 500+ MWp
-                </div>
+
               </div>
 
-              {/* Floating Glass Status Card (Top Left) */}
-              <div className="absolute -top-3 left-2 sm:left-6 z-30 rounded-2xl bg-white/95 backdrop-blur-xl px-5 py-3.5 border border-emerald-500/30 shadow-xl flex items-center gap-3 transition-all duration-500 hover:scale-105">
-                <div className="relative flex h-3.5 w-3.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                  <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-[#16a34a]" />
-                </div>
-                <div>
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500">Active Sites</div>
-                  <div className="text-sm font-sora font-extrabold text-slate-900">Powering Viksit Bharat 2047</div>
-                </div>
-              </div>
+
+
             </div>
-
           </div>
         </div>
       </section>
@@ -484,17 +425,17 @@ export default function AboutPage() {
                   </span>
                 </div>
 
-                {/* Title Overlay in Banner */}
-                <div className="absolute bottom-6 left-8 right-8 z-10">
-                  <h3 className="font-sora font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
+                {/* Title Overlay - Centered in Image */}
+                <div className="absolute inset-0 flex items-center justify-center z-10">
+                  <h3 className="font-sora font-extrabold text-3xl sm:text-4xl text-white tracking-tight text-center drop-shadow-lg">
                     Our <span className="text-emerald-400">Mission</span>
                   </h3>
                 </div>
               </div>
 
               {/* Frosted Glass Content Overlay Body - EXPANDED PADDING */}
-              <div className="flex flex-col justify-between flex-grow p-8 sm:p-11 lg:p-12 bg-white/95 backdrop-blur-xl">
-                <p className="text-[#1e293b] font-medium text-[16.5px] sm:text-[18px] leading-[1.85] tracking-normal font-inter text-left">
+              <div className="flex flex-col justify-center flex-grow p-8 sm:p-11 lg:p-12 bg-white/95 backdrop-blur-xl text-center">
+                <p className="text-[#1e293b] font-medium text-[16.5px] sm:text-[18px] leading-[1.85] tracking-normal font-inter text-center">
                   To develop and execute bankable clean energy projects by combining strong EPC capabilities, land procurement with grid integration approval expertise, stakeholder management, and advanced energy solutions, while building future-ready capabilities to become Solar, BESS, Green Hydrogen, Developer and actively contributing to Viksit Bharat 2047.
                 </p>
               </div>
@@ -521,16 +462,16 @@ export default function AboutPage() {
                   </span>
                 </div>
 
-                {/* Title Overlay in Banner */}
-                <div className="absolute bottom-6 left-8 right-8 z-10">
-                  <h3 className="font-sora font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
+                {/* Title Overlay - Centered in Image */}
+                <div className="absolute inset-0 flex items-center justify-center z-10">
+                  <h3 className="font-sora font-extrabold text-3xl sm:text-4xl text-white tracking-tight text-center drop-shadow-lg">
                     Our <span className="text-orange-300">Vision</span>
                   </h3>
                 </div>
               </div>
 
               {/* Frosted Glass Content Overlay Body - EXPANDED PADDING */}
-              <div className="flex flex-col justify-between flex-grow p-8 sm:p-11 lg:p-12 bg-white/95 backdrop-blur-xl">
+              <div className="flex flex-col justify-center flex-grow p-8 sm:p-11 lg:p-12 bg-white/95 backdrop-blur-xl text-center">
                 <p className="text-[#1e293b] font-medium text-[16.5px] sm:text-[18px] leading-[1.85] tracking-normal font-inter text-left">
                   To become a leading intelligent renewable energy ecosystem, delivering solar, storage, hybrid, and green hydrogen infrastructure through execution excellence, indigenous technology, and sustainable innovation.
                 </p>
@@ -566,7 +507,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-6 auto-rows-[180px] sm:auto-rows-[200px] lg:auto-rows-[220px] xl:auto-rows-[280px]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 auto-rows-[190px] sm:auto-rows-[210px] lg:auto-rows-[230px] xl:auto-rows-[260px]">
             {/* Solar EPC */}
             <Link
               href="/solar-epc"
@@ -579,13 +520,13 @@ export default function AboutPage() {
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-amber-400/30 to-orange-500/30" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-6 sm:p-8 lg:p-10 z-10 text-left">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+              <div className="absolute bottom-5 left-0 p-5 sm:p-6 lg:p-8 z-10 text-left w-full">
                 <span className="inline-block rounded-full bg-white/20 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-wider text-white backdrop-blur-md mb-3">
                   EPC / IPP / I&C
                 </span>
                 <h3 className="text-2xl font-sora font-extrabold text-white sm:text-3xl lg:text-4xl">Solar EPC</h3>
-                <p className="mt-1 text-sm sm:text-base text-white/90 font-medium">Complete solar project lifecycle management</p>
+                <p className="mt-1 text-sm sm:text-base text-white font-semibold drop-shadow-md">Complete solar project lifecycle management</p>
               </div>
               <div className="absolute top-6 right-6 z-10 rounded-full bg-white/20 p-3 opacity-0 backdrop-blur-md transition-all duration-300 group-hover:opacity-100 group-hover:scale-110">
                 <svg className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
@@ -604,13 +545,13 @@ export default function AboutPage() {
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-cyan-600/30" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-6 sm:p-7 z-10 text-left">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+              <div className="absolute bottom-5 left-0 p-5 sm:p-6 z-10 text-left w-full">
                 <span className="inline-block rounded-full bg-white/20 px-3 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-white backdrop-blur-md mb-2.5">
                   EPC / I&C
                 </span>
                 <h3 className="text-xl sm:text-2xl font-sora font-extrabold text-white">BESS</h3>
-                <p className="mt-1 text-xs sm:text-sm text-white/90 font-medium">Battery Energy Storage Systems</p>
+                <p className="mt-1 text-xs sm:text-sm text-white font-semibold drop-shadow-md">Battery Energy Storage Systems</p>
               </div>
               <div className="absolute top-5 right-5 z-10 rounded-full bg-white/20 p-2.5 opacity-0 backdrop-blur-md transition-all duration-300 group-hover:opacity-100 group-hover:scale-110">
                 <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
@@ -629,13 +570,13 @@ export default function AboutPage() {
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/30 to-teal-600/30" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-6 sm:p-7 z-10 text-left">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+              <div className="absolute bottom-5 left-0 p-5 sm:p-6 z-10 text-left w-full">
                 <span className="inline-block rounded-full bg-white/20 px-3 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-white backdrop-blur-md mb-2.5">
                   Consultancy
                 </span>
                 <h3 className="text-xl sm:text-2xl font-sora font-extrabold text-white">PMC</h3>
-                <p className="mt-1 text-xs sm:text-sm text-white/90 font-medium">Project Management Consultancy</p>
+                <p className="mt-1 text-xs sm:text-sm text-white font-semibold drop-shadow-md">Project Management Consultancy</p>
               </div>
               <div className="absolute top-5 right-5 z-10 rounded-full bg-white/20 p-2.5 opacity-0 backdrop-blur-md transition-all duration-300 group-hover:opacity-100 group-hover:scale-110">
                 <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
@@ -654,12 +595,13 @@ export default function AboutPage() {
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/30 to-indigo-600/30" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-6 sm:p-7 z-10 text-left">
-                <span className="inline-block rounded-full bg-white/20 px-3 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-white backdrop-blur-md mb-2.5">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+              <div className="absolute bottom-4 left-0 p-5 sm:p-6 z-10 text-left w-full">
+                <span className="inline-block rounded-full bg-white/20 px-3 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-white backdrop-blur-md mb-2">
                   Operations
                 </span>
                 <h3 className="text-xl sm:text-2xl font-sora font-extrabold text-white">O&M</h3>
+                <p className="mt-1 text-xs sm:text-sm text-white font-semibold drop-shadow-md">Operations &amp; Maintenance</p>
               </div>
               <div className="absolute top-5 right-5 z-10 rounded-full bg-white/20 p-2.5 opacity-0 backdrop-blur-md transition-all duration-300 group-hover:opacity-100 group-hover:scale-110">
                 <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
@@ -678,13 +620,13 @@ export default function AboutPage() {
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-green-500/30 to-lime-600/30" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-6 sm:p-7 z-10 text-left">
-                <span className="inline-block rounded-full bg-white/20 px-3 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-white backdrop-blur-md mb-2.5">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+              <div className="absolute bottom-4 left-0 p-5 sm:p-6 z-10 text-left w-full">
+                <span className="inline-block rounded-full bg-white/20 px-3 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-white backdrop-blur-md mb-2">
                   Future Energy
                 </span>
                 <h3 className="text-xl sm:text-2xl font-sora font-extrabold text-white">Green Hydrogen</h3>
-                <p className="mt-1 text-xs sm:text-sm text-white/90 font-medium">Next-generation clean fuel solutions</p>
+                <p className="mt-1 text-xs sm:text-sm text-white font-semibold drop-shadow-md">Next-generation clean fuel solutions</p>
               </div>
               <div className="absolute top-5 right-5 z-10 rounded-full bg-white/20 p-2.5 opacity-0 backdrop-blur-md transition-all duration-300 group-hover:opacity-100 group-hover:scale-110">
                 <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
