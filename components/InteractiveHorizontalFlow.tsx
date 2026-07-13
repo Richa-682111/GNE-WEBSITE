@@ -96,7 +96,7 @@ export function InteractiveHorizontalFlow({
         </ScrollReveal>
 
         {/* Desktop Interactive Flow Track - compact pb-44 provides exact space for popup without excess empty space */}
-        <ScrollReveal className="hidden lg:block relative max-w-[1400px] mx-auto pb-44">
+        <ScrollReveal className="hidden xl:block relative max-w-[1400px] mx-auto pb-44">
           {/* Track background line */}
           <div className="absolute top-8 left-8 right-8 h-1.5 bg-white/10 rounded-full" />
           {/* Active Track line matching active accent color */}
@@ -226,7 +226,7 @@ export function InteractiveHorizontalFlow({
         </ScrollReveal>
 
         {/* Mobile Vertical Flow with Tap/Hover Preview */}
-        <ScrollReveal className="lg:hidden relative max-w-xl mx-auto px-2">
+        <ScrollReveal className="xl:hidden relative max-w-xl mx-auto px-2">
           <div className="absolute top-4 bottom-4 left-[23px] w-1 bg-white/10 rounded-full" />
           <div className="flex flex-col gap-10 relative z-10">
             {steps.map((step, idx) => {
@@ -278,7 +278,7 @@ export function InteractiveHorizontalFlow({
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="ml-18 rounded-xl overflow-hidden border bg-[#0f1d30] shadow-lg"
+                        className="ml-[4.5rem] rounded-xl overflow-hidden border bg-[#0f1d30] shadow-lg"
                         style={{ borderColor: accent.border }}
                       >
                         <div

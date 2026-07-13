@@ -172,10 +172,10 @@ export function TimelineJourney() {
                       boxShadow: isActive ? `0 8px 30px ${step.glow}` : undefined,
                     }}
                   >
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2 sm:gap-4 min-w-0">
                       {/* Year badge pill */}
                       <span
-                        className={`font-mono text-xs sm:text-sm font-extrabold px-3.5 py-1.5 rounded-xl transition-all duration-300 border ${isActive
+                        className={`font-mono text-[10px] sm:text-sm font-extrabold px-3 py-1.5 sm:px-3.5 rounded-xl transition-all duration-300 border truncate max-w-[5rem] sm:max-w-none ${isActive
                           ? "bg-white text-slate-950 border-white shadow-md scale-105"
                           : "bg-slate-800 text-white border-slate-700 shadow-sm group-hover:bg-slate-900"
                           }`}
@@ -184,7 +184,7 @@ export function TimelineJourney() {
                       </span>
 
                       {/* Phase Title in distinct color */}
-                      <div className={`font-sora font-black text-lg sm:text-xl tracking-tight transition-colors duration-200 ${step.textClass}`}>
+                      <div className={`font-sora font-black text-sm sm:text-xl tracking-tight transition-colors duration-200 truncate min-w-0 ${step.textClass}`}>
                         {step.phase}
                       </div>
                     </div>

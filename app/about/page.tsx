@@ -393,7 +393,7 @@ export default function AboutPage() {
             </div>
 
             {/* Right Column: 3-Image Overlapping Architectural Collage + Scroll/Hover Animations */}
-            <div className="lg:col-span-7 relative pt-6 pb-14 sm:py-10 flex justify-center">
+            <div className="lg:col-span-7 relative pt-6 pb-14 sm:py-10 flex justify-center overflow-hidden sm:overflow-visible">
               {/* Subtle ambient lighting behind images */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-emerald-500/15 blur-3xl pointer-events-none" />
 

@@ -94,7 +94,7 @@ export function CoreValuesSection() {
             return (
               <div
                 key={idx}
-                className="sticky w-full rounded-[36px] overflow-hidden border border-slate-200/20 dark:border-slate-800/40 shadow-2xl transition-all duration-500 group bg-slate-950"
+                className="sticky w-full flex flex-col rounded-[36px] overflow-hidden border border-slate-200/20 dark:border-slate-800/40 shadow-2xl transition-all duration-500 group bg-slate-950"
                 style={{ top: topOffset, minHeight: "clamp(380px, 60vh, 540px)" }}
               >
                 {/* Crisp Background Image (NO backdrop blur!) */}
@@ -108,7 +108,7 @@ export function CoreValuesSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/60 to-slate-950/20" />
 
                 {/* Content Container */}
-                <div className="relative z-10 p-8 sm:p-14 md:p-20 flex flex-col justify-end min-h-[580px] text-left">
+                <div className="relative z-10 flex-1 p-8 sm:p-14 md:p-20 flex flex-col justify-end text-left">
                   <div className="flex items-center gap-3 mb-6">
                     <div
                       className="w-14 h-14 rounded-2xl flex items-center justify-center backdrop-blur-md shadow-lg border border-white/10"

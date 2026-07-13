@@ -73,7 +73,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-emerald-500/20 via-sky-400/10 to-teal-400/10 blur-2xl" />
 
                 <div className="relative w-full max-w-xl overflow-hidden rounded-3xl p-6 shadow-2xl sm:p-8" style={{ background: 'linear-gradient(135deg, #e2efe7 0%, #cbe4d5 100%)', border: '1.5px solid rgba(13,115,66,0.35)', boxShadow: '0 20px 50px rgba(13,115,66,0.12), 0 8px 20px rgba(0,0,0,0.06)' }}>
-                  <div className="relative mx-auto flex h-64 w-64 items-center justify-center sm:h-80 sm:w-80 lg:h-96 lg:w-96 [--orbit-radius:85px] sm:[--orbit-radius:120px] lg:[--orbit-radius:170px]">
+                  <div className="relative mx-auto flex h-64 w-64 items-center justify-center sm:h-80 sm:w-80 lg:h-80 lg:w-80 xl:h-96 xl:w-96 [--orbit-radius:85px] sm:[--orbit-radius:120px] lg:[--orbit-radius:120px] xl:[--orbit-radius:170px]">
                     {/* Animated orbit rings */}
                     <div className="absolute inset-0 animate-[spin_18s_linear_infinite] rounded-full border-2 border-dashed border-emerald-300/40 dark:border-emerald-700/40" />
                     <div className="absolute inset-6 animate-[spin_24s_linear_infinite_reverse] rounded-full border border-dashed border-sky-300/30 dark:border-sky-700/30" />
