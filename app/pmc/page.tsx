@@ -48,11 +48,11 @@ export default function PmcPage() {
       image: "/pmc-monitoring.png",
     },
     {
-      title: "PMC & OWNER'S ENGINEER",
+      title: "PMC & OWNER&apos;S ENGINEER",
       description: (
         <ul className="list-disc pl-5 space-y-1">
           <li>Feasibility & DPR</li>
-          <li>Owner's Engineering</li>
+          <li>Owner&apos;s Engineering</li>
           <li>Vendor Selection and Procurement Support</li>
           <li>EHS and Quality Control Support</li>
           <li>Commissioning and Supervision</li>
@@ -116,19 +116,19 @@ export default function PmcPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <JsonLd data={jsonLd} />
-      
+
       <PremiumServiceHero
         title="Project Management Consultancy"
         subtitle="Delivering end-to-end Project Management Consultancy (PMC) services for renewable energy and infrastructure projects, ensuring seamless planning, execution, quality assurance, and timely project delivery from concept to commissioning."
         image="/service-pmc.jpg"
       />
 
-      <EditorialIntro 
+      <EditorialIntro
         title="Driving Successful Project Delivery through Expert Management"
         content="GNE Infra provides comprehensive Project Management Consultancy (PMC) services for solar, BESS, and renewable energy infrastructure projects. Acting as the client's representative, we oversee planning, engineering coordination, procurement, construction, quality control, and project execution to ensure every project is delivered safely, on schedule, within budget, and in compliance with technical and regulatory requirements."
       />
 
-      <BentoFeatureGrid 
+      <BentoFeatureGrid
         title="Our 7 Verticals"
         features={features}
         hideBadge={true}
@@ -138,7 +138,7 @@ export default function PmcPage() {
       <section className="pb-24 pt-4 relative bg-white px-4 z-10">
         <div className="mx-auto max-w-[1400px]">
           <div className="rounded-[32px] overflow-hidden border border-emerald-900/10 shadow-2xl bg-white flex flex-col md:flex-row relative h-auto md:h-80">
-            
+
             {/* Left Image */}
             <div className="relative w-full md:w-1/3 h-64 md:h-full">
               <img src="/service-land.jpg" className="w-full h-full object-cover" alt="Land Identification" />
@@ -176,7 +176,7 @@ export default function PmcPage() {
         </div>
       </section>
 
-      <InteractiveHorizontalFlow 
+      <InteractiveHorizontalFlow
         title="Our PMC Scope"
         steps={scopeSteps}
       />
