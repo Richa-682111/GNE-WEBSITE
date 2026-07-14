@@ -472,7 +472,7 @@ export default function AboutPage() {
 
               {/* Frosted Glass Content Overlay Body - EXPANDED PADDING */}
               <div className="flex flex-col justify-center flex-grow p-8 sm:p-11 lg:p-12 bg-white/95 backdrop-blur-xl text-center">
-                <p className="text-[#1e293b] font-medium text-[16.5px] sm:text-[18px] leading-[1.85] tracking-normal font-inter text-left">
+                <p className="text-[#1e293b] font-medium text-[16.5px] sm:text-[18px] leading-[1.85] tracking-normal font-inter text-center">
                   To become a leading intelligent renewable energy ecosystem, delivering solar, storage, hybrid, and green hydrogen infrastructure through execution excellence, indigenous technology, and sustainable innovation.
                 </p>
               </div>
@@ -671,7 +671,7 @@ export default function AboutPage() {
               </span>
             </div>
             <h2 className="font-sora font-extrabold text-3xl sm:text-5xl" style={{ color: '#010101' }}>
-              Meet Our <span style={{ color: '#1a98a8ff' }}>Board Members</span>
+              Meet Our <span style={{ color: '#14b56fff' }}>Top Management</span>
             </h2>
             <p className="mt-2 text-base sm:text-lg max-w-2xl font-normal" style={{ color: '#5a5249' }}>
               Experienced leaders driving renewable energy across solar, BESS, and hydrogen.

@@ -37,121 +37,136 @@ const lifecyclePhases = [
     icon: Compass,
     accent: "#256c4aff",
     tagline: "Sourcing & securing high-yield locations",
-    description: "Identifying prime solar radiation & wind zones, assessing topography, grid connectivity, and securing land rights.",
+    description: "Identify suitable land considering resource availability, accessibility, and legal ownership.",
     deliverables: [
-      "Solar radiation mapping",
-      "Topographical & soil surveys",
-      "Grid connection feasibility",
-      "Land lease & easement security"
+      "Solar/Wind resource assessment",
+      "Land & topographical survey",
+      "Ownership & land due diligence",
+
     ]
   },
   {
     number: "02",
+    title: "Grid Connectivity",
+    image: "/o&m.png",
+    icon: Wrench,
+    accent: "#2b6cb0",
+    tagline: "Asset management & uptime maximization",
+    description: "Assess grid availability and secure evacuation connectivity for the project.",
+    deliverables: [
+      "Grid feasibility study",
+
+      "Substation & transmission assessment",
+      "Connectivity approvals",
+
+    ]
+  },
+  {
+    number: "03",
     title: "Feasibility Study",
     image: "/service-pmc.jpg",
     icon: ClipboardList,
     accent: "#ad5d50",
     tagline: "Assessing viability & optimizing parameters",
-    description: "In-depth geotechnical, hydrological, and financial analysis to ensure maximum return on investment.",
+    description: "Evaluate technical, financial, environmental, and regulatory viability.",
     deliverables: [
-      "Detailed financial modeling",
-      "Hydrological & geotechnical studies",
-      "Environmental risk mitigation",
-      "Regulatory compliance clearance"
+
+      "Techno-commercial analysis",
+      "Financial assessment",
+      "Risk & regulatory review"
     ]
   },
   {
-    number: "03",
+    number: "04",
     title: "Engineering",
     image: "/service-epc.jpg",
     icon: Lightbulb,
     accent: "#1a98a8ff",
     tagline: "Precision design for optimal performance",
-    description: "Precision electrical, civil, and mechanical design utilizing advanced simulation tools for optimal energy yield.",
+    description: "Develop detailed engineering designs and project documentation.",
     deliverables: [
-      "Plant layout optimization",
-      "Electrical string & inverter sizing",
-      "Structural wind load analysis",
-      "Detailed SLDs & civil drawings"
+
+      "Layouts & SLD preparation",
+      "Equipment sizing & design",
+      "BOQ & technical specifications"
     ]
   },
   {
-    number: "04",
+    number: "05",
     title: "Procurement",
     image: "/service-manufacturing.jpg",
     icon: Package,
     accent: "#e08e23ff",
     tagline: "Strategic sourcing of tier-1 technology",
-    description: "Sourcing tier-1 solar modules, high-efficiency inverters, and premium structures through a robust global supply chain.",
+    description: "Source quality equipment and manage vendor selection and contracts.",
     deliverables: [
-      "Tier-1 equipment selection",
-      "Global supply chain negotiation",
-      "Quality assurance audits",
-      "Logistics & on-site delivery tracking"
-    ]
-  },
-  {
-    number: "05",
-    title: "Construction",
-    image: "/service-installation.jpg",
-    icon: Hammer,
-    accent: "#357757ff",
-    tagline: "Rapid and safe on-site implementation",
-    description: "Safe, rapid, and high-quality civil and electrical works, adhering strictly to global execution standards.",
-    deliverables: [
-      "Site grading & pile ramming",
-      "Module mounting & cabling",
-      "Inverter & transformer installation",
-      "SCADA & sub-station construction"
+      "Vendor evaluation",
+      "Equipment procurement",
+      "Logistics planning"
     ]
   },
   {
     number: "06",
-    title: "Commissioning",
-    image: "/hero-solar-farm.png",
-    icon: Zap,
-    accent: "#c05a4aff",
-    tagline: "Grid integration & performance validation",
-    description: "Comprehensive hot & cold testing, grid synchronization, and final compliance approval for seamless power export.",
+    title: "Construction",
+    image: "/service-installation.jpg",
+    icon: Hammer,
+    accent: "#439e72ff",
+    tagline: "Rapid and safe on-site implementation",
+    description: "Execute civil, electrical, and mechanical works as per project schedule.",
     deliverables: [
-      "Pre-commissioning cold testing",
-      "Hot commissioning & energization",
-      "Grid synchronization & output checks",
-      "Regulatory inspection & COD sign-off"
+      "Civil & structural works",
+      "Equipment installation",
+      "Quality & safety management"
     ]
   },
   {
     number: "07",
+    title: "Commissioning",
+    image: "/hero-solar-farm.png",
+    icon: Zap,
+    accent: "#0ed6a4ff",
+    tagline: "Grid integration & performance validation",
+    description: "Test, validate, and energize the plant for commercial operation.",
+    deliverables: [
+      "System testing",
+      "Performance verification",
+      "Grid synchronization",
+    ]
+  },
+  {
+    number: "08",
     title: "O&M",
     image: "/o&m.png",
     icon: Wrench,
-    accent: "#2b6cb0",
+    accent: "#7f40a7ff",
     tagline: "Asset management & uptime maximization",
-    description: "Long-term predictive maintenance, real-time performance monitoring, and maximum plant uptime.",
+    description: "Operate and maintain the plant for reliable long-term performance.",
     deliverables: [
-      "24/7 remote monitoring (SCADA)",
-      "Predictive thermal imaging",
-      "Preventative module cleaning & maintenance",
-      "Rapid-response component replacement"
+
+      "Preventive maintenance",
+      "Performance monitoring",
+      "Asset optimization"
     ]
   }
 ];
 
 const getOuterPopupPosition = (idx: number) => {
   switch (idx) {
-    case 0: // Top (12 o'clock) - card pops up above
+    case 0: // Top (12:00)
       return "bottom-[105%] left-1/2 -translate-x-1/2 mb-2";
     case 1: // Top-Right (~1:30)
       return "left-[105%] bottom-0 ml-4";
-    case 2: // Right (~3:30)
+    case 2: // Right (~3:00)
       return "left-[105%] top-1/2 -translate-y-1/2 ml-4";
-    case 3: // Bottom-Right (~5:00)
+    case 3: // Bottom-Right (~4:30)
       return "left-[105%] top-0 ml-4";
-    case 4: // Bottom-Left (~7:00)
+    case 4: // Bottom (6:00)
+      return "top-[105%] left-1/2 -translate-x-1/2 mt-2";
+    case 5: // Bottom-Left (~7:30)
       return "right-[105%] top-0 mr-4";
-    case 5: // Left (~8:30)
+    case 6: // Left (~9:00)
       return "right-[105%] top-1/2 -translate-y-1/2 mr-4";
-    case 6: // Top-Left (~10:30)
+    case 7: // Top-Left (~10:30)
       return "right-[105%] bottom-0 mr-4";
     default:
       return "left-[105%] ml-4";
@@ -567,7 +582,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
           </h2>
           <div className="mt-3.5 mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#0d7342ff] to-teal-400 animate-pulse" />
           <p className="mt-4 text-base sm:text-lg font-semibold max-w-2xl mx-auto leading-relaxed" style={{ color: '#492c06ff' }}>
-            A structured 7-phase execution framework ensuring precision engineering, tier-1 procurement, and rapid on-site commissioning.
+            A structured 8-phase execution framework ensuring precision engineering, tier-1 procurement, and rapid on-site commissioning.
           </p>
         </div>
 
@@ -594,7 +609,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
               <h3 className="text-3xl font-black mb-4 transition-colors duration-300" style={{ color: lifecyclePhases[activePhase].accent }}>
                 {lifecyclePhases[activePhase].title}
               </h3>
-              <p className="text-[14.5px] font-medium leading-relaxed mb-6" style={{ color: '#475569' }}>
+              <p className="text-[14.5px] font-medium leading-relaxed mb-6 text-center" style={{ color: '#475569' }}>
                 {lifecyclePhases[activePhase].description}
               </p>
               <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-700 to-transparent mb-6" />
@@ -610,7 +625,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
 
             {/* Circular Floating Items */}
             {lifecyclePhases.map((phase, idx) => {
-              const angle = (idx * (360 / 7)) - 90;
+              const angle = (idx * (360 / lifecyclePhases.length)) - 90;
               const isActive = activePhase === idx;
               return (
                 <button
@@ -645,7 +660,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                   </div>
 
                   {/* Glassmorphic 3D-like Box wrapper */}
-                  <div 
+                  <div
                     className={`relative w-24 h-24 mb-4 rounded-3xl shadow-xl flex items-center justify-center transition-all duration-500 ${isActive ? '-translate-y-2' : 'bg-white dark:bg-slate-800 shadow-slate-200/50 dark:shadow-none'}`}
                     style={{
                       backgroundColor: isActive ? phase.accent : `${phase.accent}15`,
@@ -658,7 +673,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                     <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent rounded-3xl pointer-events-none" />
                     <phase.icon className="h-10 w-10 relative z-10" />
                   </div>
-                  <div 
+                  <div
                     className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl rounded-2xl p-4 shadow-xl transition-all duration-500 w-full border"
                     style={{
                       borderColor: isActive ? phase.accent : `${phase.accent}35`,
@@ -684,7 +699,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                     onClick={() => setActivePhase(idx)}
                     className="flex items-center gap-4 z-10 text-left w-full"
                   >
-                    <div 
+                    <div
                       className={`w-14 h-14 shrink-0 rounded-2xl shadow-lg flex items-center justify-center transition-colors duration-300 ${isActive ? '' : 'bg-white dark:bg-slate-800'}`}
                       style={{
                         backgroundColor: isActive ? phase.accent : `${phase.accent}15`,
@@ -706,11 +721,22 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                       <p className="text-[13px] font-medium leading-relaxed mb-3" style={{ color: '#475569' }}>
                         {phase.description}
                       </p>
-                      <ul className="text-[12px] space-y-2 font-semibold" style={{ color: '#334155' }}>
-                        {phase.deliverables.slice(0, 3).map((d, i) => (
-                          <li key={i} className="flex items-start gap-2">
-                            <CheckCircle2 className="w-3.5 h-3.5 shrink-0 mt-0.5" style={{ color: phase.accent }} />
-                            <span className="leading-tight">{d}</span>
+                      <ul
+                        className="w-full space-y-3 text-[13.5px] font-semibold"
+                        style={{ color: "#334155" }}
+                      >
+                        {lifecyclePhases[activePhase].deliverables.slice(0, 3).map((d, i) => (
+                          <li
+                            key={i}
+                            className="flex items-center justify-start text-left"
+                          >
+                            <div className="inline-flex items-center gap-2">
+                              <CheckCircle2
+                                className="h-4 w-4 shrink-0"
+                                style={{ color: lifecyclePhases[activePhase].accent }}
+                              />
+                              <span>{d}</span>
+                            </div>
                           </li>
                         ))}
                       </ul>
@@ -766,81 +792,81 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
 
             {/* Grid Layout of Inner Feature Rows */}
             <div className="grid gap-8 sm:grid-cols-2">
-            {/* Feature 1 */}
-            <div className="flex gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-white shadow-sm transition-all duration-300 hover:scale-105 hover:rotate-3">
-                <Building2 className="h-6 w-6" />
+              {/* Feature 1 */}
+              <div className="flex gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-white shadow-sm transition-all duration-300 hover:scale-105 hover:rotate-3">
+                  <Building2 className="h-6 w-6" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold leading-snug text-white">
+                    End-to-End EPC Delivery
+                  </h4>
+                  <p className="mt-1.5 text-[15px] leading-relaxed font-medium text-white/85">
+                    Comprehensive project execution from engineering to commissioning.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h4 className="text-lg font-bold leading-snug text-white">
-                  End-to-End EPC Delivery
-                </h4>
-                <p className="mt-1.5 text-[15px] leading-relaxed font-medium text-white/85">
-                  Comprehensive project execution from engineering to commissioning.
-                </p>
-              </div>
-            </div>
 
-            {/* Feature 2 */}
-            <div className="flex gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-white shadow-sm transition-all duration-300 hover:scale-105 hover:rotate-3">
-                <DraftingCompass className="h-6 w-6" />
+              {/* Feature 2 */}
+              <div className="flex gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-white shadow-sm transition-all duration-300 hover:scale-105 hover:rotate-3">
+                  <DraftingCompass className="h-6 w-6" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold leading-snug text-white">
+                    Engineering Excellence
+                  </h4>
+                  <p className="mt-1.5 text-[15px] leading-relaxed font-medium text-white/85">
+                    Optimized system design for maximum performance and reliability.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h4 className="text-lg font-bold leading-snug text-white">
-                  Engineering Excellence
-                </h4>
-                <p className="mt-1.5 text-[15px] leading-relaxed font-medium text-white/85">
-                  Optimized system design for maximum performance and reliability.
-                </p>
-              </div>
-            </div>
 
-            {/* Feature 3 */}
-            <div className="flex gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-white shadow-sm transition-all duration-300 hover:scale-105 hover:rotate-3">
-                <ShieldCheck className="h-6 w-6" />
+              {/* Feature 3 */}
+              <div className="flex gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-white shadow-sm transition-all duration-300 hover:scale-105 hover:rotate-3">
+                  <ShieldCheck className="h-6 w-6" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold leading-snug text-white">
+                    Quality-Driven Execution
+                  </h4>
+                  <p className="mt-1.5 text-[15px] leading-relaxed font-medium text-white/85">
+                    Strict quality assurance at every stage of construction.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h4 className="text-lg font-bold leading-snug text-white">
-                  Quality-Driven Execution
-                </h4>
-                <p className="mt-1.5 text-[15px] leading-relaxed font-medium text-white/85">
-                  Strict quality assurance at every stage of construction.
-                </p>
-              </div>
-            </div>
 
-            {/* Feature 4 */}
-            <div className="flex gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-white shadow-sm transition-all duration-300 hover:scale-105 hover:rotate-3">
-                <TowerControl className="h-6 w-6" />
+              {/* Feature 4 */}
+              <div className="flex gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-white shadow-sm transition-all duration-300 hover:scale-105 hover:rotate-3">
+                  <TowerControl className="h-6 w-6" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold leading-snug text-white">
+                    Land &amp; Grid Expertise
+                  </h4>
+                  <p className="mt-1.5 text-[15px] leading-relaxed font-medium text-white/85">
+                    Integrated support for land development and grid connectivity.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h4 className="text-lg font-bold leading-snug text-white">
-                  Land &amp; Grid Expertise
-                </h4>
-                <p className="mt-1.5 text-[15px] leading-relaxed font-medium text-white/85">
-                  Integrated support for land development and grid connectivity.
-                </p>
-              </div>
-            </div>
 
-            {/* Feature 5 */}
-            <div className="flex gap-4 sm:col-span-2">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-white shadow-sm transition-all duration-300 hover:scale-105 hover:rotate-3">
-                <BriefcaseBusiness className="h-6 w-6" />
-              </div>
-              <div>
-                <h4 className="text-lg font-bold leading-snug text-white">
-                  Experienced Project Management
-                </h4>
-                <p className="mt-1.5 text-[15px] leading-relaxed font-medium text-white/85">
-                  Structured planning and execution with schedule adherence.
-                </p>
+              {/* Feature 5 */}
+              <div className="flex gap-4 sm:col-span-2">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-white shadow-sm transition-all duration-300 hover:scale-105 hover:rotate-3">
+                  <BriefcaseBusiness className="h-6 w-6" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold leading-snug text-white">
+                    Experienced Project Management
+                  </h4>
+                  <p className="mt-1.5 text-[15px] leading-relaxed font-medium text-white/85">
+                    Structured planning and execution with schedule adherence.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
           </div>
         </div>
       </ScrollReveal>

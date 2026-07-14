@@ -162,7 +162,7 @@ export function InteractiveHorizontalFlow({
                             style={{ color: accent.color, borderColor: accent.border }}
                           >
                             <Eye className="w-3 h-3" style={{ color: accent.color }} />
-                            <span>STEP 0{idx + 1} RELEVANCE</span>
+
                           </div>
                         </div>
                         <div className="p-3 bg-[#0d1a28]/95 border-t border-white/10">

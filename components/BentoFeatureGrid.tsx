@@ -20,7 +20,7 @@ export function BentoFeatureGrid({
   hideBadge?: boolean;
 }) {
   return (
-    <section className="py-24 sm:py-32 relative overflow-hidden bg-white">
+    <section className="pt-16 pb-6 relative overflow-hidden bg-white">
       {/* Subtle light grid lines */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-40"
         style={{
@@ -117,7 +117,7 @@ export function BentoFeatureGrid({
 
                     {/* 100% Bright Pure White Description */}
                     <div
-                      className="text-base sm:text-lg font-semibold leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]"
+                      className="text-base sm:text-lg font-semibold leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)] [&_ul]:list-none [&_li]:flex [&_li]:items-start [&_li]:gap-2 [&_li]:before:content-[''] [&_li]:before:mt-[7px] [&_li]:before:w-1.5 [&_li]:before:h-1.5 [&_li]:before:rounded-full [&_li]:before:bg-emerald-400 [&_li]:before:shrink-0 [&_li]:pl-0 [&_ul]:pl-0"
                       style={{ color: '#FFFFFF' }}
                     >
                       {feature.description}

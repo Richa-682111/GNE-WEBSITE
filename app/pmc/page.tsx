@@ -105,12 +105,13 @@ export default function PmcPage() {
 
   const scopeSteps = [
     { title: "Planning" },
-    { title: "Engineering Coord." },
-    { title: "Procurement" },
-    { title: "Monitoring" },
-    { title: "Risk Mgmt" },
-    { title: "Commissioning" },
-    { title: "Handover" },
+    { title: "Owner's Engineer" },
+    { title: "Detailed Engineering" },
+    { title: "Procurement Support" },
+    { title: "Construction Support and Supervision" },
+    { title: "EHS Supoort" },
+    { title: "Commissioning Supervision" },
+
   ];
 
   return (
@@ -135,41 +136,63 @@ export default function PmcPage() {
       />
 
       {/* 7th Vertical: Land Procurement */}
-      <section className="pb-24 pt-4 relative bg-white px-4 z-10">
+      <section className="-mt-10 pb-24 pt-4 relative bg-white px-4 sm:px-8 lg:px-12 z-10">
         <div className="mx-auto max-w-[1400px]">
-          <div className="rounded-[32px] overflow-hidden border border-emerald-900/10 shadow-2xl bg-white flex flex-col md:flex-row relative h-auto md:h-80">
+          <div className="rounded-[32px] overflow-hidden border border-slate-800 shadow-2xl bg-[#080E1E] flex flex-col md:flex-row relative h-auto md:h-80 transition-all duration-500 hover:shadow-[0_25px_60px_rgba(22,163,74,0.15)] group">
 
-            {/* Left Image */}
-            <div className="relative w-full md:w-1/3 h-64 md:h-full">
-              <img src="/service-land.jpg" className="w-full h-full object-cover" alt="Land Identification" />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white" />
-            </div>
-
-            {/* Center Content */}
-            <div className="w-full md:w-1/3 flex flex-col items-center justify-center p-8 lg:p-12 z-10 bg-white text-center">
-              <div className="mb-4 text-emerald-700">
-                <MapPin className="w-10 h-10 mx-auto" />
+            {/* Background Images Layer */}
+            <div className="absolute inset-0 flex flex-col md:flex-row pointer-events-none">
+              {/* Left half */}
+              <div className="w-full md:w-1/2 h-1/2 md:h-full relative">
+                <img src="/service-land.jpg" className="w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500" alt="Land Identification" />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#080E1E]/60 to-[#080E1E]" />
               </div>
-              <h3 className="text-xl sm:text-2xl lg:text-[26px] font-black font-sora text-slate-900 mb-6 uppercase">
-                LAND Procurement
-              </h3>
-              <ul className="text-slate-700 font-semibold space-y-1.5 text-left list-disc inline-block pl-5">
-                <li>
-                  Land identification
-                  <ul className="ml-5 list-[circle] space-y-1 mt-1">
-                    <li>Aggregation</li>
-                    <li>Due diligence</li>
-                  </ul>
-                </li>
-                <li>Grid Connectivity</li>
-                <li>Regulatory &amp; transactions</li>
-              </ul>
+              {/* Right half */}
+              <div className="w-full md:w-1/2 h-1/2 md:h-full relative">
+                <img src="/solutions-bg.jpg" className="w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500" alt="Land Procurement" />
+                <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#080E1E]/60 to-[#080E1E]" />
+              </div>
             </div>
 
-            {/* Right Image */}
-            <div className="relative w-full md:w-1/3 h-64 md:h-full">
-              <img src="/solutions-bg.jpg" className="w-full h-full object-cover" alt="Land Procurement" />
-              <div className="absolute inset-0 bg-gradient-to-l from-transparent to-white" />
+            {/* Content Layer */}
+            <div className="relative z-10 w-full h-full flex flex-col md:flex-row">
+              {/* Left empty spacer */}
+              <div className="hidden md:block md:w-1/3"></div>
+              
+              {/* Center Content */}
+              <div className="w-full md:w-1/3 h-full flex flex-col items-center justify-center p-8 lg:p-12 text-center bg-[#080E1E]/30 backdrop-blur-xl border-x border-white/5 shadow-2xl py-12 md:py-0">
+                <div className="mb-4 text-[#4ade80]">
+                  <MapPin className="w-10 h-10 mx-auto drop-shadow-lg" />
+                </div>
+                <h3 className="text-xl sm:text-2xl lg:text-[26px] font-black font-sora text-white mb-6 uppercase drop-shadow-md">
+                  LAND Procurement
+                </h3>
+                <ul className="text-white/90 font-semibold text-sm flex flex-col items-start gap-y-2.5 drop-shadow-md">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#4ade80] shrink-0" />
+                    Land identification
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#4ade80] shrink-0" />
+                    Aggregation
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#4ade80] shrink-0" />
+                    Due diligence
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#4ade80] shrink-0" />
+                    Grid Connectivity
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#4ade80] shrink-0" />
+                    Regulatory &amp; transactions
+                  </li>
+                </ul>
+              </div>
+
+              {/* Right empty spacer */}
+              <div className="hidden md:block md:w-1/3"></div>
             </div>
 
           </div>
