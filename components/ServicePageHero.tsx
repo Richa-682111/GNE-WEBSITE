@@ -24,7 +24,7 @@ export function ServicePageHero({
   className = "bg-service-gradient",
 }: ServicePageHeroProps) {
   return (
-    <section className={`${className} py-10 sm:py-12`}>
+    <section className={`${className} pt-2 pb-10 sm:pt-4 sm:pb-12`}>
       <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 lg:grid-cols-[1.05fr_0.95fr]">
         <div>
           {badge}

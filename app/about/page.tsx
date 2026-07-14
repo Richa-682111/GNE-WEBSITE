@@ -335,7 +335,7 @@ export default function AboutPage() {
 
               {/* Exact Description Text - Left Aligned */}
               <div className="space-y-4 text-[15.5px] leading-[1.8]" style={{ color: '#5a5249' }}>
-                <p className="text-left">
+                <p className="text-justify ">
                   GNE Infra is an integrated clean energy infrastructure company delivering end-to-end solutions across Engineering, Procurement & Construction (EPC), Project Management Consultancy (PMC), and Operations & Maintenance (O&M). Our expertise spans Solar Power, Battery Energy Storage Systems (BESS), Wind Energy, and Pumped Storage Projects (PSP), supporting projects from concept and engineering through commissioning and long-term asset management.
                   Driven by innovation and execution excellence, GNE Infra is expanding into Green Hydrogen and next-generation energy technologies to accelerate the transition towards a sustainable, resilient, and low-carbon energy future.
                 </p>

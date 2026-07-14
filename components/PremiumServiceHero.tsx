@@ -19,7 +19,7 @@ export function PremiumServiceHero({
   ctaLink?: string;
 }) {
   return (
-    <section className="relative h-auto min-h-[500px] py-16 lg:py-0 lg:h-[85vh] lg:min-h-[600px] w-full flex items-center justify-start overflow-hidden">
+    <section className="relative w-full flex items-start justify-start overflow-hidden min-h-[500px] lg:min-h-[75vh] h-auto">
       {/* Background Image */}
       <div className="absolute inset-0 -z-20">
         <Image
@@ -39,16 +39,11 @@ export function PremiumServiceHero({
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#0d7342ff]/20 rounded-full blur-[120px] pointer-events-none -z-10" />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-32 pb-20 lg:pb-28">
         <ScrollReveal>
           <div className="max-w-3xl">
-            {/* Eyebrow label */}
-            <span
-              className="mb-6 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest"
-              style={{ background: 'rgba(13,115,66,0.20)', color: '#4ade80', outline: '1px solid rgba(13,115,66,0.4)' }}
-            >
-              GNE Infra Service
-            </span>
+
+
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black font-sora tracking-tight text-white leading-[1.1] mb-5 sm:mb-7">
               {title}

@@ -128,12 +128,15 @@ export function TimelineJourney() {
 
           {/* LEFT PANEL (40% - 5 Cols): WARM PEACH-TERRACOTTA GLASSMORPHIC CARD */}
           <div
-            className="lg:col-span-5 flex flex-col justify-between rounded-[32px] p-6 sm:p-8 md:p-10 shadow-[0_20px_50px_rgba(173,93,80,0.15)] relative overflow-hidden transition-all duration-500"
-            style={{ background: 'linear-gradient(135deg, #fceee9 0%, #ecd3ca 100%)', border: '1.5px solid rgba(173,93,80,0.3)' }}
+            className="lg:col-span-5 flex flex-col justify-between rounded-[32px] p-6 sm:p-8 md:p-10 shadow-[0_20px_50px_rgba(56,142,60,0.12)] relative overflow-hidden transition-all duration-500"
+            style={{
+              background: 'linear-gradient(135deg, #fff8e7 0%, #f8ecd4 100%)',
+              border: '1.5px solid rgba(180, 140, 70, 0.2)',
+            }}
           >
 
             {/* Ambient inner glow */}
-            <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-white/50 blur-3xl pointer-events-none" />
+            <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-emerald-200/60 blur-3xl pointer-events-none" />
 
             {/* Top Heading inside Lavender Card */}
             <div className="space-y-4 relative z-10">

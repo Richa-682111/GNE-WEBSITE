@@ -191,7 +191,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
           Our Project <span style={{ color: '#256c4aff' }}>Portfolio</span>
         </h2>
         <div className="mt-3.5 mx-auto h-1.5 w-20 rounded-full bg-gradient-to-r from-[#0d7342ff] to-teal-400" />
-        <p className="mt-4 text-base sm:text-lg font-semibold max-w-2xl mx-auto leading-relaxed" style={{ color: '#492c06ff' }}>
+        <p className="mt-4 text-center text-base sm:text-lg font-semibold max-w-2xl mx-auto leading-relaxed" style={{ color: '#492c06ff' }}>
           Explore our completed renewable energy assets, projects currently under execution, and our nationwide growth pipeline across solar EPC, BESS, and O&amp;M.
         </p>
       </ScrollReveal>
@@ -267,13 +267,11 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                   </div>
                 </div>
                 <div className="p-6 sm:p-8">
-                  <h3 className="text-2xl font-black" style={{ color: '#010101' }}>
-                    41 MW Solar EPC
+                  <h3 className="text-2xl font-black leading-tight flex flex-col gap-1">
+                    <span style={{ color: '#133e0cff' }}>41 MW</span>
+                    <span style={{ color: '#7d1212ff' }}>Solar EPC</span>
                   </h3>
-                  <p className="mt-1.5 text-lg font-extrabold" style={{ color: '#0d7342ff' }}>
-
-                  </p>
-                  <div className="mt-4 flex items-center gap-2 text-sm font-semibold" style={{ color: '#492c06ff' }}>
+                  <div className="mt-4 flex items-center gap-2 text-sm font-semibold" style={{ color: '#8d560eff' }}>
                     <MapPin className="h-4.5 w-4.5 text-slate-500 shrink-0" />
                     Maharashtra
                   </div>
@@ -281,8 +279,8 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
               </div>
 
               {/* Card 2: Jackson Group */}
-              <div className="group overflow-hidden rounded-[2rem] border border-white/80 bg-white/95 dark:border-slate-800 dark:bg-slate-900/90 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1.5 backdrop-blur-xl">
-                <div className="relative h-56 sm:h-64 w-full">
+              <div className="group overflow-hidden rounded-[2rem] border border-white/80 bg-white/95 dark:border-slate-800 dark:bg-slate-900/90 shadow-lg transition-all duration-500 ease-out hover:scale-[1.04] hover:-translate-y-2.5 hover:z-30 hover:shadow-[0_25px_60px_rgba(22,163,74,0.25)] backdrop-blur-xl">
+                <div className="relative h-64 lg:h-72 xl:h-88 w-full">
                   <Image
                     src="/service-installation.jpg"
                     alt="Jackson Group O&M project"
@@ -297,13 +295,11 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                   </div>
                 </div>
                 <div className="p-6 sm:p-8">
-                  <h3 className="text-2xl font-black" style={{ color: '#010101' }}>
-                    15 MW O&amp;M
+                  <h3 className="text-2xl font-black leading-tight flex flex-col gap-1">
+                    <span style={{ color: '#133e0cff' }}>15 MW</span>
+                    <span style={{ color: '#7d1212ff' }}>O&amp;M</span>
                   </h3>
-                  <p className="mt-1.5 text-lg font-extrabold" style={{ color: '#0d7342ff' }}>
-
-                  </p>
-                  <div className="mt-4 flex items-center gap-2 text-sm font-semibold" style={{ color: '#492c06ff' }}>
+                  <div className="mt-4 flex items-center gap-2 text-sm font-semibold" style={{ color: '#8d560eff' }}>
                     <MapPin className="h-4.5 w-4.5 text-slate-500 shrink-0" />
                     Noida, Uttar Pradesh
                   </div>
@@ -581,7 +577,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
             Project Execution <span style={{ color: '#256c4aff' }}>Lifecycle</span>
           </h2>
           <div className="mt-3.5 mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#0d7342ff] to-teal-400 animate-pulse" />
-          <p className="mt-4 text-base sm:text-lg font-semibold max-w-2xl mx-auto leading-relaxed" style={{ color: '#492c06ff' }}>
+          <p className="mt-4 text-center text-base sm:text-lg font-semibold max-w-2xl mx-auto leading-relaxed" style={{ color: '#492c06ff' }}>
             A structured 8-phase execution framework ensuring precision engineering, tier-1 procurement, and rapid on-site commissioning.
           </p>
         </div>

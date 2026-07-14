@@ -66,7 +66,7 @@ export function InteractiveHorizontalFlow({
   };
 
   return (
-    <section className="py-14 sm:py-16 overflow-visible relative bg-[#0B132B]">
+    <section className="pt-14 pb-8 sm:pt-16 sm:pb-10 overflow-visible relative bg-[#0f2d1c]">
       {/* Dot grid texture */}
       <div
         className="absolute inset-0 z-0 opacity-[0.04] pointer-events-none"
@@ -95,8 +95,8 @@ export function InteractiveHorizontalFlow({
           </div>
         </ScrollReveal>
 
-        {/* Desktop Interactive Flow Track - compact pb-44 provides exact space for popup without excess empty space */}
-        <ScrollReveal className="hidden xl:block relative max-w-[1400px] mx-auto pb-44">
+        {/* Desktop Interactive Flow Track - reserve room for popup without leaving a large idle gap. */}
+        <ScrollReveal className="hidden xl:block relative max-w-[1400px] mx-auto pb-24">
           {/* Track background line */}
           <div className="absolute top-8 left-8 right-8 h-1.5 bg-white/10 rounded-full" />
           {/* Active Track line matching active accent color */}
