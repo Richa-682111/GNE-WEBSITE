@@ -95,7 +95,7 @@ export function BentoFeatureGrid({
                   </div>
 
                   {/* Bottom Content Area */}
-                  <div className="relative p-7 sm:p-9 pb-8 sm:pb-10 z-20 flex flex-col justify-end text-left mt-auto">
+                  <div className="relative px-7 pr-12 pt-7 pb-8 sm:pl-9 sm:pr-14 sm:pt-9 sm:pb-10 z-20 flex flex-col justify-end text-left mt-auto">
                     {/* Eyebrow Pill Badge */}
                     {!hideBadge && (
                       <span

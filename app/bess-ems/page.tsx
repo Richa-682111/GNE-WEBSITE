@@ -24,7 +24,7 @@ export default function BessEpcPage() {
 
   const features = [
     {
-      title: "Integrated EPC Delivery",
+      title: "Integrated BESS EPC Delivery",
       description: "Complete project execution from engineering and procurement to commissioning and handover.",
       icon: Building2,
       image: "/service-epc.jpg",
@@ -74,24 +74,24 @@ export default function BessEpcPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <JsonLd data={jsonLd} />
-      
+
       <PremiumServiceHero
         title="Battery Energy Storage System (BESS) EPC"
         subtitle="Delivering end-to-end Battery Energy Storage System (BESS) EPC solutions for utilities, renewable energy developers, and commercial & industrial applications, enabling reliable energy storage, grid stability, and optimized power management."
         image="/hero-bess-storage.png"
       />
 
-      <EditorialIntro 
+      <EditorialIntro
         title="Intelligent Energy Storage Solutions for a Reliable Grid"
         content="As renewable energy adoption continues to grow, Battery Energy Storage Systems (BESS) have become essential for improving grid stability, maximizing renewable energy utilization, and ensuring reliable power availability. GNE Infra provides integrated BESS EPC solutions covering engineering, procurement, installation, testing, commissioning, and system integration. Our solutions are designed to support utility-scale, commercial, and industrial energy storage applications with a focus on safety, performance, and long-term reliability."
       />
 
-      <BentoFeatureGrid 
+      <BentoFeatureGrid
         title="Why Choose GNE Infra"
         features={features}
       />
 
-      <InteractiveHorizontalFlow 
+      <InteractiveHorizontalFlow
         title="Our BESS EPC Scope"
         steps={scopeSteps}
       />

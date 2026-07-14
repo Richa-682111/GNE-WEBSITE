@@ -33,7 +33,7 @@ export default function PmcPage() {
         </ul>
       ),
       icon: Gavel,
-      image: "/pmc-management.png",
+      image: "/BID.png",
     },
     {
       title: "DESIGN & ENGINEERING",
@@ -48,7 +48,7 @@ export default function PmcPage() {
       image: "/pmc-monitoring.png",
     },
     {
-      title: "PMC & OWNER&apos;S ENGINEER",
+      title: "PMC & OWNER'S ENGINEER",
       description: (
         <ul className="list-disc pl-5 space-y-1">
           <li>Feasibility & DPR</li>
@@ -59,7 +59,7 @@ export default function PmcPage() {
         </ul>
       ),
       icon: HardHat,
-      image: "/pmc-stakeholders.png",
+      image: "/pmc2.png",
     },
     {
       title: "BESS ASSEMBLY PLANT",
@@ -73,7 +73,7 @@ export default function PmcPage() {
         </ul>
       ),
       icon: Factory,
-      image: "/pmc-quality.png",
+      image: "/besspmc.png",
     },
     {
       title: "SOLAR & BESS TRAINING",
@@ -158,7 +158,7 @@ export default function PmcPage() {
             <div className="relative z-10 w-full h-full flex flex-col md:flex-row">
               {/* Left empty spacer */}
               <div className="hidden md:block md:w-1/3"></div>
-              
+
               {/* Center Content */}
               <div className="w-full md:w-1/3 h-full flex flex-col items-center justify-center p-8 lg:p-12 text-center bg-[#080E1E]/30 backdrop-blur-xl border-x border-white/5 shadow-2xl py-12 md:py-0">
                 <div className="mb-4 text-[#4ade80]">

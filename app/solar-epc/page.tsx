@@ -49,7 +49,7 @@ export default function SolarEpcPage() {
       image: "/hero-solar-bess-combined.png",
     },
     {
-      title: "Experienced Management",
+      title: "Experienced Project Management",
       description: "Structured planning and execution with schedule adherence.",
       icon: BriefcaseBusiness,
       image: "/solar-blog.png",
@@ -76,24 +76,24 @@ export default function SolarEpcPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <JsonLd data={jsonLd} />
-      
+
       <PremiumServiceHero
         title="Solar EPC Solutions"
         subtitle="Delivering end-to-end Engineering, Procurement, Construction, and Commissioning solutions for utility-scale, commercial, and industrial solar power projects."
         image="/hero-solar-farm.png"
       />
 
-      <EditorialIntro 
+      <EditorialIntro
         title="Building High-Performance Solar Infrastructure"
         content="GNE Infra delivers integrated Solar EPC solutions that transform project concepts into operational renewable energy assets. From feasibility and engineering to procurement, construction, commissioning, and long-term support, we ensure every project is executed with a focus on quality, efficiency, safety, and performance."
       />
 
-      <BentoFeatureGrid 
+      <BentoFeatureGrid
         title="Why Choose GNE Infra"
         features={features}
       />
 
-      <InteractiveHorizontalFlow 
+      <InteractiveHorizontalFlow
         title="Our Solar EPC Scope"
         steps={scopeSteps}
       />
