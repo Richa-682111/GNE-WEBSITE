@@ -57,17 +57,9 @@ export default function ProjectsPage() {
               </span>
 
               <h1 
-                className="mb-6 text-4xl sm:text-6xl lg:text-[64px] font-black font-sora tracking-tight leading-[1.1] text-[#f5ece5]"
-                style={{
-                  textShadow: `
-                    0 0 4px rgba(0,0,0,0.9),
-                    0 0 8px rgba(0,0,0,0.8),
-                    0 0 16px rgba(0,0,0,0.7),
-                    2px 2px 6px rgba(0,0,0,0.9)
-                  `
-                }}
+                className="mb-6 text-4xl sm:text-6xl lg:text-[64px] font-black font-sora tracking-tight leading-[1.1] text-white"
               >
-                Projects &amp; <span style={{ color: '#4ade80' }}>Pipeline</span>
+                Projects &amp; <span style={{ color: '#ffffff' }}>Pipeline</span>
               </h1>
 
               <p 

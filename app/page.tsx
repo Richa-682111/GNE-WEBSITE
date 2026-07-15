@@ -340,7 +340,7 @@ export default function HomePage() {
               <h2 className="mt-2 text-4xl font-black tracking-tight sm:text-5xl" style={{ color: '#010101' }}>
                 Our <span style={{ color: '#256c4aff' }}>Expertise</span>
               </h2>
-              <p className="mx-auto mt-3 max-w-2xl text-sm" style={{ color: '#492c06ff' }}>
+              <p className="mx-auto mt-3 max-w-2xl text-sm text-center" style={{ color: '#492c06ff' }}>
                 End-to-end renewable energy solutions — from land identification to long-term operations — engineered for scale.
               </p>
             </div>
@@ -428,7 +428,7 @@ export default function HomePage() {
           </h2>
 
           {/* Sub-copy */}
-          <p className="mx-auto mt-5 max-w-xl text-base font-semibold text-[#FFF8E7] sm:text-lg drop-shadow-[0_4px_20px_rgba(0,0,0,0.85)]">
+          <p className="mx-auto mt-5 max-w-xl text-center text-base font-semibold text-[#FFF8E7] sm:text-lg drop-shadow-[0_4px_20px_rgba(0,0,0,0.85)]">
             Tell us your capacity, location and timeline — our engineering team will craft a solution that delivers results from day one.
           </p>
 
