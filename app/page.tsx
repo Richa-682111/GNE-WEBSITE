@@ -86,13 +86,12 @@ export default function HomePage() {
 
                     {/* Orbital nodes */}
                     {[
-                      { label: "Supply Chain", angle: 0, icon: "🔗", color: "bg-purple-100 text-purple-900 border border-purple-200/80 dark:bg-purple-900/50 dark:text-purple-200 dark:border-purple-700/50" },
-                      { label: "Material", angle: 51, icon: "🏗️", color: "bg-blue-100 text-blue-900 border border-blue-200/80 dark:bg-blue-900/50 dark:text-blue-200 dark:border-blue-700/50" },
-                      { label: "Design", angle: 102, icon: "✏️", color: "bg-pink-100 text-pink-900 border border-pink-200/80 dark:bg-pink-900/50 dark:text-pink-200 dark:border-pink-700/50" },
-                      { label: "Energy", angle: 153, icon: "⚡", color: "bg-amber-100 text-amber-900 border border-amber-200/80 dark:bg-amber-900/50 dark:text-amber-200 dark:border-amber-700/50" },
-                      { label: "Innovation", angle: 204, icon: "💡", color: "bg-indigo-100 text-indigo-900 border border-indigo-200/80 dark:bg-indigo-900/50 dark:text-indigo-200 dark:border-indigo-700/50" },
-                      { label: "Corporate", angle: 255, icon: "🌍", color: "bg-cyan-100 text-cyan-900 border border-cyan-200/80 dark:bg-cyan-900/50 dark:text-cyan-200 dark:border-cyan-700/50" },
-                      { label: "End-of-Life", angle: 306, icon: "♻️", color: "bg-rose-100 text-rose-900 border border-rose-200/80 dark:bg-rose-900/50 dark:text-rose-200 dark:border-rose-700/50" },
+                      { label: "Environment", angle: 0, icon: "🌱", color: "bg-emerald-100 text-emerald-900 border border-emerald-200/80 dark:bg-emerald-900/50 dark:text-emerald-200 dark:border-emerald-700/50" },
+                      { label: "Economic", angle: 60, icon: "📈", color: "bg-blue-100 text-blue-900 border border-blue-200/80 dark:bg-blue-900/50 dark:text-blue-200 dark:border-blue-700/50" },
+                      { label: "Operational", angle: 120, icon: "⚙️", color: "bg-amber-100 text-amber-900 border border-amber-200/80 dark:bg-amber-900/50 dark:text-amber-200 dark:border-amber-700/50" },
+                      { label: "Innovation", angle: 180, icon: "💡", color: "bg-purple-100 text-purple-900 border border-purple-200/80 dark:bg-purple-900/50 dark:text-purple-200 dark:border-purple-700/50" },
+                      { label: "Social", angle: 240, icon: "🤝", color: "bg-rose-100 text-rose-900 border border-rose-200/80 dark:bg-rose-900/50 dark:text-rose-200 dark:border-rose-700/50" },
+                      { label: "Technical", angle: 300, icon: "⚡", color: "bg-cyan-100 text-cyan-900 border border-cyan-200/80 dark:bg-cyan-900/50 dark:text-cyan-200 dark:border-cyan-700/50" },
                     ].map(({ label, angle, icon, color }) => {
                       const rad = (angle - 90) * (Math.PI / 180);
                       const cosVal = Math.cos(rad);
@@ -192,11 +191,11 @@ export default function HomePage() {
                 },
               ].map(({ num, title, body, accent }, i) => (
                 <ScrollReveal key={num} delay={i * 60}>
-                  <div className="flex gap-6 py-7 sm:gap-10 sm:py-8 rounded-xl px-2 sm:px-4 -mx-2 sm:-mx-4">
-                    <div className="shrink-0 w-14 sm:w-20">
+                  <div className="flex gap-6 py-7 sm:gap-10 sm:py-8 rounded-xl px-2 sm:px-4 -mx-2 sm:-mx-4 items-stretch">
+                    <div className="shrink-0 w-14 sm:w-20 pt-0.5">
                       <span
                         className="text-4xl sm:text-5xl font-black leading-none select-none inline-block"
-                        style={{ color: accent, opacity: 0.35 }}
+                        style={{ color: accent, opacity: 0.45 }}
                       >
                         {num}
                       </span>
@@ -205,15 +204,14 @@ export default function HomePage() {
                       className="shrink-0 w-0.5 rounded-full self-stretch opacity-60"
                       style={{ background: accent }}
                     />
-                    <div className="flex-1 min-w-0 py-1">
+                    <div className="flex-1 min-w-0 py-0.5">
                       <h3
                         className="text-base sm:text-lg font-bold leading-snug"
                         style={{ color: accent }}
                       >
-
                         {title}
                       </h3>
-                      <p className="mt-1.5 text-sm leading-relaxed max-w-xl" style={{ color: '#5a5249' }}>
+                      <p className="mt-1.5 text-sm leading-relaxed max-w-xl font-medium" style={{ color: '#374151' }}>
                         {body}
                       </p>
                     </div>
@@ -292,15 +290,15 @@ export default function HomePage() {
                   num: "06",
                   title: "Driving Sustainable Value",
                   body: "Delivering bankable, high-yield renewable assets with transparent governance, rigorous quality assurance, and lifecycle support — ensuring lasting impact for investors and communities.",
-                  accent: "#7f1d1d", // Dark red to match the visual weight of point 05
+                  accent: "#991b1b", // Deep ruby red for rich contrast and executive weight
                 },
               ].map(({ num, title, body, accent }, i) => (
                 <ScrollReveal key={num} delay={i * 60}>
-                  <div className="flex gap-6 py-7 sm:gap-10 sm:py-8 rounded-xl px-2 sm:px-4 -mx-2 sm:-mx-4">
-                    <div className="shrink-0 w-14 sm:w-20">
+                  <div className="flex gap-6 py-7 sm:gap-10 sm:py-8 rounded-xl px-2 sm:px-4 -mx-2 sm:-mx-4 items-stretch">
+                    <div className="shrink-0 w-14 sm:w-20 pt-0.5">
                       <span
                         className="text-4xl sm:text-5xl font-black leading-none select-none inline-block"
-                        style={{ color: accent, opacity: 0.35 }}
+                        style={{ color: accent, opacity: 0.45 }}
                       >
                         {num}
                       </span>
@@ -309,14 +307,14 @@ export default function HomePage() {
                       className="shrink-0 w-0.5 rounded-full self-stretch opacity-60"
                       style={{ background: accent }}
                     />
-                    <div className="flex-1 min-w-0 py-1">
+                    <div className="flex-1 min-w-0 py-0.5">
                       <h3
                         className="text-base sm:text-lg font-bold leading-snug"
                         style={{ color: accent }}
                       >
                         {title}
                       </h3>
-                      <p className="mt-1.5 text-sm leading-relaxed max-w-xl" style={{ color: '#374151', opacity: 1, fontWeight: 500 }}>
+                      <p className="mt-1.5 text-sm leading-relaxed max-w-xl font-medium" style={{ color: '#374151' }}>
                         {body}
                       </p>
                     </div>

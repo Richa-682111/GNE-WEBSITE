@@ -697,28 +697,22 @@
     }
   }
 
-  main p,
-  main h1,
-  main h2,
-  main h3,
-  main blockquote,
-  main hr,
-  section p,
-  section h1,
-  section h2,
-  section h3,
-  section blockquote,
-  section hr {
+  :is(main, section) :is(p, h1, h2, h3, blockquote, hr):not(:is(.reveal-up, .reveal-scale, .scroll-reveal-pending) *) {
     animation: text-appear ease-in both;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
   }
 
-  main img,
-  section img {
+  :is(main, section) img:not(:is(.reveal-up, .reveal-scale, .scroll-reveal-pending) *) {
     animation: image-appear ease-in both;
     animation-timeline: view();
     animation-range: entry 0% cover 38%;
+  }
+
+  .reveal-up *,
+  .reveal-scale *,
+  .scroll-reveal-pending * {
+    animation-timeline: auto !important;
   }
 }
 
