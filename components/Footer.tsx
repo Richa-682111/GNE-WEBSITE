@@ -55,55 +55,55 @@ export function Footer() {
     <footer className="font-inter text-white">
       {/* ── TOP SECTION: Let's Build the Clean Energy Future Together ───────── */}
       {!isContactPage && (
-        <div className="bg-[#113823] py-16 sm:py-20 border-t border-emerald-900/40">
+        <div className="bg-[#113823] py-10 sm:py-12 lg:py-8 border-t border-emerald-900/40">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
 
               {/* Left Column — Copy & Contact Details (Span 5) */}
-              <div className="lg:col-span-5 space-y-6 text-left">
+              <div className="lg:col-span-5 space-y-3 lg:space-y-4 text-left">
                 <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#4ade80]">
                   GET IN TOUCH
                 </span>
 
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-[1.15] tracking-tight">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-[1.15] tracking-tight">
                   Let&apos;s Build the Clean Energy Future Together
                 </h2>
 
-                <p className="text-sm sm:text-base text-white/75 leading-relaxed">
+                <p className="text-xs sm:text-sm text-white/75 leading-relaxed">
                   Whether you&apos;re a developer, investor, utility, or industrial buyer — our team is ready to explore the right renewable solution for you.
                 </p>
 
                 {/* Contact Icon Boxes */}
-                <div className="space-y-4 pt-4">
+                <div className="space-y-2.5 pt-2">
                   <a
                     href="mailto:info@gneinfra.com"
-                    className="flex items-center gap-4 group"
+                    className="flex items-center gap-3.5 group"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-[#1a4a30] border border-[#265e3e] flex items-center justify-center text-[#4ade80] group-hover:scale-105 transition-transform shrink-0">
-                      <Mail className="w-5 h-5" />
+                    <div className="w-8 h-8 lg:w-9 lg:h-9 rounded-xl bg-[#1a4a30] border border-[#265e3e] flex items-center justify-center text-[#4ade80] group-hover:scale-105 transition-transform shrink-0">
+                      <Mail className="w-4 h-4" />
                     </div>
-                    <span className="text-sm text-white/90 group-hover:text-white font-medium transition-colors">
+                    <span className="text-xs sm:text-sm text-white/90 group-hover:text-white font-medium transition-colors">
                       info@gneinfra.com
                     </span>
                   </a>
 
                   <a
                     href="tel:+918448282440"
-                    className="flex items-center gap-4 group"
+                    className="flex items-center gap-3.5 group"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-[#1a4a30] border border-[#265e3e] flex items-center justify-center text-[#4ade80] group-hover:scale-105 transition-transform shrink-0">
-                      <Phone className="w-5 h-5" />
+                    <div className="w-8 h-8 lg:w-9 lg:h-9 rounded-xl bg-[#1a4a30] border border-[#265e3e] flex items-center justify-center text-[#4ade80] group-hover:scale-105 transition-transform shrink-0">
+                      <Phone className="w-4 h-4" />
                     </div>
-                    <span className="text-sm text-white/90 group-hover:text-white font-medium transition-colors">
+                    <span className="text-xs sm:text-sm text-white/90 group-hover:text-white font-medium transition-colors">
                       +91 8448282440
                     </span>
                   </a>
 
-                  <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-[#1a4a30] border border-[#265e3e] flex items-center justify-center text-[#4ade80] shrink-0">
-                      <MapPin className="w-5 h-5" />
+                  <div className="flex items-center gap-3.5">
+                    <div className="w-8 h-8 lg:w-9 lg:h-9 rounded-xl bg-[#1a4a30] border border-[#265e3e] flex items-center justify-center text-[#4ade80] shrink-0">
+                      <MapPin className="w-4 h-4" />
                     </div>
-                    <span className="text-sm text-white/90 font-medium">
+                    <span className="text-xs sm:text-sm text-white/90 font-medium">
                       A - 114, Urbtech Trade Center, Sector - 132, Noida, UP
                     </span>
                   </div>
@@ -112,11 +112,11 @@ export function Footer() {
 
               {/* Right Column — Contact Form (Span 7) */}
               <div className="lg:col-span-7">
-                <form onSubmit={handleSubmit} className="space-y-5">
+                <form onSubmit={handleSubmit} className="space-y-3.5 lg:space-y-4">
                   {/* Row 1: Name & Email */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 lg:gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-white/80 mb-1.5 text-left" htmlFor="footer-name">
+                      <label className="block text-[11px] font-semibold text-white/80 mb-1 text-left" htmlFor="footer-name">
                         Name <span className="text-[#4ade80]">*</span>
                       </label>
                       <input
@@ -125,11 +125,11 @@ export function Footer() {
                         name="name"
                         required
                         placeholder="Your full name"
-                        className="w-full rounded-xl bg-[#18442c] border border-[#23583a] px-4 py-3.5 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#4ade80] transition-colors"
+                        className="w-full rounded-xl bg-[#18442c] border border-[#23583a] px-3.5 py-2 lg:py-2.5 text-xs sm:text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#4ade80] transition-colors"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-white/80 mb-1.5 text-left" htmlFor="footer-email">
+                      <label className="block text-[11px] font-semibold text-white/80 mb-1 text-left" htmlFor="footer-email">
                         Email <span className="text-[#4ade80]">*</span>
                       </label>
                       <input
@@ -138,15 +138,15 @@ export function Footer() {
                         name="email"
                         required
                         placeholder="you@company.com"
-                        className="w-full rounded-xl bg-[#18442c] border border-[#23583a] px-4 py-3.5 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#4ade80] transition-colors"
+                        className="w-full rounded-xl bg-[#18442c] border border-[#23583a] px-3.5 py-2 lg:py-2.5 text-xs sm:text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#4ade80] transition-colors"
                       />
                     </div>
                   </div>
 
                   {/* Row 2: Phone & Company */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 lg:gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-white/80 mb-1.5 text-left" htmlFor="footer-phone">
+                      <label className="block text-[11px] font-semibold text-white/80 mb-1 text-left" htmlFor="footer-phone">
                         Phone (optional)
                       </label>
                       <input
@@ -154,11 +154,11 @@ export function Footer() {
                         id="footer-phone"
                         name="phone"
                         placeholder="+91 98765 43210"
-                        className="w-full rounded-xl bg-[#18442c] border border-[#23583a] px-4 py-3.5 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#4ade80] transition-colors"
+                        className="w-full rounded-xl bg-[#18442c] border border-[#23583a] px-3.5 py-2 lg:py-2.5 text-xs sm:text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#4ade80] transition-colors"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-white/80 mb-1.5 text-left" htmlFor="footer-company">
+                      <label className="block text-[11px] font-semibold text-white/80 mb-1 text-left" htmlFor="footer-company">
                         Company (optional)
                       </label>
                       <input
@@ -166,46 +166,46 @@ export function Footer() {
                         id="footer-company"
                         name="company"
                         placeholder="Your organization"
-                        className="w-full rounded-xl bg-[#18442c] border border-[#23583a] px-4 py-3.5 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#4ade80] transition-colors"
+                        className="w-full rounded-xl bg-[#18442c] border border-[#23583a] px-3.5 py-2 lg:py-2.5 text-xs sm:text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#4ade80] transition-colors"
                       />
                     </div>
                   </div>
 
                   {/* Row 3: Message */}
                   <div>
-                    <label className="block text-xs font-semibold text-white/80 mb-1.5 text-left" htmlFor="footer-message">
+                    <label className="block text-[11px] font-semibold text-white/80 mb-1 text-left" htmlFor="footer-message">
                       Message <span className="text-[#4ade80]">*</span>
                     </label>
                     <textarea
-                      rows={4}
+                      rows={2}
                       id="footer-message"
                       name="message"
                       required
                       placeholder="How can we help you?"
-                      className="w-full rounded-xl bg-[#18442c] border border-[#23583a] px-4 py-3.5 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#4ade80] transition-colors resize-none"
+                      className="w-full rounded-xl bg-[#18442c] border border-[#23583a] px-3.5 py-2 lg:py-2.5 text-xs sm:text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#4ade80] transition-colors resize-none"
                     />
                   </div>
 
                   {status === "success" && (
-                    <div className="rounded-xl border border-emerald-500/50 bg-[#163c26] px-4 py-3 text-sm text-[#4ade80] flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-[#4ade80] shrink-0" />
+                    <div className="rounded-xl border border-emerald-500/50 bg-[#163c26] px-4 py-2.5 text-xs sm:text-sm text-[#4ade80] flex items-center gap-2.5">
+                      <CheckCircle className="w-4 h-4 text-[#4ade80] shrink-0" />
                       <span>Thank you! Your inquiry has been sent successfully.</span>
                     </div>
                   )}
 
                   {status === "error" && (
-                    <div className="rounded-xl border border-rose-500/50 bg-rose-950/40 px-4 py-3 text-sm text-rose-300 flex items-center gap-3">
-                      <AlertCircle className="w-5 h-5 text-rose-400 shrink-0" />
+                    <div className="rounded-xl border border-rose-500/50 bg-rose-950/40 px-4 py-2.5 text-xs sm:text-sm text-rose-300 flex items-center gap-2.5">
+                      <AlertCircle className="w-4 h-4 text-rose-400 shrink-0" />
                       <span>{error || "Failed to submit. Please try again."}</span>
                     </div>
                   )}
 
                   {/* Submit Button */}
-                  <div className="pt-2 text-left">
+                  <div className="pt-1 text-left">
                     <button
                       type="submit"
                       disabled={status === "loading"}
-                      className="inline-flex items-center gap-2 rounded-full bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold text-sm px-8 py-4 shadow-lg shadow-emerald-950/40 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-60 disabled:cursor-not-allowed"
+                      className="inline-flex items-center gap-2 rounded-full bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold text-xs sm:text-sm px-6 py-2.5 lg:py-3 shadow-md shadow-emerald-950/30 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-60 disabled:cursor-not-allowed"
                     >
                       {status === "loading" ? (
                         <span>Sending...</span>
@@ -231,8 +231,8 @@ export function Footer() {
       )}
 
       {/* ── BOTTOM BAR: Dark Forest Green with Logo & Copyright ─────────────── */}
-      <div className="bg-[#0b2617] py-8 border-t border-white/[0.06]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="bg-[#0b2617] py-4 lg:py-3.5 border-t border-white/[0.06]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
 
           {/* Logo at Bottom Left */}
           <div className="shrink-0">
@@ -240,9 +240,9 @@ export function Footer() {
               <Image
                 src="/gne-logo.png"
                 alt="GNE Infra logo"
-                width={150}
-                height={45}
-                className="h-10 w-auto"
+                width={130}
+                height={38}
+                className="h-8 lg:h-9 w-auto"
               />
             </Link>
           </div>
