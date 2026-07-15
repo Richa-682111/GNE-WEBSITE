@@ -49,19 +49,19 @@ export const blogContents: Record<string, React.ReactNode> = {
       <div className="my-6 grid gap-6 md:grid-cols-3">
         <div className="rounded-xl border border-emerald-100 dark:border-emerald-900/40 bg-emerald-50/30 dark:bg-slate-900/50 p-5">
           <h4 className="text-emerald-700 dark:text-emerald-300 font-bold mt-0 mb-2">AI & Machine Learning</h4>
-          <p className="text-sm m-0 text-slate-600 dark:text-slate-400">
+          <p className="text-sm !text-left m-0 text-slate-600 dark:text-slate-400">
             Modern EMS (Energy Management Systems) use predictive AI to forecast demand, optimize battery cycles, and prolong system life.
           </p>
         </div>
         <div className="rounded-xl border border-emerald-100 dark:border-emerald-900/40 bg-emerald-50/30 dark:bg-slate-900/50 p-5">
           <h4 className="text-emerald-700 dark:text-emerald-300 font-bold mt-0 mb-2">Virtual Power Plants</h4>
-          <p className="text-sm m-0 text-slate-600 dark:text-slate-400">
+          <p className="text-sm !text-left m-0 text-slate-600 dark:text-slate-400">
             Aggregated BESS units can operate like mini power stations, working collectively to provide flexible, responsive support to the grid.
           </p>
         </div>
         <div className="rounded-xl border border-emerald-100 dark:border-emerald-900/40 bg-emerald-50/30 dark:bg-slate-900/50 p-5">
           <h4 className="text-emerald-700 dark:text-emerald-300 font-bold mt-0 mb-2">Second-Life Batteries</h4>
-          <p className="text-sm m-0 text-slate-600 dark:text-slate-400">
+          <p className="text-sm !text-left m-0 text-slate-600 dark:text-slate-400">
             Retired electric vehicle (EV) batteries find new life in stationary storage installations, supporting a sustainable circular energy economy.
           </p>
         </div>

@@ -144,31 +144,6 @@ export default async function BlogPostPage({ params }: Props) {
             {/* SIDEBAR COLUMN */}
             <aside className="lg:col-span-4 space-y-8 sticky top-28">
               
-              {/* AUTHOR CARD */}
-              <ScrollReveal delay={50}>
-                <div className="rounded-3xl border border-slate-200/60 dark:border-slate-800 bg-white/70 dark:bg-slate-950/50 p-6 backdrop-blur shadow-sm">
-                  <h3 className="text-xs font-black uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
-                    Author
-                  </h3>
-                  <div className="mt-4 flex items-center gap-3.5">
-                    <div className="h-10 w-10 flex items-center justify-center rounded-full bg-emerald-500 text-white font-extrabold text-lg select-none">
-                      G
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-black text-slate-900 dark:text-white leading-tight">
-                        GNE Editorial Team
-                      </h4>
-                      <p className="text-[11px] font-bold text-slate-500 dark:text-slate-400">
-                        {site.legalName}
-                      </p>
-                    </div>
-                  </div>
-                  <p className="mt-4 text-xs leading-relaxed text-slate-500 dark:text-slate-400">
-                    {"Sourcing technical, design, and regulatory insights from GNE Infra's experienced Solar EPC, BESS, and Green Hydrogen engineering divisions."}
-                  </p>
-                </div>
-              </ScrollReveal>
-
               {/* RELATED ARTICLES CARD */}
               <ScrollReveal delay={100}>
                 <div className="rounded-3xl border border-slate-200/60 dark:border-slate-800 bg-white/70 dark:bg-slate-950/50 p-6 backdrop-blur shadow-sm">

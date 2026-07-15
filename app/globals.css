@@ -52,8 +52,7 @@
 
   p,
   .prose p {
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left;
     font-size: 1.05rem;
     line-height: 1.75;
   }
