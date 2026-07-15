@@ -19,7 +19,7 @@ export function PremiumServiceHero({
   ctaLink?: string;
 }) {
   return (
-    <section className="relative w-full flex items-center justify-start overflow-hidden min-h-[500px] lg:min-h-0 lg:h-[90vh] xl:h-[88vh] max-h-screen">
+    <section className="relative w-full flex items-start justify-start overflow-hidden min-h-[500px] lg:h-[calc(100vh-4.5rem)] lg:max-h-[900px] xl:max-h-[860px]">
       {/* Background Image */}
       <div className="absolute inset-0 -z-20">
         <Image
@@ -27,19 +27,19 @@ export function PremiumServiceHero({
           alt={title}
           fill
           priority
-          className="object-cover"
+          className="object-cover object-top"
         />
       </div>
 
       {/* Layered Dark Gradient for drama and readability */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#0B132B]/95 via-[#0B132B]/70 to-transparent" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#0B132B]/80 via-transparent to-transparent" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#0B132B]/60 via-transparent to-transparent" />
 
       {/* Neon emerald ambient glow — top left corner */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#0d7342ff]/20 rounded-full blur-[120px] pointer-events-none -z-10" />
 
-      {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-14 sm:pt-20 lg:pt-24 xl:pt-16 pb-14 lg:pb-20 xl:pb-14">
+      {/* Content — shifted toward top */}
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 lg:pt-20 xl:pt-14 pb-10 lg:pb-16 xl:pb-10">
         <ScrollReveal>
           <div className="max-w-3xl">
 
