@@ -5,8 +5,8 @@ import { Resend } from "resend";
 const ContactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
   email: z.string().email("Please provide a valid email address."),
-  phone: z.string().optional(),
-  company: z.string().optional(),
+  phone: z.string().optional().or(z.literal("")),
+  company: z.string().optional().or(z.literal("")),
   message: z.string().min(10, "Message must be at least 10 characters."),
 });
 

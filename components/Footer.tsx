@@ -4,7 +4,16 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { z } from "zod";
 import { Mail, Phone, MapPin, ArrowRight, CheckCircle, AlertCircle } from "lucide-react";
+
+const ContactSchema = z.object({
+  name: z.string().min(2, "Please enter your name (2+ characters)."),
+  email: z.string().email("Please enter a valid email address."),
+  phone: z.string().min(7, "Please enter a valid phone number.").optional().or(z.literal("")),
+  company: z.string().optional().or(z.literal("")),
+  message: z.string().min(10, "Please add a short message (10+ characters).")
+});
 
 export function Footer() {
   const pathname = usePathname();
@@ -32,11 +41,18 @@ export function Footer() {
       message: String(form.get("message") || "")
     };
 
+    const parsed = ContactSchema.safeParse(payload);
+    if (!parsed.success) {
+      setStatus("error");
+      setError(parsed.error.issues[0]?.message ?? "Please check your form details.");
+      return;
+    }
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(parsed.data)
       });
       if (!res.ok) {
         const data = (await res.json().catch(() => null)) as { error?: string } | null;
@@ -208,15 +224,18 @@ export function Footer() {
                       className="inline-flex items-center gap-2 rounded-full bg-[#22c55e] hover:bg-[#16a34a] text-white font-bold text-xs sm:text-sm px-6 py-2.5 lg:py-3 shadow-md shadow-emerald-950/30 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-60 disabled:cursor-not-allowed"
                     >
                       {status === "loading" ? (
-                        <span>Sending...</span>
+                        <>
+                          <div className="w-3.5 h-3.5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                          <span>Sending...</span>
+                        </>
                       ) : status === "success" ? (
                         <>
                           <CheckCircle className="w-4 h-4 text-white animate-bounce" />
-                          Message Sent!
+                          <span>Message Sent!</span>
                         </>
                       ) : (
                         <>
-                          Send Message
+                          <span>Send Message</span>
                           <ArrowRight className="w-4 h-4" />
                         </>
                       )}
@@ -230,8 +249,8 @@ export function Footer() {
         </div>
       )}
 
-      {/* ── BOTTOM BAR: Dark Forest Green with Logo & Copyright ─────────────── */}
-      <div className="bg-[#0b2617] py-4 lg:py-3.5 border-t border-white/[0.06]">
+      {/* ── BOTTOM BAR: Dark Navy Blue with Logo & Copyright ─────────────── */}
+      <div className="bg-[#040a16] py-4 lg:py-3.5 border-t border-white/[0.06]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
 
           {/* Logo at Bottom Left */}

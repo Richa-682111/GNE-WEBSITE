@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import { MobileNav } from "@/components/MobileNav";
-import { ThemeToggle } from "@/components/ThemeToggle";
 
 import { usePathname } from "next/navigation";
 
@@ -167,7 +166,6 @@ export function Header() {
           >
             Get a Quote
           </Link>
-          <ThemeToggle />
         </div>
       </div>
     </header>

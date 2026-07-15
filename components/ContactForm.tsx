@@ -62,10 +62,10 @@ export function ContactForm() {
       <div className="grid gap-5 md:grid-cols-2">
         <div className="grid gap-2 text-left">
           <label className="text-sm font-semibold text-white" htmlFor="name">
-            Name <span className="text-[#4ade80]">*</span>
+            Name <span className="text-sky-400">*</span>
           </label>
           <input
-            className="h-12 rounded-xl border border-slate-300 bg-white/90 px-4 text-sm text-slate-900 placeholder-slate-400 outline-none ring-emerald-500/30 transition-all focus:border-emerald-600 focus:bg-white focus:ring-4 shadow-sm"
+            className="h-12 rounded-xl border border-slate-300 bg-white/90 px-4 text-sm text-slate-900 placeholder-slate-400 outline-none ring-sky-500/30 transition-all focus:border-sky-600 focus:bg-white focus:ring-4 shadow-sm"
             id="name"
             name="name"
             autoComplete="name"
@@ -75,10 +75,10 @@ export function ContactForm() {
         </div>
         <div className="grid gap-2 text-left">
           <label className="text-sm font-semibold text-white" htmlFor="email">
-            Email <span className="text-[#4ade80]">*</span>
+            Email <span className="text-sky-400">*</span>
           </label>
           <input
-            className="h-12 rounded-xl border border-slate-300 bg-white/90 px-4 text-sm text-slate-900 placeholder-slate-400 outline-none ring-emerald-500/30 transition-all focus:border-emerald-600 focus:bg-white focus:ring-4 shadow-sm"
+            className="h-12 rounded-xl border border-slate-300 bg-white/90 px-4 text-sm text-slate-900 placeholder-slate-400 outline-none ring-sky-500/30 transition-all focus:border-sky-600 focus:bg-white focus:ring-4 shadow-sm"
             id="email"
             name="email"
             type="email"
@@ -95,7 +95,7 @@ export function ContactForm() {
             Phone (optional)
           </label>
           <input
-            className="h-12 rounded-xl border border-slate-300 bg-white/90 px-4 text-sm text-slate-900 placeholder-slate-400 outline-none ring-emerald-500/30 transition-all focus:border-emerald-600 focus:bg-white focus:ring-4 shadow-sm"
+            className="h-12 rounded-xl border border-slate-300 bg-white/90 px-4 text-sm text-slate-900 placeholder-slate-400 outline-none ring-sky-500/30 transition-all focus:border-sky-600 focus:bg-white focus:ring-4 shadow-sm"
             id="phone"
             name="phone"
             autoComplete="tel"
@@ -107,7 +107,7 @@ export function ContactForm() {
             Company (optional)
           </label>
           <input
-            className="h-12 rounded-xl border border-slate-300 bg-white/90 px-4 text-sm text-slate-900 placeholder-slate-400 outline-none ring-emerald-500/30 transition-all focus:border-emerald-600 focus:bg-white focus:ring-4 shadow-sm"
+            className="h-12 rounded-xl border border-slate-300 bg-white/90 px-4 text-sm text-slate-900 placeholder-slate-400 outline-none ring-sky-500/30 transition-all focus:border-sky-600 focus:bg-white focus:ring-4 shadow-sm"
             id="company"
             name="company"
             autoComplete="organization"
@@ -118,10 +118,10 @@ export function ContactForm() {
 
       <div className="grid gap-2 text-left">
         <label className="text-sm font-semibold text-white" htmlFor="message">
-          Message <span className="text-[#4ade80]">*</span>
+          Message <span className="text-sky-400">*</span>
         </label>
         <textarea
-          className="min-h-[140px] rounded-xl border border-slate-300 bg-white/90 p-4 text-sm text-slate-900 placeholder-slate-400 outline-none ring-emerald-500/30 transition-all focus:border-emerald-600 focus:bg-white focus:ring-4 shadow-sm resize-none"
+          className="min-h-[140px] rounded-xl border border-slate-300 bg-white/90 p-4 text-sm text-slate-900 placeholder-slate-400 outline-none ring-sky-500/30 transition-all focus:border-sky-600 focus:bg-white focus:ring-4 shadow-sm resize-none"
           id="message"
           name="message"
           placeholder="How can we help you?"
@@ -146,7 +146,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 px-8 text-sm font-bold text-white shadow-lg shadow-emerald-600/25 transition-all duration-200 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
+          className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-700 px-8 text-sm font-bold text-white shadow-lg shadow-blue-600/25 transition-all duration-200 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {status === "loading" ? (
             <>
