@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Calendar, Clock, ChevronLeft, Tag, Share2, ArrowRight } from "lucide-react";
@@ -53,30 +54,52 @@ export default async function BlogPostPage({ params }: Props) {
       <JsonLd data={jsonLd} />
 
       {/* ── HEADER HERO SECTION ────────────────────────────────────────── */}
-      <Section className="relative overflow-hidden bg-renewable-gradient pb-16 pt-28 border-b border-slate-100 dark:border-slate-900">
-        {/* Subtle grid background */}
-        <div className="pointer-events-none absolute inset-0 bg-grid opacity-[0.35]" />
+      <Section className="relative overflow-hidden pb-20 pt-32 lg:pb-24 lg:pt-36 border-b border-white/10 min-h-[480px] flex items-center" style={{ background: '#0B132B' }}>
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={post.image}
+            alt={post.title}
+            fill
+            priority
+            className="object-cover object-center"
+          />
+        </div>
 
-        <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        {/* Layered Dark Gradient overlays for vivid image visibility and perfect text readability */}
+        <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[#0B132B]/95 sm:from-[#0B132B]/90 via-[#0B132B]/75 to-[#0B132B]/30" />
+        <div className="absolute inset-0 z-[1] bg-gradient-to-t from-[#0B132B] via-transparent to-transparent opacity-80" />
+
+        {/* Ambient glow orbs */}
+        <div className="pointer-events-none absolute top-0 left-1/3 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-[#0d7342ff]/20 blur-[120px] z-[2]" />
+        <div className="pointer-events-none absolute bottom-0 right-1/4 h-[400px] w-[500px] rounded-full bg-teal-400/10 blur-[100px] z-[2]" />
+
+        {/* Subtle dot grid */}
+        <div
+          className="absolute inset-0 z-[2] opacity-[0.04] pointer-events-none"
+          style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.6) 1px, transparent 0)', backgroundSize: '36px 36px' }}
+        />
+
+        <div className="relative z-10 mx-auto w-full max-w-[1400px] px-4 sm:px-8 lg:px-12 text-left">
           <ScrollReveal>
             {/* Back to Blog Pill */}
             <Link
               href="/blog"
-              className="group inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-1.5 text-xs font-bold text-slate-700 backdrop-blur transition-all duration-300 hover:bg-slate-100 dark:border-slate-800 dark:bg-slate-950/80 dark:text-slate-200 dark:hover:bg-slate-900"
+              className="group inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-bold text-white backdrop-blur transition-all duration-300 hover:bg-white/20 hover:border-white/40"
             >
-              <ChevronLeft className="h-3.5 w-3.5 transform transition-transform duration-300 group-hover:-translate-x-0.5 text-emerald-600 dark:text-emerald-400" />
+              <ChevronLeft className="h-3.5 w-3.5 transform transition-transform duration-300 group-hover:-translate-x-0.5 text-[#4ade80]" />
               Back to Blog
             </Link>
 
             {/* Title */}
-            <h1 className="mt-8 text-balance text-3xl font-black leading-tight tracking-tight text-slate-950 dark:text-white sm:text-4xl md:text-5xl">
+            <h1 className="mt-8 text-balance text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-[3.25rem] font-black font-sora leading-tight tracking-tight text-white max-w-4xl">
               {post.title}
             </h1>
 
             {/* Metadata bar */}
-            <div className="mt-6 flex flex-wrap items-center gap-6 text-sm font-semibold text-slate-600 dark:text-slate-300 border-t border-slate-200/50 dark:border-slate-800/40 pt-6">
+            <div className="mt-8 flex flex-wrap items-center gap-6 text-sm font-semibold text-slate-300 border-t border-white/15 pt-6 max-w-4xl">
               <span className="inline-flex items-center gap-1.5">
-                <Calendar className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
+                <Calendar className="h-4 w-4 text-[#4ade80]" />
                 {new Date(post.date).toLocaleDateString(undefined, {
                   year: "numeric",
                   month: "long",
@@ -84,11 +107,11 @@ export default async function BlogPostPage({ params }: Props) {
                 })}
               </span>
               <span className="inline-flex items-center gap-1.5">
-                <Clock className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
+                <Clock className="h-4 w-4 text-[#4ade80]" />
                 {post.readingTime}
               </span>
               <span className="inline-flex items-center gap-1.5">
-                <Tag className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
+                <Tag className="h-4 w-4 text-[#4ade80]" />
                 {post.category}
               </span>
             </div>
