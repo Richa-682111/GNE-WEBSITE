@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { MessageSquareText, PhoneCall, Mail } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 import { JsonLd } from "@/components/JsonLd";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
@@ -63,54 +64,58 @@ export default function ContactPage() {
         <div className="mx-auto grid max-w-6xl gap-8 px-4 sm:px-6 lg:px-8 md:grid-cols-3 items-start relative z-10">
 
           {/* Inquiry Form Card — Emerald Jade Glassmorphism (Span 2) */}
-          <div className="md:col-span-2 rounded-3xl bg-[#1b6b44]/85 border border-[#4ade80]/40 p-6 sm:p-10 shadow-[0_25px_60px_rgba(0,0,0,0.3)] backdrop-blur-xl text-white">
-            <div className="text-xl sm:text-2xl font-bold text-white">
-              Inquiry form
+          <ScrollReveal delay={60} className="md:col-span-2">
+            <div className="rounded-3xl bg-[#1b6b44]/85 border border-[#4ade80]/40 p-6 sm:p-10 shadow-[0_25px_60px_rgba(0,0,0,0.3)] backdrop-blur-xl text-white">
+              <div className="text-xl sm:text-2xl font-bold text-white">
+                Inquiry form
+              </div>
+              <div className="mt-1.5 text-sm sm:text-base text-white/80 mb-8">
+                Fill in your details below and we&apos;ll get back to you within 24 hours.
+              </div>
+              <ContactForm />
             </div>
-            <div className="mt-1.5 text-sm sm:text-base text-white/80 mb-8">
-              Fill in your details below and we&apos;ll get back to you within 24 hours.
-            </div>
-            <ContactForm />
-          </div>
+          </ScrollReveal>
 
           {/* Direct Contact Card — Emerald Jade Glassmorphism (Span 1) */}
-          <div className="rounded-3xl bg-[#1b6b44]/85 border border-[#4ade80]/40 p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.3)] backdrop-blur-xl text-white space-y-6">
-            <div className="text-xl font-bold text-white border-b border-emerald-500/30 pb-4">
-              Direct contact
-            </div>
-
-            <div className="space-y-6 text-sm">
-              <div className="group">
-                <div className="flex items-center gap-2.5 font-semibold text-emerald-300 text-xs uppercase tracking-wider mb-1.5">
-                  <Mail className="w-4 h-4 text-[#4ade80]" />
-                  Email
-                </div>
-                <a
-                  className="text-base font-bold text-white hover:text-emerald-300 underline underline-offset-4 transition-colors block truncate"
-                  href={`mailto:${site.contact.email}`}
-                >
-                  {site.contact.email}
-                </a>
+          <ScrollReveal delay={160}>
+            <div className="rounded-3xl bg-[#1b6b44]/85 border border-[#4ade80]/40 p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.3)] backdrop-blur-xl text-white space-y-6">
+              <div className="text-xl font-bold text-white border-b border-emerald-500/30 pb-4">
+                Direct contact
               </div>
 
-              <div className="group">
-                <div className="flex items-center gap-2.5 font-semibold text-emerald-300 text-xs uppercase tracking-wider mb-1.5">
-                  <PhoneCall className="w-4 h-4 text-[#4ade80]" />
-                  Phone
+              <div className="space-y-6 text-sm">
+                <div className="group">
+                  <div className="flex items-center gap-2.5 font-semibold text-emerald-300 text-xs uppercase tracking-wider mb-1.5">
+                    <Mail className="w-4 h-4 text-[#4ade80]" />
+                    Email
+                  </div>
+                  <a
+                    className="text-base font-bold text-white hover:text-emerald-300 underline underline-offset-4 transition-colors block truncate"
+                    href={`mailto:${site.contact.email}`}
+                  >
+                    {site.contact.email}
+                  </a>
                 </div>
-                <a
-                  className="text-base font-bold text-white hover:text-emerald-300 underline underline-offset-4 transition-colors inline-flex items-center gap-2"
-                  href={`tel:${site.contact.phone}`}
-                >
-                  {site.contact.phone}
-                </a>
+
+                <div className="group">
+                  <div className="flex items-center gap-2.5 font-semibold text-emerald-300 text-xs uppercase tracking-wider mb-1.5">
+                    <PhoneCall className="w-4 h-4 text-[#4ade80]" />
+                    Phone
+                  </div>
+                  <a
+                    className="text-base font-bold text-white hover:text-emerald-300 underline underline-offset-4 transition-colors inline-flex items-center gap-2"
+                    href={`tel:${site.contact.phone}`}
+                  >
+                    {site.contact.phone}
+                  </a>
+                </div>
+              </div>
+
+              <div className="pt-4 border-t border-emerald-500/30 text-xs text-white/70 leading-relaxed">
+                Our engineering team is available Monday through Saturday to assist with turnkey EPC and advisory inquiries.
               </div>
             </div>
-
-            <div className="pt-4 border-t border-emerald-500/30 text-xs text-white/70 leading-relaxed">
-              Our engineering team is available Monday through Saturday to assist with turnkey EPC and advisory inquiries.
-            </div>
-          </div>
+          </ScrollReveal>
 
         </div>
       </section>

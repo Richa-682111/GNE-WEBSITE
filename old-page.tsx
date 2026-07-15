@@ -55,9 +55,7 @@ export default function HomePage() {
           {/* Section header */}
           <ScrollReveal>
             <div className="mb-14 text-center">
-              <span className="mb-3 inline-block rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest" style={{ background: 'rgba(69,82,62,0.12)', color: '#0d7342ff', outline: '1px solid rgba(69,82,62,0.3)', outlineOffset: '0px' }}>
-                Welcome to Solar Power &amp; Save Energy
-              </span>
+
               <h2 className="mt-2 text-4xl font-black tracking-tight sm:text-5xl" style={{ color: '#010101' }}>
                 Our&nbsp;<span style={{ color: '#256c4aff' }}>Impact</span>
               </h2>
@@ -111,10 +109,7 @@ export default function HomePage() {
                     })}
                   </div>
 
-                  {/* Label below */}
-                  <p className="mt-5 text-center text-xs font-semibold uppercase tracking-widest" style={{ color: '#1a4731' }}>
-                    Integrated Sustainability Framework
-                  </p>
+
                 </div>
               </div>
             </ScrollReveal>

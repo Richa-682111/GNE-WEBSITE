@@ -34,6 +34,11 @@ const navPill =
 export function Header() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,7 +82,7 @@ export function Header() {
             aria-label="Main"
           >
             {primaryNav.map((item) => {
-              const isActive = pathname === item.href;
+              const isActive = mounted && pathname === item.href;
               return (
                 <Link
                   key={item.href}
@@ -96,7 +101,7 @@ export function Header() {
             })}
 
             {dropdownNav.map((group) => {
-              const isGroupActive = group.items.some((item) => pathname === item.href);
+              const isGroupActive = mounted && group.items.some((item) => pathname === item.href);
               return (
                 <div key={group.label} className="group/drop relative">
                   <button
@@ -112,7 +117,7 @@ export function Header() {
 
                   <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-full z-50 min-w-[240px] rounded-2xl border border-slate-200/60 bg-white/95 p-2 opacity-0 shadow-2xl transition-all duration-200 group-hover/drop:pointer-events-auto group-hover/drop:opacity-100 dark:border-slate-800 dark:bg-brand-darkCard/95 backdrop-blur-md">
                     {group.items.map((item) => {
-                      const isItemActive = pathname === item.href;
+                      const isItemActive = mounted && pathname === item.href;
                       return (
                         <Link
                           key={item.href}
@@ -135,7 +140,7 @@ export function Header() {
 
             {/* Blogs link */}
             {(() => {
-              const isBlogsActive = pathname.startsWith("/blog");
+              const isBlogsActive = mounted && Boolean(pathname?.startsWith("/blog"));
               return (
                 <Link
                   href="/blog"

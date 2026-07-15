@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { Sora, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { SmoothScrollProvider } from "@/components/SmoothScroll";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import LoadingOverlay from "@/components/LoadingOverlay";
@@ -64,16 +65,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${sora.variable} ${inter.variable}`} suppressHydrationWarning>
       <body className="font-inter">
         <ThemeProvider>
-          <Suspense fallback={null}>
-            <LoadingOverlay />
-          </Suspense>
-          <Header />
+          <SmoothScrollProvider>
+            <Suspense fallback={null}>
+              <LoadingOverlay />
+            </Suspense>
+            <Header />
 
-          {/* GLOBAL GLASSY CORPORATE BACKGROUND */}
-          <div
-            className="fixed inset-0 z-[-1] overflow-hidden transition-colors duration-500"
-            style={{
-              background: `
+            {/* GLOBAL GLASSY CORPORATE BACKGROUND */}
+            <div
+              className="fixed inset-0 z-[-1] overflow-hidden transition-colors duration-500"
+              style={{
+                background: `
     radial-gradient(circle at 15% 20%,
       rgba(69,82,62,0.20),
       transparent 40%),
@@ -93,18 +95,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       #e8e2da 70%,
       #f0ebe4 100%
     )`
-            }}
-          >
+              }}
+            >
 
-            {/* Subtle Noise/Mesh */}
-            <div
-              className="absolute inset-0 opacity-[0.02] dark:opacity-[0.04] pointer-events-none mix-blend-overlay"
-              style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, black 1px, transparent 0)', backgroundSize: '32px 32px' }}
-            />
-          </div>
+              {/* Subtle Noise/Mesh */}
+              <div
+                className="absolute inset-0 opacity-[0.02] dark:opacity-[0.04] pointer-events-none mix-blend-overlay"
+                style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, black 1px, transparent 0)', backgroundSize: '32px 32px' }}
+              />
+            </div>
 
-          <main className="min-h-[70vh] relative z-0">{children}</main>
-          <Footer />
+            <main className="min-h-[70vh] relative z-0">{children}</main>
+            <Footer />
+          </SmoothScrollProvider>
         </ThemeProvider>
       </body>
     </html>

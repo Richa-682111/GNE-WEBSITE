@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -8,7 +8,12 @@ import { Mail, Phone, MapPin, ArrowRight, CheckCircle, AlertCircle } from "lucid
 
 export function Footer() {
   const pathname = usePathname();
-  const isContactPage = pathname === "/contact";
+  const [mounted, setMounted] = useState(false);
+  const isContactPage = mounted && pathname === "/contact";
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [error, setError] = useState<string | null>(null);

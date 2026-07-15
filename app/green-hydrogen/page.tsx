@@ -3,6 +3,7 @@ import { PremiumServiceHero } from "@/components/PremiumServiceHero";
 import { EditorialIntro } from "@/components/EditorialIntro";
 import { BentoFeatureGrid, FeatureCard } from "@/components/BentoFeatureGrid";
 import { InteractiveHorizontalFlow, FlowStep } from "@/components/InteractiveHorizontalFlow";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { Factory, Leaf, ShieldCheck, Zap, TrendingUp, Shield } from "lucide-react";
 import { site } from "@/content/site";
 
@@ -73,21 +74,23 @@ export default function GreenHydrogenPage() {
       />
 
       {/* Featured Green Hydrogen Video */}
-      <section className="py-12 sm:py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-[0_20px_60px_rgba(0,0,0,0.12)] bg-slate-950">
-            <video
-              src="/GreenHydrogen.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              controls
-              className="w-full h-auto object-cover max-h-[700px] aspect-video"
-            />
+      <ScrollReveal>
+        <section className="py-12 sm:py-16">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-[0_20px_60px_rgba(0,0,0,0.12)] bg-slate-950">
+              <video
+                src="/GreenHydrogen.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls
+                className="w-full h-auto object-cover max-h-[700px] aspect-video"
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollReveal>
 
       <BentoFeatureGrid title="Our Hydrogen Strategy" features={features} />
 

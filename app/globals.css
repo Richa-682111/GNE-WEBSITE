@@ -17,6 +17,27 @@
     -webkit-overflow-scrolling: touch;
   }
 
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+
   /* Smooth elastic/bounce overscroll on supported browsers */
   @supports (-webkit-overscroll-behavior: auto) or (overscroll-behavior: auto) {
     body {
@@ -300,7 +321,7 @@
   @keyframes revealUp {
     0% {
       opacity: 0;
-      transform: translateY(18px);
+      transform: translateY(32px);
     }
 
     100% {
@@ -312,7 +333,7 @@
   @keyframes revealScale {
     0% {
       opacity: 0;
-      transform: translateY(22px) scale(0.96);
+      transform: translateY(36px) scale(0.95);
     }
 
     100% {
@@ -421,11 +442,11 @@
   }
 
   .reveal-up {
-    animation: revealUp 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: revealUp 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 
   .reveal-scale {
-    animation: revealScale 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: revealScale 1100ms cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 
   .hero-float {
@@ -433,12 +454,12 @@
   }
 
   .animate-fade-in-up {
-    animation: revealUp 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: revealUp 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 
   .scroll-reveal-pending {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(32px);
   }
 
   .spotlight-card {

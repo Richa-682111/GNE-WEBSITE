@@ -55,9 +55,7 @@ export default function HomePage() {
           {/* Section header */}
           <ScrollReveal>
             <div className="mb-14 text-center">
-              <span className="mb-3 inline-block rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest" style={{ background: 'rgba(69,82,62,0.12)', color: '#0d7342ff', outline: '1px solid rgba(69,82,62,0.3)', outlineOffset: '0px' }}>
-                Welcome to Solar Power &amp; Save Energy
-              </span>
+
               <h2 className="mt-2 text-4xl font-black tracking-tight sm:text-5xl" style={{ color: '#010101' }}>
                 Our&nbsp;<span style={{ color: '#256c4aff' }}>Impact</span>
               </h2>
@@ -72,26 +70,26 @@ export default function HomePage() {
                 {/* Outer glow ring */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-emerald-500/20 via-sky-400/10 to-teal-400/10 blur-2xl" />
 
-                <div className="relative w-full max-w-xl overflow-hidden rounded-3xl p-6 shadow-2xl sm:p-8" style={{ background: 'linear-gradient(135deg, #e2efe7 0%, #cbe4d5 100%)', border: '1.5px solid rgba(13,115,66,0.35)', boxShadow: '0 20px 50px rgba(13,115,66,0.12), 0 8px 20px rgba(0,0,0,0.06)' }}>
-                  <div className="relative mx-auto flex h-64 w-64 items-center justify-center sm:h-80 sm:w-80 lg:h-80 lg:w-80 xl:h-96 xl:w-96 [--orbit-radius:85px] sm:[--orbit-radius:120px] lg:[--orbit-radius:120px] xl:[--orbit-radius:170px]">
+                <div className="relative w-full max-w-2xl overflow-hidden rounded-3xl p-6 shadow-2xl sm:p-10" style={{ background: 'linear-gradient(135deg, #e2efe7 0%, #cbe4d5 100%)', border: '1.5px solid rgba(13,115,66,0.35)', boxShadow: '0 20px 50px rgba(13,115,66,0.12), 0 8px 20px rgba(0,0,0,0.06)' }}>
+                  <div className="relative mx-auto flex h-72 w-72 items-center justify-center sm:h-96 sm:w-96 lg:h-[400px] lg:w-[400px] xl:h-[460px] xl:w-[460px] [--orbit-radius:98px] sm:[--orbit-radius:140px] lg:[--orbit-radius:150px] xl:[--orbit-radius:185px]">
                     {/* Animated orbit rings */}
                     <div className="absolute inset-0 animate-[spin_18s_linear_infinite] rounded-full border-2 border-dashed border-emerald-300/40 dark:border-emerald-700/40" />
-                    <div className="absolute inset-6 animate-[spin_24s_linear_infinite_reverse] rounded-full border border-dashed border-sky-300/30 dark:border-sky-700/30" />
+                    <div className="absolute inset-6 sm:inset-8 xl:inset-10 animate-[spin_24s_linear_infinite_reverse] rounded-full border border-dashed border-sky-300/30 dark:border-sky-700/30" />
 
                     {/* Centre hub */}
-                    <div className="relative z-10 flex h-20 w-20 sm:h-24 sm:w-24 flex-col items-center justify-center rounded-full shadow-xl" style={{ background: 'linear-gradient(135deg, #1a4731, #0f2d1e)' }}>
-                      <Leaf className="mb-0.5 h-5 w-5 sm:h-7 sm:w-7 text-white" />
-                      <span className="text-[9px] sm:text-[11px] font-bold uppercase tracking-wide text-white/90">GNE infra</span>
+                    <div className="relative z-10 flex h-24 w-24 sm:h-28 sm:w-28 xl:h-32 xl:w-32 flex-col items-center justify-center rounded-full shadow-2xl" style={{ background: 'linear-gradient(135deg, #1a4731, #0f2d1e)' }}>
+                      <Leaf className="mb-1 h-6 w-6 sm:h-8 sm:w-8 xl:h-9 xl:w-9 text-white" />
+                      <span className="text-[10px] sm:text-xs font-black uppercase tracking-wider text-white/95">GNE INFRA</span>
                     </div>
 
                     {/* Orbital nodes */}
                     {[
-                      { label: "Environment", angle: 0, icon: "🌱", color: "bg-emerald-100 text-emerald-900 border border-emerald-200/80 dark:bg-emerald-900/50 dark:text-emerald-200 dark:border-emerald-700/50" },
-                      { label: "Economic", angle: 60, icon: "📈", color: "bg-blue-100 text-blue-900 border border-blue-200/80 dark:bg-blue-900/50 dark:text-blue-200 dark:border-blue-700/50" },
-                      { label: "Operational", angle: 120, icon: "⚙️", color: "bg-amber-100 text-amber-900 border border-amber-200/80 dark:bg-amber-900/50 dark:text-amber-200 dark:border-amber-700/50" },
-                      { label: "Innovation", angle: 180, icon: "💡", color: "bg-purple-100 text-purple-900 border border-purple-200/80 dark:bg-purple-900/50 dark:text-purple-200 dark:border-purple-700/50" },
-                      { label: "Social", angle: 240, icon: "🤝", color: "bg-rose-100 text-rose-900 border border-rose-200/80 dark:bg-rose-900/50 dark:text-rose-200 dark:border-rose-700/50" },
-                      { label: "Technical", angle: 300, icon: "⚡", color: "bg-cyan-100 text-cyan-900 border border-cyan-200/80 dark:bg-cyan-900/50 dark:text-cyan-200 dark:border-cyan-700/50" },
+                      { label: "Environment", angle: 0, icon: "🌱", color: "bg-emerald-100 text-emerald-950 border-2 border-emerald-300/80 dark:bg-emerald-900/60 dark:text-emerald-100 dark:border-emerald-600/60" },
+                      { label: "Economic", angle: 60, icon: "📈", color: "bg-blue-100 text-blue-950 border-2 border-blue-300/80 dark:bg-blue-900/60 dark:text-blue-100 dark:border-blue-600/60" },
+                      { label: "Operational", angle: 120, icon: "⚙️", color: "bg-amber-100 text-amber-950 border-2 border-amber-300/80 dark:bg-amber-900/60 dark:text-amber-100 dark:border-amber-600/60" },
+                      { label: "Innovation", angle: 180, icon: "💡", color: "bg-purple-100 text-purple-950 border-2 border-purple-300/80 dark:bg-purple-900/60 dark:text-purple-100 dark:border-purple-600/60" },
+                      { label: "Social", angle: 240, icon: "🤝", color: "bg-rose-100 text-rose-950 border-2 border-rose-300/80 dark:bg-rose-900/60 dark:text-rose-100 dark:border-rose-600/60" },
+                      { label: "Technical", angle: 300, icon: "⚡", color: "bg-cyan-100 text-cyan-950 border-2 border-cyan-300/80 dark:bg-cyan-900/60 dark:text-cyan-100 dark:border-cyan-600/60" },
                     ].map(({ label, angle, icon, color }) => {
                       const rad = (angle - 90) * (Math.PI / 180);
                       const cosVal = Math.cos(rad);
@@ -99,22 +97,20 @@ export default function HomePage() {
                       return (
                         <div
                           key={label}
-                          className={`absolute flex h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20 flex-col items-center justify-center rounded-xl sm:rounded-2xl text-center text-[8px] sm:text-[9px] lg:text-[11px] font-semibold leading-none sm:leading-tight shadow-lg transition-transform hover:scale-110 ${color}`}
+                          className={`absolute flex h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 flex-col items-center justify-center rounded-2xl sm:rounded-3xl text-center text-[9px] sm:text-[11px] lg:text-xs xl:text-sm font-bold leading-none sm:leading-tight shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:z-20 ${color}`}
                           style={{
                             transform: `translate(calc(var(--orbit-radius) * ${cosVal}), calc(var(--orbit-radius) * ${sinVal}))`,
                           }}
                         >
-                          <span className="text-base sm:text-lg lg:text-2xl leading-none">{icon}</span>
-                          <span className="mt-0.5 px-0.5 block">{label}</span>
+                          <span className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl leading-none mb-1">{icon}</span>
+                          <span className="px-1 block tracking-tight font-extrabold">{label}</span>
                         </div>
                       );
                     })}
                   </div>
 
                   {/* Label below */}
-                  <p className="mt-5 text-center text-xs font-semibold uppercase tracking-widest" style={{ color: '#1a4731' }}>
-                    Integrated Sustainability Framework
-                  </p>
+
                 </div>
               </div>
             </ScrollReveal>

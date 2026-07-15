@@ -22,6 +22,7 @@ import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
 import TimelineJourney from "@/components/TimelineJourney";
 import { CoreValuesSection } from "@/components/CoreValuesSection";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "About GNE Infra | Our Story, Culture & Team",
@@ -316,7 +317,8 @@ export default function AboutPage() {
       <section className="py-12 sm:py-16 bg-transparent font-inter relative overflow-hidden">
         {/* Optimized wide container to reduce wasted whitespace */}
         <div className="mx-auto max-w-[1380px] px-4 sm:px-8 lg:px-12">
-          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
+          <ScrollReveal>
+            <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
 
             {/* Left Narrative Column */}
             <div className="lg:col-span-5 space-y-6 text-left">
@@ -375,7 +377,8 @@ export default function AboutPage() {
 
 
             </div>
-          </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -402,7 +405,8 @@ export default function AboutPage() {
           </div>
 
           {/* Two Card Grid — Large Split-Screen Cards with Expansive Photography Header & Frosted Glass Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-stretch">
+          <ScrollReveal delay={100}>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-stretch">
 
             {/* Mission Card - EXPANDED SIZE */}
             <div className="group flex flex-col rounded-[32px] overflow-hidden shadow-[0_25px_60px_rgba(13,115,66,0.14)] border border-[#0d7342]/25 bg-white transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_70px_rgba(13,115,66,0.24)]">
@@ -478,7 +482,8 @@ export default function AboutPage() {
               </div>
             </div>
 
-          </div>
+            </div>
+          </ScrollReveal>
 
         </div>
       </section>
@@ -507,7 +512,8 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 auto-rows-[190px] sm:auto-rows-[210px] lg:auto-rows-[230px] xl:auto-rows-[260px]">
+          <ScrollReveal>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 auto-rows-[190px] sm:auto-rows-[210px] lg:auto-rows-[230px] xl:auto-rows-[260px]">
             {/* Solar EPC */}
             <Link
               href="/solar-epc"
@@ -632,7 +638,8 @@ export default function AboutPage() {
                 <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
               </div>
             </Link>
-          </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -680,37 +687,38 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10 items-stretch">
             {leadership.map((leader, idx) => (
-              <Card
-                key={idx}
-                className="flex h-full flex-col p-5 sm:p-6 lg:p-7 bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-3xl shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl text-left"
-              >
-                <div className="relative mb-4 aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-sm">
-                  <Image
-                    src={leader.image}
-                    alt={leader.name}
-                    fill
-                    className="object-cover transition-transform duration-500 hover:scale-105"
-                  />
-                </div>
-                <h3 className="text-lg sm:text-xl font-sora font-extrabold leading-tight text-[#111827] text-left">
-                  {leader.name}
-                </h3>
-                <p className="mt-1 text-xs sm:text-sm font-bold text-[#16a34a] text-left">
-                  {leader.title}
-                </p>
-                <p className="mt-3 flex-grow text-xs sm:text-sm leading-relaxed text-[#475569] text-left">
-                  {leader.bio}
-                </p>
-                <a
-                  href={leader.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#16a34a] hover:text-[#15803d] hover:underline"
+              <ScrollReveal key={idx} delay={idx * 60}>
+                <Card
+                  className="flex h-full flex-col p-5 sm:p-6 lg:p-7 bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-3xl shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl text-left"
                 >
-                  <Linkedin className="h-4 w-4" />
-                  Connect
-                </a>
-              </Card>
+                  <div className="relative mb-4 aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-sm">
+                    <Image
+                      src={leader.image}
+                      alt={leader.name}
+                      fill
+                      className="object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-sora font-extrabold leading-tight text-[#111827] text-left">
+                    {leader.name}
+                  </h3>
+                  <p className="mt-1 text-xs sm:text-sm font-bold text-[#16a34a] text-left">
+                    {leader.title}
+                  </p>
+                  <p className="mt-3 flex-grow text-xs sm:text-sm leading-relaxed text-[#475569] text-left">
+                    {leader.bio}
+                  </p>
+                  <a
+                    href={leader.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#16a34a] hover:text-[#15803d] hover:underline"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                    Connect
+                  </a>
+                </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>
