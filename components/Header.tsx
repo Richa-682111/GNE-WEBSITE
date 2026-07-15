@@ -68,7 +68,7 @@ export function Header() {
             alt="GNE Infra logo"
             width={315}
             height={190}
-            className="h-14 sm:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+            className="logo-img h-14 sm:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
             priority
           />
         </a>

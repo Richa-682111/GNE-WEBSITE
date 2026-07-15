@@ -59,7 +59,7 @@ const cardsData: CardData[] = [
 export function CoreValuesSection() {
   return (
     <section
-      className="core-values relative min-h-screen py-12 lg:py-16 xl:py-24 font-inter transition-colors duration-300"
+      className="core-values relative min-h-screen py-10 lg:py-14 xl:py-12 font-inter transition-colors duration-300"
       style={{
         background: `radial-gradient(circle at 20% 20%, rgba(22,199,132,.06), transparent 35%), radial-gradient(circle at 80% 80%, rgba(79,124,255,.06), transparent 35%), var(--background, #faf8f5)`,
       }}
@@ -75,11 +75,11 @@ export function CoreValuesSection() {
             <span className="w-8 h-[2px] bg-[#16c784]" />
           </div>
 
-          <h2 className="font-sora font-extrabold text-4xl sm:text-5xl md:text-6xl text-slate-900 dark:text-white tracking-tight mb-4">
+          <h2 className="font-sora font-extrabold text-3xl sm:text-4xl md:text-5xl text-slate-900 dark:text-white tracking-tight mb-4">
             Our Core Values
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
+          <p className="text-base text-center sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
             We don&apos;t just build clean energy infrastructure—we cultivate an enduring ecosystem where ethical integrity, technological innovation, and sustainable excellence thrive.
           </p>
         </div>
@@ -95,7 +95,7 @@ export function CoreValuesSection() {
               <div
                 key={idx}
                 className="sticky w-full flex flex-col rounded-[36px] overflow-hidden border border-slate-200/20 dark:border-slate-800/40 shadow-2xl transition-all duration-500 group bg-slate-950"
-                style={{ top: topOffset, minHeight: "clamp(380px, 60vh, 540px)" }}
+                style={{ top: topOffset, minHeight: "clamp(300px, 50vh, 480px)" }}
               >
                 {/* Crisp Background Image (NO backdrop blur!) */}
                 <img

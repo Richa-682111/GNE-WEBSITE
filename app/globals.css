@@ -755,3 +755,55 @@
     animation: none !important;
   }
 }
+
+/* ── 14-INCH LAPTOP OPTIMISATIONS (1280 – 1440 px) ──────────────────────
+   A 14" screen at 100% DPI sits in this range. We reduce hero height,
+   tighten section vertical padding, scale heading sizes down one notch,
+   and shrink the orbital diagram so nothing overflows or feels cramped.
+──────────────────────────────────────────────────────────────────────── */
+@media (min-width: 1280px) and (max-width: 1440px) {
+  /* ── Section vertical rhythm ── */
+  section {
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+
+  /* ── Heading scale ── */
+  .text-5xl  { font-size: 2.6rem  !important; line-height: 1.15 !important; }
+  .text-6xl  { font-size: 3rem    !important; line-height: 1.1  !important; }
+  .sm\:text-5xl { font-size: 2.6rem !important; }
+  .md\:text-6xl { font-size: 3rem   !important; }
+  .lg\:text-6xl { font-size: 3rem   !important; }
+
+  /* ── Hero height – fits cleanly below the sticky header ── */
+  .hero-video-wrap {
+    height: 76vh !important;
+    min-height: 420px !important;
+  }
+
+  /* ── Orbital diagram: pull in the radius so nodes don't clip ── */
+  .orbital-wrap {
+    --orbit-radius: 155px !important;
+  }
+
+  /* ── Core-values stacked cards ── */
+  .core-values .sticky {
+    min-height: clamp(300px, 48vh, 440px) !important;
+  }
+
+  /* ── Header logo ── */
+  .logo-img {
+    height: 3.25rem !important;
+  }
+
+  /* ── Max content container ── */
+  .max-w-\[1400px\] {
+    max-width: 1200px !important;
+  }
+  .max-w-\[1380px\] {
+    max-width: 1180px !important;
+  }
+  .max-w-\[1340px\] {
+    max-width: 1140px !important;
+  }
+}

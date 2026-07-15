@@ -13,7 +13,7 @@ export default function HomePage() {
 
 
           <h1
-            className="mx-auto max-w-4xl text-center text-3xl font-black leading-[1.1] text-[#f5ece5] sm:text-4xl md:text-5xl lg:text-[52px]"
+            className="mx-auto max-w-4xl text-center text-3xl font-black leading-[1.1] text-[#f5ece5] sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[48px]"
             style={{
               textShadow: `
       0 0 4px rgba(0,0,0,0.9),
@@ -49,7 +49,7 @@ export default function HomePage() {
       </HeroCarousel>
 
       {/* ── OUR IMPACT ─────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden py-14 sm:py-20" style={{ background: '#f5ece5' }}>
+      <section className="relative overflow-hidden py-10 sm:py-16 xl:py-14" style={{ background: '#f5ece5' }}>
 
         <div className="mx-auto max-w-[1400px] px-4 sm:px-8 lg:px-12">
           {/* Section header */}
@@ -71,7 +71,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-emerald-500/20 via-sky-400/10 to-teal-400/10 blur-2xl" />
 
                 <div className="relative w-full max-w-2xl overflow-hidden rounded-3xl p-6 shadow-2xl sm:p-10" style={{ background: 'linear-gradient(135deg, #e2efe7 0%, #cbe4d5 100%)', border: '1.5px solid rgba(13,115,66,0.35)', boxShadow: '0 20px 50px rgba(13,115,66,0.12), 0 8px 20px rgba(0,0,0,0.06)' }}>
-                  <div className="relative mx-auto flex h-72 w-72 items-center justify-center sm:h-96 sm:w-96 lg:h-[400px] lg:w-[400px] xl:h-[460px] xl:w-[460px] [--orbit-radius:98px] sm:[--orbit-radius:140px] lg:[--orbit-radius:150px] xl:[--orbit-radius:185px]">
+                  <div className="orbital-wrap relative mx-auto flex h-72 w-72 items-center justify-center sm:h-96 sm:w-96 lg:h-[380px] lg:w-[380px] xl:h-[420px] xl:w-[420px] [--orbit-radius:98px] sm:[--orbit-radius:140px] lg:[--orbit-radius:145px] xl:[--orbit-radius:165px]">
                     {/* Animated orbit rings */}
                     <div className="absolute inset-0 animate-[spin_18s_linear_infinite] rounded-full border-2 border-dashed border-emerald-300/40 dark:border-emerald-700/40" />
                     <div className="absolute inset-6 sm:inset-8 xl:inset-10 animate-[spin_24s_linear_infinite_reverse] rounded-full border border-dashed border-sky-300/30 dark:border-sky-700/30" />
@@ -141,7 +141,7 @@ export default function HomePage() {
       </section>
 
       {/* ── WHAT WE DO — Editorial Numbered Strip ─────────────────── */}
-      <section className="relative py-16 sm:py-24 overflow-hidden" style={{ background: '#fbf5eb' }}>
+      <section className="relative py-12 sm:py-20 xl:py-16 overflow-hidden" style={{ background: '#fbf5eb' }}>
         {/* Subtle background */}
         <div className="pointer-events-none absolute inset-0 -z-10">
           <div className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-emerald-200/60 to-transparent" />
@@ -323,7 +323,7 @@ export default function HomePage() {
       </section>
 
       {/* ── OUR EXPERTISE ──────────────────────────────────────── */}
-      <section className="relative overflow-hidden py-14 sm:py-20" style={{ background: '#f5ece5' }}>
+      <section className="relative overflow-hidden py-10 sm:py-16 xl:py-14" style={{ background: '#f5ece5' }}>
         {/* Ambient glow */}
         <div className="pointer-events-none absolute inset-0 -z-0">
           <div className="absolute left-1/3 top-0 h-[400px] w-[700px] -translate-x-1/2 rounded-full bg-emerald-400/15 blur-[130px]" />

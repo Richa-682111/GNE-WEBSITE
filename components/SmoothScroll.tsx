@@ -8,11 +8,11 @@ export function SmoothScrollProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.8, // Buttery smooth 1.8s deceleration glide
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Exponential easing for silky smoothness
+      duration: 2.2, // Controls inertia duration: higher = slower, smoother glide
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Silky exponential easing
       smoothWheel: true,
-      wheelMultiplier: 1.0, // Natural 1:1 wheel input scaling
-      touchMultiplier: 2.0, // Responsive touch gliding
+      wheelMultiplier: 0.65, // Controls scroll range: lower = shorter travel distance per wheel turn
+      touchMultiplier: 1.2, // Controls touch swipe range on mobile/tablet
     });
 
     lenisRef.current = lenis;
