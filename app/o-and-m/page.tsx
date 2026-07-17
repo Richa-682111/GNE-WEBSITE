@@ -73,24 +73,24 @@ export default function OAndMPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <JsonLd data={jsonLd} />
-      
+
       <PremiumServiceHero
         title="Operations & Maintenance (O&M)"
         subtitle="Comprehensive Operations & Maintenance services for solar power plants and Battery Energy Storage Systems, focused on maximizing asset performance, ensuring operational reliability, and extending plant life through proactive maintenance and continuous monitoring."
-        image="/service-om.jpg" 
+        image="/service-om.jpg"
       />
 
-      <EditorialIntro 
+      <EditorialIntro
         title="Maximizing Performance throughout the Asset Lifecycle"
         content="GNE Infra provides integrated Operations & Maintenance (O&M) services to ensure renewable energy assets operate safely, efficiently, and reliably throughout their lifecycle. Our services include preventive and corrective maintenance, performance monitoring, diagnostics, and asset optimization, helping clients maximize energy generation, minimize downtime, and improve long-term operational efficiency."
       />
 
-      <BentoFeatureGrid 
-        title="Why Choose GNE Infra"
+      <BentoFeatureGrid
+        title="Operational Excellence"
         features={features}
       />
 
-      <InteractiveHorizontalFlow 
+      <InteractiveHorizontalFlow
         title="Our O&M Scope"
         steps={scopeSteps}
       />

@@ -84,12 +84,12 @@ export default function SolarEpcPage() {
       />
 
       <EditorialIntro
-        title="Building High-Performance Solar Infrastructure"
+        title="BESS Executions Excellence"
         content="GNE Infra delivers integrated Solar EPC solutions that transform project concepts into operational renewable energy assets. From feasibility and engineering to procurement, construction, commissioning, and long-term support, we ensure every project is executed with a focus on quality, efficiency, safety, and performance."
       />
 
       <BentoFeatureGrid
-        title="Why Choose GNE Infra"
+        title="Our Core Strengths"
         features={features}
       />
 
