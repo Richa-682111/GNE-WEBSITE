@@ -13,7 +13,7 @@ export default function HomePage() {
 
 
           <h1
-            className="mx-auto max-w-4xl text-center text-3xl font-black leading-[1.1] text-[#f5ece5] sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[48px]"
+            className="mx-auto max-w-5xl text-center text-4xl font-malgiva font-normal leading-[1.08] text-[#f5ece5] sm:text-6xl md:text-[64px] lg:text-[72px] xl:text-[80px]"
             style={{
               textShadow: `
       0 0 4px rgba(0,0,0,0.9),

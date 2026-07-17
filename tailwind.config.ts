@@ -26,6 +26,8 @@ export default {
       fontFamily: {
         sora: ["var(--font-sora)", "sans-serif"],
         inter: ["var(--font-inter)", "sans-serif"],
+        clash: ["'Clash Display'", "sans-serif"],
+        malgiva: ["'Malgiva'", "Georgia", "serif"],
       },
       keyframes: {
         marquee: {
