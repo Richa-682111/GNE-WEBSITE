@@ -48,7 +48,7 @@ const lifecyclePhases = [
   {
     number: "02",
     title: "Grid Connectivity",
-    image: "/o&m.png",
+    image: "/grid-integration.png",
     icon: Wrench,
     accent: "#2b6cb0",
     tagline: "Asset management & uptime maximization",
