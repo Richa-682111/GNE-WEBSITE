@@ -28,10 +28,10 @@ export function ServicePageHero({
       <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 lg:grid-cols-[1.05fr_0.95fr]">
         <div>
           {badge}
-          <h1 className="mt-6 text-3xl font-black tracking-tight text-slate-950 dark:text-white sm:text-4xl lg:text-[2.5rem] lg:leading-tight">
+          <h1 className="mt-6 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl lg:text-[2.5rem] lg:leading-tight">
             {title}
           </h1>
-          <p className="mt-4 max-w-2xl text-base text-slate-700 dark:text-slate-200 sm:text-lg">
+          <p className="mt-4 max-w-2xl text-base text-slate-700 sm:text-lg">
             {description}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -44,7 +44,7 @@ export function ServicePageHero({
           </div>
         </div>
 
-        <div className="relative overflow-hidden rounded-2xl border border-emerald-200/60 shadow-xl dark:border-emerald-900/40">
+        <div className="relative overflow-hidden rounded-2xl border border-emerald-200/60 shadow-xl">
           <Image
             src={image}
             alt={imageAlt}

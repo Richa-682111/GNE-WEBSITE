@@ -43,7 +43,7 @@ export default function LoadingOverlay() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
-          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-slate-50/95 dark:bg-slate-950/95 backdrop-blur-md"
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-slate-50/95 backdrop-blur-md"
         >
           <div className="relative flex flex-col items-center w-64 h-80">
             
@@ -109,12 +109,12 @@ export default function LoadingOverlay() {
 
             {/* 4. Battery */}
             <div className="absolute bottom-6 flex flex-col items-center">
-              <div className="w-5 h-2.5 bg-slate-300 dark:bg-slate-700 rounded-t-sm" />
+              <div className="w-5 h-2.5 bg-slate-300 rounded-t-sm" />
               <div 
                 className={`relative w-24 h-12 border-2 rounded-lg p-1 overflow-hidden transition-all duration-300 shadow-lg ${
                   charge === 100 
                     ? 'border-brand-green shadow-[0_0_25px_rgba(22,163,74,0.4)]' 
-                    : 'border-slate-300 dark:border-slate-700'
+                    : 'border-slate-300'
                 }`}
               >
                 {/* Battery Fill Bar */}

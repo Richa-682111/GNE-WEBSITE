@@ -120,16 +120,16 @@ export default async function BlogPostPage({ params }: Props) {
       </Section>
 
       {/* ── CONTENT & SIDEBAR GRID ──────────────────────────────────────── */}
-      <Section className="relative bg-slate-50/20 dark:bg-slate-950/5 flex-grow">
+      <Section className="relative bg-slate-50/20 flex-grow">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             
             {/* ARTICLE COLUMN */}
             <main className="lg:col-span-8">
               <ScrollReveal>
-                <Card className="!p-8 sm:!p-10 border border-emerald-100/60 dark:border-emerald-900/25 bg-white/80 dark:bg-slate-950/40 backdrop-blur-md rounded-3xl">
+                <Card className="!p-8 sm:!p-10 border border-emerald-100/60 bg-white/80 backdrop-blur-md rounded-3xl">
                   {/* Tailwind Prose Container for rich text styling */}
-                  <article className="prose prose-slate dark:prose-invert prose-emerald max-w-none prose-headings:font-black prose-headings:tracking-tight prose-h2:mt-10 prose-h2:border-b prose-h2:border-slate-100 dark:prose-h2:border-slate-900 prose-h2:pb-3 prose-blockquote:border-l-4 prose-blockquote:border-emerald-500 prose-blockquote:bg-emerald-50/10 dark:prose-blockquote:bg-emerald-950/5 prose-blockquote:p-4 prose-blockquote:rounded-r-xl">
+                  <article className="prose prose-slate prose-emerald max-w-none prose-headings:font-black prose-headings:tracking-tight prose-h2:mt-10 prose-h2:border-b prose-h2:border-slate-100 prose-h2:pb-3 prose-blockquote:border-l-4 prose-blockquote:border-emerald-500 prose-blockquote:bg-emerald-50/10 prose-blockquote:p-4 prose-blockquote:rounded-r-xl">
                     {content || (
                       <>
                         <p className="lead">{post.excerpt}</p>
@@ -146,8 +146,8 @@ export default async function BlogPostPage({ params }: Props) {
               
               {/* RELATED ARTICLES CARD */}
               <ScrollReveal delay={100}>
-                <div className="rounded-3xl border border-slate-200/60 dark:border-slate-800 bg-white/70 dark:bg-slate-950/50 p-6 backdrop-blur shadow-sm">
-                  <h3 className="text-xs font-black uppercase tracking-widest text-emerald-600 dark:text-emerald-400 mb-4">
+                <div className="rounded-3xl border border-slate-200/60 bg-white/70 p-6 backdrop-blur shadow-sm">
+                  <h3 className="text-xs font-black uppercase tracking-widest text-emerald-600 mb-4">
                     Related Articles
                   </h3>
                   <div className="space-y-4">
@@ -155,9 +155,9 @@ export default async function BlogPostPage({ params }: Props) {
                       <Link 
                         key={related.slug} 
                         href={`/blog/${related.slug}`}
-                        className="group block border-b border-slate-100 dark:border-slate-900 last:border-0 pb-4 last:pb-0"
+                        className="group block border-b border-slate-100 last:border-0 pb-4 last:pb-0"
                       >
-                        <h4 className="text-sm font-bold text-slate-900 dark:text-white transition-colors duration-200 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 line-clamp-2">
+                        <h4 className="text-sm font-bold text-slate-900 transition-colors duration-200 group-hover:text-emerald-600 line-clamp-2">
                           {related.title}
                         </h4>
                         <div className="mt-2 flex items-center gap-2 text-[10px] font-semibold text-slate-400">

@@ -2,7 +2,6 @@ import type { Config } from "tailwindcss";
 import typography from "@tailwindcss/typography";
 
 export default {
-  darkMode: ["class"],
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./content/**/*.{ts,tsx}"],
   theme: {
     extend: {
@@ -13,10 +12,7 @@ export default {
           blue: "#0B5FFF",
           solar: "#FFD54A",
           hydrogen: "#3BB7FF",
-          bess: "#00E676",
-          darkBg: "#050B14",
-          darkCard: "#071018",
-          darkBorder: "#0B1623"
+          bess: "#00E676"
         }
       },
       boxShadow: {

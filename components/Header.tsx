@@ -53,10 +53,10 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-40 transition-all duration-300 border-b backdrop-blur-md bg-white/95 dark:bg-[#0B132B]/95 ${
+      className={`sticky top-0 z-40 transition-all duration-300 border-b backdrop-blur-md bg-white/95 ${
         isScrolled
-          ? "border-slate-200 dark:border-slate-800 shadow-md"
-          : "border-slate-200/60 dark:border-slate-800/60 shadow-sm"
+          ? "border-slate-200 shadow-md"
+          : "border-slate-200/60 shadow-sm"
       }`}
     >
       <div className="grid w-full grid-cols-[auto_1fr_auto] items-center gap-4 px-3 py-2 sm:px-5 lg:px-8">
@@ -114,7 +114,7 @@ export function Header() {
                     <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover/drop:rotate-180" />
                   </button>
 
-                  <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-full z-50 min-w-[240px] rounded-2xl border border-slate-200/60 bg-white/95 p-2 opacity-0 shadow-2xl transition-all duration-200 group-hover/drop:pointer-events-auto group-hover/drop:opacity-100 dark:border-slate-800 dark:bg-brand-darkCard/95 backdrop-blur-md">
+                  <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-full z-50 min-w-[240px] rounded-2xl border border-slate-200/60 bg-white/95 p-2 opacity-0 shadow-2xl transition-all duration-200 group-hover/drop:pointer-events-auto group-hover/drop:opacity-100 backdrop-blur-md">
                     {group.items.map((item) => {
                       const isItemActive = mounted && pathname === item.href;
                       return (

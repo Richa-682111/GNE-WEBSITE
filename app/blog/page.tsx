@@ -68,9 +68,9 @@ export default function BlogPage() {
           {featuredPost && (
             <ScrollReveal className="mb-16">
               <Link href={`/blog/${featuredPost.slug}`} className="group block">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch overflow-hidden rounded-[2.5rem] border border-emerald-100 dark:border-emerald-900/40 bg-white/70 dark:bg-slate-950/40 backdrop-blur-md p-6 sm:p-8 transition-all duration-500 ease-out group-hover:scale-[1.02] group-hover:-translate-y-2 group-hover:z-30 group-hover:shadow-[0_30px_70px_rgba(22,163,74,0.25)]">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch overflow-hidden rounded-[2.5rem] border border-emerald-100 bg-white/70 backdrop-blur-md p-6 sm:p-8 transition-all duration-500 ease-out group-hover:scale-[1.02] group-hover:-translate-y-2 group-hover:z-30 group-hover:shadow-[0_30px_70px_rgba(22,163,74,0.25)]">
                   {/* Image container */}
-                  <div className="relative overflow-hidden rounded-[1.5rem] border border-emerald-100/50 dark:border-emerald-900/20 lg:col-span-6 min-h-[280px] lg:min-h-[340px] xl:min-h-[440px]">
+                  <div className="relative overflow-hidden rounded-[1.5rem] border border-emerald-100/50 lg:col-span-6 min-h-[280px] lg:min-h-[340px] xl:min-h-[440px]">
                     <Image
                       src={featuredPost.image}
                       alt={featuredPost.title}
@@ -85,7 +85,7 @@ export default function BlogPage() {
                   <div className="flex flex-col justify-between py-2 lg:col-span-6">
                     <div>
                       {/* Tag badge */}
-                      <span className="inline-block rounded-full bg-emerald-50 dark:bg-emerald-950/50 px-3.5 py-1 text-xs font-extrabold uppercase tracking-wider text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-200/50 dark:ring-emerald-800/50">
+                      <span className="inline-block rounded-full bg-emerald-50 px-3.5 py-1 text-xs font-extrabold uppercase tracking-wider text-emerald-700 ring-1 ring-emerald-200/50">
                         {featuredPost.category}
                       </span>
 
@@ -95,14 +95,14 @@ export default function BlogPage() {
                       </h2>
 
                       {/* Excerpt */}
-                      <p className="mt-3 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                      <p className="mt-3 text-slate-600 text-sm leading-relaxed">
                         {featuredPost.excerpt}
                       </p>
                     </div>
 
                     {/* Metadata & CTA */}
-                    <div className="mt-6 flex flex-wrap items-center justify-between border-t border-slate-100 dark:border-slate-900 pt-6 gap-4">
-                      <div className="flex items-center gap-4 text-xs font-semibold text-slate-500 dark:text-slate-400">
+                    <div className="mt-6 flex flex-wrap items-center justify-between border-t border-slate-100 pt-6 gap-4">
+                      <div className="flex items-center gap-4 text-xs font-semibold text-slate-500">
                         <span className="inline-flex items-center gap-1">
                           <Calendar className="h-3.5 w-3.5 text-emerald-500" />
                           {new Date(featuredPost.date).toLocaleDateString(undefined, {
@@ -117,7 +117,7 @@ export default function BlogPage() {
                         </span>
                       </div>
 
-                      <div className="inline-flex items-center gap-1.5 text-sm font-black text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400">
+                      <div className="inline-flex items-center gap-1.5 text-sm font-black text-slate-900 group-hover:text-emerald-600">
                         <span>Read Article</span>
                         <ArrowRight className="h-4 w-4 transform transition-transform duration-300 group-hover:translate-x-1" />
                       </div>
@@ -135,7 +135,7 @@ export default function BlogPage() {
                 <Link href={`/blog/${post.slug}`} className="group flex h-full">
                   <Card className="flex w-full flex-col overflow-hidden !p-0">
                     {/* Image Thumbnail */}
-                    <div className="relative aspect-video w-full overflow-hidden rounded-t-2xl border-b border-slate-100 dark:border-slate-900">
+                    <div className="relative aspect-video w-full overflow-hidden rounded-t-2xl border-b border-slate-100">
                       <Image
                         src={post.image}
                         alt={post.title}
@@ -149,7 +149,7 @@ export default function BlogPage() {
                     <div className="flex flex-1 flex-col justify-between p-6">
                       <div>
                         {/* Category Badge */}
-                        <span className="inline-block rounded-full bg-emerald-50 dark:bg-emerald-950/50 px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-200/50 dark:ring-emerald-800/50">
+                        <span className="inline-block rounded-full bg-emerald-50 px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-emerald-700 ring-1 ring-emerald-200/50">
                           {post.category}
                         </span>
 
@@ -159,13 +159,13 @@ export default function BlogPage() {
                         </h3>
 
                         {/* Excerpt */}
-                        <p className="mt-2 text-xs leading-relaxed text-slate-500 dark:text-slate-400 line-clamp-3">
+                        <p className="mt-2 text-xs leading-relaxed text-slate-500 line-clamp-3">
                           {post.excerpt}
                         </p>
                       </div>
 
                       {/* Metadata Footer */}
-                      <div className="mt-5 border-t border-slate-100 dark:border-slate-900 pt-4 flex items-center justify-between">
+                      <div className="mt-5 border-t border-slate-100 pt-4 flex items-center justify-between">
                         <div className="flex items-center gap-3 text-[11px] font-semibold text-slate-400">
                           <span className="inline-flex items-center gap-1">
                             <Calendar className="h-3 w-3" />
@@ -181,7 +181,7 @@ export default function BlogPage() {
                           </span>
                         </div>
 
-                        <div className="inline-flex items-center gap-1 text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400">
+                        <div className="inline-flex items-center gap-1 text-xs font-bold text-slate-900 group-hover:text-emerald-600">
                           <span>Read</span>
                           <ArrowRight className="h-3.5 w-3.5 transform transition-transform duration-300 group-hover:translate-x-0.5" />
                         </div>

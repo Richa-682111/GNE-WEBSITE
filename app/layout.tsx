@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Suspense } from "react";
 import { Sora, Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
 import { SmoothScrollProvider } from "@/components/SmoothScroll";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -62,10 +61,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${sora.variable} ${inter.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${sora.variable} ${inter.variable}`}>
       <body className="font-inter">
-        <ThemeProvider>
-          <SmoothScrollProvider>
+        <SmoothScrollProvider>
             <Suspense fallback={null}>
               <LoadingOverlay />
             </Suspense>
@@ -100,7 +98,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
               {/* Subtle Noise/Mesh */}
               <div
-                className="absolute inset-0 opacity-[0.02] dark:opacity-[0.04] pointer-events-none mix-blend-overlay"
+                className="absolute inset-0 opacity-[0.02] pointer-events-none mix-blend-overlay"
                 style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, black 1px, transparent 0)', backgroundSize: '32px 32px' }}
               />
             </div>
@@ -108,7 +106,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <main className="min-h-[70vh] relative z-0">{children}</main>
             <Footer />
           </SmoothScrollProvider>
-        </ThemeProvider>
       </body>
     </html>
   );

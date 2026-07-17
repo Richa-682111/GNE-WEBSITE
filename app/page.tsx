@@ -73,8 +73,8 @@ export default function HomePage() {
                 <div className="relative w-full max-w-2xl overflow-hidden rounded-3xl p-6 shadow-2xl sm:p-10" style={{ background: 'linear-gradient(135deg, #e2efe7 0%, #cbe4d5 100%)', border: '1.5px solid rgba(13,115,66,0.35)', boxShadow: '0 20px 50px rgba(13,115,66,0.12), 0 8px 20px rgba(0,0,0,0.06)' }}>
                   <div className="orbital-wrap relative mx-auto flex h-72 w-72 items-center justify-center sm:h-96 sm:w-96 lg:h-[380px] lg:w-[380px] xl:h-[420px] xl:w-[420px] [--orbit-radius:98px] sm:[--orbit-radius:140px] lg:[--orbit-radius:145px] xl:[--orbit-radius:165px]">
                     {/* Animated orbit rings */}
-                    <div className="absolute inset-0 animate-[spin_18s_linear_infinite] rounded-full border-2 border-dashed border-emerald-300/40 dark:border-emerald-700/40" />
-                    <div className="absolute inset-6 sm:inset-8 xl:inset-10 animate-[spin_24s_linear_infinite_reverse] rounded-full border border-dashed border-sky-300/30 dark:border-sky-700/30" />
+                    <div className="absolute inset-0 animate-[spin_18s_linear_infinite] rounded-full border-2 border-dashed border-emerald-300/40" />
+                    <div className="absolute inset-6 sm:inset-8 xl:inset-10 animate-[spin_24s_linear_infinite_reverse] rounded-full border border-dashed border-sky-300/30" />
 
                     {/* Centre hub */}
                     <div className="relative z-10 flex h-24 w-24 sm:h-28 sm:w-28 xl:h-32 xl:w-32 flex-col items-center justify-center rounded-full shadow-2xl" style={{ background: 'linear-gradient(135deg, #1a4731, #0f2d1e)' }}>
@@ -84,12 +84,12 @@ export default function HomePage() {
 
                     {/* Orbital nodes */}
                     {[
-                      { label: "Environment", angle: 0, icon: "🌱", color: "bg-emerald-100 text-emerald-950 border-2 border-emerald-300/80 dark:bg-emerald-900/60 dark:text-emerald-100 dark:border-emerald-600/60" },
-                      { label: "Economic", angle: 60, icon: "📈", color: "bg-blue-100 text-blue-950 border-2 border-blue-300/80 dark:bg-blue-900/60 dark:text-blue-100 dark:border-blue-600/60" },
-                      { label: "Operational", angle: 120, icon: "⚙️", color: "bg-amber-100 text-amber-950 border-2 border-amber-300/80 dark:bg-amber-900/60 dark:text-amber-100 dark:border-amber-600/60" },
-                      { label: "Innovation", angle: 180, icon: "💡", color: "bg-purple-100 text-purple-950 border-2 border-purple-300/80 dark:bg-purple-900/60 dark:text-purple-100 dark:border-purple-600/60" },
-                      { label: "Social", angle: 240, icon: "🤝", color: "bg-rose-100 text-rose-950 border-2 border-rose-300/80 dark:bg-rose-900/60 dark:text-rose-100 dark:border-rose-600/60" },
-                      { label: "Technical", angle: 300, icon: "⚡", color: "bg-cyan-100 text-cyan-950 border-2 border-cyan-300/80 dark:bg-cyan-900/60 dark:text-cyan-100 dark:border-cyan-600/60" },
+                      { label: "Environment", angle: 0, icon: "🌱", color: "bg-emerald-100 text-emerald-950 border-2 border-emerald-300/80" },
+                      { label: "Economic", angle: 60, icon: "📈", color: "bg-blue-100 text-blue-950 border-2 border-blue-300/80" },
+                      { label: "Operational", angle: 120, icon: "⚙️", color: "bg-amber-100 text-amber-950 border-2 border-amber-300/80" },
+                      { label: "Innovation", angle: 180, icon: "💡", color: "bg-purple-100 text-purple-950 border-2 border-purple-300/80" },
+                      { label: "Social", angle: 240, icon: "🤝", color: "bg-rose-100 text-rose-950 border-2 border-rose-300/80" },
+                      { label: "Technical", angle: 300, icon: "⚡", color: "bg-cyan-100 text-cyan-950 border-2 border-cyan-300/80" },
                     ].map(({ label, angle, icon, color }) => {
                       const rad = (angle - 90) * (Math.PI / 180);
                       const cosVal = Math.cos(rad);
@@ -165,7 +165,7 @@ export default function HomePage() {
           {/* Top Row: Points 01-03 on Left, wedo1 Image Card on Right */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-16 sm:mb-24">
             {/* Left Column: First 3 Points (Span 7) */}
-            <div className="lg:col-span-7 divide-y divide-slate-200/70 dark:divide-slate-700/50">
+            <div className="lg:col-span-7 divide-y divide-slate-200/70">
               {[
                 {
                   num: "01",
@@ -219,7 +219,7 @@ export default function HomePage() {
             {/* Right Column: wedo1 Image Card (Span 5) */}
             <div className="lg:col-span-5">
               <ScrollReveal delay={200}>
-                <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl bg-slate-900 group aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/5] min-h-[380px] lg:min-h-[440px] xl:min-h-[540px]">
+                <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-2xl bg-slate-900 group aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/5] min-h-[380px] lg:min-h-[440px] xl:min-h-[540px]">
                   <Image
                     src="/wedo1.jpg"
                     alt="Renewable Energy Development"
@@ -246,7 +246,7 @@ export default function HomePage() {
             {/* Left Column: wedo2 Image Card (Span 5) - Order 2 on mobile, 1 on desktop */}
             <div className="lg:col-span-5 order-2 lg:order-1">
               <ScrollReveal delay={200}>
-                <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl bg-slate-900 group aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/5] min-h-[360px] lg:min-h-[460px]">
+                <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-2xl bg-slate-900 group aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/5] min-h-[360px] lg:min-h-[460px]">
                   <Image
                     src="/wedo2.jpg"
                     alt="Industrial Decarbonization and Sustainable Value"
@@ -268,7 +268,7 @@ export default function HomePage() {
             </div>
 
             {/* Right Column: Last 3 Points (Span 7) - Order 1 on mobile, 2 on desktop */}
-            <div className="lg:col-span-7 order-1 lg:order-2 divide-y divide-slate-200/70 dark:divide-slate-700/50">
+            <div className="lg:col-span-7 order-1 lg:order-2 divide-y divide-slate-200/70">
               {[
                 {
                   num: "04",
@@ -350,12 +350,12 @@ export default function HomePage() {
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
             {[
-              { key: "land", href: "/solar-epc", img: "/service-land.jpg", label: "Land Procurement & Grid Connectivity", accent: "from-[#45523e] to-[#2a3328]", tag: "bg-[#45523e]", desc: "We support renewable energy projects through strategic land identification, aggregation, techno-legal due diligence, and regulatory coordination. Our integrated approach helps accelerate project development while minimizing land-related risks and execution delays." },
-              { key: "installation", href: "/pmc", img: "/service-pmc.jpg", label: "PMC(Solar, BESS, PSP, Wind)", accent: "from-[#b0aca2] to-[#7a756f]", tag: "bg-[#b0aca2]", desc: "We offer end-to-end project management consultancy services covering project planning, execution monitoring, contract management, procurement support, quality control, and stakeholder coordination to ensure efficient and timely project delivery." },
-              { key: "epc", href: "/solar-epc", img: "/service-epc.jpg", label: "Solar EPC", accent: "from-[#45523e] to-[#010101]", tag: "bg-[#45523e]", desc: "We provide complete Solar EPC services from feasibility studies and detailed engineering to procurement, construction, commissioning, and grid connectivity, ensuring high-quality and timely project delivery." },
-              { key: "om", href: "/o-and-m", img: "/service-om.jpg", label: "O&M(BESS, Solar,PSP)", accent: "from-[#ad5d50] to-[#7a3f35]", tag: "bg-[#ad5d50]", desc: "We deliver end-to-end operations and maintenance services focused on maximizing plant availability, improving energy generation, reducing downtime, and extending asset life." },
-              { key: "bess", href: "/bess-ems", img: "/service-bess.jpg", label: "BESS (EPC/C&I, I&C)", accent: "from-[#010101] to-[#45523e]", tag: "bg-[#010101]", desc: "We deliver turnkey Battery Energy Storage System (BESS) projects, including engineering, procurement, installation, commissioning, and grid integration to enhance energy reliability, flexibility, and operational efficiency." },
-              { key: "manufacturing", href: "/green-hydrogen", img: "/grid-integration.png", label: "Grid Integration", accent: "from-[#ad5d50] to-[#010101]", tag: "bg-[#ad5d50]", desc: "We facilitate efficient grid connectivity through transmission planning, utility coordination, regulatory approvals, and power evacuation solutions, ensuring smooth integration of renewable energy projects into the grid." },
+              { key: "land", img: "/service-land.jpg", label: "Land Procurement & Grid Connectivity", accent: "from-[#45523e] to-[#2a3328]", tag: "bg-[#45523e]", desc: "We enable renewable energy projects through strategic land procurement, techno-legal due diligence, grid connectivity planning, regulatory approvals, and stakeholder coordination—ensuring faster project development with minimized execution risks." },
+              { key: "installation", img: "/service-pmc.jpg", label: "PMC(Solar, BESS, PSP, Wind)", accent: "from-[#b0aca2] to-[#7a756f]", tag: "bg-[#b0aca2]", desc: "We deliver end-to-end PMC services for Solar, BESS, PSP, and Wind projects, covering planning, engineering coordination, procurement, execution monitoring, quality assurance, and stakeholder management for timely project delivery." },
+              { key: "epc", img: "/service-epc.jpg", label: "Solar EPC", accent: "from-[#45523e] to-[#010101]", tag: "bg-[#45523e]", desc: "We provide complete Solar EPC services from feasibility studies and detailed engineering to procurement, construction, commissioning, and grid connectivity, ensuring high-quality and timely project delivery." },
+              { key: "om", img: "/service-om.jpg", label: "O&M(BESS, Solar,PSP)", accent: "from-[#ad5d50] to-[#7a3f35]", tag: "bg-[#ad5d50]", desc: "We deliver end-to-end operations and maintenance services focused on maximizing plant availability, improving energy generation, reducing downtime, and extending asset life." },
+              { key: "bess", img: "/service-bess.jpg", label: "BESS (EPC/C&I, I&C)", accent: "from-[#010101] to-[#45523e]", tag: "bg-[#010101]", desc: "We deliver turnkey Battery Energy Storage System (BESS) projects, including engineering, procurement, installation, commissioning, and grid integration to enhance energy reliability, flexibility, and operational efficiency." },
+              { key: "manufacturing", img: "/grid-integration.png", label: "Grid Integration", accent: "from-[#ad5d50] to-[#010101]", tag: "bg-[#ad5d50]", desc: "We facilitate efficient grid connectivity through transmission planning, utility coordination, regulatory approvals, and power evacuation solutions, ensuring smooth integration of renewable energy projects into the grid." },
             ].map(({ key, href, img, label, accent, tag, desc }, index) => (
               <ScrollReveal key={key} delay={index * 60} className="h-full">
                 <Link

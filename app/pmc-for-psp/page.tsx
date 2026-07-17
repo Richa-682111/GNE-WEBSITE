@@ -28,14 +28,14 @@ export default function PmcForPspPage() {
       <JsonLd data={jsonLd} />
       <Section className="bg-service-gradient">
         <div className="mx-auto max-w-6xl px-4">
-          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-xs font-semibold text-slate-700 backdrop-blur dark:border-slate-800 dark:bg-slate-950/50 dark:text-slate-200">
+          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-xs font-semibold text-slate-700 backdrop-blur">
             <Target className="h-4 w-4 text-brand-blue" />
             PMC for PSP
           </div>
           <h1 className="mt-6 text-4xl font-black tracking-tight sm:text-5xl">
             PMC for Public Sector Projects
           </h1>
-          <p className="mt-4 max-w-2xl text-lg text-slate-700 dark:text-slate-200">
+          <p className="mt-4 max-w-2xl text-lg text-slate-700">
             We support public sector renewable energy projects with contract oversight, compliance management and delivery confidence.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -80,10 +80,10 @@ export default function PmcForPspPage() {
             <div className="grid gap-10 lg:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-black tracking-tight">Expert PMC for government-backed projects</h2>
-                <p className="mt-5 text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+                <p className="mt-5 text-base text-slate-700 leading-relaxed">
                   Our team understands the governance, approvals and compliance needed in public sector renewable development, ensuring projects stay aligned with stakeholder expectations and regulatory frameworks.
                 </p>
-                <ul className="mt-8 space-y-4 text-sm text-slate-600 dark:text-slate-300">
+                <ul className="mt-8 space-y-4 text-sm text-slate-600">
                   <li className="flex gap-3">
                     <CheckCircle2 className="mt-1 h-5 w-5 text-brand-green" />
                     Project controls tuned for tender milestones and public procurement requirements.
@@ -101,8 +101,8 @@ export default function PmcForPspPage() {
 
               <div className="space-y-6">
                 <Card>
-                  <div className="text-sm font-semibold text-slate-900 dark:text-white">PSP PMC focus areas</div>
-                  <div className="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                  <div className="text-sm font-semibold text-slate-900">PSP PMC focus areas</div>
+                  <div className="mt-4 space-y-3 text-sm text-slate-600">
                     <div>Government process alignment and documentation</div>
                     <div>Technical audit coordination and compliance</div>
                     <div>Performance-based milestone delivery</div>
@@ -113,7 +113,7 @@ export default function PmcForPspPage() {
                     <ClipboardCheck className="mt-0.5 h-5 w-5 text-brand-solar" />
                     <div>
                       <div className="text-sm font-semibold">Quality and approvals</div>
-                      <div className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+                      <div className="mt-2 text-sm text-slate-600">
                         Tight quality control and approval management keeps projects audit-ready through every stage.
                       </div>
                     </div>
@@ -124,7 +124,7 @@ export default function PmcForPspPage() {
                     <ShieldCheck className="mt-0.5 h-5 w-5 text-brand-blue" />
                     <div>
                       <div className="text-sm font-semibold">Stakeholder confidence</div>
-                      <div className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+                      <div className="mt-2 text-sm text-slate-600">
                         Transparent coordination with agencies, financiers and EPC partners.
                       </div>
                     </div>

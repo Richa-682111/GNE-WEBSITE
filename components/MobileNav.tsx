@@ -8,7 +8,7 @@ type NavItem = { href: string; label: string };
 type DropdownGroup = { label: string; items: NavItem[] };
 
 const mobileLink =
-  "block rounded-xl px-4 py-3 text-sm font-bold text-slate-800 transition-all duration-200 hover:bg-emerald-50 hover:text-emerald-700 dark:text-slate-200 dark:hover:bg-slate-800/65 dark:hover:text-emerald-450";
+  "block rounded-xl px-4 py-3 text-sm font-bold text-slate-800 transition-all duration-200 hover:bg-emerald-50 hover:text-emerald-700";
 
 export function MobileNav({
   primaryNav,
@@ -55,7 +55,7 @@ export function MobileNav({
     <div ref={wrapRef} className="relative z-30 lg:hidden">
       <button
         type="button"
-        className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white/80 px-3 py-2 text-sm font-semibold text-slate-800 shadow-sm dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-100"
+        className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white/80 px-3 py-2 text-sm font-semibold text-slate-800 shadow-sm"
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen((v) => !v)}
@@ -67,13 +67,13 @@ export function MobileNav({
       {open ? (
         <>
           <div
-            className="fixed inset-0 z-40 bg-slate-950/40 backdrop-blur-[2px] dark:bg-slate-950/60"
+            className="fixed inset-0 z-40 bg-slate-950/40 backdrop-blur-[2px]"
             aria-hidden
             onClick={close}
           />
           <div
             id={panelId}
-            className="fixed left-4 right-4 top-[4.75rem] z-50 max-h-[min(70vh,calc(100dvh-6rem))] overflow-y-auto rounded-2xl border border-slate-200/80 bg-white/95 p-3 shadow-2xl dark:border-brand-darkBorder/55 dark:bg-brand-darkCard/95 backdrop-blur-lg"
+            className="fixed left-4 right-4 top-[4.75rem] z-50 max-h-[min(70vh,calc(100dvh-6rem))] overflow-y-auto rounded-2xl border border-slate-200/80 bg-white/95 p-3 shadow-2xl backdrop-blur-lg"
             role="dialog"
             aria-modal="true"
             aria-label="Site navigation"
@@ -86,7 +86,7 @@ export function MobileNav({
               ))}
               {dropdownNav.map((group) => (
                 <div key={group.label} className="pt-2">
-                  <div className="px-3 pb-1 text-[11px] font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+                  <div className="px-3 pb-1 text-[11px] font-bold uppercase tracking-wide text-slate-500">
                     {group.label}
                   </div>
                   {group.items.map((item) => (
@@ -99,10 +99,10 @@ export function MobileNav({
               <Link key="/blog" href="/blog" className={mobileLink} onClick={close}>
                 Blogs
               </Link>
-              <div className="mt-2 border-t border-emerald-100 pt-2 dark:border-emerald-900/50">
+              <div className="mt-2 border-t border-emerald-100 pt-2">
                 <Link
                   href="/contact"
-                  className={`${mobileLink} font-bold text-brand-green dark:text-emerald-400`}
+                  className={`${mobileLink} font-bold text-brand-green`}
                   onClick={close}
                 >
                   Contact

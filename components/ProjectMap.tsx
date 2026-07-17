@@ -52,20 +52,20 @@ export function ProjectMap({
   if (!mounted) {
     return (
       <div
-        className={`flex h-[420px] items-center justify-center rounded-2xl border border-emerald-100 bg-emerald-50/50 dark:border-emerald-900/40 dark:bg-slate-900/50 ${className}`}
+        className={`flex h-[420px] items-center justify-center rounded-2xl border border-emerald-100 bg-emerald-50/50 ${className}`}
       >
-        <span className="text-sm text-slate-500 dark:text-slate-400">Loading map…</span>
+        <span className="text-sm text-slate-500">Loading map…</span>
       </div>
     );
   }
 
   return (
     <div
-      className={`relative overflow-hidden rounded-2xl border border-emerald-100 shadow-lg dark:border-emerald-900/40 ${className}`}
+      className={`relative overflow-hidden rounded-2xl border border-emerald-100 shadow-lg ${className}`}
     >
       {/* Map background — OpenStreetMap tiles via CSS pattern */}
       <div
-        className="relative h-[420px] w-full bg-slate-200 dark:bg-slate-800"
+        className="relative h-[420px] w-full bg-slate-200"
         style={{
           backgroundImage: `
             linear-gradient(to bottom, rgba(16,185,129,0.06), rgba(15,23,42,0.15)),
@@ -75,7 +75,7 @@ export function ProjectMap({
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 via-transparent to-sky-50/20 dark:from-slate-950/40 dark:to-slate-950/20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 via-transparent to-sky-50/20" />
 
         {/* Grid overlay for polish */}
         <div
@@ -114,7 +114,7 @@ export function ProjectMap({
 
               {/* Tooltip */}
               <span
-                className={`pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 whitespace-nowrap rounded-lg bg-slate-900 px-2.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity dark:bg-white dark:text-slate-900 ${
+                className={`pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 whitespace-nowrap rounded-lg bg-slate-900 px-2.5 py-1.5 text-xs font-semibold text-white shadow-lg transition-opacity ${
                   isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
                 }`}
               >
@@ -125,8 +125,8 @@ export function ProjectMap({
         })}
 
         {/* Legend */}
-        <div className="absolute bottom-4 left-4 rounded-xl border border-white/60 bg-white/90 px-3 py-2.5 text-xs shadow-md backdrop-blur dark:border-slate-700 dark:bg-slate-900/90">
-          <div className="mb-1.5 font-semibold text-slate-700 dark:text-slate-200">
+        <div className="absolute bottom-4 left-4 rounded-xl border border-white/60 bg-white/90 px-3 py-2.5 text-xs shadow-md backdrop-blur">
+          <div className="mb-1.5 font-semibold text-slate-700">
             Project status
           </div>
           <div className="flex flex-col gap-1.5">
@@ -137,7 +137,7 @@ export function ProjectMap({
                 ["Design", "bg-sky-500"],
               ] as const
             ).map(([label, dot]) => (
-              <div key={label} className="flex items-center gap-2 text-slate-600 dark:text-slate-300">
+              <div key={label} className="flex items-center gap-2 text-slate-600">
                 <span className={`h-2.5 w-2.5 rounded-full ${dot}`} />
                 {label}
               </div>

@@ -41,9 +41,9 @@ const statusStyles: Record<
   (typeof projects)[number]["status"],
   string
 > = {
-  Commissioned: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-200",
-  "Under construction": "bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-200",
-  Design: "bg-sky-100 text-sky-800 dark:bg-sky-900/50 dark:text-sky-200",
+  Commissioned: "bg-emerald-100 text-emerald-800",
+  "Under construction": "bg-amber-100 text-amber-800",
+  Design: "bg-sky-100 text-sky-800",
 };
 
 export default async function ProjectDetailPage({ params }: Props) {
@@ -98,10 +98,10 @@ export default async function ProjectDetailPage({ params }: Props) {
             <div className="grid gap-10 lg:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-black tracking-tight">Solar EPC that maximizes energy yield</h2>
-                <p className="mt-5 text-base leading-relaxed text-slate-700 dark:text-slate-300">
+                <p className="mt-5 text-base leading-relaxed text-slate-700">
                   {project.description}
                 </p>
-                <ul className="mt-8 space-y-4 text-sm text-slate-600 dark:text-slate-300">
+                <ul className="mt-8 space-y-4 text-sm text-slate-600">
                   {project.scope.map((item) => (
                     <li key={item} className="flex gap-3">
                       <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-brand-green" />
@@ -125,16 +125,16 @@ export default async function ProjectDetailPage({ params }: Props) {
 
               <div className="space-y-6">
                 <Card>
-                  <div className="text-sm font-semibold text-slate-900 dark:text-white">What we manage</div>
-                  <div className="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                  <div className="text-sm font-semibold text-slate-900">What we manage</div>
+                  <div className="mt-4 space-y-3 text-sm text-slate-600">
                     <div>Solar & BESS Plant Design, Development & Optimization</div>
                     <div>Topology & Site Feasibility Surveys and shadow analysis</div>
                     <div>Procurement oversight and tier-1 vendor coordination</div>
                   </div>
                 </Card>
                 <Card>
-                  <div className="text-sm font-semibold text-slate-900 dark:text-white">Our Solar promise</div>
-                  <div className="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                  <div className="text-sm font-semibold text-slate-900">Our Solar promise</div>
+                  <div className="mt-4 space-y-3 text-sm text-slate-600">
                     <div>Transparent contract governance and project timeline tracking</div>
                     <div>Rigorous quality assurance with audit-ready documentation</div>
                     <div>Yield-optimized design for consistent energy production</div>
@@ -145,7 +145,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                     <ShieldCheck className="mt-0.5 h-5 w-5 text-brand-blue" />
                     <div>
                       <div className="text-sm font-semibold">Handover excellence</div>
-                      <div className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+                      <div className="mt-2 text-sm text-slate-600">
                         We prepare full commissioning logs, CEIG approvals, net-metering services, and SCADA integration setups.
                       </div>
                     </div>
@@ -194,10 +194,10 @@ export default async function ProjectDetailPage({ params }: Props) {
             <div className="grid gap-10 lg:grid-cols-2">
               <div>
                 <h2 className="text-3xl font-black tracking-tight">ABOUT BESS EPC</h2>
-                <p className="mt-5 text-base leading-relaxed text-slate-700 dark:text-slate-300">
+                <p className="mt-5 text-base leading-relaxed text-slate-700">
                   {project.description}
                 </p>
-                <ul className="mt-8 space-y-4 text-sm text-slate-600 dark:text-slate-300">
+                <ul className="mt-8 space-y-4 text-sm text-slate-600">
                   {project.scope.map((item) => (
                     <li key={item} className="flex gap-3">
                       <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-brand-green" />
@@ -221,16 +221,16 @@ export default async function ProjectDetailPage({ params }: Props) {
 
               <div className="space-y-6">
                 <Card>
-                  <div className="text-sm font-semibold text-slate-900 dark:text-white">What we manage</div>
-                  <div className="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                  <div className="text-sm font-semibold text-slate-900">What we manage</div>
+                  <div className="mt-4 space-y-3 text-sm text-slate-600">
                     <div>BESS system design, integration & layout modeling</div>
                     <div>EMS software configuration, dispatch logic & SCADA integration</div>
                     <div>Grid interconnection works and compliance coordination</div>
                   </div>
                 </Card>
                 <Card>
-                  <div className="text-sm font-semibold text-slate-900 dark:text-white">Our storage promise</div>
-                  <div className="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                  <div className="text-sm font-semibold text-slate-900">Our storage promise</div>
+                  <div className="mt-4 space-y-3 text-sm text-slate-600">
                     <div>Dispatch optimization for maximum peak shaving capability</div>
                     <div>Degradation-aware battery operation models to extend system life</div>
                     <div>Consistent remote monitoring and automated alert tracking</div>
@@ -241,7 +241,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                     <ShieldCheck className="mt-0.5 h-5 w-5 text-brand-blue" />
                     <div>
                       <div className="text-sm font-semibold">Handover excellence</div>
-                      <div className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+                      <div className="mt-2 text-sm text-slate-600">
                         We prepare full commissioning certifications, safety compliance tests, and custom EMS remote operator integrations.
                       </div>
                     </div>
@@ -306,7 +306,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             <div className="space-y-8">
               <div>
                 <h2 className="text-xl font-bold tracking-tight">Project overview</h2>
-                <p className="mt-3 text-sm leading-relaxed text-slate-700 dark:text-slate-300 sm:text-base">
+                <p className="mt-3 text-sm leading-relaxed text-slate-700 sm:text-base">
                   {project.description}
                 </p>
               </div>
@@ -317,7 +317,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                   {project.scope.map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-2 rounded-xl border border-white/20 bg-white/55 px-4 py-3 text-sm dark:border-emerald-900/40 dark:bg-slate-950/50 backdrop-blur-xl shadow-sm"
+                      className="flex items-start gap-2 rounded-xl border border-white/20 bg-white/55 px-4 py-3 text-sm backdrop-blur-xl shadow-sm"
                     >
                       <Target className="mt-0.5 h-4 w-4 shrink-0 text-brand-green" />
                       {item}
@@ -333,7 +333,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                     {project['Digital & O&M Solutions'].map((outcome) => (
                       <li
                         key={outcome}
-                        className="flex gap-2 text-sm text-slate-700 dark:text-slate-300"
+                        className="flex gap-2 text-sm text-slate-700"
                       >
                         <Zap className="mt-0.5 h-4 w-4 shrink-0 text-brand-solar" />
                         {outcome}
@@ -349,7 +349,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                   {project['Execution & delivery'].map((h) => (
                     <li
                       key={h}
-                      className="flex gap-2 text-sm text-slate-700 dark:text-slate-300"
+                      className="flex gap-2 text-sm text-slate-700"
                     >
                       <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-brand-green" />
                       {h}
@@ -367,7 +367,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                     <div className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                       Capacity
                     </div>
-                    <div className="mt-1 text-lg font-bold text-slate-900 dark:text-white">
+                    <div className="mt-1 text-lg font-bold text-slate-900">
                       {project.capacity}
                     </div>
                   </div>
@@ -414,7 +414,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                   <Link
                     key={p.id}
                     href={`/projects/${p.id}`}
-                    className="group flex gap-4 overflow-hidden rounded-2xl border border-white/20 bg-white/55 p-4 transition hover:-translate-y-0.5 hover:shadow-lg dark:border-emerald-900/40 dark:bg-slate-950/50 backdrop-blur-xl shadow-md"
+                    className="group flex gap-4 overflow-hidden rounded-2xl border border-white/20 bg-white/55 p-4 transition hover:-translate-y-0.5 hover:shadow-lg backdrop-blur-xl shadow-md"
                   >
                     <div className="relative h-20 w-28 shrink-0 overflow-hidden rounded-xl">
                       <Image

@@ -251,7 +251,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
           <ScrollReveal>
             <div className="grid gap-8 md:grid-cols-2">
               {/* Card 1: Bondada Group */}
-              <div className="group overflow-hidden rounded-[2rem] border border-white/80 bg-white/95 dark:border-slate-800 dark:bg-slate-900/90 shadow-lg transition-all duration-500 ease-out hover:scale-[1.04] hover:-translate-y-2.5 hover:z-30 hover:shadow-[0_25px_60px_rgba(22,163,74,0.25)] backdrop-blur-xl">
+              <div className="group overflow-hidden rounded-[2rem] border border-white/80 bg-white/95 shadow-lg transition-all duration-500 ease-out hover:scale-[1.04] hover:-translate-y-2.5 hover:z-30 hover:shadow-[0_25px_60px_rgba(22,163,74,0.25)] backdrop-blur-xl">
                 <div className="relative h-64 lg:h-72 xl:h-88 w-full">
                   <Image
                     src="/hero-solar-farm.png"
@@ -279,7 +279,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
               </div>
 
               {/* Card 2: Jackson Group */}
-              <div className="group overflow-hidden rounded-[2rem] border border-white/80 bg-white/95 dark:border-slate-800 dark:bg-slate-900/90 shadow-lg transition-all duration-500 ease-out hover:scale-[1.04] hover:-translate-y-2.5 hover:z-30 hover:shadow-[0_25px_60px_rgba(22,163,74,0.25)] backdrop-blur-xl">
+              <div className="group overflow-hidden rounded-[2rem] border border-white/80 bg-white/95 shadow-lg transition-all duration-500 ease-out hover:scale-[1.04] hover:-translate-y-2.5 hover:z-30 hover:shadow-[0_25px_60px_rgba(22,163,74,0.25)] backdrop-blur-xl">
                 <div className="relative h-64 lg:h-72 xl:h-88 w-full">
                   <Image
                     src="/service-installation.jpg"
@@ -312,7 +312,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
         {/* PROJECTS UNDER EXECUTION */}
         {activeTab === "execution" && (
           <ScrollReveal>
-            <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/95 dark:border-slate-800 dark:bg-slate-900/90 shadow-lg transition-all duration-500 ease-out hover:scale-[1.03] hover:-translate-y-2 hover:z-30 hover:shadow-[0_25px_60px_rgba(22,163,74,0.25)] backdrop-blur-xl">
+            <div className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/95 shadow-lg transition-all duration-500 ease-out hover:scale-[1.03] hover:-translate-y-2 hover:z-30 hover:shadow-[0_25px_60px_rgba(22,163,74,0.25)] backdrop-blur-xl">
               <div className="flex flex-col md:flex-row min-h-[280px] lg:min-h-[300px] xl:min-h-[340px]">
                 {/* Image panel */}
                 <div className="relative md:w-5/12 min-h-[250px] md:min-h-full">
@@ -323,7 +323,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                     sizes="(max-width: 768px) 100vw, 40vw"
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-white/10 dark:to-slate-900/10" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-white/10" />
                 </div>
 
                 {/* Info panel */}
@@ -351,62 +351,62 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                   </div>
 
                   {/* Horizontal timeline */}
-                  <div className="mt-10 pt-6 border-t border-slate-100 dark:border-slate-800/80">
+                  <div className="mt-10 pt-6 border-t border-slate-100">
                     <div className="relative flex items-center justify-between w-full">
                       {/* Timeline Background Line */}
-                      <div className="absolute left-0 right-0 top-6 h-1 -translate-y-1/2 bg-slate-200 dark:bg-slate-800 rounded-full" />
+                      <div className="absolute left-0 right-0 top-6 h-1 -translate-y-1/2 bg-slate-200 rounded-full" />
 
                       {/* Progress Line (up to step 3 / Construction 50% which is 66% width) */}
-                      <div className="absolute left-0 w-[66%] top-6 h-1 -translate-y-1/2 bg-brand-green rounded-full" />
+                      <div className="absolute left-0 w-[100%] top-6 h-1 -translate-y-1/2 bg-brand-green rounded-full" />
 
                       {/* Step 1: Engineering */}
                       <div className="relative z-10 flex flex-col items-center">
-                        <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-brand-green bg-white text-brand-green dark:bg-slate-900 shadow-[0_0_12px_rgba(22,163,74,0.15)] transition-all hover:scale-105">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-brand-green bg-white text-brand-green shadow-[0_0_12px_rgba(22,163,74,0.15)] transition-all hover:scale-105">
                           <Lightbulb className="h-5 w-5" />
                         </div>
-                        <span className="mt-2 text-[11px] sm:text-xs font-bold text-slate-900 dark:text-slate-150">
+                        <span className="mt-2 text-[11px] sm:text-xs font-bold text-slate-900">
                           Engineering
                         </span>
-                        <span className="text-[10px] sm:text-[11px] font-extrabold text-slate-500 dark:text-slate-400">
+                        <span className="text-[10px] sm:text-[11px] font-extrabold text-slate-500">
 
                         </span>
                       </div>
 
                       {/* Step 2: Procurement */}
                       <div className="relative z-10 flex flex-col items-center">
-                        <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-brand-green bg-white text-brand-green dark:bg-slate-900 shadow-[0_0_12px_rgba(22,163,74,0.15)] transition-all hover:scale-105">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-brand-green bg-white text-brand-green shadow-[0_0_12px_rgba(22,163,74,0.15)] transition-all hover:scale-105">
                           <ClipboardList className="h-5 w-5" />
                         </div>
-                        <span className="mt-2 text-[11px] sm:text-xs font-bold text-slate-900 dark:text-slate-150">
+                        <span className="mt-2 text-[11px] sm:text-xs font-bold text-slate-900">
                           Procurement
                         </span>
-                        <span className="text-[10px] sm:text-[11px] font-extrabold text-slate-500 dark:text-slate-400">
+                        <span className="text-[10px] sm:text-[11px] font-extrabold text-slate-500">
 
                         </span>
                       </div>
 
                       {/* Step 3: Construction */}
                       <div className="relative z-10 flex flex-col items-center">
-                        <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-brand-green bg-white text-brand-green dark:bg-slate-900 shadow-[0_0_12px_rgba(22,163,74,0.15)] transition-all hover:scale-105">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-brand-green bg-white text-brand-green shadow-[0_0_12px_rgba(22,163,74,0.15)] transition-all hover:scale-105">
                           <Hammer className="h-5 w-5" />
                         </div>
-                        <span className="mt-2 text-[11px] sm:text-xs font-bold text-slate-900 dark:text-slate-150">
+                        <span className="mt-2 text-[11px] sm:text-xs font-bold text-slate-900">
                           Construction
                         </span>
-                        <span className="text-[10px] sm:text-[11px] font-extrabold text-slate-500 dark:text-slate-400">
+                        <span className="text-[10px] sm:text-[11px] font-extrabold text-slate-500">
 
                         </span>
                       </div>
 
                       {/* Step 4: Commissioning */}
                       <div className="relative z-10 flex flex-col items-center">
-                        <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-slate-350 bg-white text-slate-400 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-500 transition-all hover:scale-105">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-brand-green bg-white text-brand-green shadow-[0_0_12px_rgba(22,163,74,0.15)] transition-all hover:scale-105">
                           <Wrench className="h-5 w-5" />
                         </div>
-                        <span className="mt-2 text-[11px] sm:text-xs font-bold text-slate-400 dark:text-slate-500">
+                        <span className="mt-2 text-[11px] sm:text-xs font-bold text-slate-900">
                           Commissioning
                         </span>
-                        <span className="text-[10px] sm:text-[11px] font-extrabold text-slate-400 dark:text-slate-500">
+                        <span className="text-[10px] sm:text-[11px] font-extrabold text-slate-500">
 
                         </span>
                       </div>
@@ -433,9 +433,9 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
               {/* Grid for Solar & BESS */}
               <div className="grid gap-8 md:grid-cols-2">
                 {/* Solar Pipeline */}
-                <div className="rounded-[2rem] border border-white/80 bg-white/95 p-6 sm:p-8 shadow-lg dark:border-slate-800 dark:bg-slate-900/90 backdrop-blur-xl">
-                  <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100 dark:border-slate-800">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-50 text-brand-solar dark:bg-amber-950/20">
+                <div className="rounded-[2rem] border border-white/80 bg-white/95 p-6 sm:p-8 shadow-lg backdrop-blur-xl">
+                  <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-50 text-brand-solar">
                       <Sun className="h-5.5 w-5.5 fill-current" />
                     </div>
                     <h4 className="text-xl font-black" style={{ color: '#010101' }}>
@@ -450,20 +450,20 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                           <th className="pb-3 text-center">Location</th>
                         </tr>
                       </thead>
-                      <tbody className="divide-y divide-slate-100 dark:divide-slate-800/50">
-                        <tr className="group/row hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
+                      <tbody className="divide-y divide-slate-100">
+                        <tr className="group/row hover:bg-slate-50/50 transition-colors">
                           <td className="py-3.5 text-center font-black" style={{ color: '#010101' }}>100 MW</td>
                           <td className="py-3.5 text-center font-medium" style={{ color: '#5a5249' }}>Maharashtra</td>
                         </tr>
-                        <tr className="group/row hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
+                        <tr className="group/row hover:bg-slate-50/50 transition-colors">
                           <td className="py-3.5 text-center font-black" style={{ color: '#010101' }}>50 MW</td>
                           <td className="py-3.5 text-center font-medium" style={{ color: '#5a5249' }}>Maharashtra</td>
                         </tr>
-                        <tr className="group/row hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
+                        <tr className="group/row hover:bg-slate-50/50 transition-colors">
                           <td className="py-3.5 text-center font-black" style={{ color: '#010101' }}>50 MW</td>
                           <td className="py-3.5 text-center font-medium" style={{ color: '#5a5249' }}>Maharashtra</td>
                         </tr>
-                        <tr className="group/row hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
+                        <tr className="group/row hover:bg-slate-50/50 transition-colors">
                           <td className="py-3.5 text-center font-black" style={{ color: '#010101' }}>100 MW</td>
                           <td className="py-3.5 text-center font-medium" style={{ color: '#5a5249' }}>Maharashtra</td>
                         </tr>
@@ -473,9 +473,9 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                 </div>
 
                 {/* BESS Pipeline */}
-                <div className="rounded-[2rem] border border-white/80 bg-white/95 p-6 sm:p-8 dark:border-slate-800 dark:bg-slate-900/90 shadow-lg backdrop-blur-xl">
-                  <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100 dark:border-slate-800">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-brand-green dark:bg-emerald-950/20">
+                <div className="rounded-[2rem] border border-white/80 bg-white/95 p-6 sm:p-8 shadow-lg backdrop-blur-xl">
+                  <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-brand-green">
                       <Battery className="h-5.5 w-5.5 fill-current" />
                     </div>
                     <h4 className="text-xl font-black" style={{ color: '#010101' }}>
@@ -491,22 +491,22 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                           <th className="pb-3 text-center">Location</th>
                         </tr>
                       </thead>
-                      <tbody className="divide-y divide-slate-100 dark:divide-slate-800/50">
-                        <tr className="group/row hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
+                      <tbody className="divide-y divide-slate-100">
+                        <tr className="group/row hover:bg-slate-50/50 transition-colors">
                           <td className="py-3.5 text-center font-black" style={{ color: '#010101' }}>45 MW / 180 MWh</td>
                           <td className="py-3.5 text-center font-medium" style={{ color: '#5a5249' }}>Odisha</td>
                         </tr>
-                        <tr className="group/row hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
+                        <tr className="group/row hover:bg-slate-50/50 transition-colors">
                           <td className="py-3.5 text-center font-black" style={{ color: '#010101' }}>25 MW / 100 MWh</td>
                           <td className="py-3.5 text-center font-medium" style={{ color: '#5a5249' }}>Tamil Nadu</td>
                         </tr>
-                        <tr className="group/row hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
+                        <tr className="group/row hover:bg-slate-50/50 transition-colors">
                           <td className="py-3.5 text-center font-black" style={{ color: '#010101' }}>100 MW / 200 MWh</td>
                           <td className="py-3.5 text-center font-medium" style={{ color: '#5a5249' }}>Rajasthan</td>
                         </tr>
-                        <tr className="group/row hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors">
+                        <tr className="group/row hover:bg-slate-50/50 transition-colors">
                           <td className="py-3.5 text-center font-black" style={{ color: '#010101' }}>50 MW / 200 MWh</td>
-                          <td className="py-3.5 text-center font-medium" style={{ color: '#5a5249' }}>-</td>
+                          <td className="py-3.5 text-center font-medium" style={{ color: '#5a5249' }}>Rajkot</td>
                         </tr>
                       </tbody>
                     </table>
@@ -517,13 +517,13 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
               {/* Progress Summary Bars */}
               <div className="grid gap-6 md:grid-cols-2 mt-4">
                 {/* Total Solar Summary */}
-                <div className="rounded-2xl border border-white/80 bg-white/95 p-5 shadow-lg dark:border-slate-800 dark:bg-slate-900/90 backdrop-blur-xl">
-                  <div className="flex items-center justify-between mb-3.5">
+                <div className="rounded-2xl border border-white/80 bg-white/95 p-5 shadow-lg backdrop-blur-xl">
+                  <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2.5">
-                      <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-amber-50 text-brand-solar dark:bg-amber-950/20">
+                      <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-amber-50 text-brand-solar">
                         <Sun className="h-5 w-5 fill-current" />
                       </div>
-                      <span className="text-sm font-bold" style={{ color: '#010101' }}>
+                      <span className="text-lg justify-center font-bold" style={{ color: '#010101' }}>
                         Total Solar Pipeline
                       </span>
                     </div>
@@ -531,30 +531,22 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                       250 MW
                     </span>
                   </div>
-                  {/* Progress track */}
-                  <div className="h-3 w-full bg-slate-100 rounded-full overflow-hidden dark:bg-slate-800">
-                    <div className="h-full bg-brand-green rounded-full w-[62.5%]" />
-                  </div>
                 </div>
 
                 {/* Total BESS Summary */}
-                <div className="rounded-2xl border border-white/80 bg-white/95 p-5 shadow-lg dark:border-slate-800 dark:bg-slate-900/90 backdrop-blur-xl">
-                  <div className="flex items-center justify-between mb-3.5">
+                <div className="rounded-2xl border border-white/80 bg-white/95 p-5 shadow-lg backdrop-blur-xl">
+                  <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2.5">
-                      <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-50 text-brand-green dark:bg-emerald-950/20">
+                      <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-50 text-brand-green">
                         <Battery className="h-5 w-5 fill-current" />
                       </div>
-                      <span className="text-sm font-bold" style={{ color: '#010101' }}>
+                      <span className="text-lg justify-center font-bold" style={{ color: '#010101' }}>
                         Total BESS Pipeline
                       </span>
                     </div>
                     <span className="text-xl font-extrabold" style={{ color: '#0d7342ff' }}>
                       480 MWh
                     </span>
-                  </div>
-                  {/* Progress track */}
-                  <div className="h-3 w-full bg-slate-100 rounded-full overflow-hidden dark:bg-slate-800">
-                    <div className="h-full bg-brand-green rounded-full w-[80%]" />
                   </div>
                 </div>
               </div>
@@ -577,7 +569,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
             Project Execution <span style={{ color: '#256c4aff' }}>Lifecycle</span>
           </h2>
           <div className="mt-3.5 mx-auto h-1.5 w-16 rounded-full bg-gradient-to-r from-[#0d7342ff] to-teal-400 animate-pulse" />
-          <p className="mt-4 text-center text-base sm:text-lg font-semibold max-w-2xl mx-auto leading-relaxed" style={{ color: '#492c06ff' }}>
+          <p className="mt-4 text-center text-base sm:text-lg font-semibold max-w-2xl mx-auto leading-relaxed" style={{ color: '#770707ff' }}>
             A structured 8-phase execution framework ensuring precision engineering, tier-1 procurement, and rapid on-site commissioning.
           </p>
         </div>
@@ -594,11 +586,11 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
 
             {/* Background Dashed Circle (Arrows concept) */}
             <svg className="absolute w-[660px] h-[660px] -z-10 animate-[spin_80s_linear_infinite]" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="49.5" fill="none" stroke="currentColor" className="text-brand-green/30 dark:text-brand-green/20" strokeWidth="0.5" strokeDasharray="2,3" />
+              <circle cx="50" cy="50" r="49.5" fill="none" stroke="currentColor" className="text-brand-green/30" strokeWidth="0.5" strokeDasharray="2,3" />
             </svg>
 
             {/* Central Core Content (Interactive) */}
-            <div className="absolute w-[420px] h-[420px] rounded-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-3xl shadow-2xl border border-white/60 dark:border-slate-700 flex flex-col items-center justify-center text-center p-14 z-0 transition-all duration-300">
+            <div className="absolute w-[420px] h-[420px] rounded-full bg-white/80 backdrop-blur-3xl shadow-2xl border border-white/60 flex flex-col items-center justify-center text-center p-14 z-0 transition-all duration-300">
               <span className="text-[13px] font-black uppercase tracking-[0.25em] mb-3 transition-colors duration-300" style={{ color: lifecyclePhases[activePhase].accent }}>
                 Phase {lifecyclePhases[activePhase].number}
               </span>
@@ -608,7 +600,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
               <p className="text-[14.5px] font-medium leading-relaxed mb-6 text-center" style={{ color: '#475569' }}>
                 {lifecyclePhases[activePhase].description}
               </p>
-              <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-700 to-transparent mb-6" />
+              <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-slate-200 to-transparent mb-6" />
               <ul className="text-[13.5px] text-center w-full mx-auto space-y-3 font-semibold" style={{ color: '#334155' }}>
                 {lifecyclePhases[activePhase].deliverables.slice(0, 3).map((d, i) => (
                   <li key={i} className="flex items-center justify-center gap-2">
@@ -634,8 +626,8 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                   }}
                 >
                   {/* Interactive Hover Image Popup Card on Outer Side */}
-                  <div className={`absolute ${getOuterPopupPosition(idx)} w-[230px] rounded-2xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-2xl p-3 shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-white/60 dark:border-slate-700 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 z-[100] text-left overflow-hidden`}>
-                    <div className="relative w-full h-[120px] rounded-xl overflow-hidden mb-2.5 bg-slate-100 dark:bg-slate-800">
+                  <div className={`absolute ${getOuterPopupPosition(idx)} w-[230px] rounded-2xl bg-white/95 backdrop-blur-2xl p-3 shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-white/60 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 z-[100] text-left overflow-hidden`}>
+                    <div className="relative w-full h-[120px] rounded-xl overflow-hidden mb-2.5 bg-slate-100">
                       <Image
                         src={(phase as any).image}
                         alt={phase.title}
@@ -657,7 +649,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
 
                   {/* Glassmorphic 3D-like Box wrapper */}
                   <div
-                    className={`relative w-24 h-24 mb-4 rounded-3xl shadow-xl flex items-center justify-center transition-all duration-500 ${isActive ? '-translate-y-2' : 'bg-white dark:bg-slate-800 shadow-slate-200/50 dark:shadow-none'}`}
+                    className={`relative w-24 h-24 mb-4 rounded-3xl shadow-xl flex items-center justify-center transition-all duration-500 ${isActive ? '-translate-y-2' : 'bg-white shadow-slate-200/50'}`}
                     style={{
                       backgroundColor: isActive ? phase.accent : `${phase.accent}15`,
                       color: isActive ? '#ffffff' : phase.accent,
@@ -670,7 +662,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                     <phase.icon className="h-10 w-10 relative z-10" />
                   </div>
                   <div
-                    className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl rounded-2xl p-4 shadow-xl transition-all duration-500 w-full border"
+                    className="bg-white/95 backdrop-blur-xl rounded-2xl p-4 shadow-xl transition-all duration-500 w-full border"
                     style={{
                       borderColor: isActive ? phase.accent : `${phase.accent}35`,
                       boxShadow: isActive ? `0 8px 25px -5px ${phase.accent}30` : ''
@@ -696,7 +688,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                     className="flex items-center gap-4 z-10 text-left w-full"
                   >
                     <div
-                      className={`w-14 h-14 shrink-0 rounded-2xl shadow-lg flex items-center justify-center transition-colors duration-300 ${isActive ? '' : 'bg-white dark:bg-slate-800'}`}
+                      className={`w-14 h-14 shrink-0 rounded-2xl shadow-lg flex items-center justify-center transition-colors duration-300 ${isActive ? '' : 'bg-white'}`}
                       style={{
                         backgroundColor: isActive ? phase.accent : `${phase.accent}15`,
                         color: isActive ? '#ffffff' : phase.accent,
@@ -713,7 +705,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
                   </button>
 
                   {isActive && (
-                    <div className="ml-[72px] bg-white/70 dark:bg-slate-900/70 backdrop-blur-md rounded-xl p-4 shadow-sm border border-white/20 dark:border-slate-800 mt-1 mb-2 animate-in slide-in-from-top-2 fade-in duration-300">
+                    <div className="ml-[72px] bg-white/70 backdrop-blur-md rounded-xl p-4 shadow-sm border border-white/20 mt-1 mb-2 animate-in slide-in-from-top-2 fade-in duration-300">
                       <p className="text-[13px] font-medium leading-relaxed mb-3" style={{ color: '#475569' }}>
                         {phase.description}
                       </p>
@@ -747,123 +739,148 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
       </ScrollReveal>
 
       {/* WHY CHOOSE GNE INFRA SECTION */}
-      <ScrollReveal className="w-full mt-24">
-        <div className="group relative overflow-hidden rounded-[2.5rem] border border-white/80 bg-[#f2f8f9] dark:border-slate-800 dark:bg-slate-900 p-8 sm:p-12 shadow-xl transition-all duration-500 z-0">
-          {/* Expanding Corner Circle Effect on the OUTER Card */}
-          <div className="absolute -top-6 -right-6 h-14 w-14 rounded-full bg-gradient-to-br from-[#0d7342] via-[#105634] to-[#042f2c] transition-transform duration-700 ease-out group-hover:scale-[38] -z-20" />
+      <ScrollReveal className="w-full mt-14">
+        <div className="relative overflow-hidden rounded-[2.5rem] bg-[#f0f7f2] px-6 sm:px-10 pt-8 pb-10">
 
-          {/* New Topic-Relevant Photography Background (/solutions-bg.jpg) with Rich Contrast Overlay */}
-          <div className="absolute inset-0 -z-10 opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100">
-            <Image
-              src="/solutions-bg.jpg"
-              alt="GNE Infra Clean Energy Advantage"
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-            {/* High-Contrast Dark Overlay ensuring white text pops with 100% clarity and sharpness */}
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-950/88 via-slate-950/80 to-slate-950/90" />
+          {/* Subtle background texture */}
+          <div className="absolute inset-0 -z-10 bg-gradient-to-br from-emerald-50/60 via-white/40 to-teal-50/60" />
+
+          {/* Section Header — outside any white box */}
+          <div className="text-center mb-7 max-w-3xl mx-auto">
+            <span
+              className="mb-3 inline-block rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest shadow-sm"
+              style={{ background: 'rgba(13,115,66,0.1)', color: '#0d7342', outline: '1px solid rgba(13,115,66,0.25)', outlineOffset: '0px' }}
+            >
+              The GNE Infra Advantage
+            </span>
+            <h3 className="mt-3 text-2xl sm:text-4xl font-black font-sora tracking-tight" style={{ color: '#010101' }}>
+              Why Clients Trust <span style={{ color: '#0d7342ff' }}>GNE Infra</span>
+            </h3>
+            <p className="mt-4 text-base sm:text-lg font-semibold leading-relaxed" style={{ color: '#067434ff' }}>
+              Delivering bankable clean energy infrastructure with uncompromising engineering excellence, transparent governance, and lifecycle reliability.
+            </p>
           </div>
 
-          {/* Top-Right "Go Corner" Badge on Outer Card */}
-          <div className="absolute top-0 right-0 flex h-14 w-14 items-center justify-center rounded-bl-[32px] bg-gradient-to-br from-[#0d7342] to-[#16a34a] text-white shadow-lg transition-transform duration-300 group-hover:scale-110 z-10">
-            <ArrowUpRight className="h-6 w-6 -mt-0.5 -mr-0.5" />
-          </div>
+          {/* 2-column grid of wide-short cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-5xl mx-auto">
 
-          {/* Content Wrapper with Glassmorphism for Readability */}
-          <div className="relative z-10 max-w-5xl mx-auto rounded-3xl bg-black/40 backdrop-blur-lg border border-white/20 shadow-2xl p-8 sm:p-12 mt-4">
-            {/* Section Header */}
-            <div className="text-center mb-12">
-              <span
-                className="mb-3 inline-block rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest shadow-sm transition-colors duration-500 bg-white/20 text-white border border-white/30"
-              >
-                The GNE Infra Advantage
-              </span>
-              <h3 className="mt-2 text-2xl sm:text-4xl font-black font-sora tracking-tight text-white">
-                Why Clients Trust <span className="text-emerald-400">GNE Infra</span>
-              </h3>
-              <p className="mt-3 text-base sm:text-lg font-semibold max-w-2xl mx-auto leading-relaxed text-white/90">
-                Delivering bankable clean energy infrastructure with uncompromising engineering excellence, transparent governance, and lifecycle reliability.
-              </p>
-            </div>
-
-            {/* Grid Layout of Inner Feature Rows */}
-            <div className="grid gap-8 sm:grid-cols-2">
-              {/* Feature 1 */}
-              <div className="flex gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-white shadow-sm transition-all duration-300 hover:scale-105 hover:rotate-3">
-                  <Building2 className="h-6 w-6" />
+            {/* Card 1 — End-to-End EPC Delivery */}
+            <div className="trust-card group relative overflow-hidden rounded-2xl border border-emerald-100/80 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 cursor-pointer" style={{ height: '160px' }}>
+              {/* Hover image layer */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ zIndex: 0 }}>
+                <Image src="/service-epc.jpg" alt="EPC Delivery" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-900/60" />
+              </div>
+              {/* Left accent bar */}
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-400 to-emerald-600 rounded-l-2xl transition-all duration-300 group-hover:w-1.5 group-hover:from-emerald-300 group-hover:to-emerald-500" style={{ zIndex: 11 }} />
+              {/* Content */}
+              <div className="absolute inset-0 flex items-center gap-5 pl-7 pr-6" style={{ zIndex: 10 }}>
+                <div className="trust-card-icon flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 shadow-sm transition-all duration-300">
+                  <Building2 className="h-5 w-5" />
                 </div>
-                <div>
-                  <h4 className="text-lg font-bold leading-snug text-white">
+                <div className="flex-1 min-w-0">
+                  <h4 className="text-base font-black leading-tight text-slate-900 transition-colors duration-300">
                     End-to-End EPC Delivery
                   </h4>
-                  <p className="mt-1.5 text-[15px] leading-relaxed font-medium text-white/85">
+                  <p className="mt-1 text-[13px] leading-relaxed font-medium text-slate-500 transition-colors duration-300">
                     Comprehensive project execution from engineering to commissioning.
                   </p>
                 </div>
               </div>
+            </div>
 
-              {/* Feature 2 */}
-              <div className="flex gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-white shadow-sm transition-all duration-300 hover:scale-105 hover:rotate-3">
-                  <DraftingCompass className="h-6 w-6" />
+            {/* Card 2 — Engineering Excellence */}
+            <div className="trust-card group relative overflow-hidden rounded-2xl border border-emerald-100/80 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 cursor-pointer" style={{ height: '160px' }}>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ zIndex: 0 }}>
+                <Image src="/excellence.jpg" alt="Engineering Excellence" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-900/60" />
+              </div>
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-400 to-emerald-600 rounded-l-2xl transition-all duration-300 group-hover:w-1.5 group-hover:from-emerald-300 group-hover:to-emerald-500" style={{ zIndex: 11 }} />
+              <div className="absolute inset-0 flex items-center gap-5 pl-7 pr-6" style={{ zIndex: 10 }}>
+                <div className="trust-card-icon flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 shadow-sm transition-all duration-300">
+                  <DraftingCompass className="h-5 w-5" />
                 </div>
-                <div>
-                  <h4 className="text-lg font-bold leading-snug text-white">
+                <div className="flex-1 min-w-0">
+                  <h4 className="text-base font-black leading-tight text-slate-900 transition-colors duration-300">
                     Engineering Excellence
                   </h4>
-                  <p className="mt-1.5 text-[15px] leading-relaxed font-medium text-white/85">
+                  <p className="mt-1 text-[13px] leading-relaxed font-medium text-slate-500 transition-colors duration-300">
                     Optimized system design for maximum performance and reliability.
                   </p>
                 </div>
               </div>
+            </div>
 
-              {/* Feature 3 */}
-              <div className="flex gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-white shadow-sm transition-all duration-300 hover:scale-105 hover:rotate-3">
-                  <ShieldCheck className="h-6 w-6" />
+            {/* Card 3 — Quality-Driven Execution */}
+            <div className="trust-card group relative overflow-hidden rounded-2xl border border-emerald-100/80 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 cursor-pointer" style={{ height: '160px' }}>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ zIndex: 0 }}>
+                <Image src="/pmc-quality.jpg" alt="Quality Execution" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-900/60" />
+              </div>
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-400 to-emerald-600 rounded-l-2xl transition-all duration-300 group-hover:w-1.5 group-hover:from-emerald-300 group-hover:to-emerald-500" style={{ zIndex: 11 }} />
+              <div className="absolute inset-0 flex items-center gap-5 pl-7 pr-6" style={{ zIndex: 10 }}>
+                <div className="trust-card-icon flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 shadow-sm transition-all duration-300">
+                  <ShieldCheck className="h-5 w-5" />
                 </div>
-                <div>
-                  <h4 className="text-lg font-bold leading-snug text-white">
+                <div className="flex-1 min-w-0">
+                  <h4 className="text-base font-black leading-tight text-slate-900 transition-colors duration-300">
                     Quality-Driven Execution
                   </h4>
-                  <p className="mt-1.5 text-[15px] leading-relaxed font-medium text-white/85">
+                  <p className="mt-1 text-[13px] leading-relaxed font-medium text-slate-500 transition-colors duration-300">
                     Strict quality assurance at every stage of construction.
                   </p>
                 </div>
               </div>
+            </div>
 
-              {/* Feature 4 */}
-              <div className="flex gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-white shadow-sm transition-all duration-300 hover:scale-105 hover:rotate-3">
-                  <TowerControl className="h-6 w-6" />
+            {/* Card 4 — Land & Grid Expertise */}
+            <div className="trust-card group relative overflow-hidden rounded-2xl border border-emerald-100/80 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 cursor-pointer" style={{ height: '160px' }}>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ zIndex: 0 }}>
+                <Image src="/service-land.jpg" alt="Land and Grid" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-900/60" />
+              </div>
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-400 to-emerald-600 rounded-l-2xl transition-all duration-300 group-hover:w-1.5 group-hover:from-emerald-300 group-hover:to-emerald-500" style={{ zIndex: 11 }} />
+              <div className="absolute inset-0 flex items-center gap-5 pl-7 pr-6" style={{ zIndex: 10 }}>
+                <div className="trust-card-icon flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 shadow-sm transition-all duration-300">
+                  <TowerControl className="h-5 w-5" />
                 </div>
-                <div>
-                  <h4 className="text-lg font-bold leading-snug text-white">
+                <div className="flex-1 min-w-0">
+                  <h4 className="text-base font-black leading-tight text-slate-900 transition-colors duration-300">
                     Land &amp; Grid Expertise
                   </h4>
-                  <p className="mt-1.5 text-[15px] leading-relaxed font-medium text-white/85">
+                  <p className="mt-1 text-[13px] leading-relaxed font-medium text-slate-500 transition-colors duration-300">
                     Integrated support for land development and grid connectivity.
                   </p>
                 </div>
               </div>
+            </div>
 
-              {/* Feature 5 */}
-              <div className="flex gap-4 sm:col-span-2">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/20 text-white shadow-sm transition-all duration-300 hover:scale-105 hover:rotate-3">
-                  <BriefcaseBusiness className="h-6 w-6" />
+          </div>
+
+          {/* 5th card — centered below */}
+          <div className="flex justify-center mt-3 max-w-5xl mx-auto">
+            <div className="trust-card group relative overflow-hidden rounded-2xl border border-emerald-100/80 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 cursor-pointer w-full sm:w-1/2" style={{ height: '160px' }}>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ zIndex: 0 }}>
+                <Image src="/pmc-management.jpg" alt="Project Management" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-900/60" />
+              </div>
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-400 to-emerald-600 rounded-l-2xl transition-all duration-300 group-hover:w-1.5 group-hover:from-emerald-300 group-hover:to-emerald-500" style={{ zIndex: 11 }} />
+              <div className="absolute inset-0 flex items-center gap-5 pl-7 pr-6" style={{ zIndex: 10 }}>
+                <div className="trust-card-icon flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 shadow-sm transition-all duration-300">
+                  <BriefcaseBusiness className="h-5 w-5" />
                 </div>
-                <div>
-                  <h4 className="text-lg font-bold leading-snug text-white">
+                <div className="flex-1 min-w-0">
+                  <h4 className="text-base font-black leading-tight text-slate-900 transition-colors duration-300">
                     Experienced Project Management
                   </h4>
-                  <p className="mt-1.5 text-[15px] leading-relaxed font-medium text-white/85">
+                  <p className="mt-1 text-[13px] leading-relaxed font-medium text-slate-500 transition-colors duration-300">
                     Structured planning and execution with schedule adherence.
                   </p>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
       </ScrollReveal>
     </div>

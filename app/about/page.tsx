@@ -517,7 +517,7 @@ export default function AboutPage() {
             {/* Solar EPC */}
             <Link
               href="/solar-epc"
-              className="group relative col-span-1 md:col-span-2 row-span-2 overflow-hidden rounded-3xl border border-slate-200/60 dark:border-slate-700/50 shadow-xl transition-all duration-500 ease-out hover:scale-[1.06] hover:-translate-y-3 hover:z-30 hover:shadow-[0_30px_70px_rgba(22,163,74,0.35)] block cursor-pointer"
+              className="group relative col-span-1 md:col-span-2 row-span-2 overflow-hidden rounded-3xl border border-slate-200/60 shadow-xl transition-all duration-500 ease-out hover:scale-[1.06] hover:-translate-y-3 hover:z-30 hover:shadow-[0_30px_70px_rgba(22,163,74,0.35)] block cursor-pointer"
             >
               <Image
                 src="/solar epc.png"
@@ -542,7 +542,7 @@ export default function AboutPage() {
             {/* BESS */}
             <Link
               href="/bess-ems"
-              className="group relative col-span-1 md:col-span-2 overflow-hidden rounded-3xl border border-slate-200/60 dark:border-slate-700/50 shadow-xl transition-all duration-500 ease-out hover:scale-[1.06] hover:-translate-y-3 hover:z-30 hover:shadow-[0_30px_70px_rgba(22,163,74,0.35)] block cursor-pointer"
+              className="group relative col-span-1 md:col-span-2 overflow-hidden rounded-3xl border border-slate-200/60 shadow-xl transition-all duration-500 ease-out hover:scale-[1.06] hover:-translate-y-3 hover:z-30 hover:shadow-[0_30px_70px_rgba(22,163,74,0.35)] block cursor-pointer"
             >
               <Image
                 src="/bess.png"
@@ -567,7 +567,7 @@ export default function AboutPage() {
             {/* PMC */}
             <Link
               href="/pmc"
-              className="group relative col-span-1 md:col-span-2 overflow-hidden rounded-3xl border border-slate-200/60 dark:border-slate-700/50 shadow-xl transition-all duration-500 ease-out hover:scale-[1.06] hover:-translate-y-3 hover:z-30 hover:shadow-[0_30px_70px_rgba(22,163,74,0.35)] block cursor-pointer"
+              className="group relative col-span-1 md:col-span-2 overflow-hidden rounded-3xl border border-slate-200/60 shadow-xl transition-all duration-500 ease-out hover:scale-[1.06] hover:-translate-y-3 hover:z-30 hover:shadow-[0_30px_70px_rgba(22,163,74,0.35)] block cursor-pointer"
             >
               <Image
                 src="/pmc.png"
@@ -592,7 +592,7 @@ export default function AboutPage() {
             {/* O&M */}
             <Link
               href="/o-and-m"
-              className="group relative col-span-1 md:col-span-1 overflow-hidden rounded-3xl border border-slate-200/60 dark:border-slate-700/50 shadow-xl transition-all duration-500 ease-out hover:scale-[1.06] hover:-translate-y-3 hover:z-30 hover:shadow-[0_30px_70px_rgba(22,163,74,0.35)] block cursor-pointer"
+              className="group relative col-span-1 md:col-span-1 overflow-hidden rounded-3xl border border-slate-200/60 shadow-xl transition-all duration-500 ease-out hover:scale-[1.06] hover:-translate-y-3 hover:z-30 hover:shadow-[0_30px_70px_rgba(22,163,74,0.35)] block cursor-pointer"
             >
               <Image
                 src="/o&m.png"
@@ -617,7 +617,7 @@ export default function AboutPage() {
             {/* Green Hydrogen */}
             <Link
               href="/green-hydrogen"
-              className="group relative col-span-1 md:col-span-3 overflow-hidden rounded-3xl border border-slate-200/60 dark:border-slate-700/50 shadow-xl transition-all duration-500 ease-out hover:scale-[1.06] hover:-translate-y-3 hover:z-30 hover:shadow-[0_30px_70px_rgba(22,163,74,0.35)] block cursor-pointer"
+              className="group relative col-span-1 md:col-span-3 overflow-hidden rounded-3xl border border-slate-200/60 shadow-xl transition-all duration-500 ease-out hover:scale-[1.06] hover:-translate-y-3 hover:z-30 hover:shadow-[0_30px_70px_rgba(22,163,74,0.35)] block cursor-pointer"
             >
               <Image
                 src="/green hydrogen.png"

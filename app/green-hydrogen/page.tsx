@@ -77,7 +77,7 @@ export default function GreenHydrogenPage() {
       <ScrollReveal>
         <section className="py-12 sm:py-16">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-            <div className="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-[0_20px_60px_rgba(0,0,0,0.12)] bg-slate-950">
+            <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-[0_20px_60px_rgba(0,0,0,0.12)] bg-slate-950">
               <video
                 src="/GreenHydrogen.mp4"
                 autoPlay
