@@ -65,12 +65,12 @@ export default function GreenHydrogenPage() {
       <PremiumServiceHero
         title="Green Hydrogen"
         subtitle="Developing bankable green hydrogen projects with electrolyzer integration, renewable coupling, and end-to-end execution support for industrial decarbonization."
-        image="/green hydrogen.png"
+        image="/Green-H2.png"
       />
 
-      <EditorialIntro 
-        title="Building the Hydrogen Economy" 
-        content="GNE Infra is actively expanding into the green hydrogen sector with a dedicated focus on renewable-powered hydrogen production, advanced electrolyzer deployment, robust storage infrastructure, and strategic industrial offtake partnerships. Our approach masterfully combines existing renewable energy assets with next-generation hydrogen technologies to directly support India's National Green Hydrogen Mission while delivering highly scalable, commercially viable projects." 
+      <EditorialIntro
+        title="Building the Hydrogen Economy"
+        content="GNE Infra is actively expanding into the green hydrogen sector with a dedicated focus on renewable-powered hydrogen production, advanced electrolyzer deployment, robust storage infrastructure, and strategic industrial offtake partnerships. Our approach masterfully combines existing renewable energy assets with next-generation hydrogen technologies to directly support India's National Green Hydrogen Mission while delivering highly scalable, commercially viable projects."
       />
 
       {/* Featured Green Hydrogen Video */}

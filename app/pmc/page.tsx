@@ -144,12 +144,12 @@ export default function PmcPage() {
             <div className="absolute inset-0 flex flex-col md:flex-row pointer-events-none">
               {/* Left half */}
               <div className="w-full md:w-1/2 h-1/2 md:h-full relative">
-                <img src="/service-land.jpg" className="w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500" alt="Land Identification" />
+                <img src="/service-land.jpg" className="w-full h-full object-cover opacity-85 group-hover:opacity-100 transition-opacity duration-500" alt="Land Identification" />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#080E1E]/60 to-[#080E1E]" />
               </div>
               {/* Right half */}
               <div className="w-full md:w-1/2 h-1/2 md:h-full relative">
-                <img src="/solutions-bg.jpg" className="w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500" alt="Land Procurement" />
+                <img src="/solutions-bg.jpg" className="w-full h-full object-cover opacity-85 group-hover:opacity-100 transition-opacity duration-500" alt="Land Procurement" />
                 <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#080E1E]/60 to-[#080E1E]" />
               </div>
             </div>

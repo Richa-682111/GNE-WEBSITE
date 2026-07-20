@@ -45,7 +45,7 @@ export default function BessEpcPage() {
       title: "Quality & Safety",
       description: "Strict adherence to international quality standards and comprehensive safety protocols throughout project execution.",
       icon: ShieldCheck,
-      image: "/excellence.jpg",
+      image: "/Safety.png",
     },
     {
       title: "Scalable Storage Solutions",
@@ -87,7 +87,7 @@ export default function BessEpcPage() {
       />
 
       <BentoFeatureGrid
-        title="Why Choose GNE Infra"
+        title="BESS Execution Excellence"
         features={features}
       />
 

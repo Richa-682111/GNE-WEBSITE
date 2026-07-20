@@ -86,8 +86,8 @@ export function BentoFeatureGrid({
                     />
                   )}
 
-                  {/* 75% Opacity Gradient Overlay: Balanced photography visibility & text contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#050B14]/90 via-[#050B14]/75 via-50% to-transparent pointer-events-none" />
+                  {/* High-clarity photography visibility with targeted bottom gradient for text contrast */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#050B14] via-[#050B14]/85 via-25% to-transparent to-55% pointer-events-none transition-opacity duration-500" />
 
                   {/* Top-Right Floating Icon Button */}
                   <div className="absolute top-5 right-5 z-20 flex h-11 w-11 items-center justify-center rounded-2xl bg-black/60 backdrop-blur-md border border-white/20 text-white shadow-lg group-hover:scale-110 group-hover:border-[#4ade80]/60 group-hover:text-[#4ade80] transition-all duration-400">
@@ -98,13 +98,13 @@ export function BentoFeatureGrid({
                   <div className="relative px-7 pr-12 pt-7 pb-8 sm:pl-9 sm:pr-14 sm:pt-9 sm:pb-10 z-20 flex flex-col justify-end text-left mt-auto">
                     {/* Eyebrow Pill Badge */}
                     {!hideBadge && (
-                      <span
+                      <div
                         className="mb-3 w-fit inline-flex items-center gap-1.5 rounded-full px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider shadow-md backdrop-blur-sm"
                         style={{ background: accent.bg, color: accent.color, border: `1px solid ${accent.border}` }}
                       >
-                        <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: accent.color }} />
-                        Capability 0{idx + 1}
-                      </span>
+
+                      </div>
+
                     )}
 
                     {/* Bold Pure White Title */}

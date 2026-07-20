@@ -116,9 +116,7 @@ export function CoreValuesSection() {
                     >
                       <Icon className="w-7 h-7" />
                     </div>
-                    <span className="text-xs font-mono font-bold uppercase tracking-widest text-slate-300">
-                      CORE VALUE 0{idx + 1}
-                    </span>
+
                   </div>
 
                   <h3 className="font-sora font-extrabold text-4xl sm:text-5xl md:text-6xl text-white tracking-tight mb-4 group-hover:translate-x-1 transition-transform duration-300">

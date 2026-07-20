@@ -33,7 +33,7 @@ export default function OAndMPage() {
       title: "Performance Monitoring",
       description: "Continuous monitoring and analysis to optimize plant performance and energy generation.",
       icon: LineChart,
-      image: "/innovation.png",
+      image: "/Performance.png",
     },
     {
       title: "Rapid Fault Response",
