@@ -242,7 +242,7 @@ export function TimelineJourney() {
               </AnimatePresence>
 
               {/* Top Banner inside Image Card */}
-              <div className="relative z-10 flex items-center justify-between gap-4 mb-8">
+              <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 mb-8">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-xs font-semibold uppercase tracking-wider shadow-lg">
                   <Calendar className="w-4 h-4" style={{ color: activeStep.hex }} />
                   <span>Strategic Roadmap Milestone</span>

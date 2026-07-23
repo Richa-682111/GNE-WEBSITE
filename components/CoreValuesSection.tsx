@@ -108,7 +108,7 @@ export function CoreValuesSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/60 to-slate-950/20" />
 
                 {/* Content Container */}
-                <div className="relative z-10 flex-1 p-8 sm:p-14 md:p-20 flex flex-col justify-end text-left">
+                <div className="relative z-10 flex-1 p-5 sm:p-8 md:p-14 lg:p-20 flex flex-col justify-end text-left">
                   <div className="flex items-center gap-3 mb-6">
                     <div
                       className="w-14 h-14 rounded-2xl flex items-center justify-center backdrop-blur-md shadow-lg border border-white/10"
@@ -119,11 +119,11 @@ export function CoreValuesSection() {
 
                   </div>
 
-                  <h3 className="font-sora font-extrabold text-4xl sm:text-5xl md:text-6xl text-white tracking-tight mb-4 group-hover:translate-x-1 transition-transform duration-300">
+                  <h3 className="font-sora font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white tracking-tight mb-4 group-hover:translate-x-1 transition-transform duration-300">
                     {card.title}
                   </h3>
 
-                  <p className="text-lg sm:text-xl md:text-2xl text-slate-200 max-w-4xl leading-relaxed font-normal">
+                  <p className="text-base sm:text-xl md:text-2xl text-slate-200 max-w-4xl leading-relaxed font-normal break-words">
                     {card.description}
                   </p>
                 </div>

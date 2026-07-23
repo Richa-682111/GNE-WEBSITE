@@ -198,7 +198,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
 
       {/* Filter Tabs */}
       <ScrollReveal className="w-full max-w-2xl mb-12">
-        <div className="flex rounded-2xl p-1.5 shadow-md backdrop-blur-sm" style={{ background: 'rgba(255,255,255,0.75)', border: '1px solid rgba(176,125,58,0.3)' }}>
+        <div className="flex rounded-2xl p-1.5 shadow-md backdrop-blur-sm flex-wrap gap-1" style={{ background: 'rgba(255,255,255,0.75)', border: '1px solid rgba(176,125,58,0.3)' }}>
           <button
             type="button"
             onClick={() => setActiveTab("completed")}
@@ -575,10 +575,10 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
         </div>
 
         {/* Circular Lifecycle Layout */}
-        <div className="mx-auto max-w-6xl w-full mt-12 md:mt-28 md:mb-16">
+        <div className="mx-auto max-w-6xl w-full mt-12 lg:mt-28 lg:mb-16">
 
           {/* Desktop Circular Layout */}
-          <div className="hidden md:flex relative w-[900px] h-[900px] mx-auto items-center justify-center">
+          <div className="hidden lg:flex relative w-[900px] h-[900px] mx-auto items-center justify-center">
 
             {/* Decorative Background Orbs to fill empty space */}
             <div className="absolute w-[800px] h-[800px] blur-[100px] rounded-full pointer-events-none -z-20 transition-colors duration-700" style={{ backgroundColor: `${lifecyclePhases[activePhase].accent}15` }} />
@@ -677,7 +677,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
           </div>
 
           {/* Mobile Vertical Layout (Fallback) */}
-          <div className="md:hidden flex flex-col gap-6 relative px-2 mt-8">
+          <div className="lg:hidden flex flex-col gap-6 relative px-2 mt-8">
             <div className="absolute left-[36px] top-8 bottom-8 w-[2px] transition-colors duration-500" style={{ backgroundColor: `${lifecyclePhases[activePhase].accent}40` }} />
             {lifecyclePhases.map((phase, idx) => {
               const isActive = activePhase === idx;
@@ -765,7 +765,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-5xl mx-auto">
 
             {/* Card 1 — End-to-End EPC Delivery */}
-            <div className="trust-card group relative overflow-hidden rounded-2xl border border-emerald-100/80 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 cursor-pointer" style={{ height: '160px' }}>
+            <div className="trust-card group relative overflow-hidden rounded-2xl border border-emerald-100/80 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 cursor-pointer min-h-[160px]">
               {/* Hover image layer */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ zIndex: 0 }}>
                 <Image src="/service-epc.jpg" alt="EPC Delivery" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
@@ -790,7 +790,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
             </div>
 
             {/* Card 2 — Engineering Excellence */}
-            <div className="trust-card group relative overflow-hidden rounded-2xl border border-emerald-100/80 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 cursor-pointer" style={{ height: '160px' }}>
+            <div className="trust-card group relative overflow-hidden rounded-2xl border border-emerald-100/80 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 cursor-pointer min-h-[160px]">
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ zIndex: 0 }}>
                 <Image src="/excellence.jpg" alt="Engineering Excellence" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-900/60" />
@@ -812,7 +812,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
             </div>
 
             {/* Card 3 — Quality-Driven Execution */}
-            <div className="trust-card group relative overflow-hidden rounded-2xl border border-emerald-100/80 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 cursor-pointer" style={{ height: '160px' }}>
+            <div className="trust-card group relative overflow-hidden rounded-2xl border border-emerald-100/80 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 cursor-pointer min-h-[160px]">
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ zIndex: 0 }}>
                 <Image src="/pmc-quality.jpg" alt="Quality Execution" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-900/60" />
@@ -834,7 +834,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
             </div>
 
             {/* Card 4 — Land & Grid Expertise */}
-            <div className="trust-card group relative overflow-hidden rounded-2xl border border-emerald-100/80 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 cursor-pointer" style={{ height: '160px' }}>
+            <div className="trust-card group relative overflow-hidden rounded-2xl border border-emerald-100/80 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 cursor-pointer min-h-[160px]">
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ zIndex: 0 }}>
                 <Image src="/service-land.jpg" alt="Land and Grid" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-900/60" />
@@ -859,7 +859,7 @@ export function ProjectsPortfolio({ projects }: { projects?: any[] }) {
 
           {/* 5th card — centered below */}
           <div className="flex justify-center mt-3 max-w-5xl mx-auto">
-            <div className="trust-card group relative overflow-hidden rounded-2xl border border-emerald-100/80 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 cursor-pointer w-full sm:w-1/2" style={{ height: '160px' }}>
+            <div className="trust-card group relative overflow-hidden rounded-2xl border border-emerald-100/80 bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 cursor-pointer w-full sm:w-1/2 min-h-[160px]">
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ zIndex: 0 }}>
                 <Image src="/pmc-management.jpg" alt="Project Management" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-900/60" />

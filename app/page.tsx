@@ -71,15 +71,15 @@ export default function HomePage() {
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-emerald-500/20 via-sky-400/10 to-teal-400/10 blur-2xl" />
 
                 <div className="relative w-full max-w-2xl overflow-hidden rounded-3xl p-6 shadow-2xl sm:p-10" style={{ background: 'linear-gradient(135deg, #e2efe7 0%, #cbe4d5 100%)', border: '1.5px solid rgba(13,115,66,0.35)', boxShadow: '0 20px 50px rgba(13,115,66,0.12), 0 8px 20px rgba(0,0,0,0.06)' }}>
-                  <div className="orbital-wrap relative mx-auto flex h-72 w-72 items-center justify-center sm:h-96 sm:w-96 lg:h-[380px] lg:w-[380px] xl:h-[420px] xl:w-[420px] [--orbit-radius:98px] sm:[--orbit-radius:140px] lg:[--orbit-radius:145px] xl:[--orbit-radius:165px]">
+                  <div className="orbital-wrap relative mx-auto flex h-56 w-56 items-center justify-center sm:h-72 sm:w-72 md:h-80 md:w-80 lg:h-[380px] lg:w-[380px] xl:h-[420px] xl:w-[420px] [--orbit-radius:76px] sm:[--orbit-radius:98px] md:[--orbit-radius:118px] lg:[--orbit-radius:145px] xl:[--orbit-radius:165px]">
                     {/* Animated orbit rings */}
                     <div className="absolute inset-0 animate-[spin_18s_linear_infinite] rounded-full border-2 border-dashed border-emerald-300/40" />
                     <div className="absolute inset-6 sm:inset-8 xl:inset-10 animate-[spin_24s_linear_infinite_reverse] rounded-full border border-dashed border-sky-300/30" />
 
                     {/* Centre hub */}
-                    <div className="relative z-10 flex h-24 w-24 sm:h-28 sm:w-28 xl:h-32 xl:w-32 flex-col items-center justify-center rounded-full shadow-2xl" style={{ background: 'linear-gradient(135deg, #1a4731, #0f2d1e)' }}>
-                      <Leaf className="mb-1 h-6 w-6 sm:h-8 sm:w-8 xl:h-9 xl:w-9 text-white" />
-                      <span className="text-[10px] sm:text-xs font-black uppercase tracking-wider text-white/95">GNE INFRA</span>
+                    <div className="relative z-10 flex h-16 w-16 sm:h-24 sm:w-24 xl:h-32 xl:w-32 flex-col items-center justify-center rounded-full shadow-2xl" style={{ background: 'linear-gradient(135deg, #1a4731, #0f2d1e)' }}>
+                      <Leaf className="mb-1 h-4 w-4 sm:h-6 sm:w-6 xl:h-9 xl:w-9 text-white" />
+                      <span className="hidden sm:block text-[10px] sm:text-xs font-black uppercase tracking-wider text-white/95">GNE INFRA</span>
                     </div>
 
                     {/* Orbital nodes */}
@@ -97,12 +97,12 @@ export default function HomePage() {
                       return (
                         <div
                           key={label}
-                          className={`absolute flex h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 flex-col items-center justify-center rounded-2xl sm:rounded-3xl text-center text-[9px] sm:text-[11px] lg:text-xs xl:text-sm font-bold leading-none sm:leading-tight shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:z-20 ${color}`}
+                          className={`absolute flex h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20 xl:h-28 xl:w-28 flex-col items-center justify-center rounded-xl sm:rounded-2xl lg:rounded-3xl text-center text-[7px] sm:text-[9px] lg:text-xs xl:text-sm font-bold leading-none sm:leading-tight shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:z-20 ${color}`}
                           style={{
                             transform: `translate(calc(var(--orbit-radius) * ${cosVal}), calc(var(--orbit-radius) * ${sinVal}))`,
                           }}
                         >
-                          <span className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl leading-none mb-1">{icon}</span>
+                          <span className="text-base sm:text-xl lg:text-3xl xl:text-4xl leading-none mb-0.5 sm:mb-1">{icon}</span>
                           <span className="px-1 block tracking-tight font-extrabold">{label}</span>
                         </div>
                       );
@@ -323,7 +323,7 @@ export default function HomePage() {
       </section>
 
       {/* ── OUR EXPERTISE ──────────────────────────────────────── */}
-      <section className="relative overflow-hidden py-10 sm:py-16 xl:py-14" style={{ background: '#f5ece5' }}>
+      <section className="relative overflow-x-hidden overflow-y-visible py-10 sm:py-16 xl:py-14" style={{ background: '#f5ece5' }}>
         {/* Ambient glow */}
         <div className="pointer-events-none absolute inset-0 -z-0">
           <div className="absolute left-1/3 top-0 h-[400px] w-[700px] -translate-x-1/2 rounded-full bg-emerald-400/15 blur-[130px]" />

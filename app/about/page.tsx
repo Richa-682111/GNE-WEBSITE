@@ -348,7 +348,7 @@ export default function AboutPage() {
 
             </div>
             {/* Right Column: 3-Image Overlapping Architectural Collage + Scroll/Hover Animations */}
-            <div className="lg:col-span-7 relative flex items-center justify-end py-8">
+            <div className="lg:col-span-7 relative flex items-center justify-end py-8 overflow-hidden">
               {/* Subtle ambient lighting behind images */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-emerald-500/15 blur-3xl pointer-events-none" />
 
@@ -364,7 +364,7 @@ export default function AboutPage() {
               </div>
 
               {/* Overlapping Secondary Image Card (Bottom Right) - LARGE SIZE */}
-              <div className="absolute -bottom-6 -right-2 sm:-right-4 w-[60%] sm:w-[56%] aspect-[16/11] rounded-[24px] overflow-hidden shadow-[0_25px_55px_rgba(0,0,0,0.3)] border-[5px] border-white z-20 group/second transition-all duration-500 hover:-translate-y-2 hover:scale-105">
+              <div className="absolute -bottom-4 right-0 sm:-right-2 w-[56%] sm:w-[52%] aspect-[16/11] rounded-[20px] sm:rounded-[24px] overflow-hidden shadow-[0_25px_55px_rgba(0,0,0,0.3)] border-[3px] sm:border-[5px] border-white z-20 group/second transition-all duration-500 hover:-translate-y-2 hover:scale-105">
                 <Image
                   src="/new-solar-epc.jpg"
                   alt="Solar EPC Installation & Operations"

@@ -58,6 +58,35 @@
     @apply overflow-x-hidden bg-white text-slate-900 antialiased;
   }
 
+  main {
+    overflow-x: hidden;
+  }
+
+  /* ─── 320px micro-fixes ───────────────────────────────────────────
+     Only applies to the very narrowest phones (< 375px).
+     Gently reduces section padding and bumps up min-width safety.
+  ────────────────────────────────────────────────────────────────── */
+  @media (max-width: 374px) {
+    .hero-video-wrap {
+      min-height: 360px !important;
+    }
+    /* Tighten generous section padding so content doesn't overflow vertically */
+    section {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+    /* Prevent any oversized text from causing horizontal scroll */
+    h1, h2, h3, h4 {
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+    /* Trust card content should not be clipped */
+    .trust-card > div[style*="zIndex: 10"] {
+      position: relative;
+    }
+  }
+
+
   p,
   .prose p {
     text-align: left;

@@ -6,7 +6,7 @@ export function HeroCarousel({
   children: React.ReactNode;
 }) {
   return (
-    <div className="hero-video-wrap relative h-[65vh] min-h-[460px] sm:h-[80vh] md:h-[calc(100vh-4.5rem)] w-full overflow-hidden flex flex-col justify-center">
+    <div className="hero-video-wrap relative h-[65vh] min-h-[380px] sm:min-h-[460px] sm:h-[80vh] md:h-[calc(100vh-4.5rem)] w-full overflow-hidden flex flex-col justify-center">
       {/* Background Video */}
       <video
         autoPlay
