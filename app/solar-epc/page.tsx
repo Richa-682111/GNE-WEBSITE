@@ -84,7 +84,7 @@ export default function SolarEpcPage() {
       />
 
       <EditorialIntro
-        title="Solar EPC Executions Excellence"
+        title="Solar EPC Execution Excellence"
         content="GNE Infra delivers integrated Solar EPC solutions that transform project concepts into operational renewable energy assets. From feasibility and engineering to procurement, construction, commissioning, and long-term support, we ensure every project is executed with a focus on quality, efficiency, safety, and performance."
       />
 

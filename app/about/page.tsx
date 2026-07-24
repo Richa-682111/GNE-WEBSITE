@@ -212,8 +212,8 @@ export default function AboutPage() {
       name: "Harshita Arora",
       title: "Business Development Manager",
       bio: "Dynamic leader driving business growth through client acquisition, strategic partnerships, proposal management, P&L management, project coordination, and strengthening the company's business pipeline.",
-      linkedin: "",
-      image: "/Harshita.jepg",
+      linkedin: "https://www.linkedin.com/in/harshita-arora-10738027a/",
+      image: "/Harshita.jpeg",
     }
   ];
 
@@ -337,7 +337,7 @@ export default function AboutPage() {
 
                 {/* Exact Description Text - Left Aligned */}
                 <div className="space-y-4 text-[15.5px] leading-[1.8]" style={{ color: '#5a5249' }}>
-                  <p className="text-justify ">
+                  <p className="text-left md:text-justify">
                     GNE Infra is an integrated clean energy infrastructure company delivering end-to-end solutions across Engineering, Procurement & Construction (EPC), Project Management Consultancy (PMC), and Operations & Maintenance (O&M). Our expertise spans Solar Power, Battery Energy Storage Systems (BESS), Wind Energy, and Pumped Storage Projects (PSP), supporting projects from concept and engineering through commissioning and long-term asset management.
                     Driven by innovation and execution excellence, GNE Infra is expanding into Green Hydrogen and next-generation energy technologies to accelerate the transition towards a sustainable, resilient, and low-carbon energy future.
                   </p>
@@ -392,17 +392,19 @@ export default function AboutPage() {
 
         <div className="mx-auto max-w-[1380px] px-4 sm:px-8 lg:px-12">
           {/* Section Heading & Context */}
-          <div className="mb-12 text-left">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="w-8 h-[2px] bg-[#16a34a]" />
-              <span className="text-[11px] font-bold uppercase tracking-[3px] text-[#22c55e]">
-                PURPOSE & DIRECTION
-              </span>
+          <ScrollReveal>
+            <div className="mb-12 text-left">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="w-8 h-[2px] bg-[#16a34a]" />
+                <span className="text-[11px] font-bold uppercase tracking-[3px] text-[#22c55e]">
+                  PURPOSE & DIRECTION
+                </span>
+              </div>
+              <h2 className="font-sora font-extrabold text-3xl sm:text-5xl text-[#010101]">
+                Our <span className="text-[#16a34a]">Mission</span> & <span className="text-[#ad5d50]">Vision</span>
+              </h2>
             </div>
-            <h2 className="font-sora font-extrabold text-3xl sm:text-5xl text-[#010101]">
-              Our <span className="text-[#16a34a]">Mission</span> & <span className="text-[#ad5d50]">Vision</span>
-            </h2>
-          </div>
+          </ScrollReveal>
 
           {/* Two Card Grid — Large Split-Screen Cards with Expansive Photography Header & Frosted Glass Content */}
           <ScrollReveal delay={100}>
@@ -496,21 +498,23 @@ export default function AboutPage() {
       {/* 7. Our Services Section */}
       <section className="py-16 sm:py-24 bg-transparent font-inter border-y border-[#e5e7eb]/50">
         <div className="mx-auto max-w-[1440px] px-4 sm:px-8 lg:px-12">
-          <div className="mb-12 flex flex-col items-start text-left">
-            {/* Eyebrow */}
-            <div className="flex items-center gap-3 mb-3">
-              <span className="w-8 h-[2px] bg-[#16a34a]" />
-              <span className="text-[11px] font-bold uppercase tracking-[3px] text-[#22c55e]">
-                WHAT WE PROVIDE
-              </span>
+          <ScrollReveal>
+            <div className="mb-12 flex flex-col items-start text-left">
+              {/* Eyebrow */}
+              <div className="flex items-center gap-3 mb-3">
+                <span className="w-8 h-[2px] bg-[#16a34a]" />
+                <span className="text-[11px] font-bold uppercase tracking-[3px] text-[#22c55e]">
+                  WHAT WE PROVIDE
+                </span>
+              </div>
+              <h2 className="font-sora font-extrabold text-3xl sm:text-5xl" style={{ color: '#010101' }}>
+                Our <span style={{ color: '#256c4aff' }}>Services</span>
+              </h2>
+              <p className="mt-2 text-base sm:text-lg max-w-2xl font-normal" style={{ color: '#5a5249' }}>
+                End-to-end renewable energy solutions — from engineering to operations
+              </p>
             </div>
-            <h2 className="font-sora font-extrabold text-3xl sm:text-5xl" style={{ color: '#010101' }}>
-              Our <span style={{ color: '#256c4aff' }}>Services</span>
-            </h2>
-            <p className="mt-2 text-base sm:text-lg max-w-2xl font-normal" style={{ color: '#5a5249' }}>
-              End-to-end renewable energy solutions — from engineering to operations
-            </p>
-          </div>
+          </ScrollReveal>
 
           <ScrollReveal>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 auto-rows-[190px] sm:auto-rows-[210px] lg:auto-rows-[230px] xl:auto-rows-[260px]">
@@ -646,21 +650,23 @@ export default function AboutPage() {
       {/* 8. Our Journey Section */}
       <section className="py-10 sm:py-16 bg-transparent font-inter">
         <div className="mx-auto max-w-[1440px] px-4 sm:px-8 lg:px-12">
-          <div className="mb-8 flex flex-col items-start text-left">
-            {/* Eyebrow */}
-            <div className="flex items-center gap-3 mb-3">
-              <span className="w-8 h-[2px] bg-[#16a34a]" />
-              <span className="text-[11px] font-bold uppercase tracking-[3px] text-[#22c55e]">
-                OUR GROWTH
-              </span>
+          <ScrollReveal>
+            <div className="mb-8 flex flex-col items-start text-left">
+              {/* Eyebrow */}
+              <div className="flex items-center gap-3 mb-3">
+                <span className="w-8 h-[2px] bg-[#16a34a]" />
+                <span className="text-[11px] font-bold uppercase tracking-[3px] text-[#22c55e]">
+                  OUR GROWTH
+                </span>
+              </div>
+              <h2 className="font-sora font-extrabold text-3xl sm:text-5xl" style={{ color: '#010101' }}>
+                Our <span style={{ color: '#ad5d50' }}>Journey</span>
+              </h2>
+              <p className="mt-2 text-base sm:text-lg max-w-2xl font-normal" style={{ color: '#5a5249' }}>
+                Five-year growth roadmap across solar, BESS, and green hydrogen
+              </p>
             </div>
-            <h2 className="font-sora font-extrabold text-3xl sm:text-5xl" style={{ color: '#010101' }}>
-              Our <span style={{ color: '#ad5d50' }}>Journey</span>
-            </h2>
-            <p className="mt-2 text-base sm:text-lg max-w-2xl font-normal" style={{ color: '#5a5249' }}>
-              Five-year growth roadmap across solar, BESS, and green hydrogen
-            </p>
-          </div>
+          </ScrollReveal>
 
           <TimelineJourney />
         </div>
@@ -669,21 +675,23 @@ export default function AboutPage() {
       {/* 9. Leadership Section - Board Members */}
       <section className="py-16 sm:py-24 bg-transparent border-t border-[#e5e7eb]/50 font-inter">
         <div className="mx-auto max-w-[1440px] px-4 sm:px-8 lg:px-12">
-          <div className="mb-12 flex flex-col items-start text-left">
-            {/* Eyebrow */}
-            <div className="flex items-center gap-3 mb-3">
-              <span className="w-8 h-[2px] bg-[#16a34a]" />
-              <span className="text-[11px] font-bold uppercase tracking-[3px] text-[#22c55e]">
-                OUR LEADERSHIP
-              </span>
+          <ScrollReveal>
+            <div className="mb-12 flex flex-col items-start text-left">
+              {/* Eyebrow */}
+              <div className="flex items-center gap-3 mb-3">
+                <span className="w-8 h-[2px] bg-[#16a34a]" />
+                <span className="text-[11px] font-bold uppercase tracking-[3px] text-[#22c55e]">
+                  OUR LEADERSHIP
+                </span>
+              </div>
+              <h2 className="font-sora font-extrabold text-3xl sm:text-5xl" style={{ color: '#010101' }}>
+                Meet Our <span style={{ color: '#14b56fff' }}>Top Management</span>
+              </h2>
+              <p className="mt-2 text-base sm:text-lg max-w-2xl font-normal" style={{ color: '#5a5249' }}>
+                Experienced leaders driving renewable energy across solar, BESS, and hydrogen.
+              </p>
             </div>
-            <h2 className="font-sora font-extrabold text-3xl sm:text-5xl" style={{ color: '#010101' }}>
-              Meet Our <span style={{ color: '#14b56fff' }}>Top Management</span>
-            </h2>
-            <p className="mt-2 text-base sm:text-lg max-w-2xl font-normal" style={{ color: '#5a5249' }}>
-              Experienced leaders driving renewable energy across solar, BESS, and hydrogen.
-            </p>
-          </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10 items-stretch">
             {leadership.map((leader, idx) => (

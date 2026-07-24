@@ -31,7 +31,7 @@ export default function HomePage() {
           <p
             className="mx-auto max-w-2xl text-center text-base font-semibold leading-relaxed sm:text-lg md:text-xl"
             style={{
-              color: '#4ade80',
+              color: '#f5ece5',
               textShadow: `
                 0 0 8px rgba(0,0,0,0.9),
                 0 0 16px rgba(0,0,0,0.8),
@@ -118,7 +118,7 @@ export default function HomePage() {
             {/* RIGHT — Copy */}
             <ScrollReveal delay={120}>
               <div className="flex flex-col gap-6">
-                <p className="text-xl leading-relaxed  text-justify" style={{ color: '#010101' }}>
+                <p className="text-xl leading-relaxed text-left md:text-justify" style={{ color: '#010101' }}>
                   GNE Infra delivers integrated renewable energy solutions across Solar EPC, Battery Energy Storage Systems (BESS), Project Development, Land Acquisition, Grid Connectivity, and Project Management Consultancy (PMC). Combining engineering excellence, execution capability, and strategic advisory, we help clients accelerate project delivery, optimize investments, and develop reliable, future-ready energy infrastructure.
 
                 </p>

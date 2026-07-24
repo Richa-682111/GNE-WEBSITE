@@ -77,20 +77,15 @@ function AnimatedCard({ card, index, total, containerProgress }: AnimatedCardPro
   // The last card never shrinks (it stays full size).
   const isLast = index === total - 1;
 
-  // Progress range: card starts scaling at [start] and finishes at [end]
-  const start = index / total;
-  const end = (index + 1) / total;
+  // Progress range: distribute scrolling across only the cards that actually animate (total - 1)
+  const animTotal = Math.max(1, total - 1);
+  const start = index / animTotal;
+  const end = (index + 1) / animTotal;
 
   const scale = useTransform(
     containerProgress,
     [start, end],
     isLast ? [1, 1] : [1, 0.88]
-  );
-
-  const opacity = useTransform(
-    containerProgress,
-    [start, end],
-    isLast ? [1, 1] : [1, 0.4]
   );
 
   // Stagger the sticky top so cards visibly stack
@@ -100,22 +95,25 @@ function AnimatedCard({ card, index, total, containerProgress }: AnimatedCardPro
     <motion.div
       style={{
         scale,
-        opacity,
         top: topOffset,
         minHeight: "clamp(300px, 50vh, 480px)",
         transformOrigin: "center top",
       }}
-      className="sticky w-full flex flex-col rounded-[36px] overflow-hidden border border-slate-200/20 shadow-2xl group bg-slate-950 transition-transform duration-500"
+      className="sticky w-full flex flex-col rounded-[36px] overflow-hidden border border-slate-200/20 shadow-2xl group bg-black transition-transform duration-500"
     >
       {/* Crisp background image – NO backdrop-blur */}
       <img
         src={card.image}
         alt={card.title}
-        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 !filter-none !opacity-100"
+        style={{ animation: 'none' }}
       />
 
-      {/* Dark gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/60 to-slate-950/20" />
+      {/* Subtle uniform darkening overlay to slightly equalize brightness */}
+      <div className="absolute inset-0 bg-black/10" />
+
+      {/* Dark gradient overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-slate-950/10" />
 
       {/* Content Container (Responsive Padding) */}
       <div className="relative z-10 flex-1 p-5 sm:p-8 md:p-14 lg:p-20 flex flex-col justify-end text-left">
@@ -186,8 +184,8 @@ export function CoreValuesSection() {
         {/* STACKOVER SCROLL CARDS – ref tracked for scroll progress */}
         <div
           ref={containerRef}
-          className="relative w-full max-w-[1340px] mx-auto pb-24"
-          style={{ height: `calc(100vh * ${cardsData.length})` }}
+          className="relative w-full max-w-[1340px] mx-auto pb-8"
+          style={{ height: `calc(100vh + (${cardsData.length - 1} * 45vh))` }}
         >
           {cardsData.map((card, idx) => (
             <AnimatedCard
