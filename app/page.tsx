@@ -219,7 +219,7 @@ export default function HomePage() {
             {/* Right Column: wedo1 Image Card (Span 5) */}
             <div className="lg:col-span-5">
               <ScrollReveal delay={200}>
-                <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-2xl bg-slate-900 group aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/5] min-h-[380px] lg:min-h-[440px] xl:min-h-[540px]">
+                <div className="relative w-full rounded-3xl overflow-hidden border border-slate-200 shadow-2xl bg-slate-900 group aspect-[3/4] sm:aspect-[16/10] lg:aspect-[4/5] sm:min-h-[380px] lg:min-h-[440px] xl:min-h-[540px]">
                   <Image
                     src="/wedo1.jpg"
                     alt="Renewable Energy Development"
@@ -246,7 +246,7 @@ export default function HomePage() {
             {/* Left Column: wedo2 Image Card (Span 5) - Order 2 on mobile, 1 on desktop */}
             <div className="lg:col-span-5 order-2 lg:order-1">
               <ScrollReveal delay={200}>
-                <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-2xl bg-slate-900 group aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/5] min-h-[360px] lg:min-h-[460px]">
+                <div className="relative w-full rounded-3xl overflow-hidden border border-slate-200 shadow-2xl bg-slate-900 group aspect-[3/4] sm:aspect-[16/10] lg:aspect-[4/5] sm:min-h-[360px] lg:min-h-[460px]">
                   <Image
                     src="/wedo2.jpg"
                     alt="Industrial Decarbonization and Sustainable Value"
