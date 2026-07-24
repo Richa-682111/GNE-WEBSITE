@@ -98,19 +98,6 @@
     text-align: left !important;
   }
 
-  main h1,
-  main h2,
-  main h3 {
-    transition: color 220ms ease, text-shadow 220ms ease, transform 220ms ease;
-  }
-
-  main h1:hover,
-  main h2:hover,
-  main h3:hover {
-    color: #16a34a;
-    text-shadow: 0 0 14px rgba(74, 222, 128, 0.28);
-    transform: translateY(-1px);
-  }
 
   /* Global typography upgrades to make text larger and high-contrast */
   .text-xs {

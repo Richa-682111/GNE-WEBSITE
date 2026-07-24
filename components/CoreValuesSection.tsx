@@ -184,8 +184,7 @@ export function CoreValuesSection() {
         {/* STACKOVER SCROLL CARDS – ref tracked for scroll progress */}
         <div
           ref={containerRef}
-          className="relative w-full max-w-[1340px] mx-auto pb-8"
-          style={{ height: `calc(100vh + (${cardsData.length - 1} * 45vh))` }}
+          className="relative w-full max-w-[1340px] mx-auto pb-24"
         >
           {cardsData.map((card, idx) => (
             <AnimatedCard
