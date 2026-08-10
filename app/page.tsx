@@ -13,19 +13,17 @@ export default function HomePage() {
 
 
           <h1
-            className="mx-auto max-w-5xl text-center text-4xl font-malgiva font-normal leading-[1.08] text-[#f5ece5] sm:text-6xl md:text-[64px] lg:text-[72px] xl:text-[80px]"
-            style={{
-              textShadow: `
-      0 0 4px rgba(0,0,0,0.9),
-      0 0 8px rgba(0,0,0,0.8),
-      0 0 16px rgba(0,0,0,0.7),
-      2px 2px 6px rgba(0,0,0,0.9)
+  className="mx-auto max-w-5xl text-center font-semibold leading-[1.05] text-[#f5ece5]
+             text-6xl sm:text-7xl md:text-[78px] lg:text-[88px] xl:text-[96px]"
+  style={{
+    textShadow: `
+      0 2px 6px rgba(0,0,0,0.7)
     `
-            }}
-          >
-            Engineering the <br className="hidden sm:block" />
-            Future
-          </h1>
+  }}
+>
+  Engineering the Future <br />
+  of Renewable Energy
+</h1>
 
           {/* Subheading */}
           <p

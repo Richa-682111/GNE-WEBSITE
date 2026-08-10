@@ -189,7 +189,7 @@ export default function AboutPage() {
     },
     {
       name: "Shrikant Bartakke",
-      title: "President",
+      title: "Chief Growth Officer",
       bio: "Seasoned business leader with over 20 years of experience across telecommunications, infrastructure and renewable energy.",
       linkedin: "https://www.linkedin.com/in/shrikant-bartakke-2b977b60/",
       image: "/Shrikant.jpeg"
@@ -205,12 +205,12 @@ export default function AboutPage() {
       name: "Rajesh Kumar",
       title: "General Manager Projects & Operation",
       bio: "Over 24 years of vast experience in Project Management, Operation Management and Solar O&M.",
-      linkedin: "https://www.linkedin.com/in/rajesh-pal-34b81a16/",
+      linkedin: "https://www.linkedin.com/in/ajesh-pal-34b81a16/",
       image: "/rajesh kumar.jpg",
     },
     {
       name: "Harshita Arora",
-      title: "Business Development Manager",
+      title: "Business Growth & Strategic Partnerships",
       bio: "Dynamic leader driving business growth through client acquisition, strategic partnerships, proposal management, P&L management, project coordination, and strengthening the company's business pipeline.",
       linkedin: "https://www.linkedin.com/in/harshita-arora-10738027a/",
       image: "/Harshita.jpeg",
@@ -699,13 +699,17 @@ export default function AboutPage() {
                 <Card
                   className="flex h-full flex-col p-5 sm:p-6 lg:p-7 bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-3xl shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl text-left"
                 >
-                  <div className="relative mb-4 aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-sm">
-                    <Image
-                      src={leader.image}
-                      alt={leader.name}
-                      fill
-                      className="object-cover transition-transform duration-500 hover:scale-105"
-                    />
+                  <div className="relative mb-4 aspect-[4/5] w-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+                    {leader.name === "Rajesh Kumar" ? (
+                      <div className="flex h-full w-full items-center justify-center bg-white" />
+                    ) : (
+                      <Image
+                        src={leader.image}
+                        alt={leader.name}
+                        fill
+                        className="object-cover transition-transform duration-500 hover:scale-105"
+                      />
+                    )}
                   </div>
                   <h3 className="text-lg sm:text-xl font-sora font-extrabold leading-tight text-[#111827] text-left">
                     {leader.name}
