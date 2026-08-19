@@ -693,13 +693,13 @@ export default function AboutPage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 xl:gap-6 items-stretch justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10 items-stretch">
             {leadership.map((leader, idx) => (
               <ScrollReveal key={idx} delay={idx * 60}>
                 <Card
-                  className="mx-auto flex h-full max-w-[320px] flex-col p-3 sm:p-4 lg:p-4 bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-3xl shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl text-left"
+                  className="flex h-full flex-col p-5 sm:p-6 lg:p-7 bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-3xl shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl text-left"
                 >
-                  <div className="relative mb-3 aspect-[4/5] w-full max-h-[190px] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+                  <div className="relative mb-4 aspect-[4/5] w-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
                     {leader.name === "Rajesh Kumar" ? (
                       <div className="flex h-full w-full items-center justify-center bg-white" />
                     ) : (
@@ -707,24 +707,24 @@ export default function AboutPage() {
                         src={leader.image}
                         alt={leader.name}
                         fill
-                        className="object-contain object-center transition-transform duration-500 hover:scale-105"
+                        className="object-cover transition-transform duration-500 hover:scale-105"
                       />
                     )}
                   </div>
-                  <h3 className="text-base sm:text-base font-sora font-extrabold leading-tight text-[#111827] text-left">
+                  <h3 className="text-lg sm:text-xl font-sora font-extrabold leading-tight text-[#111827] text-left">
                     {leader.name}
                   </h3>
-                  <p className="mt-1 text-[11px] sm:text-[11px] font-bold text-[#16a34a] text-left">
+                  <p className="mt-1 text-xs sm:text-sm font-bold text-[#16a34a] text-left">
                     {leader.title}
                   </p>
-                  <p className="mt-2 text-[13px] leading-snug text-[#475569] text-left">
+                  <p className="mt-3 flex-grow text-xs sm:text-sm leading-relaxed text-[#475569] text-left">
                     {leader.bio}
                   </p>
                   <a
                     href={leader.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3 inline-flex items-center gap-1.5 text-[11px] sm:text-[11px] font-bold text-[#16a34a] hover:text-[#15803d] hover:underline"
+                    className="mt-4 inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#16a34a] hover:text-[#15803d] hover:underline"
                   >
                     <Linkedin className="h-4 w-4" />
                     Connect

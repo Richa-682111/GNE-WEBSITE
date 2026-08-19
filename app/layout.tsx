@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Suspense } from "react";
+import Script from "next/script";
 import { Sora, Inter } from "next/font/google";
 import "./globals.css";
 import { SmoothScrollProvider } from "@/components/SmoothScroll";
@@ -111,8 +112,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
             <main className="min-h-[70vh] relative z-0">{children}</main>
             <Footer />
-          </SmoothScrollProvider>
-      </body>
+
+<Script
+  src="https://www.googletagmanager.com/gtag/js?id=G-RVZFS0N8JS"
+  strategy="afterInteractive"
+/>
+<Script id="google-analytics" strategy="afterInteractive">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RVZFS0N8JS');
+  `}
+</Script>
+
+</SmoothScrollProvider>
+</body>
     </html>
   );
 }
