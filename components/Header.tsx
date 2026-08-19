@@ -161,6 +161,11 @@ export function Header() {
         <div className="flex items-center justify-end gap-3">
           <Link
             href="/contact"
+            onClick={() => {
+    window.gtag?.("event", "generate_lead", {
+      method: "get_quote",
+    });
+  }}
             className="hidden rounded-xl px-5 py-2.5 text-sm font-bold text-white transition-all duration-300 hover:scale-102 hover:shadow-md sm:inline-flex shine-button"
             style={{ background: '#1a4731' }}
           >
